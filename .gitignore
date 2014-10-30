@@ -1,0 +1,11 @@
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+Markel.REMUS.DesignSystem.Web/bin/
+REMUS.DesignSystem.Web.v12.suo
+Markel.REMUS.DesignSystem.Web/obj/
+Markel.REMUS.DesignSystem.Web/dummy/
+Markel.REMUS.DesignSystem.Web/.sass-cache/
+

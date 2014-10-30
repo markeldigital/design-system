@@ -1,0 +1,37 @@
+@mixin documents($selector){
+    #{$selector}{
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            li{
+                margin-bottom: $grid-unit;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            a {
+                display: inline-block;
+                width: 100%;
+                img {
+                    float: left;
+                    @include set-graphic-as(beta);
+                    margin-right: $grid-unit;
+                }
+                &:hover {
+                    background-color: $colour-interaction-10;
+                    outline: $grid-unit solid $colour-interaction-10;
+                }
+				p {
+					overflow:hidden;
+                    margin-top: $grid-unit;
+				}
+            }
+        }
+        @include respond-to-print(){
+            display: none;
+        }
+    }
+}
+
+@include documents(".quote-screen .documents, .bind-screen .documents, .policy-confirmation-screen .documents");

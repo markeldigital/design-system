@@ -1,0 +1,23 @@
+@mixin cover-nested($selector) {
+    #{$selector} {
+        margin-top: $grid-unit/4;
+        .cover-headline {
+           padding: 0 0 2*$grid-unit 1px;
+           background-color: $colour-greyscale-97;
+            .checkbox-option.checkbox-stacked input + label {
+                background-color: $colour-greyscale-97;
+            }
+        }
+        .cover-name {
+            @include set-text-as(gamma,$reduced:true,$margins-overrides:zero-top);
+            width: 100%;
+            span {
+                @include set-text-as(delta,$margins-overrides:zero-top);
+            }
+        }
+        .limit-header-container {
+            padding-top: $grid-unit;
+        }
+    }
+}
+

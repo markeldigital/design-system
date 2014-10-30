@@ -1,0 +1,10 @@
+@mixin question-group-message($selector) {
+    @include panel(#{$selector}, beta);
+
+    #{$selector} {
+        margin-top: 2*$grid-unit;
+        padding: 3*$grid-unit;
+    }
+}
+
+@include question-group-message(".question-group-message");

@@ -1,0 +1,219 @@
+﻿@{
+ViewBag.Title = @Text.Content.StatusTitle;
+Layout = "Shared/Layout";
+}
+
+<style>
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        padding: 0;
+    }
+</style>
+
+<article class="grid-width">
+    <h1>Professional activities that we cover</h1>
+    <div id="activities">
+        <form class="search-form">
+            <input autofocus="true" type="search" class="search" placeholder="Search activities explanations"/><i
+                class="icon-search"></i>
+        </form>
+        <ul class="list">
+            <li><span class="activity-name">Accident Investigator</span></li>
+            <li><span class="activity-name">Acoustic Consultant</span></li>
+            <li><span class="activity-name">Aerobics Instructor</span></li>
+            <li><span class="activity-name">Answering Services (non-medical)</span></li>
+            <li><span class="activity-name">Anthologist</span></li>
+            <li><span class="activity-name">Anthropologist</span></li>
+            <li><span class="activity-name">Appraiser (non-real estate and no fine art)</span></li>
+            <li><span class="activity-name">Aquaculture Consultant</span></li>
+            <li><span class="activity-name">Aqua Zumba Instructor</span></li>
+            <li><span class="activity-name">Arbitrator</span></li>
+            <li><span class="activity-name">Arbourist</span></li>
+            <li><span class="activity-name">Archaeologists</span></li>
+            <li><span class="activity-name">Auctioneer (No Fine Art)</span></li>
+            <li><span class="activity-name">Badminton Coach</span></li>
+            <li><span class="activity-name">Bailiff</span></li>
+            <li><span class="activity-name">Ballet Teacher</span></li>
+            <li><span class="activity-name">Basketball Coach</span></li>
+            <li><span class="activity-name">Bookkeeper/Annual Tax Returns (Non-accountancy Practice - No Tax Consultancy/Tax Advice)</span></li>
+            <li><span class="activity-name">Boxercise Instructor</span></li>
+            <li><span class="activity-name">Branding Agent/Consultant</span></li>
+            <li><span class="activity-name">Brewers Consultant</span></li>
+            <li><span class="activity-name">Business Advisory Service</span></li>
+            <li><span class="activity-name">Business Analyst</span></li>
+            <li><span class="activity-name">Business Consultant</span></li>
+            <li><span class="activity-name">Calligraphist</span></li>
+            <li><span class="activity-name">Careers Advisory Service</span></li>
+            <li><span class="activity-name">Careers Consultant</span></li>
+            <li><span class="activity-name">Cartographer</span></li>
+            <li><span class="activity-name">Cartoonist</span></li>
+            <li><span class="activity-name">Circuit Training Instructor</span></li>
+            <li><span class="activity-name">Claims Adjusters</span></li>
+            <li><span class="activity-name">Clerical / Secretarial Services</span></li>
+            <li><span class="activity-name">Component Testing</span></li>
+            <li><span class="activity-name">Computer Consultant (other than engineering & bespoke financial application trading platforms) utlilizing proprietary hardware and/or software</span></li>
+            <li><span class="activity-name">Computer programmer</span></li>
+            <li><span class="activity-name">Computer software & hardware consultant</span></li>
+            <li><span class="activity-name">Computer software & hardware installation</span></li>
+            <li><span class="activity-name">Computer software/design/development/customization & testing</span></li>
+            <li><span class="activity-name">Conference and Exhibition Management/Organisation</span></li>
+            <li><span class="activity-name">Conservation Consultant</span></li>
+            <li><span class="activity-name">Copywriter</span></li>
+            <li><span class="activity-name">Corporate Training</span></li>
+            <li><span class="activity-name">Court Reporters</span></li>
+            <li><span class="activity-name">Creative Consultant</span></li>
+            <li><span class="activity-name">Cricket Coach</span></li>
+            <li><span class="activity-name">Dance Instructor/Drama Instructors or Tutors</span></li>
+            <li><span class="activity-name">Data analyst</span></li>
+            <li><span class="activity-name">Data processor</span></li>
+            <li><span class="activity-name">Data removal</span></li>
+            <li><span class="activity-name">Database input</span></li>
+            <li><span class="activity-name">Database management consultant</span></li>
+            <li><span class="activity-name">Database migration</span></li>
+            <li><span class="activity-name">Drama instructor or tutor</span></li>
+            <li><span class="activity-name">Ecological Consultant</span></li>
+            <li><span class="activity-name">Education Advisory Service/Consultant</span></li>
+            <li><span class="activity-name">Employment Agent</span></li>
+            <li><span class="activity-name">Employment Consultant</span></li>
+            <li><span class="activity-name">Energy Conservation Consultant - Commercial/Industrial</span></li>
+            <li><span class="activity-name">Energy Conservation Consultant - Domestic</span></li>
+            <li><span class="activity-name">Energy Consultant/Assessment - Commercial/Industrial</span></li>
+            <li><span class="activity-name">Energy Consultant/Assessment - Domestic</span></li>
+            <li><span class="activity-name">Environmental Health Consultant</span></li>
+            <li><span class="activity-name">Ergonomics Consultant</span></li>
+            <li><span class="activity-name">Event Organiser/Party Planner - NO GL</span></li>
+            <li><span class="activity-name">Executive Recruiter</span></li>
+            <li><span class="activity-name">Exhibition Designer</span></li>
+            <li><span class="activity-name">Expert Witness</span></li>
+            <li><span class="activity-name">Facilities Management</span></li>
+            <li><span class="activity-name">Fashion Consultant (Including Design)</span></li>
+            <li><span class="activity-name">Fire Protection Consultant</span></li>
+            <li><span class="activity-name">Fire Safety Consultant</span></li>
+            <li><span class="activity-name">First Aid Instructor</span></li>
+            <li><span class="activity-name">Fisheries Consultant</span></li>
+            <li><span class="activity-name">Fitness Instructor/Personal Trainer/Sports Coach</span></li>
+            <li><span class="activity-name">Florist</span></li>
+            <li><span class="activity-name">Flower Arranger</span></li>
+            <li><span class="activity-name">Food Consultant</span></li>
+            <li><span class="activity-name">Food Safety and Hygiene Consultant</span></li>
+            <li><span class="activity-name">Football Coach (Non-professional football)</span></li>
+            <li><span class="activity-name">Forensic Analysts (non-financial)</span></li>
+            <li><span class="activity-name">Forensic Science</span></li>
+            <li><span class="activity-name">Forestry Consultant</span></li>
+            <li><span class="activity-name">Fuel Efficiency Consultant - Commercial/Industrial</span></li>
+            <li><span class="activity-name">Fuel Efficiency Consultant - Domestic</span></li>
+            <li><span class="activity-name">Fundraising Consultant</span></li>
+            <li><span class="activity-name">Funeral Director</span></li>
+            <li><span class="activity-name">Golf Instructor</span></li>
+            <li><span class="activity-name">Graphic Designer</span></li>
+            <li><span class="activity-name">Graphologist</span></li>
+            <li><span class="activity-name">Gymnastics Coach (no trampoling activities)</span></li>
+            <li><span class="activity-name">Health & Safety Consultant (excluding Asbestos)</span></li>
+            <li><span class="activity-name">Health and Social Care Consultant</span></li>
+            <li><span class="activity-name">Heating Costs Consultant - Commercial/Industrial</span></li>
+            <li><span class="activity-name">Heating Costs Consultant - Domestic</span></li>
+            <li><span class="activity-name">Hockey Coach (non-professional hockey)</span></li>
+            <li><span class="activity-name">Home Tutor</span></li>
+            <li><span class="activity-name">Hotel and Catering Consultant</span></li>
+            <li><span class="activity-name">Human Resources Consultant</span></li>
+            <li><span class="activity-name">Illustrator</span></li>
+            <li><span class="activity-name">Image Consultant</span></li>
+            <li><span class="activity-name">Immigration advisor/consultant</span></li>
+            <li><span class="activity-name">Insurance Claims Adjuster</span></li>
+            <li><span class="activity-name">Interior Designers</span></li>
+            <li><span class="activity-name">Interpreter/Translation (Non-technical)</span></li>
+            <li><span class="activity-name">Inventory/Stocktaking</span></li>
+            <li><span class="activity-name">IT Consultant</span></li>
+            <li><span class="activity-name">Jewellery Design/Consultant</span></li>
+            <li><span class="activity-name">Jewellery Designer</span></li>
+            <li><span class="activity-name">Latin Fit Instructor</span></li>
+            <li><span class="activity-name">Learning Services</span></li>
+            <li><span class="activity-name">Linguistic Consultant</span></li>
+            <li><span class="activity-name">Local tour guide excluding travel tour organizers/operators</span></li>
+            <li><span class="activity-name">Loss Adjuster</span></li>
+            <li><span class="activity-name">Management Accountant (not C.A.'s)</span></li>
+            <li><span class="activity-name">Management Consultant</span></li>
+            <li><span class="activity-name">Management Training</span></li>
+            <li><span class="activity-name">Market Research Consultant</span></li>
+            <li><span class="activity-name">Market Researcher</span></li>
+            <li><span class="activity-name">Marketing and/or Advertising Agent/Consultant</span></li>
+            <li><span class="activity-name">Marriage Counsellor</span></li>
+            <li><span class="activity-name">Mediator</span></li>
+            <li><span class="activity-name">Meeting Planner</span></li>
+            <li><span class="activity-name">Model Maker</span></li>
+            <li><span class="activity-name">Music Teacher</span></li>
+            <li><span class="activity-name">Netball Coach</span></li>
+            <li><span class="activity-name">Noise and Vibration Consultant</span></li>
+            <li><span class="activity-name">Noise Pollution Control</span></li>
+            <li><span class="activity-name">Noise & vibration consultant</span></li>
+            <li><span class="activity-name">Occupational Health Consultant</span></li>
+            <li><span class="activity-name">Personal Trainers</span></li>
+            <li><span class="activity-name">Photographer/Videographer</span></li>
+            <li><span class="activity-name">Piano Tuner</span></li>
+            <li><span class="activity-name">Picture Framer</span></li>
+            <li><span class="activity-name">Pilates Instructor</span></li>
+            <li><span class="activity-name">Planning Consultant</span></li>
+            <li><span class="activity-name">Plastics Consultant</span></li>
+            <li><span class="activity-name">Polygraph Operators</span></li>
+            <li><span class="activity-name">Printing Consultant</span></li>
+            <li><span class="activity-name">Private Investigator</span></li>
+            <li><span class="activity-name">Probate Services</span></li>
+            <li><span class="activity-name">Process Servers</span></li>
+            <li><span class="activity-name">Property Management</span></li>
+            <li><span class="activity-name">Public Relations Consultant</span></li>
+            <li><span class="activity-name">Publicity Consultant</span></li>
+            <li><span class="activity-name">Quality Control/Quality Assurance Consultant</span></li>
+            <li><span class="activity-name">Recruitment Agent</span></li>
+            <li><span class="activity-name">Regulatory Consultant</span></li>
+            <li><span class="activity-name">Relocation Agency</span></li>
+            <li><span class="activity-name">Research Consultant</span></li>
+            <li><span class="activity-name">Safety Training/Consultant</span></li>
+            <li><span class="activity-name">Salsa Fit Instructor</span></li>
+            <li><span class="activity-name">Secretarial Services</span></li>
+            <li><span class="activity-name">Security Consultant</span></li>
+            <li><span class="activity-name">Spinning Instructor</span></li>
+            <li><span class="activity-name">Sports Coach</span></li>
+            <li><span class="activity-name">Tachograph Analysis</span></li>
+            <li><span class="activity-name">Teacher/Tutor (Excluding sports actvities)</span></li>
+            <li><span class="activity-name">Telecommunications Consultant</span></li>
+            <li><span class="activity-name">Telemarketer/Telesales</span></li>
+            <li><span class="activity-name">Tennis Coach</span></li>
+            <li><span class="activity-name">Textiles Consultant</span></li>
+            <li><span class="activity-name">Theatre Lighting (Consultant)</span></li>
+            <li><span class="activity-name">Thermal and Insulation Consultant - Domestic</span></li>
+            <li><span class="activity-name">Ticket/Theatre Agent</span></li>
+            <li><span class="activity-name">Tourist Information</span></li>
+            <li><span class="activity-name">Traffic Consultant</span></li>
+            <li><span class="activity-name">Training Advisory Service</span></li>
+            <li><span class="activity-name">Training Consultant</span></li>
+            <li><span class="activity-name">Translator (Non-technical)</span></li>
+            <li><span class="activity-name">Transportation & distribution/logistics consultant Excluding Freight Forwarders</span></li>
+            <li><span class="activity-name">Travel Agent (Retail Only)</span></li>
+            <li><span class="activity-name">Tree Surgeon</span></li>
+            <li><span class="activity-name">Triathlon Sports Coach</span></li>
+            <li><span class="activity-name">Virtual Assistant</span></li>
+            <li><span class="activity-name">Web marketing</span></li>
+            <li><span class="activity-name">Website design</span></li>
+            <li><span class="activity-name">Website hosting</span></li>
+            <li><span class="activity-name">Wedding and Event Planner</span></li>
+            <li><span class="activity-name">Wedding Photographer</span></li>
+            <li><span class="activity-name">Yoga Instructor</span></li>
+            <li><span class="activity-name">Zoology Consultant</span></li>
+            <li><span class="activity-name">Zumba Instructor</span></li>
+            <li><span class="activity-name">Other</span></li>
+        </ul>
+    </div>
+</article>
+
+<script src="/Content/non_bower/list.js"></script>
+<script>
+    var options = {
+        valueNames: [ 'activity-name' ]
+    };
+    new List('activities', options);
+</script>

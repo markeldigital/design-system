@@ -1,0 +1,20 @@
+$menu-palm-height: $grid-unit * 4.5;
+$menu-lap-height: $grid-unit * 6;
+$menu-desk-height: $grid-unit * 7;
+
+$logo-palm-width: $menu-palm-height * 2;
+$logo-lap-width: $menu-lap-height * 2;
+$logo-desk-width: $menu-desk-height * 2;
+
+$logo-palm-clearance: 2*$grid-unit;
+$logo-lap-clearance: 3*$grid-unit;
+$logo-desk-clearance: 7*$grid-unit;
+
+@import "logo";
+@import "main-navigation";
+@import "main-banner";
+@import "main-content";
+
+@include main-navigation(".primary-navigation-menu");
+@include main-banner(".top-header");
+@include main-content(".content");

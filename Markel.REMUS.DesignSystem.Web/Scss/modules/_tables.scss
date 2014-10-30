@@ -1,0 +1,85 @@
+@mixin table($selector){
+    #{$selector}{
+        width: 100%;
+        margin-bottom: 2*$grid-unit;
+        th, td {
+            text-align: left;
+            padding: 2*$grid-unit;
+            @include respond-to($lap-and-desk) {
+                &:first-child {
+                    padding-left: 0;
+                }
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+        thead {
+            th {
+                @include set-text-as(epsilon, $strength: weak);
+                text-transform: uppercase;
+                @include visually-hidden;
+                @include respond-to($lap-and-desk){
+                    @include visually-shown;
+                }
+                vertical-align: top;
+            }
+        }
+
+        tbody {
+            td {
+                overflow: hidden;
+                display: block;
+                width: 100%;
+                float: left;
+                clear: left;
+                vertical-align: top;
+                @include respond-to($lap-and-desk){
+                    display: table-cell;
+                    width: auto;
+                    float: none;
+                }
+                .data-label {
+                    display: inline-block;
+                    float: left;
+                    width: 30%;
+                    margin-right: $grid-unit/2;
+                    @include respond-to($lap-and-desk){
+                        display: none;
+                    }
+                    font-weight: bold;
+                }
+                .data {
+                    display: block;
+                    overflow: hidden;
+                }
+                .table-actions {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin: 0;
+                    padding: 0;
+                }
+                border-bottom: 1px solid $colour-greyscale-88;
+                background-color: $colour-greyscale-94;
+                &.main-index {
+                    background-color: $colour-white;
+                }
+                @include respond-to($lap-and-desk){
+                    background-color: transparent;
+                }
+            }
+            tr:first-of-type td {
+                border-top: 1px solid $colour-greyscale-88;
+            }
+            tr {
+                background: $colour-white;
+            }
+            tr:hover {
+                background-color: $colour-greyscale-96;
+            }
+        }
+    }
+
+}
+
+@include table("table");

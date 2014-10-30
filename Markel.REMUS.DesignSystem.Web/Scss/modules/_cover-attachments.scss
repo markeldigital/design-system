@@ -1,0 +1,31 @@
+@mixin cover-attachments($selector) {
+    #{$selector} {
+        h3 {
+            @include set-text-as(body, $margins-overrides: zero-both);
+            font-weight: bold;
+        }
+
+        .panel-inverse {
+            min-height: $grid-unit*10;
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+        }
+
+        .cover-attachments-left, .cover-attachments-right {
+            @include respond-to($lap-and-desk) {
+                @include span-columns($one-half);
+            }
+        }
+
+
+        @include respond-to-print(){
+            .cover-attachments-left, .cover-attachments-right {
+                @include span-columns($one-half);
+            }
+        }
+    }
+}
+
+@include cover-attachments(".cover-attachments");

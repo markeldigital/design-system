@@ -1,0 +1,69 @@
+﻿@mixin cover-headline($selector){
+    #{$selector} {
+        @include clearfix;
+        margin-bottom: $grid-unit/4;
+        overflow: hidden;
+        vertical-align: middle;
+        background-color: $colour-greyscale-94;
+        @include respond-to($lap-and-desk){
+            padding: 2*$grid-unit 3*$grid-unit;//to align the spans inside
+        }
+        .checkbox-option.checkbox-stacked input + label {
+            border: none;
+            border-radius: none;
+            box-shadow: none;
+            background-color: $colour-greyscale-94;
+            padding: 0;
+            margin: 0;
+            .fake-check-box:before {
+                background-color: $colour-white;
+                border-color: $colour-white;
+                position: relative;
+                top:-2px;
+            }
+        }
+
+        .checkbox {
+            margin-top: 1.5*$grid-unit;
+            margin-right: 1.5*$grid-unit;
+            float: left;
+        }
+        .cover-name, .selected-premium-value {
+            @include span-columns($one-half);
+            position: relative;
+            line-height: 1;
+        }
+
+        .selected-premium-value {
+            float: right;
+            text-align: right;
+            width: auto;
+            @include set-text-as(beta, $margins-overrides: zero-both);
+        }
+        .cover-name {
+            float: left;
+            top: 4px;
+            @include set-text-as(gamma, $margins-overrides: zero-both);
+            .fake-check-box {
+                padding-right: 1.5*$grid-unit;
+            }
+            @include respond-to($lap-and-desk){
+                top: 7px;
+                position: relative;
+            }
+        }
+
+        @include respond-to-print(){
+            padding: $grid-unit/2 0;
+            background: transparent;
+            .panel-inverse{
+                padding: $grid-unit/2 0;
+            }
+            & > .row:nth-child(2){
+                border-bottom: solid 1px $colour-black;
+                margin-bottom: $grid-unit;
+            }
+        }
+    }
+}
+

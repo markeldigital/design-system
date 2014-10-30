@@ -1,0 +1,100 @@
+﻿@{
+ViewBag.Title = @Text.Content.StatusTitle;
+Layout = "Shared/Layout";
+}
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<style>
+    /* Put into a 'filters' module or 'dashboard-screen' Scss file when needed in the real code. */
+
+    .question-address input {
+        min-height: 0;
+    }
+    .question-address input {
+        margin-right: 5px;
+    }
+    .question-address .icon-search {
+        color: white;
+    }
+    .question-address select[multiple]{
+        padding: 0;
+    }
+    .question-address .search-results label {
+        display: block;
+    }
+</style>
+
+
+
+<article class="question-page sidekick-template grid-width">
+    <div class="primary-content">
+        <h1>Dashboard prototype</h1>
+
+        <form action="">
+            <div class="question-address">
+                <div class="question-main">
+                    <legend>
+                        <span class="legend-content">Postcode address search</span>
+                    </legend>
+                    <div class="option">
+                        <div class="row">
+                            <div class="label-selector"></div>
+                            <div class="input-and-unit">
+                                <input type="search" class="search" placeholder="eg M5H3P5"/><a class="button icon--left" href="" onclick="PostcodeAnywhereInternational_Interactive_RetrieveByPostalCode_v2_20('ZX37-DZ79-RU98-CX68', 'CAN', 'M3H3P5'); return false;"><i class="icon-search"></i>Search</a>
+                            </div>
+                            <p class="error-message"></p>
+                        </div>
+                    </div>
+                    <div class="search-results" id="address-search-results">
+                        <label for="results-selector">Results</label>
+                        <select multiple id="results-selector">
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="sidekick">
+    </div>
+</article>
+
+<script>
+    $('.error-message').hide();
+    $('#address-search-results').hide();
+
+    function PostcodeAnywhereInternational_Interactive_RetrieveByPostalCode_v2_20(Key, Country, PostalCode, Building) {
+        $.getJSON("http://services.postcodeanywhere.co.uk/PostcodeAnywhereInternational/Interactive/RetrieveByPostalCode/v2.20/json3.ws?callback=?",
+                {
+                    Key: Key,
+                    Country: Country,
+                    PostalCode: PostalCode,
+                    Building: Building
+                },
+                function (data) {
+                    // Test for an error
+                    if (data.Items.length == 1 && typeof(data.Items[0].Error) != "undefined") {
+                        $('.option').addClass('error');
+                        $('.error-message').html('<i class="icon-error"></i>' + data.Items[0].Description).show();
+                    }
+                    else {
+                        if (data.Items.length == 0){
+                            $('.error-message').html('<i class="icon-error"></i>' + 'No results found').show();
+                        }
+                        else {
+                            var resultsHTML = "";
+
+                            var result;
+                            for(var i = 0; i < data.Items.length; i++){
+                                result = data.Items[i];
+                                resultsHTML += "<option>" + result.Description + ", " + result.PostalCode + "," + result.City + " " + result.City + "</option>";
+                            }
+
+                            $('.error-message').hide();
+                            $('#address-search-results select').html(resultsHTML);
+                            $('#address-search-results').show();
+                        }
+                    }
+                });
+    }
+</script>

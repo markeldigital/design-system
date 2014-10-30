@@ -1,0 +1,114 @@
+@mixin all-icons-helper(){
+    $icon-size: $large-spacer;
+    font-family: 'Iconography';
+    @include set-text-as(body, $margins-overrides: zero-both);
+    line-height:$icon-size;
+    display: inline-block;
+    width: $icon-size;
+    height: $icon-size;
+    text-align: center;
+    color: $colour-interaction-60;
+    background-color: transparent;
+    border-radius: $standard-curvature;
+	vertical-align: baseline;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin all-icons-helper-mini() {
+    $icon-size: $grid-unit * 1.5;
+    line-height:$icon-size;
+    width: $icon-size;
+    height: $icon-size;
+}
+
+@mixin iconography($icon-map){
+    /*
+    * To add icons go to http://icomoon.me and sign in with the company account (TODO: Set this up!).
+    * Our current icon set is FontAwesome.
+    */
+    @font-face {
+        font-family: 'Iconography';
+        src: url('../fonts/iconography-webfont.woff?v=4.1.0') format('woff'), 
+			url('../fonts/iconography-webfont.ttf?v=4.1.0') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    // Create the comma separated selector for all the icons.
+    $all-icons-selector: '';
+    @each $icon-name in map-keys($icon-map) {
+        $all-icons-selector: '.icon-' + $icon-name + ',' + $all-icons-selector;
+    }
+
+    // Style all the icons to use the font.
+    #{$all-icons-selector} {
+        @include all-icons-helper;
+        &.mini {
+            @include all-icons-helper-mini;
+        }
+    }
+
+    // Assign the appropriate content to each of the icon classes.
+    @each $icon-name in map-keys($icon-map) {
+        .icon-#{$icon-name}:before {
+            content: map-get($icon-map, $icon-name);
+        }
+    }
+}
+$icon-map:(
+        "reserve-space":            "\2002",
+        "tick":                    "\f00c",
+        "cross":                   "\f00d",
+        "info":                    "\f129",
+        "spinner":                 "\f110",
+        "menu":                    "\f0c9",
+        "plus":                    "\f067",
+        "minus":                   "\f068",
+        "error":                   "\f12a",
+        "circle-o":                "\f10c",
+        "dashboard":               "\f0e4",
+        "check-circle-o":          "\f05d",
+        "chevron-circle-down":     "\f13a",
+        "circle":                  "\f111",
+        "caret-left":              "\f0d9",
+        "caret-up":                "\f0d8",
+        "caret-down":              "\f0d7",
+        "caret-right":             "\f0da",
+        "clock":                   "\f017",
+        "certificate":             "\f0a3",
+        "signal":                  "\f012",
+        "mobile":                  "\f10b",
+        "user":                    "\f007",
+        "calendar":                "\f073",
+        "exclamation-triangle":    "\f071",
+        "unlink":                  "\f127",
+        "minus-circle":            "\f056",
+        "search":                  "\f002",
+        "chain-broken":            "\f127",
+        "arrrow-circle-right":     "\f0a9",
+        "phone":                   "\f095",
+        "angle-left":              "\f104",
+        "angle-right":             "\f105",
+        "angle-up":                "\f106",
+        "angle-down":              "\f107",
+        "refresh":                 "\f021",
+        "info-circle":             "\f05a",
+        "exclamation-circle":      "\f06a"
+);
+
+@include iconography($icon-map);
+
+@mixin icon-content-for-name($icon-name){
+    content: map-get($icon-map, $icon-name);
+    @include all-icons-helper;
+}
+
+@mixin get-icon-content-only($icon-name){
+    content: map-get($icon-map, $icon-name);
+}

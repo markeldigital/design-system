@@ -1,0 +1,21 @@
+@mixin main-content($selector){
+    #{$selector}{
+        width: 100%;
+        margin-bottom: $grid-unit*10;
+        h1 {
+            word-wrap: break-word;
+            padding-top: 1.5*$menu-palm-height;
+            @include respond-to($lap-and-desk){
+                padding-top: 1.5*$menu-lap-height;
+            }
+            @include respond-to($desk-only){
+                padding-top: 1.5*$menu-desk-height;
+            }
+        }
+        @include respond-to-print(){
+            &>div:first-child{
+                border-top: 1px solid $colour-greyscale-39;
+            }
+        }
+    }
+}

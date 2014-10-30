@@ -1,0 +1,44 @@
+@mixin expander($selector){
+    #{$selector}{
+        i {
+            background-color: $colour-interaction-100;
+            margin-right: $grid-unit;
+            color: $colour-white;
+            &.hover, &:hover {
+                background-color: darken($colour-interaction-100, 10);
+                @include transition($standard-transition-animation);
+            }
+        }
+        &.open > a i {
+            &.hover, &:hover {
+                background-color: darken($colour-interaction-100, 10);
+                @include transition($standard-transition-animation);
+            }
+        }
+        &.open > a i:before {
+            @include icon-content-for-name("angle-down");
+            color: $colour-white;
+        }
+
+        a.expander-trigger {
+          display: block;
+          margin-right: 1.5*$grid-unit;
+        }
+
+        @include respond-to-print(){
+            a.expander-trigger {
+                display: none;
+            }
+                & > a i:before {
+                @include icon-content-for-name("angle-down");
+                color: $colour-white;
+            }
+            .expander-content {
+                display: block !important;
+            }
+        }
+    }
+}
+
+
+@include expander(".expander");
