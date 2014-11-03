@@ -1,9 +1,9 @@
 ﻿'use strict';
 var path = require('path');
 module.exports = function (grunt) {
-    var root = __dirname;
-    console.log(root);
-    var sourcePathForScss = path.join(root, "/Scss/design-system.scss");
+    var projectRoot = path.join(__dirname, "Markel.REMUS.DesignSystem.Web");
+    console.log(projectRoot);
+    var sourcePathForScss = path.join(projectRoot, "/Scss/design-system.scss");
     console.log(sourcePathForScss);
     grunt.initConfig({
         sass: {
@@ -14,7 +14,7 @@ module.exports = function (grunt) {
                 files: [
                 {
                     src: sourcePathForScss,
-                    dest: 'Content/Styles/design-system.css',
+                    dest: path.join(projectRoot, 'Content/Styles/design-system.css'),
                     ext: '.css'
                 }
                 ]
@@ -23,17 +23,18 @@ module.exports = function (grunt) {
 
         watch: {
             gruntfile: {
-                files: path.join(root, 'gruntfile.js')
+                files: path.join(projectRoot, 'gruntfile.js')
             },
             css: {
-                files: path.join(root, '/Scss/**'),
+                files: path.join(projectRoot, '/Scss/**'),
                 tasks: ['sass']
             }
         }
 
     });
 
-    grunt.loadNpmTasks('grunt-collection');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.registerTask('default', ['watch']);
 
 };

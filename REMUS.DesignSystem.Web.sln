@@ -5,6 +5,11 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.REMUS.DesignSystem.Web", "Markel.REMUS.DesignSystem.Web\Markel.REMUS.DesignSystem.Web.csproj", "{D94629C9-B040-4288-B2D8-76AB420552FC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{29246634-C53B-49EC-85BD-928082238832}"
+	ProjectSection(SolutionItems) = preProject
+		gruntfile.js = gruntfile.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

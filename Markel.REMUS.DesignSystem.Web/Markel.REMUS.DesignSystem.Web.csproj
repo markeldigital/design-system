@@ -446,7 +446,6 @@
     <Content Include="Content\non_bower\modernizr.custom.09892.js" />
     <Content Include="Content\non_bower\picoModal-2.0.0.min.js" />
     <Content Include="Content\non_bower\placeholders.min.js" />
-    <Content Include="Content\Styles\design-system.css" />
     <Content Include="Views\Snippets\design-system.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -653,9 +652,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="gruntfile.js" />
+    <Folder Include="Content\Styles\" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
@@ -663,7 +661,7 @@
   </PropertyGroup>
   <Target Name="BeforeBuild">
     <MakeDir Directories="$(ProjectDir)\dummy\net40" />
-    <Exec Command="grunt sass --no-color" />
+    <Exec Command="grunt sass --gruntfile=$(ProjectDir)..\gruntfile.js --no-color" />
   </Target>
   <Target Name="AfterBuild">
     <ItemGroup>
