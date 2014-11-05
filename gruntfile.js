@@ -9,9 +9,9 @@ module.exports = function (grunt) {
     var params = {
         'sass-publishing-path': 'design_system/Shared/Scss/',
         'views-publishing-path': 'design_system/Shared/Views/',
-        'broker-root': '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web',
-        'public-root': '../REMUS.RetailPublicSite/REMUS.RetailPublicSite',
-        'underwriter-root': '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal'
+        'broker-root': '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/',
+        'public-root': '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/',
+        'underwriter-root': '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/'
     };
 
     grunt.initConfig({
@@ -36,22 +36,24 @@ module.exports = function (grunt) {
             },
             css: {
                 files: path.join(projectRoot, '/Scss/**'),
-                tasks: ['sass', 'copy:toProjectsforLocalDev']
+                tasks: ['sass', 'copy:toAllUIProjects']
             }
         },
 
         copy: {
-            toProjectsforLocalDev: {
+            toAllUIProjects: {
                 files: [
                     // Broker
-                    {expand: true, src: ['Sass/**'], dest: params['broker-root'] + params['sass-publishing-path']},
-                    {expand: true, src: ['Views/**'], dest: params['broker-root'] + params['views-publishing-path']},
+                    {expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['broker-root'], params['sass-publishing-path'])},
+                    {expand: true, cwd: path.join(projectRoot, 'Views'), src: path.join('**'), dest: path.join(params['broker-root'], params['views-publishing-path'])},
+
                     // Public
-                    {expand: true, src: ['Sass/**'], dest: params['public-root'] + params['sass-publishing-path']},
-                    {expand: true, src: ['Views/**'], dest: params['public-root'] + params['views-publishing-path']},
+                    {expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['public-root'], params['sass-publishing-path'])},
+                    {expand: true, cwd: path.join(projectRoot, 'Views'), src: path.join('**'), dest: path.join(params['public-root'], params['views-publishing-path'])},
+
                     // Underwriter
-                    {expand: true, src: ['Sass/**'], dest: params['underwriter-root'] + params['sass-publishing-path']},
-                    {expand: true, src: ['Views/**'], dest: params['underwriter-root'] + params['views-publishing-path']}
+                    {expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['underwriter-root'], params['sass-publishing-path'])},
+                    {expand: true, cwd: path.join(projectRoot, 'Views'), src: path.join('**'), dest: path.join(params['underwriter-root'], params['views-publishing-path'])},
                 ]
             }
         },
