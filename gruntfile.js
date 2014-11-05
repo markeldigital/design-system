@@ -54,12 +54,41 @@ module.exports = function (grunt) {
                     {expand: true, src: ['Views/**'], dest: params['underwriter-root'] + params['views-publishing-path']}
                 ]
             }
+        },
+
+        hub: {
+            all: {
+                options: {
+                    allowSelf: true,
+                    concurrent: 6
+                },
+                src: [
+                    // Step 1: Design System will publish itself to the other projects for local dev (from task watch).
+                    // Step 2: Each project watches it's own app.scss for changes and this will notice when design_system is updated and published by step 1 above...
+                    // the output of step 2 is an app.css for each project that includes Design System as it's base and adds on any extra styles needed for that project.
+                    '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/gruntfile.js',
+                    '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/gruntfile.js',
+                    '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/gruntfile.js'
+                ]
+            }
+        },
+
+        concurrent: {
+            options: {
+                logConcurrentOutput: true
+            },
+            dev: {
+                tasks: ["watch", "hub:all:watch"]
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.registerTask('default', ['watch']);
 
+    grunt.loadNpmTasks('grunt-hub');
+    grunt.loadNpmTasks('grunt-concurrent');
+
+    grunt.registerTask('default', ['concurrent:dev']);
 };
