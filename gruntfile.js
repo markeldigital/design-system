@@ -36,11 +36,11 @@ module.exports = function (grunt) {
             },
             css: {
                 files: path.join(projectRoot, '/Scss/**'),
-                tasks: ['sass', 'copy:toAllUIProjects']
+                tasks: ['sass', 'sync:toAllUIProjects']
             }
         },
 
-        copy: {
+        sync: {
             toAllUIProjects: {
                 files: [
                     // Broker
@@ -87,7 +87,7 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-sync');
 
     grunt.loadNpmTasks('grunt-hub');
     grunt.loadNpmTasks('grunt-concurrent');
