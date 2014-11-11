@@ -12,6 +12,7 @@
             @include set-text-as($text-size, $responsive-text: false, $margins-overrides: zero-both);
             @include padding-for-form-element($standard-touch-size, $text-size, $border-size);
             text-align: center;
+            white-space: nowrap;
         }
 
 
