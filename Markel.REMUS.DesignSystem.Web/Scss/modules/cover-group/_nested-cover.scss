@@ -1,0 +1,35 @@
+@mixin nested-cover($selector) {
+    #{$selector} {
+        margin-top: $grid-unit/4;
+        .cover-headline {
+            background-color: $colour-greyscale-97;
+
+            @include respond-to($lap-and-desk){
+                padding: $grid-unit 3*$grid-unit;
+            }
+            .checkbox-option.checkbox-stacked input + label {
+                background-color: $colour-greyscale-97;
+            }
+            .checkbox-option.checkbox-stacked input[type=checkbox][disabled] + label {
+                color: $colour-greyscale-76;
+                .fake-check-box:before {
+                    background: transparent;
+                }
+            }
+            .checkbox-option.checkbox-stacked input[type=checkbox][disabled]:hover + label {
+                background-color: $colour-greyscale-97;
+                border: none;
+            }
+            .cover-name {
+                @include set-text-as(gamma,$reduced:true,$margins-overrides:zero-top);
+                span {
+                    @include set-text-as(delta,$margins-overrides:zero-top);
+                }
+            }
+            .limit-header-container {
+                padding-top: $grid-unit;
+            }
+        }
+
+    }
+}

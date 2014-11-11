@@ -1,13 +1,13 @@
-﻿@import "cover-headline";
+﻿@import "nested-cover";
+@import "cover-headline";
 @import "cover-contents";
-@import "cover-nested";
 @import "modify-cover-as-not-taken-up";
 @import "modify-cover-as-unable-to-quote-online";
 
 @mixin cover($selector){
     #{$selector} {
         @include clearfix;
-        margin-bottom: 3*$grid-unit;
+
         @include respond-to-print(){
             padding: $grid-unit/2 0;
             background: transparent;
@@ -18,7 +18,7 @@
                 border-bottom: solid 1px $colour-black;
                 margin-bottom: $grid-unit;
             }
-            
+
             .checkbox-option{
                 input[type=checkbox] {
                     display: none;
@@ -30,7 +30,4 @@
     @include cover-headline('.cover .cover-headline');
     @include modify-cover-as-not-taken-up($selector, '.cover--not-taken-up');
     @include modify-cover-as-unable-to-quote-online($selector, '.cover--unable-to-quote-online');
-    @include cover-nested('.cover .cover-nested');
 }
-
-@include cover(".cover");
