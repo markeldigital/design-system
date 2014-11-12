@@ -3,9 +3,9 @@
 
 @mixin question-percentage-breakdown($selector){
     $label-selector-palm-size: $three-fifths;
-    $label-selector-lap-size: $three-fifths;
+    $label-selector-lap-size: 7*$one-twelfth;
     $label-selector-desk-size: $three-quarters;
-    $percentages-palm-size:$two-fifths;
+    $percentages-palm-size: 5*$one-twelfth;
     $percentages-lap-size: $two-fifths;
     $percentages-desk-size: $one-quarter;
 
@@ -31,7 +31,7 @@
             margin: 0 0 $grid-unit 0;
             overflow: hidden;
             .additional-content {
-                margin-bottom:2*$grid-unit;
+                @include set-text-as(delta, $reduced: true, $margins-overrides: zero-both);
                 @include span-columns($label-selector-palm-size);
                 @include respond-to($lap-and-desk){
                     @include span-columns($label-selector-lap-size);
@@ -39,7 +39,7 @@
                 @include respond-to($desk-only){
                     @include span-columns($label-selector-desk-size);
                 }
-                @include pad(0 4*$grid-unit 0 0);
+                @include pad($grid-unit/2 4*$grid-unit 0 0);
             }
 		}
         legend {
@@ -64,6 +64,11 @@
 			select {
 				width: 100%;
 			}
+
+            // Hack for small screens dropping unit onto second line.
+            @include respond-to($palm-only){
+                margin-right: 0;
+            }
 		}
         label {
             $border-size: 1px;
