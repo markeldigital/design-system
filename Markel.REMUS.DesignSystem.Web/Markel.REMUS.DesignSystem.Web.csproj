@@ -496,9 +496,14 @@
     <None Include="Scss\modules\chrome-and-content\_main-navigation.scss" />
     <None Include="Scss\modules\chrome-and-content\_mobile-trigger.scss" />
     <None Include="Scss\modules\chrome-and-content\_navigation-dropdown.scss" />
-    <None Include="Scss\modules\cover\_cover-headline.scss" />
-    <None Include="Scss\modules\cover\_modify-cover-as-not-taken-up.scss" />
-    <None Include="Scss\modules\cover\_modify-cover-as-unable-to-quote-online.scss" />
+    <None Include="Scss\modules\cover-group\_cover-attachments.scss" />
+    <None Include="Scss\modules\cover-group\_cover-contents.scss" />
+    <None Include="Scss\modules\cover-group\_cover-group.scss" />
+    <None Include="Scss\modules\cover-group\_cover-headline.scss" />
+    <None Include="Scss\modules\cover-group\_cover.scss" />
+    <None Include="Scss\modules\cover-group\_modify-cover-as-not-taken-up.scss" />
+    <None Include="Scss\modules\cover-group\_modify-cover-as-unable-to-quote-online.scss" />
+    <None Include="Scss\modules\cover-group\_nested-cover.scss" />
     <None Include="Scss\modules\forms\_form-element.scss" />
     <None Include="Scss\modules\forms\_forms-ie-hacks.scss" />
     <None Include="Scss\modules\forms\_forms.scss" />
@@ -532,7 +537,6 @@
     <None Include="Scss\modules\select2\_select2.scss" />
     <None Include="Scss\modules\tabs\_tabs.scss" />
     <None Include="Scss\modules\_contact-us.scss" />
-    <None Include="Scss\modules\_cover-attachments.scss" />
     <None Include="Scss\modules\_documents.scss" />
     <None Include="Scss\modules\_endorsements.scss" />
     <None Include="Scss\modules\_error-message.scss" />
@@ -543,7 +547,6 @@
     <None Include="Scss\modules\_flag.scss" />
     <None Include="Scss\modules\_footer.scss" />
     <None Include="Scss\modules\_links.scss" />
-    <None Include="Scss\modules\cover\_cover.scss" />
     <None Include="Scss\modules\_iconography.scss" />
     <None Include="Scss\modules\_marketing-info.scss" />
     <None Include="Scss\modules\_form-fragment.scss" />
@@ -616,6 +619,9 @@
     <None Include="Views\Snippets\activities-explanations-prototype.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Content Include="Views\Snippets\bi_cover-prototype.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Views\Snippets\html-email-prototype.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

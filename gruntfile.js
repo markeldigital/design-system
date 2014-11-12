@@ -82,46 +82,6 @@ module.exports = function (grunt) {
             dev: {
                 tasks: ["watch", "hub:all:watch"]
             }
-        },
-
-        nodemailer: {
-            options: {
-                transport: {
-                    type: 'SMTP',
-                    options: {
-                        service: 'Gmail',
-                        auth: {
-                            user: 'nigelbrokertest@gmail.com',
-                            pass: 'WHEREDOYOUGETYOURCOFFEE'
-                        }
-                    }
-                },
-                message: {
-                    subject: 'TEST: Markel broker platform updates...',
-                    text: 'Plain text message',
-                    html: '<body><h1>HTML custom message</h1></body>'
-                },
-                recipients: [
-                    {
-                        email: 'nigelbrokertest@gmail.com',
-                        name: 'Nigel Broker TEST'
-                    },
-                    {
-                        email: 'nbailey@thoughtworks.com',
-                        name: 'Nigel Broker TEST'
-                    },
-                    {
-                        email: 'cthelwel@thoughtworks.com',
-                        name: 'Nigel Broker TEST'
-                    }
-                ]
-            },
-
-            inline: { /* use above options*/ },
-
-            external: {
-                src: ['html-email-prototype.html']
-            }
         }
     });
 
@@ -130,7 +90,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-sync');
     grunt.loadNpmTasks('grunt-hub');
     grunt.loadNpmTasks('grunt-concurrent');
-    grunt.loadNpmTasks('grunt-nodemailer');
 
     grunt.registerTask('default', ['concurrent:dev']);
 };
