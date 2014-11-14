@@ -1,7 +1,6 @@
 ﻿@mixin cover-headline($selector){
     #{$selector} {
         @include clearfix;
-        margin-bottom: $grid-unit/4;
         overflow: hidden;
         vertical-align: middle;
         background-color: $colour-greyscale-94;

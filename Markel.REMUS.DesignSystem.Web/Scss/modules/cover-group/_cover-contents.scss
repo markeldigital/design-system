@@ -1,5 +1,6 @@
 @mixin cover-contents($selector) {
     #{$selector} {
+        margin-top: $grid-unit/4;
         .cover-level-label {
             @include set-text-as(body, $margins-overrides: zero-bottom);
             margin: 0;
