@@ -84,12 +84,13 @@
                 right: $standard-touch-size / 4.5;
                 top: $standard-touch-size / 4.5;
                 i {
-                    background-color: $colour-interaction-100;
-                    color: $colour-white;
-                    &.hover, &:hover {
-                        background-color: darken($colour-interaction-100, 10);
-                        @include transition($standard-transition-animation);
-                    }
+                     @include icon-interaction($colour-white,$colour-interaction-100);
+//                    background-color: $colour-interaction-100;
+//                    color: $colour-white;
+//                    &.hover, &:hover {
+//                        background-color: darken($colour-interaction-100, 10);
+//                        @include transition($standard-transition-animation);
+//                    }
                     &:before {
                         position: relative;
                         top:2px;

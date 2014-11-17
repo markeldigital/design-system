@@ -1,13 +1,8 @@
 @mixin expander($selector){
     #{$selector}{
         i {
-            background-color: $colour-interaction-100;
             margin-right: $grid-unit;
-            color: $colour-white;
-            &.hover, &:hover {
-                background-color: darken($colour-interaction-100, 10);
-                @include transition($standard-transition-animation);
-            }
+           @include icon-interaction($colour-white,$colour-interaction-100);
         }
         &.open > a i {
             &.hover, &:hover {

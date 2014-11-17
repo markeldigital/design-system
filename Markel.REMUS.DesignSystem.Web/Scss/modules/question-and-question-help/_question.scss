@@ -66,6 +66,11 @@
                 }
             }
         }
+        &.question-multiple-choice {
+            .checkbox-option label {
+                margin: 0;
+            }
+        }
     }
     @include option($selector);
 

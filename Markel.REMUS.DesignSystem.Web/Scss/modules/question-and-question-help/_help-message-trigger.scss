@@ -18,8 +18,9 @@
 		text-decoration: none;
 
         .icon-info {
-            background-color: $colour-interaction-60;
-            color: $colour-white;
+            @include icon-interaction($colour-white,$colour-interaction-100);
+            margin: 0  0 $grid-unit $grid-unit/2;
+
         }
         &.open .icon-info:after {
             position: absolute;
