@@ -1,7 +1,7 @@
 @mixin expander($selector){
     #{$selector}{
         i {
-            margin-right: $grid-unit;
+           margin-right: $grid-unit;
            @include icon-interaction($colour-white,$colour-interaction-100);
         }
         &.open > a i {
