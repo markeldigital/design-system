@@ -69,7 +69,8 @@
 @import 'modules/question-group-message';
 @import 'modules/select2/_select2';
 @import 'modules/hero/_hero';
-@import 'modules/tabs/_tabs';
+
+@import '../Components/Tabs/scss/_tabs.scss';
 
 // Templates
 @import 'templates/_twins-template';
