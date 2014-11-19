@@ -457,6 +457,7 @@
     <Content Include="Content\Fonts\iconography-webfont.ttf" />
     <Content Include="Content\Fonts\iconography-webfont.woff" />
     <None Include="Components\expander\scss\_expander.scss" />
+    <None Include="Components\expander\template\Expander.cshtml" />
     <None Include="Components\tabs\scss\_tabs.scss" />
     <None Include="Content\non_bower\chosen_v1.1.0\.bower.json" />
     <None Include="Content\non_bower\jquery-ui-1.10.4.custom\development-bundle\package.json" />
