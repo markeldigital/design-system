@@ -14,18 +14,16 @@
         }
 
         #{$sidekick} {
-            border-top: 1px solid $colour-black;
+            border: none;
             margin-top: $grid-unit;
-            padding-top: $grid-unit;
+            padding-top: 2*$grid-unit;
             overflow: auto;
             @include respond-to($lap-and-desk){
-                border-top: none;
                 @include span-columns($one-third);
                 margin-top: 0;
                 padding-top: 0;
             }
             @include respond-to-print(){
-                border: none;
                 overflow: hidden;
             }
         }
