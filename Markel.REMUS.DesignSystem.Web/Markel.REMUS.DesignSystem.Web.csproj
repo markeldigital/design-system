@@ -627,10 +627,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Views\Snippets\bi_cover-prototype.cshtml" />
-    <None Include="Views\Snippets\html-email-prototype.cshtml">
+    <Content Include="Views\Snippets\email-editor.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
     <None Include="Views\Snippets\postcode-form-prototype.cshtml" />
+    <Content Include="Views\Snippets\output-email.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Views\Snippets\stacked-questions-prototype.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
