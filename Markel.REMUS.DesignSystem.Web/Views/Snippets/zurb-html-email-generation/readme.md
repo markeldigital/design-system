@@ -2,7 +2,7 @@
 
 This project allows us to have a robust email template based on the boilerplate from Zurb whilst still using our brand.
 
-The output should be placed in the email editor file in the 'Snippets' directory ready for people to work on the content of the final email.
+The output should be placed in the output-email file that is pulled in by an iframe in the email-editor file ready for people to work on the content of the final email.
 
 ## Steps to update
 

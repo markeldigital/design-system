@@ -128,11 +128,11 @@ $sub-column-padding-right: $column-gutter / 2;
 // $paragraph-lead-line-height: 21px;
 
 // We use these to style anchors
-// $anchor-text-decoration: none;
-// $anchor-font-color: #2ba6cb;
-// $anchor-font-color-visited: $anchor-font-color;
-// $anchor-font-color-hover: #2795b6;
-// $anchor-font-color-active: $anchor-font-color-hover;
+$anchor-text-decoration: none;
+$anchor-font-color: $colour-interaction-100;
+$anchor-font-color-visited: $colour-interaction-100;
+$anchor-font-color-hover: $colour-interaction-10;
+$anchor-font-color-active: $anchor-font-color-hover;
 
 // $header-anchor-font-color: $anchor-font-color;
 // $header-anchor-font-color-visited: $header-anchor-font-color;

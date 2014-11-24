@@ -29,8 +29,21 @@ body, .body {
     }
 }
 
+.context-header {
+    text-align: center;
+    color: $colour-greyscale-63;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 /* HELPERS
 */
+
+// Remember to add <center> tag and text-align='center' as well.
+.center {
+    text-align: center;
+}
+
 .markel-rounding {
     -moz-border-radius: $standard-curvature;
     -webkit-border-radius: $standard-curvature;

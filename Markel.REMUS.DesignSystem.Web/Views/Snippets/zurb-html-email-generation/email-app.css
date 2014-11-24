@@ -442,17 +442,17 @@ small {
   font-size: 10px; }
 
 a {
-  color: #2ba6cb;
+  color: #009aa6;
   text-decoration: none; }
 
 a:hover {
-  color: #2795b6 !important; }
+  color: #e5f5f6 !important; }
 
 a:active {
-  color: #2795b6 !important; }
+  color: #e5f5f6 !important; }
 
 a:visited {
-  color: #2ba6cb !important; }
+  color: #009aa6 !important; }
 
 h1 a,
 h2 a,
@@ -460,7 +460,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-  color: #2ba6cb; }
+  color: #009aa6; }
 
 h1 a:active,
 h2 a:active,
@@ -468,7 +468,7 @@ h3 a:active,
 h4 a:active,
 h5 a:active,
 h6 a:active {
-  color: #2ba6cb !important; }
+  color: #009aa6 !important; }
 
 h1 a:visited,
 h2 a:visited,
@@ -476,7 +476,7 @@ h3 a:visited,
 h4 a:visited,
 h5 a:visited,
 h6 a:visited {
-  color: #2ba6cb !important; }
+  color: #009aa6 !important; }
 
 /* Panels */
 .panel {
@@ -759,8 +759,17 @@ body, .body {
 .panel h2 {
   text-align: center; }
 
+.context-header {
+  text-align: center;
+  color: #a1a1a1;
+  font-weight: bold;
+  margin-bottom: 0; }
+
 /* HELPERS
 */
+.center {
+  text-align: center; }
+
 .markel-rounding {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
