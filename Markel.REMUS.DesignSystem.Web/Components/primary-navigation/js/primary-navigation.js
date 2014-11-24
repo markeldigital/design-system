@@ -3,9 +3,6 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).closest('li').toggleClass('open');
         $('.overlay').toggleClass('open');
-        $('.content').bind('touchmove', function(e){
-            e.preventDefault()
-        });
     });
 
     $('.overlay').on('click', function(e){

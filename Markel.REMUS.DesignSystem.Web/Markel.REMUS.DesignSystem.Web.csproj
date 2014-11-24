@@ -132,6 +132,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Components\common\js\classList.min.js" />
+    <Content Include="Components\expander\js\expander.js" />
+    <Content Include="Components\primary-navigation\js\primary-navigation.js" />
+    <Content Include="Components\tabs\js\ds-tabs.js" />
     <Content Include="Content\app\primary-navigation.js" />
     <Content Include="Content\Images\apple-touch-icon-114x114-precomposed.png" />
     <Content Include="Content\Images\apple-touch-icon-144x144-precomposed.png" />
@@ -453,6 +457,10 @@
     <None Include="app.config" />
     <Content Include="Content\Fonts\iconography-webfont.ttf" />
     <Content Include="Content\Fonts\iconography-webfont.woff" />
+    <None Include="Components\expander\scss\_expander.scss" />
+    <None Include="Components\expander\template\Expander.cshtml" />
+    <None Include="Components\primary-navigation\template\PrimaryNavigation.cshtml" />
+    <None Include="Components\tabs\scss\_tabs.scss" />
     <None Include="Content\non_bower\chosen_v1.1.0\.bower.json" />
     <None Include="Content\non_bower\jquery-ui-1.10.4.custom\development-bundle\package.json" />
     <None Include="Content\non_bower\jquery-ui-1.10.4.custom\development-bundle\README.md" />
@@ -535,7 +543,6 @@
     <None Include="Scss\modules\question-single-checkbox\_question-single-checkbox.scss" />
     <None Include="Scss\modules\select2\_select2-overrides.scss" />
     <None Include="Scss\modules\select2\_select2.scss" />
-    <None Include="Scss\modules\tabs\_tabs.scss" />
     <None Include="Scss\modules\_contact-us.scss" />
     <None Include="Scss\modules\_documents.scss" />
     <None Include="Scss\modules\_endorsements.scss" />
@@ -592,9 +599,6 @@
     <Content Include="Views\Global\Error.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Global\Partial\PrimaryNavigation.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Views\Snippets\dashboard-prototype.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -622,6 +626,7 @@
     <Content Include="Views\Snippets\bi_cover-prototype.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Views\Snippets\bi_cover-prototype.cshtml" />
     <None Include="Views\Snippets\html-email-prototype.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

@@ -18,14 +18,14 @@
             "label-text-align": center,
             "fake-input-display": block,
             "fake-input-margin": 0 auto,
-            "label-margin": 0 $medium-spacer 0 0,
-            "label-max-width": 20*$medium-spacer
+            "label-margin": 0 $grid-unit*2 0 0,
+            "label-max-width": 40*$grid-unit
     );
     @if (map_get($options, "display") == "stacked") {
         $display-options: (
                 "width": 100%,
                 "margin": 0,
-                "label-padding": 1.5*$grid-unit $medium-spacer,
+                "label-padding": 1.5*$grid-unit 2*$grid-unit,
                 "label-text-align": left,
                 "fake-input-display": inline-block,
                 "fake-input-margin": 0 $grid-unit 0 0,

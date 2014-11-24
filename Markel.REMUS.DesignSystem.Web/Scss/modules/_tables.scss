@@ -25,7 +25,6 @@
                 vertical-align: top;
             }
         }
-
         tbody {
             td {
                 overflow: hidden;
@@ -60,7 +59,7 @@
                     padding: 0;
                 }
                 border-bottom: 1px solid $colour-greyscale-88;
-                background-color: $colour-greyscale-94;
+                background-color: $colour-greyscale-97;
                 &.main-index {
                     background-color: $colour-white;
                 }
@@ -79,7 +78,6 @@
             }
         }
     }
-
 }
 
 @include table("table");

@@ -10,6 +10,7 @@
     <file src="..\scripts\*.*" target="scripts" />
     <file src="Deploy.ps1" target="." />
     <file src="PreDeploy.ps1" target="." />
+    <file src="Components\**\*.*" target="Components" />
     <file src="bower_components\**\*.*" target="Shared\bower_components" />
     <file src="Scss\**\*.*" target="Shared\Scss" />
     <file src="bin\Release\Views\**\*.*" target="Shared\Views" />
