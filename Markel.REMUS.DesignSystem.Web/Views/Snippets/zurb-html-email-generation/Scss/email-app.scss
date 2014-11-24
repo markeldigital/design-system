@@ -1,0 +1,12 @@
+// Import Markel variables
+@import '../../../../Scss/_neat-setup-vars';
+@import '../../../../Scss/_vars';
+
+// Setup 'Ink' variables using Markel variables
+@import '_markel-settings-for-zurb-framework.scss';
+
+// Sassy-ink port of ZURB's 'Ink' framework
+@import "../lib/sassy-ink-master/scss/ink";
+
+// Markel custom styles to add on top of Ink.
+@import "_markel-additions.scss";

@@ -1,0 +1,51 @@
+/* GLOBAL
+*/
+body, .body {
+    background: $colour-greyscale-97;
+}
+
+/* MODULES
+*/
+.markel-header {
+    background-color: $colour-white;
+    border-top: 4px solid $colour-brand-primary;
+    border-bottom: 1px solid $colour-greyscale-88;
+    height: 36px;
+    margin-bottom: 32px;
+    .wrapper {
+        padding-top: 0;
+        td {
+            padding-bottom: 0;
+        }
+    }
+    .logo {
+        position: absolute;
+    }
+}
+
+.panel {
+    h2 {
+        text-align: center;
+    }
+}
+
+/* HELPERS
+*/
+.markel-rounding {
+    -moz-border-radius: $standard-curvature;
+    -webkit-border-radius: $standard-curvature;
+    border-radius: $standard-curvature;
+}
+
+.no-padding-or-margin {
+    padding: 0;
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
