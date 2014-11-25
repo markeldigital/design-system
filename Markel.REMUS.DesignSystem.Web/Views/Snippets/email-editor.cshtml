@@ -22,8 +22,12 @@
         function exportTemplateFile() {
             var iframeDocument = document.querySelector('#email-template-container').contentDocument;
             var templateHTML = iframeDocument.querySelector('html').innerHTML;
-            var uri = "data:application/octet-stream;charset=utf-8,"+ encodeURIComponent(templateHTML);
-            document.location = uri;
+            templateHTML = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">' +
+                           '<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml">' +
+                               templateHTML +
+                           '</html>';
+            var download = "data:application/octet-stream;charset=utf-8,"+ encodeURIComponent(templateHTML);
+            document.location = download;
         }
 
         function editEmailContent() {
