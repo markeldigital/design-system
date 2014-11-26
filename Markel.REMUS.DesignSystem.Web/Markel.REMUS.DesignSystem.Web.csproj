@@ -631,6 +631,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Views\Snippets\postcode-form-prototype.cshtml" />
+    <Content Include="Views\Snippets\input-email.html" />
     <Content Include="Views\Snippets\output-email.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

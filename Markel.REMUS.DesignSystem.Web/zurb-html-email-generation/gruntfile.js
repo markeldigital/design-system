@@ -11,7 +11,7 @@ module.exports = function (grunt) {
                 files: [
                     {
                         src: 'Scss/email-app.scss',
-                        dest: 'email-app.css',
+                        dest: '../Content/Styles/email-app.css',
                         ext: '.css'
                     }
                 ]
