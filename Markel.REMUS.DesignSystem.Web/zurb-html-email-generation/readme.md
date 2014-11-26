@@ -11,7 +11,9 @@ The output should be placed in the output-email file that is pulled in by an ifr
 3. Generate the CSS from the Sass files (Sass compile task).
 4. Inline the CSS into the email by taking the input-email.html and the compiled CSS and inline it with the [Zurb inliner](http://zurb.com/ink/inliner.php)
 5. Put the result into output-email.html
-6. Copy the output-email into the appropriate position in the email-editor.html
+6. Put a style tag in for the Google Font for clients that support it (other clients will fallback to the other fonts in our font stack):
+
+        <style type="text/css">@import url(http://fonts.googleapis.com/css?family=Titillium+Web);</style>
 
 ## Notes on editing the HTML
 
@@ -34,3 +36,8 @@ This project exists to help the team to generate HTML email templates with the M
 ## Testing
 
 Testing is vital with HTML emails, you can't unsend an email...Talk to QAs about your edits and make sure they are tested across different devices and email clients (eg. Older versions of Outlook, latest Gmail, native clients on mobile devices, etc.)
+
+### Tools for testing:
+
+* Dotmailer - Markel uses this email service for most newsletters etc. (if you have access you can use the 'send test email' option)
+* Litmus' [Putsmail online (free) test service](https://putsmail.com/tests/new) can help for quick local tests with people on the team before testing through Dotmailer.

@@ -148,6 +148,7 @@
     <Content Include="Content\Images\icon-logged-in.svg" />
     <Content Include="Content\Images\icon-logged-out.svg" />
     <Content Include="Content\Images\icon-sprite.png" />
+    <Content Include="Content\Images\markel-logo-64x64.png" />
     <Content Include="Content\Images\markel-logo-white.svg" />
     <Content Include="Content\Images\mobile-tab.png" />
     <Content Include="Content\Images\nav-arrow-back-disabled.png" />
@@ -632,6 +633,9 @@
     </Content>
     <None Include="Views\Snippets\postcode-form-prototype.cshtml" />
     <Content Include="Views\Snippets\input-email.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Snippets\logo64x64.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Snippets\output-email.html">

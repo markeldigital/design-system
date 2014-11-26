@@ -20,7 +20,7 @@ module.exports = function (grunt) {
 
         watch: {
             css: {
-                files: ['Scss/**', 'lib/sassy-ink-master/scss'],
+                files: ['Scss/**/*.*', 'lib/sassy-ink-master/scss'],
                 tasks: ['sass']
             }
         }
