@@ -688,6 +688,9 @@
       <Content Include="Content\Images\*" />
     </ItemGroup>
     <ItemGroup>
+      <Content Include="Content\Styles\*" />
+    </ItemGroup>
+    <ItemGroup>
       <BowerComponents Include="bower_components\**" />
     </ItemGroup>
     <Copy Condition=" '$(Configuration)' == 'Release' " SourceFiles="@(BowerComponents)" DestinationFiles="@(BowerComponents-> '$(ProjectDir)bin\$(Configuration)\%(RelativeDir)%(Filename)%(Extension)')" />
