@@ -551,7 +551,6 @@
     <None Include="Scss\modules\_error-page.scss" />
     <None Include="Scss\modules\_error-popup.scss" />
     <None Include="Scss\modules\_expander.scss" />
-    <None Include="Scss\modules\_actions-panel.scss" />
     <None Include="Scss\modules\_flag.scss" />
     <None Include="Scss\modules\_footer.scss" />
     <None Include="Scss\modules\_links.scss" />
