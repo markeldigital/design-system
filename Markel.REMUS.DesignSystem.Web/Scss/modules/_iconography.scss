@@ -99,7 +99,9 @@ $icon-map:(
         "angle-down":              "\f107",
         "refresh":                 "\f021",
         "info-circle":             "\f05a",
-        "exclamation-circle":      "\f06a"
+        "exclamation-circle":      "\f06a",
+        "padlock":                 "\f023"
+
 );
 
 @include iconography($icon-map);

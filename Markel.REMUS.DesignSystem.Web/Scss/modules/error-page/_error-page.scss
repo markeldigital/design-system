@@ -1,6 +1,7 @@
+@import "error-page-expired-link";
 @mixin error-page($selector){
     $icon-size:80px;
-      
+
     #{$selector} { //CLASS FOR ALL ERROR-PAGES
         .panel {
             padding: $grid-unit*4;
@@ -9,7 +10,7 @@
             }
         }
         //ERROR - 404/NOT FOUND
-        .error-not-found {  
+        .error-not-found {
             i {
             &:before {
                 @include icon-content-for-name("exclamation-triangle"); 
@@ -22,10 +23,11 @@
                     @include respond-to($lap-and-desk) {   
                         font-size: $icon-size;
                     }
-                }     
+                }
             }
         }
     }
+
 }
 
 /* ===
@@ -58,3 +60,5 @@ ERROR - 401/UNAUTHORISED
 === */
 
 @include error-page(".error-not-found");
+@include error-page(".error-page");
+@include error-page-expired-link(".error-page-expired-link");

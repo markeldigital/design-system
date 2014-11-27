@@ -1,5 +1,10 @@
+@function get-size-for($level){
+
+}
+
 @mixin set-graphic-as($level, $type:image){
 
+    $jumbo-size: map_get(get-base-text-properties-for(jumbo), "font-size");
     $jumbo-size: map_get(get-base-text-properties-for(jumbo), "font-size");
     $alpha-size: map_get(get-base-text-properties-for(alpha), "font-size");
     $beta-size: map_get(get-base-text-properties-for(beta), "font-size");

@@ -35,7 +35,7 @@ module.exports = function (grunt) {
                 files: path.join(projectRoot, 'gruntfile.js')
             },
             css: {
-                files: path.join(projectRoot, '/Scss/**'),
+                files: path.join(projectRoot, '/Scss/**/*.*'),
                 tasks: ['sass', 'sync:toAllUIProjects']
             }
         },
