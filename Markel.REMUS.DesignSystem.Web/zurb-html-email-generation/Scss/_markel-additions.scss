@@ -17,12 +17,10 @@ body, .body {
 /* MODULES
 */
 .markel-header {
-    background-color: $colour-white;
-    border-top: 4px solid $colour-brand-primary;
-    border-bottom: 1px solid $colour-greyscale-88;
+    position: relative;
     height: 0;
     margin-bottom: ($logo-size / 2) - $wrapper-padding-top;
-    position: relative;
+    border-top: 4px solid $colour-brand-primary;
     .wrapper {
         padding-top: 0;
         td {
@@ -32,7 +30,7 @@ body, .body {
     .logo {
         position: absolute;
         z-index: 100;
-        left: $panel-padding;
+        left: $panel-padding/2;
     }
 }
 
