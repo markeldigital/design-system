@@ -1,0 +1,6 @@
+@mixin notification($selector){
+div {
+    padding: $grid-unit;
+}
+}
+@include notification(".notification");

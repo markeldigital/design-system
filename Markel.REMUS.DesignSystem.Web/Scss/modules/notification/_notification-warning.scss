@@ -1,0 +1,20 @@
+@mixin notification-warning($selector){
+    .notification {
+        margin-top: 6*$grid-unit;
+        padding:2*$grid-unit;
+        border: 1px solid $warning-colour-100;
+        background-color: $warning-colour-10;
+        p {
+            display: inline;
+            width:100%
+
+        }
+        .icon-exclamation-circle{
+            color: $warning-colour-100;
+            display: inline;
+            font-size: 3*$grid-unit;
+            padding-right: $grid-unit;
+        }
+    }
+}
+@include notification-warning(".notification-Warning");

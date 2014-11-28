@@ -1,16 +1,17 @@
 @mixin error-page-expired-link($selector){
-    $icon-size:80px;
-    .panel-beta.panel--wide {
-        padding:8*$grid-unit 0;
-        h2{
-            @include set-text-as(beta, $margins-overrides:zero-top);
-            margin: $grid-unit 0;
-        }
-        p {
-            margin-bottom: 0;
-        }
-        .icon-padlock {
-            color: $warning-colour-100;
+    #{$selector}{
+        $icon-size:80px;
+        .panel-beta.panel--wide {
+            padding:8*$grid-unit 0;
+            h2{
+                @include set-text-as(beta, $margins-overrides:zero-top);
+                margin: $grid-unit 0;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            .icon-padlock {
+                color: $warning-colour-100;
 
                 @include set-graphic-as(beta, $type:icon);
                 font-size: $icon-size;
@@ -18,6 +19,7 @@
                 width: $icon-size;
                 padding-top: 4*$grid-unit;
                 margin-bottom: 2*$grid-unit;
+            }
         }
     }
 }
