@@ -19,6 +19,6 @@
 }
 
 @include notification(".notification");
-@include notification-warning(".notification-Warning");
+@include notification-warning(".notification-warning");
 @include notification-success(".notification-success");
 @include notification-error(".notification-error");

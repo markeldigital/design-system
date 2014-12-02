@@ -1,7 +1,8 @@
 @mixin page-top-padding(){
-    margin-top: $menu-palm-height;
+    //the page top padding is based on the menu height
+    margin-top: $menu-palm-height * 1.5;
     @include respond-to($lap-and-desk){
-        margin-top: $menu-lap-height;
+        margin-top: $menu-lap-height * 1.5;
     }
     @include respond-to($desk-only){
         margin-top: $menu-desk-height;
@@ -47,7 +48,6 @@
         }
         // First panel is assumed to contain H1's inside panels
         article > *[class^='panel']:first-of-type {
-//            @include responding('padding', 4*$grid-unit);
             padding: 0;
         }
         @include respond-to-print(){
