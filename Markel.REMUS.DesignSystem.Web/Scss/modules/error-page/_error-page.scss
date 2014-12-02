@@ -1,4 +1,4 @@
-@import "error-page-expired-link";
+@import "error-page-access-restricted";
 @mixin error-page($selector){
     $icon-size:80px;
 
@@ -61,4 +61,4 @@ ERROR - 401/UNAUTHORISED
 
 @include error-page(".error-not-found");
 @include error-page(".error-page");
-@include error-page-expired-link(".error-page-expired-link");
+@include error-page-access-restricted(".error-page-access-restricted");
