@@ -56,6 +56,10 @@ body, .body {
     text-align: center;
 }
 
+.weak-text {
+    color: $colour-greyscale-63;
+}
+
 .markel-rounding {
     -moz-border-radius: $standard-curvature;
     -webkit-border-radius: $standard-curvature;
