@@ -3,6 +3,8 @@
 @import "notification-error";
 @mixin notification($selector){
     #{$selector}{
+        display: inline-block;
+        width: 100%;
         margin-top: 6*$grid-unit;
         padding:2*$grid-unit;
         p {

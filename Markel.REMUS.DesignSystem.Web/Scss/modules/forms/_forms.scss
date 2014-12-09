@@ -1,5 +1,6 @@
 @import "_form-element";
 @import "_forms-ie-hacks";
+@import "_simple-form";
 
 @mixin form($selector){
     #{$selector}{
