@@ -44,6 +44,6 @@ $all-multiple-choice-selectors: ".radio-option, .radio-option.radio--stacked, .c
 @include on-off-box(".radio-option", $options: ("type":"radio", "display": "default"));
 @include on-off-box(".radio-option.radio--stacked", $options: ("type":"radio", "display": "stacked"));
 @include on-off-box(".checkbox-option", $options: ("type": "checkbox", "display": "default"));
-@include on-off-box(".question-multiple_choice_exclusive_stacked .radio-option", $options: ("type":"radio", "display": "stacked"));
-@include on-off-box(".question-multiple_choice_stacked .checkbox-option", $options: ("type":"checkbox", "display": "stacked"));
+@include on-off-box(".question-multiple-choice-exclusive-stacked .radio-option", $options: ("type":"radio", "display": "stacked"));
+@include on-off-box(".question-multiple-choice-stacked .checkbox-option", $options: ("type":"checkbox", "display": "stacked"));
 @include on-off-box(".checkbox-option.checkbox-stacked", $options: ("type":"checkbox", "display": "stacked"));
