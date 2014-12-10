@@ -388,7 +388,6 @@
     <None Include=".bowerrc" />
     <Content Include="Content\Fonts\iconography-webfont.ttf" />
     <Content Include="Content\Fonts\iconography-webfont.woff" />
-    <None Include="app.config" />
     <None Include="Components\expander\scss\_expander.scss" />
     <None Include="Components\expander\template\Expander.cshtml" />
     <None Include="Components\primary-navigation\template\PrimaryNavigation.cshtml" />
