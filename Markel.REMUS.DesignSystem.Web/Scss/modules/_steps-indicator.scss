@@ -1,0 +1,21 @@
+@mixin steps-indicator($selector){
+ #{$selector}{
+     >ul {
+        @include set-text-as(gamma,$reduced:true); //,$margins-overrides:zero-both);
+//         margin-top: 2*$grid-unit;
+         li {
+             margin-right:2*$grid-unit;
+             .steps {
+                 @include set-text-as(delta,$margins-overrides:zero-both);
+             }
+             .circle {
+                 border-radius: 50%;
+                 border: 1px solid $colour-greyscale-76;
+                 width: 3*$grid-unit;
+                 height: 3*$grid-unit;
+             }
+         }
+     }
+ }
+}
+@include steps-indicator(".steps-indicator");
