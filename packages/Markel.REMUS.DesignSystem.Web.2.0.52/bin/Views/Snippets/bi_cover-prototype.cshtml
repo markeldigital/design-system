@@ -1,0 +1,143 @@
+@{
+Layout = "Shared/Layout";
+}
+<main role="main">
+    <div class="content">
+        <div class="content-inner">
+            <div id="RemusBrokerPortal" class="ng-scope">
+                <div data-ui-view="" autoscroll="true" class="ng-scope">
+                    <article class="quote-screen sidekick-template grid-width ng-scope"ng-class="{'referred-mode': isReferred}" ng-show="isRendered">
+                    <h1 class="ng-binding">Quote</h1>
+                        <div class="primary-content">
+                            <div class="large-12 medium-12 columns">
+                                <quote-header-section class="ng-scope">
+                                    <section class="quote-header">
+                                        <div class="name-and-quote-number">
+                                            <h2 id="quoteHeaderProductName"class="ng-binding">Professional liability insurance package
+                                            <br>
+                                            <span class="unemphasised">for</span> <span id="quoteHeaderPolicyHolderName" class="ng-binding">name</span></h2>
+                                            <dl>
+                                                <dt class="unemphasised ng-binding">Reference number</dt>
+                                                <dd class="quote-number ng-binding">&nbsp;54</dd>
+                                            </dl>
+                                        </div>
+                                        <div class="selected-premium ng-scope" ng-if="showTotal">
+                                            <h2 class="ng-binding">$1,065</h2>
+                                        </div>
+                                    </section>
+                                </quote-header-section>
+                                <form first-input-focus="" class="ng-pristine ng-valid">
+                                    <cover-section data-cover-expander-state="open" data-is-referred="isReferred" ng-repeat="quotedCover in quotedCovers" data-quoted-cover="quotedCover" data-page="page"
+                                                   data-update-total-premiums="updateTotalPremiums" class="ng-scope ng-isolate-scope">
+                                        <section class="cover UGP property-cover cover--optional cover--taken-up"
+                                                 data-ng-class="{'property-cover': isPropertyCover, 'cover--main': quotedCover.IsMainCover,'cover--optional': !quotedCover.IsMainCover, 'cover--not-taken-up': (!quotedCover.IsSelected &amp;&amp; !quotedCover.IsMainCover), 'cover--taken-up': quotedCover.IsSelected,'cover--unable-to-quote-online': quotedCover.IsReferred}">
+                                                    <div class="cover-headline panel-beta ng-scope">
+                                                        <div class="checkbox-option checkbox-stacked">
+                                                            <input class="visually-hidden ng-pristine ng-valid" id="Office Contents" type="checkbox"ng-model="quotedCover.IsSelected" ng-change="updateSelectedCover(quotedCover)">
+                                                            <label for="Office Contents">
+                                                                <span class="cover-name panel-first ng-binding"><span class="fake-check-box"></span> Office Contents</span>
+                                                                <span class="selected-premium-value ng-binding">$100</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel-beta cover-contents ng-scope">
+                                                        <div class="panel ng-scope" data-ng-if="isQuoteOptions">
+                                                            <div class="row limit-header-container">
+                                                                <h3 class="limit-header ng-scope ng-binding" data-ng-if="isQuoteOptions">Limit</h3>
+                                                              <h3 class="premium-header ng-binding"> Premium </h3>
+                                                            </div>
+                                                            <div class="row single-option">
+                                                                <span class="limit-value ng-binding">Per Sum Insured</span>
+                                                                <span class="premium-value ng-binding">$100</span></div>
+                                                        </div>
+                                                        <expander data-cover-code="UGP" data-expander-state="open" data-open-title="Show more" data-close-title="Show less" data-content-path="additionalCoverDetails.html" class="ng-scope">
+                                                            <div class="expander open" data-ng-class="{open: contentShown}"><a href="" class="expander-trigger ng-binding" ng-click="toggleContent()"><i class="icon-angle-right"></i>Show less</a><!-- ngIf: isNotEmpty(content) -->
+                                                                <div ng-if="isNotEmpty(contentPath)" class="expander-content ng-scope" ng-show="contentShown" ng-include="contentPath">
+                                                                    <div class="panel-inverse ng-scope">
+                                                                        <quote-option-additional-details>
+                                                                            <div class="row ng-scope">
+                                                                                <section class="cover-attachments">
+                                                                                    <div class="cover-attachments-left">
+                                                                                        <h3 class="ng-binding">Sum Insured</h3>
+                                                                                        <p class="ng-binding">$12,345</p>
+                                                                                        <h3 class="ng-binding"> Deductible</h3>
+                                                                                        <p data-ng-bind-html="excesses" class="ng-binding">$1,000</p>
+                                                                                        <h3 class="ng-binding">Basis</h3>
+                                                                                        <p class="ng-binding">Replacement cost</p>
+                                                                                    </div>
+                                                                                    <div class="cover-attachments-right ng-hide" ng-show="showRetroactiveDate">
+                                                                                        <h3 class="ng-binding">Retroactive Date</h3>
+                                                                                        <p class="ng-binding"></p></div>
+                                                                                </section>
+                                                                            </div>
+                                                                        </quote-option-additional-details>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </expander>
+                                                    </div>
+                                                    <div class=" panel-beta cover-nested cover-contents">
+                                                        <div class="cover-headline ng-scope">
+                                                            <div class="checkbox-option checkbox-stacked">
+                                                                <input class="visually-hidden ng-pristine ng-valid" id="Office Contents" type="checkbox"ng-model="quotedCover.IsSelected" ng-change="updateSelectedCover(quotedCover)">
+                                                                <label for="Office Contents">
+                                                                    <span class="cover-name panel-first ng-binding">
+                                                                       <span class="fake-check-box"></span>
+                                                                        Business Interruptions <span>(Only available with Office Contents)</span>
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <fieldset class="cover-contents">
+                                                            <div class="row limit-header-container">
+                                                                <h3 class="limit-header ng-scope ng-binding" data-ng-if="isQuoteOptions">Sum Insured</h3>
+                                                                <h3 class="premium-header ng-binding"> Premium </h3>
+                                                            </div>
+                                                            <div class="radio-option radio--stacked ng-scope" data-ng-repeat="premium in premiumOptionsForCover">
+                                                                <input id="UMS-L1" class="visually-hidden ng-pristine ng-valid" data-ng-model="selectedPremiumKey" type="radio" name="UMS-indemnity-limit" data-ng-click="updatePremiumValue(premium)" data-ng-value="premium.LimitCode" value="L1">
+                                                                <label for="UMS-L1">
+                                                                    <span class="radio-option-content limit-value ng-binding"><span class="fake-radio-button">$5000-Loss of income</span></span>
+                                                                    <span class="radio-option-content premium-value ng-binding">$715</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="radio-option radio--stacked ng-scope" data-ng-repeat="premium in premiumOptionsForCover">
+                                                                <input id="UMS-L2" class="visually-hidden ng-pristine ng-valid" data-ng-model="selectedPremiumKey" type="radio" name="UMS-indemnity-limit" data-ng-click="updatePremiumValue(premium)" data-ng-value="premium.LimitCode" value="L2">
+                                                                <label for="UMS-L2">
+                                                                    <span class="radio-option-content limit-value ng-binding"><span class="fake-radio-button"></span>$1000-Extra expenses</span>
+                                                                    <span class="radio-option-content premium-value ng-binding">$893</span>
+                                                                </label>
+                                                            </div>
+                                                        </fieldset>
+                                                     </div>
+                                                </ng-include>
+                                             </ng-include>
+                                        </section>
+                                    </cover-section>
+                                    <totals-section class="ng-scope"><!-- ngIf: showTotalSection -->
+                                        <section class="total-premium ng-scope" data-ng-if="showTotalSection">
+                                            <dl class="premium">
+                                                <dt class="ng-binding">Total Premium</dt>
+                                                <dd class="ng-binding">$1,065</dd>
+                                            </dl>
+                                            <dl class="retained-premium">
+                                                <dt class="ng-binding">Minimum Retained Premium</dt>
+                                                <dd class="ng-binding">100%</dd>
+                                            </dl>
+                                        </section>
+                                        <!-- end ngIf: showTotalSection --></totals-section>
+                                    <div class="split-actions ng-scope"
+                                         ng-if="!isReferred &amp;&amp; actions.length !==0">
+                                        <!-- ngRepeat: action in actions --><a ng-repeat="action in actions" href=""
+                                                                               data-ng-click="action.action()"
+                                                                               class="button-style-secondary button--size-jumbo button--icon-right last-action ng-scope ng-binding">Pre-bind
+                                        summary<i class="icon-angle-right"></i></a><!-- end ngRepeat: action in actions -->
+                                    </div>
+                                 </form>
+                                </div>
+                            </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

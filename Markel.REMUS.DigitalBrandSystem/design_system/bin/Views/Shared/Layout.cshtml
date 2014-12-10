@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Markel Digital Design System</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/Content/Images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/Content/Images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/Content/Images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/Content/Images/apple-touch-icon-57x57-precomposed.png">
+    <link rel="shortcut icon" sizes="196x196" href="/Content/Images/touch-icon-196x196.png">
+    <link rel="shortcut icon" href="/Content/Images/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="/Content/Images/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#222222">
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+            families: ['Titillium Web:400,600,700:latin']
+        }
+      });
+    </script>
+
+    <script src="/Content/non_bower/jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
+    <script src="/Content/app/primary-navigation.js"></script>
+
+    <link rel="stylesheet" href="/Content/Styles/design-system.css">
+    <script src="/Content/non_bower/modernizr.custom.09892.js"></script>
+</head>
+    <body>
+        @Html.Partial("Global/Partial/UnsupportedBrowserMessage.cshtml")
+        @Html.Partial("Shared/primary-navigation-menu.cshtml")
+
+        <main role="main">
+            <div class="content">
+                <div class="content-inner">
+                    @RenderBody()
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

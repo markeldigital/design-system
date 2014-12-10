@@ -1,0 +1,141 @@
+@import 'account-menu';
+@import 'navigation-dropdown';
+
+
+@mixin main-navigation($selector) {
+    $top-z-index: 99999;
+
+    $options: ('top-z-index': $top-z-index);
+    @include navigation-dropdown(#{$selector + " nav .menu"}, $options);
+    @include account-menu(#{$selector + " nav.right-nav .account-menu"}, $options);
+
+    #{$selector} {
+        width: 100%;
+        background: $colour-white;
+        height: $menu-palm-height+5px;
+        border-bottom: solid 1px $colour-greyscale-88;
+        border-top: solid 4px $colour-brand-primary;
+        position: relative;
+        z-index: $top-z-index;
+        @include respond-to($lap-and-desk){
+            height: $menu-lap-height+5px;
+        }
+        @include respond-to($desk-only){
+            height: $menu-desk-height+5px;
+        }
+        a, button{
+            display: block;
+            padding: $grid-unit;
+            color: $colour-greyscale-39;
+            text-decoration: none;
+            &:hover, &.hover, &:focus, &.focus{
+                @include transition($standard-transition-animation);
+                background-color: $colour-greyscale-96;
+                color: $colour-greyscale-39;
+                span, i{
+                    opacity: 1;
+                }
+            }
+        }
+        button{
+            background: transparent;
+            width: 100%;
+            text-align: left;
+            padding-left: $grid-unit*1.5;
+        }
+
+        li{
+            margin: 0;
+        }
+        i{
+            color: $colour-greyscale-63;
+        }
+
+        @include logo("a.logo");
+
+        .top-header nav {
+            display: none;
+            @include respond-to($lap-and-desk){
+                display: block;
+            }
+        }
+
+        nav {
+            > ul > li {
+                float: left;
+                margin: 0;
+                border-left: solid 1px $colour-greyscale-88;
+                >a {
+                    height: $menu-palm-height;
+                    padding: $grid-unit;
+                    @include respond-to($lap-and-desk){
+                        height: $menu-lap-height;
+                        padding: 1.5*$grid-unit;
+                    }
+                    @include respond-to($desk-only){
+                        height: $menu-desk-height;
+                        padding: 2*$grid-unit;
+                    }
+                    span{
+                        line-height: $grid-unit*2;
+                    }
+                    span, i {
+                        opacity: 0.7;
+                    }
+                    i {
+                        width: $grid-unit;
+                        @include respond-to($lap-and-desk){
+                            width: $grid-unit*1.5;
+                        }
+                        @include transform(rotate(0deg));
+                        @include transition($standard-transition-animation);
+                    }
+                }
+            }
+            &.main-nav{
+                float: left;
+            }
+            &.right-nav{
+                float: right;
+                ul li a i{
+                    @include visually-shown();
+                }
+            }
+
+
+            .language-menu{
+                >a, li.selected{
+                    display: none;
+                }
+                >a.selected{
+                    display: block;
+                }
+            }
+
+
+            @include respond-to-print(){
+                display: none;
+            }
+        }
+        @include respond-to-print(){
+            border: none;
+            height: auto;
+            position: static;
+        }
+    }
+
+    // Mask used for all open navigation items
+    .overlay{
+        display: none;
+        &.open{
+            position: fixed;
+            z-index: $top-z-index - 1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: $standard-transparent-overlay-colour;
+            display: block;
+        }
+    }
+}

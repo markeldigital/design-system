@@ -1,0 +1,640 @@
+﻿@{
+    Layout = "Shared/Layout";
+}
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/3.5.0/select2.min.js"></script>
+<script>
+    $(function () {
+        $('.select2-select').select2();
+    });
+</script>
+<section class="design-system-index panel-delta panel--wide">
+    <div class="grid-width">
+        <h1>Markel Digital Design System</h1>
+
+        <h3>UI Components</h3>
+        <ul>
+            <li><a href="#graphics-hierarchy">Graphics hierarchy</a></li>
+            <li><a href="#typograhy-hierarchy">Typography hierarchy</a></li>
+            <li><a href="#panels">Panels</a></li>
+            <li><a href="#buttons">Buttons hierarchy</a></li>
+            <li>
+                <a href="#forms">Forms (summary)</a>
+                <ul>
+                    <li><a href="#form-fragments">Form fragments (question groups)</a></li>
+                    <li><a href="#questions-and-options">Questions, question types, and question options</a></li>
+                    <li><a href="#text-question">Text question</a></li>
+                    <li><a href="#on-off-boxes">On-off boxes (radio and checkbox)</a></li>
+                    <li><a href="#auto-suggest">Auto Suggest</a></li>
+                </ul>
+            </li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#tables">Tables</a></li>
+        </ul>
+
+        <h3>Appendices</h3>
+        <ul>
+            <li><a href="#what-is-a-design-pattern">What is a design pattern?</a></li>
+        </ul>
+    </div>
+</section>
+
+
+<article class="design-system-library-screen">
+
+    <section class="design-system-section graphics-hierarchy panel-inverse panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="graphics-hierarchy">Graphics hierarchy</h3>
+            <p>We have a set number of standard sizes for graphics to encourage consistency:</p>
+            <img src="/Content/Images/pdf-document.svg" alt="Jumbo (jumbo)" />
+            <img src="/Content/Images/pdf-document.svg" alt="Largest (alpha)" />
+            <img src="/Content/Images/pdf-document.svg" alt="Large (beta)" />
+            <img src="/Content/Images/pdf-document.svg" alt="Medium (gamma)" />
+            <img src="/Content/Images/pdf-document.svg" alt="Smaller than medium (delta)" />
+            <img src="/Content/Images/pdf-document.svg" alt="Standard (epsilon)" title="Standard (epsilon)"/>
+        </div>
+    </section>
+
+    <section class="design-system-section typography-hierarchy panel-beta panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="typograhy-hierarchy">Typography hierarchy</h3>
+            <p>Our typography scales according to the screen size. We have several scales to suit different needs.</p>
+            <p class="design-system-dev-notes"><strong>Developer notes:</strong> always use plain tag names such as <code>&lt;h1&gt;</code> or the <code>&commat;include set-text-as()</code> mixin...never define typography for yourself. The class names used in the markup here will not work outside of this page.</p>
+
+            <h3>The Regular typography scale. Please use these in preference over the reduced versions.</h3>
+            <!-- Tech notes: The size of text is not tied to the HTML element but you should use an appropriate html tag eg. an H1 for main page headers. -->
+            <!-- Tech notes: Set the size of text using Sass mixins not using these class names -->
+            <div class="panel-inverse">
+                <p class="jumbo">Jumbo</p>
+                <p class="alpha">Largest (Alpha)</p>
+                <p class="beta">Large (Beta)</p>
+                <p class="gamma">Medium (Gamma)</p>
+                <p class="delta">Smaller than medium. Standard body content text size (Delta/Body)</p>
+                <p class="epsilon">Small (epsilon)</p>
+            </div>
+
+            <h3>The reduced scale. Only use these if one of the sizes above is not appropriate. In general we prefer using the regular scale.</h3>
+            <div class="panel-inverse">
+                <p class="jumbo reduced">Jumbo</p>
+                <p class="alpha reduced">Largest (Alpha)</p>
+                <p class="beta reduced">Large (Beta)</p>
+                <p class="gamma reduced">Medium (Gamma)</p>
+                <p class="delta reduced">Smaller than medium. Standard body content text size (Delta/Body)</p>
+                <p class="epsilon reduced">Small (epsilon)</p>
+            </div>
+
+
+            <h3>The weak hierarchy. Use this where you need <span class="gamma weak">contrast</span> with surrounding copy. Use this to make the type recede and appear less important than surrounding text of the same size.</h3>
+            <div class="panel-inverse">
+                <p class="jumbo weak">Jumbo</p>
+                <p class="alpha weak">Largest (Alpha)</p>
+                <p class="beta weak">Large (Beta)</p>
+                <p class="gamma weak">Medium (Gamma)</p>
+                <p class="delta weak">Smaller than medium. Standard body content text size (Delta/Body)</p>
+                <p class="epsilon weak">Small (epsilon)</p>
+            </div>
+
+
+            <h3>The strong hierarchy. Use this where you need <span class="gamma strong">contrast</span> with surrounding copy. Use this make the type stand out and appear more important than surrounding text of the same size.</h3>
+            <div class="panel-inverse">
+                <p class="jumbo strong">Jumbo</p>
+                <p class="alpha strong">Largest (Alpha)</p>
+                <p class="beta strong">Large (Beta)</p>
+                <p class="gamma strong">Medium (Gamma)</p>
+                <p class="delta strong">Smaller than medium. Standard body content text size (Delta/Body)</p>
+                <p class="epsilon strong">Small (epsilon)</p>
+            </div>
+
+            <h3>The typography scales all together to show the contrast.</h3>
+            <div class="panel-inverse">
+                <p class="jumbo">Regular<span class="jumbo strong">Strong</span><span class="jumbo weak">Weak</span></p>
+                <p class="alpha">Regular<span class="alpha strong">Strong</span><span class="alpha weak">Weak</span></p>
+                <p class="beta">Regular<span class="beta strong">Strong</span><span class="beta weak">Weak</span></p>
+                <p class="gamma">Regular<span class="gamma strong">Strong</span><span class="gamma weak">Weak</span></p>
+                <p class="delta">Regular<span class="delta strong">Strong</span><span class="delta weak">Weak</span></p>
+                <p class="epsilon">Regular<span class="epsilon strong">Strong</span><span class="epsilon weak">Weak</span></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="design-system-section typography-hierarchy panel-inverse panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="panels">Panels</h3>
+            <p>Panels are useful for separating content into different themes. Chunking content in this way aids comprehension.</p>
+            <p>Panels manage the clearance around content in a responsive way so that it is appropriate to the screen size and scales with the typography.</p>
+
+            <div class="panel-alpha">
+                <h3 class="panel-header">Alpha panel</h3>
+                <p>Our alpha panel is used mainly for 'hero' sections of content that needs to stand out a lot.</p>
+            </div>
+            <p></p>
+            <div class="panel-beta">
+                <h3 class="panel-header">Beta panel</h3>
+                <p>Our beta panel strongly separates content and highlights it from the rest of our content.</p>
+            </div>
+            <p></p>
+            <div class="panel-gamma">
+                <h3 class="panel-header">Gamma panel</h3>
+                <p>Our gamma panel separates content in a more subtle way from the rest of our content than our standard panel.</p>
+            </div>
+            <p></p>
+            <div class="panel-delta">
+                <h3 class="panel-header">Delta panel</h3>
+                <p>Used as a base for our hero container.</p>
+            </div>
+            <p></p>
+            <div class="panel-beta">
+                <h3 class="panel-header">Panel</h3>
+                <p>Standard panels can contain inverse panels which allow content hierarchy and further chunking of content into disparate parts.</p>
+                <div class="panel-inverse">
+                    <h3 class="panel-header">Inverse panel</h3>
+                    <p>Inverse panels can be used to separate content that is inside of a standard panel.</p>
+                </div>
+            </div>
+            <p></p>
+            <div class="panel-beta panel--centered">
+                <h3 class="panel-header">Centered panels</h3>
+                <p>Panels can be turned into centered panels which are usually used to set key messages to the broker apart from other types of content.</p>
+                <p>Examples of this are the referral page and the 404 page not found error page.</p>
+                <div class="panel-inverse">
+                    <h3 class="panel-header">Inverse panel</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="design-system-section panel-beta panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="buttons">Buttons</h3>
+            <p>Buttons have two aspects, they have a size which matches the text hierarchy sizes, and they have a visual style which can be chosen from a fixed set of visual styles.</p>
+            <h4>Visual Styles</h4>
+            <p>
+                <button class="button-style-primary button--size-alpha">Primary style alpha size</button>
+                <button class="button-style-secondary button--size-alpha">Secondary style alpha size</button>
+            </p>
+            <p>
+                <button class="button-style-primary button--size-alpha hover">Primary style alpha size hover</button>
+                <button class="button-style-secondary button--size-alpha hover">Secondary style alpha size hover</button>
+            </p>
+            <p>
+                <button class="button-style-primary button--size-alpha active">Primary style alpha size active</button>
+                <button class="button-style-secondary button--size-alpha active">Secondary style alpha size active</button>
+            </p>
+            <p>
+                <button class="button-style-primary button--size-alpha active">Primary style alpha size disabled</button>
+                <button class="button-style-secondary button--size-alpha active">Secondary style alpha size disabled</button>
+            </p>
+            <p>
+                <button class="button-style-secondary button--size-alpha button--icon-right">Beta button with icon right<i class="icon-cross"></i></button>
+                <button class="button-style-secondary button--size-alpha button--icon-left"><i class="icon-cross"></i>Beta button with icon left</button>
+                <button class="button-style-secondary button--size-alpha button--icon-right button--icon-loading active">Alpha button with loading icon<i class="icon-cross"></i></button>
+            </p>
+
+
+            <div class="typography-hierarchy">
+                <p>
+                    <button class="button-style-primary button--size-alpha">Primary style alpha size</button><span style="vertical-align: middle" class="alpha">Alpha text</span>
+                </p>
+                <p>
+                    <button class="button-style-primary button--size-jumbo">Primary style jumbo size</button><span style="vertical-align: middle" class="jumbo">Jumbo text</span>
+                </p>
+            </div>
+
+            <p>Buttons are used within the platform to take the user forward through the process and also to provide ways out if they come to a dead-end within a process (e.g. they are missing client information, or need to check the price with their client). There are 3 types of button used within the platform:</p>
+            <ol>
+                <li>Next button</li>
+                <li>Back button</li>
+                <li>Other button</li>
+            </ol>
+            <h2>Next button</h2>
+            <p>The next button is the primary button on each page, there should only be one of these. It takes the user to the next step of the process they are currently in.</p>
+            <div class="split-actions">
+                <button class="button-style-secondary button--size-alpha button--icon-right last-action">Instant quote<i class="icon-angle-right"></i></button>
+            </div>
+            <ul>
+                <li>Only one next button is allowed per page</li>
+                <li>The next button is the only button which is allowed to use the ‘>’ icon</li>
+                <li>The next button is usually an action (see below)</li>
+                <li>The next button is only a view if the page is in an historical read only state and the button returns the user to the current active state (see below)</li>
+                <li>The next button always appears on the right side of the action bar</li>
+            </ul>
+            <h2>Back button</h2>
+            <p>The back button provides the user a way to go back to the previous step of the process. Whether a back button is present depends on the state of the quote or policy and the current page being displayed.</p>
+            <div class="split-actions">
+                <button class="button-style-secondary button--size-alpha button--icon-left first-action"><i class="icon-angle-left"></i>Disclosure questions</button>
+            </div>
+            <ul>
+                <li>Back buttons should always appear on the left side of the action bar</li>
+                <li>There is only one back button allowed per page</li>
+                <li>Back button labels should include the name of the page they are returning to</li>
+                <li>A back button is a view, never an action (see below)</li>
+            </ul>
+            <h2>Other button</h2>
+            <p>The other button provides a link to other useful pages if they are relevant to the state of the quote or policy and the current page.</p>
+            <ul>
+                <li>Other buttons can be actions or views</li>
+                <li>Other buttons should appear on the left side of the action bar after the back button (if present)</li>
+            </ul>
+            <h2>General usage rules</h2>
+            <p>The following rules should be followed for all buttons:</p>
+            <ul>
+                <li>There should be no more than 3 buttons within the action bar at the end of a page</li>
+                <li>There should only be 1 next button per page</li>
+                <li>Keep the button label as short as possible, 2 or 3 words is more than enough</li>
+                <li>Button labels should be written in sentence case</li>
+                <li>The ‘>’ icon should only be used for a next button</li>
+            </ul>
+            <h2>Actions versus views</h2>
+            <p>A button can either be an action or a view depending on the outcome of clicking. An action actually performs a task (e.g. start a new quote or bind a policy) a view takes the user to another page (e.g. viewing all quotes and policies or viewing the disclosure questions for an existing quote).</p>
+            <ul>
+                <li>Actions always start with a action word that describes the action that will happen, e.g. Bind, New, Start, Confirm, Change. Followed by a description of the outcome, e.g. quote, policy.</li>
+                <li>Views only ever contain the name of page to be viewed, never containing an action</li>
+            </ul>
+            <p><strong>Examples:</strong></p>
+            <p>Get quote NOT Submit</p>
+            <p>Application NOT View disclosure answers</p>
+            <p>All quotes &amp; policies NOT All Quotes and Policies</p>
+        </div>
+    </section>
+
+    <section class="design-system-section panel-inverse panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="sign-posts">Notifications</h3>
+            <p>The notification messages appear at the top of the page whenever an urgent but brief message needs to be delivered to the user. Also referred to as flash messages,
+                when they appear on the page but disappear after they've been read or after a refresh.<br/> Notifications have three types :</p>
+            <ul>
+                <li>Warning</li>
+                <li>Success</li>
+                <li>Error</li>
+            </ul>
+            <div class="notification notification-warning">
+                <i class="icon-exclamation-circle"></i>
+                <p>This is a warning notification!</p>
+            </div>
+            <div class="notification notification-success">
+                <i class="icon-tick-circle"></i>
+                <p>This is a success notification!</p>
+            </div>
+            <div class="notification notification-error">
+                <i class="icon-cross"></i>
+                <p>This is an error notification!</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="design-system-section panel-inverse panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="sign-posts">Sign posts</h3>
+            <p>The sign post appears at the top of each page, it’s purpose is to inform the user about what page they are on. Imagine you are a broker and you have have 10 tabs open with 10 different quotes active at the same time. The sign post informs the user that they are on the correct client’s quote.</p>
+            <p>The contents of the sign post are as follows:</p>
+            <ul>
+                <li>Name of insurance product, e.g. Online Errors &amp; Omissions</li>
+                <li>Name of the applicant (if available)</li>
+                <li>Name of the current page, e.g. Application or Quote</li>
+                <li>State of the quote or policy, e.g. Quote or Policy</li>
+                <li>The reference number for the quote or policy</li>
+            </ul>
+        </div>
+    </section>
+
+
+    <section class="design-system-section panel-beta panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="split-actions">Split actions / Action bar</h3>
+            <div class="split-actions">
+                <a href="#" class="button last-action">Split action One</a>
+                <a href="#" class="button first-action">Split action Two</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="design-system-section panel-inverse panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="forms">Groupings in our forms</h3>
+            <p>Our forms are made up of three types of groupings which form the hierarchy of how we display information to our users:</p>
+            <ul>
+                <li>Form fragments (question groupings)</li>
+                <li>Questions</li>
+                <li>Question options</li>
+            </ul>
+            <p>This hierarchy improves usability by allowing people to see at a glance what information will be needed to complete the form whilst still getting the detail they need to answer each question.</p>
+        </div>
+    </section>
+
+    <section class="design-system-section panel-beta panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="form-fragments">Form Fragments (question groups)</h3>
+            <p>Form fragments are the highest grouping level in our forms. They split the form into chunks each of which contains one to many questions that are related to one-another by some kind of theme.</p>
+
+            <strong class="design-system-example">Example:</strong>
+            <form action="/without-js-it-submits-to-this-url" method="post">
+                <div class="question-group">
+                    <div class="form-fragment">
+                        <h2 class="form-fragment-title">Form fragment title</h2>
+                        <div class="form-fragment-content">
+                            One to many questions are put here inside the form fragment content. Note: the first form fragment doesn't get a divider keyline.
+                        </div>
+                    </div>
+                </div>
+                <div class="question-group">
+                    <div class="form-fragment">
+                        <h2 class="form-fragment-title">Form fragment title</h2>
+                        <div class="form-fragment-content">
+                            Note: this form fragment gets a keyline above it to separate it from the previous form fragment.
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="design-system-section panel-inverse panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="questions-and-options">Questions, and question options</h3>
+            <p>A form question has a type eg. text, number, radio, checkbox, date, percentage breakdown, etc. Questions may have one or many question options. A multi-option question may have multiple text fields to fill in, or multiple radio buttons or checkboxes to choose from. When a question has multiple options it should always have a 'legend' which introduces the question. Each question option has a label which is attached to the choice or text input field that the user chooses. Clicking on this label should always activate the question.</p>
+            <p>A question can have one of a few states:</p>
+            <ul>
+                <li>An inactive state</li>
+                <li>An active state</li>
+                <li>A success state</li>
+                <li>An error state</li>
+            </ul>
+
+            <p><strong class="design-system-example">Text question example (showing error state):</strong></p>
+            <form action="/without-js-it-submits-to-this-url" method="post">
+                <fieldset>
+                    <div class="text question question-error">
+                        <div class="question-main">
+                            <legend>Name of Applicant
+                                <a class="help-message-trigger"><i class="icon-info"></i></a>
+                                <span class="help-message-text">Mobile help text for this question, eg. this input text will be used to get you a quote&hellip;</span>
+                            </legend>
+                            <div class="option error">
+                                <div class="row">
+                                    <div class="label-selector"></div>
+                                    <div class="input-and-unit">
+                                        <input type="text" placeholder="e.g. J. Smith t/as J.S. Associates" maxlength="100">
+                                    </div>
+                                </div>
+                                <p class="error-message"><i class="icon-error"></i>Please enter the name of applicant</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="question-aside"><div class="help-message-text">Desktop help text. eg. this input text will be used to get you a quote&hellip;</div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <section class="design-system-section panel-gamma panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="on-off-boxes">on-off boxes (radio and checkbox)</h3>
+
+            <strong class="design-system-example">Radio question example:</strong>
+            <form action="/without-js-it-submits-to-this-url" method="post">
+                <fieldset>
+                    <div class="question">
+                        <div class="question-main">
+                            <legend>Default radio group legend</legend>
+                            <div class="radio-option">
+                                <input type="radio" class="visually-hidden" id="devs-customise-radio-id-1" name="devs-customise-radio-group-1-name" checked/>
+                                <label for="devs-customise-radio-id-1"><span class="fake-radio-button"></span>Yes</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" class="visually-hidden" id="devs-customise-radio-id-2" name="devs-customise-radio-group-1-name"/>
+                                <label for="devs-customise-radio-id-2"><span class="fake-radio-button"></span>No</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <strong class="design-system-example">Radio question example:</strong>
+            <form action="/without-js-it-submits-to-this-url" method="post">
+                <fieldset>
+                    <div class="question">
+                        <div class="question-main">
+                            <legend>Default checkbox group legend</legend>
+                            <div class="checkbox-option">
+                                <input type="checkbox" class="visually-hidden" id="devs-customise-radio-id-6" name="devs-customise-radio-group-1-name"/>
+                                <label for="devs-customise-radio-id-6"><span class="fake-check-box"></span>Yes</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" class="visually-hidden" id="devs-customise-radio-id-7" name="devs-customise-radio-group-1-name" checked/>
+                                <label for="devs-customise-radio-id-7"><span class="fake-check-box"></span>No</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <strong class="design-system-example">Stacked radio question example:</strong>
+            <form action="/without-js-it-submits-to-this-url" method="post">
+                <fieldset>
+                    <div class="question">
+                        <div class="question-main">
+                            <legend>Stacked radio group legend</legend>
+                            <div class="radio-option radio--stacked">
+                                <input id="stack-radio1" class="visually-hidden" type="radio" name="stack-radio" value="1">
+                                <label for="stack-radio1">
+                                    <span class="fake-radio-button"></span>
+                                    option 1
+                                </label>
+                            </div>
+                            <div class="radio-option radio--stacked">
+                                <input id="stack-radio2" class="visually-hidden" type="radio" name="stack-radio" value="2">
+                                <label for="stack-radio2">
+                                    <span class="radio-option-content">
+                                        <span class="fake-radio-button"></span>
+                                        option 2
+                                    </span>
+                                    <span class="radio-option-content premium-value">Some Text</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+
+            <strong class="design-system-example">Stacked checkbox question example:</strong>
+            <form action="/without-js-it-submits-to-this-url" method="post">
+                <fieldset>
+                    <div class="question">
+                        <div class="question-main">
+                            <legend>Stacked checkbox group legend</legend>
+                            <div class="option checkbox-option checkbox-stacked">
+                                <input id="option1" name="option1" type="checkbox" data-ng-model="termsAgreed" class="visually-hidden checkbox-group" >
+                                <label for="option1" class="ng-binding">
+                                    <span class="fake-check-box"></span>
+                                    Option 1
+                                </label>
+                            </div>
+                            <div class="option checkbox-option checkbox-stacked">
+                                <input id="option2" name="option2" type="checkbox" data-ng-model="termsAgreed" class="visually-hidden checkbox-group" >
+                                <label for="option2" class="ng-binding">
+                                    <span class="fake-check-box"></span>
+                                    Option 2
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </section>
+
+    <section class="design-system-section panel-beta panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="auto-suggest">Auto Suggest</h3>
+            <p class="design-system-dev-notes"><strong>Developer notes:</strong> Select2 javascript library</p>
+            <form>
+                <div class="option">
+                    <div class="label-selector">
+                        <label for="activities-id">Select an activity</label>
+                        <select class="select2-select" name="select2-select" id="activities-id" data-placeholder="Search for an activity">
+                            <option></option>
+                            <option value="0">Accident Investigator 0</option>
+                            <option value="1">Accident Investigator</option>
+                            <option value="2">Acoustic Consultant</option>
+                            <option value="3">Aerobics Instructor</option>
+                            <option value="4">Answering Services (non-medical)</option>
+                            <option value="5">Anthologist</option>
+                            <option value="6">Anthropologist</option>
+                            <option value="7">Appraiser (non-real estate and no fine art)</option>
+                            <option value="8">Aquaculture Consultant</option>
+                            <option value="9">Aqua Zumba Instructor</option>
+                            <option value="10">Arbitrator</option>
+                            <option value="11">Archaeologists</option>
+                            <option value="12">Auctioneer (No Fine Art)</option>
+                            <option value="13">Badminton Coach</option>
+                            <option value="14">Bailiff</option>
+                            <option value="15">Ballet Teacher</option>
+                            <option value="16">Basketball Coach</option>
+                            <option value="17">Bookkeeper/Annual Tax Returns (Non-accountancy Practice - No Tax Consultancy/Tax Advice)</option>
+                            <option value="18">Boxercise Instructor</option><option value="19">Branding Agent/Consultant</option>
+                            <option value="20">Brewers Consultant</option><option value="21">Business Advisory Service</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="design-system-section panel-gamma panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="lists">Lists</h3>
+            <p>Unordered lists (see content style guide for use)</p>
+            <ul>
+                <li>item</li>
+                <li>item</li>
+                <li>
+                    item
+                    <ul>
+                        <li>
+                            item
+                            <ul>
+                                <li>item</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p>Ordered lists (see content style guide for use)</p>
+            <ol>
+                <li>item</li>
+                <li>item</li>
+                <li>
+                    item
+                    <ol>
+                        <li>
+                            item
+                            <ol>
+                                <li>item</li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+
+            <p>Plain list</p>
+            <ul class="list--plain">
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+
+            <p>Horizontal list</p>
+            <ul class="list--plain list--horizontal">
+                <li><a href="">one</a></li>
+                <li><a href="">two</a></li>
+                <li><a href="">three</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="design-system-section panel-beta panel--wide">
+        <div class="grid-width">
+            <h3 class="design-system-headline" id="tables">Tables</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th>Applicant name</th>
+                    <th>Policy number</th>
+                    <th>Activities</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        <span class="data-label">Applicant name</span>
+                        <span class="data"><a href=""><span>Jane Doe</span></a></span>
+                    </td>
+                    <td>
+                        <span class="data-label">Reference number</span>
+                        <span class="data">70</span>
+                    </td>
+                    <td>
+                        <span class="data-label">Activities</span>
+                        <span class="data"><a href=""><span>Book keeper</span></a></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="data-label">Applicant name</span>
+                        <span class="data"><a href=""><span>John Doe</span></a></span>
+                    </td>
+                    <td>
+                        <span class="data-label">Reference number</span>
+                        <span class="data">68</span>
+                    </td>
+                    <td>
+                        <span class="data-label">Activities</span>
+                        <span class="data"><a href=""><span>Aqua zumba instructor</span></a></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <article class="design-system-section panel-delta panel--wide">
+        <div class="grid-width">
+            <h1>Appendices</h1>
+            <section class="design-system-appendix">
+                <h2 class="design-system-headline" id="what-is-a-design-pattern">What is a design pattern?</h2>
+                <p><strong>A pattern describes an optimal solution to a common problem within a specific context.</strong></p>
+                <p>Because a picture is worth a thousand words, the patterns also have a "sensitizing example" that visually represents the pattern in code. By using code as documentation, accessibility and omni-channel concerns are also captured in the pattern (just resize your browser!).</p>
+                <p>Additionally, each pattern will have a corresponding mingle entry which details the pattern’s primary components:</p>
+                <ul>
+                    <li>a Title</li>
+                    <li>a Problem</li>
+                    <li> a Context</li>
+                    <li>a Solution</li>
+                </ul>
+            </section>
+        </div>
+    </article>
+</article>

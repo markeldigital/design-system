@@ -1,0 +1,6 @@
+@mixin warning-message(){
+    background-color: $warning-colour-10;
+    i.icon-exclamation-circle{
+        color: $warning-colour-100;
+    }
+}

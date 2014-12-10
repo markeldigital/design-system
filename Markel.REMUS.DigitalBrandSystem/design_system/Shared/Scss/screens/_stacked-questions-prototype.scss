@@ -1,0 +1,57 @@
+@mixin stacked-questions-prototype($selector){
+    #{$selector}{
+
+        // Stuff needed from questions screen. DELETE WHEN INTEGRATED INTO DISCLOSURE PAGE.
+        .question {
+            @include clearfix;
+            .question-main {
+                @include respond-to($lap-and-desk){
+                    @include span-columns($three-fifths);
+                }
+            }
+            .question-aside {
+                position: relative;
+                @include span-columns($two-fifths);
+            }
+        }
+
+        // Stacked questions...
+
+        // Option 2:
+        .question-style-stacked-headline {
+            .question-main {
+                margin-top: 2*$grid-unit;
+                border-left: transparent;
+                background-color: $colour-greyscale-88;
+                margin-bottom: 1px;
+            }
+            &:first-of-type .question-main {
+                margin-top: 0;
+            }
+        }
+
+        .question-style-stacked-headline, .question-style-stacked-content {
+            margin: 0;
+            padding: 0;
+        }
+
+        // Option 1:
+        .stacked-questions-block {
+            margin-bottom: 2*$grid-unit;
+            .stacked-questions-block-headline {
+                .question-main {
+                    border-left: transparent;
+                    background-color: $colour-greyscale-88;
+                    margin-bottom: 1px;
+                }
+            }
+
+            .stacked-questions-block-headline, .stacked-questions-block-content {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@include stacked-questions-prototype(".stacked-questions-prototype");

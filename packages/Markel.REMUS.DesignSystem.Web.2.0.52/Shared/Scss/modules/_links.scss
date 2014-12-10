@@ -1,0 +1,9 @@
+@mixin link($selector, $level){
+    #{$selector}{
+		i[class^='icon-']:before {
+			text-decoration: none;
+		}
+    }
+}
+
+@include link("a", standard-link);

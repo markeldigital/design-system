@@ -9,6 +9,11 @@ Markel.REMUS.DesignSystem.Web/obj/
 Markel.REMUS.DesignSystem.Web/dummy/
 Markel.REMUS.DesignSystem.Web/.sass-cache/
 
+
+Markel.REMUS.DigitalBrandSystem/bin/
+Markel.REMUS.DigitalBrandSystem/obj/
+Markel.REMUS.DigitalBrandSystem/.sass-cache/
+
 .idea/
 .sass-cache/
 

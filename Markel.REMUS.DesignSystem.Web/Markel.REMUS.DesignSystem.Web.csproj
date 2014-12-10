@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D94629C9-B040-4288-B2D8-76AB420552FC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Markel.REMUS.DesignSystem.Web</RootNamespace>
     <AssemblyName>Markel.REMUS.DesignSystem.Web</AssemblyName>
@@ -451,11 +451,7 @@
     <Content Include="Content\non_bower\modernizr.custom.09892.js" />
     <Content Include="Content\non_bower\picoModal-2.0.0.min.js" />
     <Content Include="Content\non_bower\placeholders.min.js" />
-    <Content Include="Views\Snippets\design-system.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include=".bowerrc" />
-    <None Include="app.config" />
     <Content Include="Content\Fonts\iconography-webfont.ttf" />
     <Content Include="Content\Fonts\iconography-webfont.woff" />
     <None Include="Components\expander\scss\_expander.scss" />
@@ -468,16 +464,6 @@
     <None Include="Content\non_bower\jquery-ui-1.10.4.custom\development-bundle\ui.core.jquery.json" />
     <None Include="Content\non_bower\jquery-ui-1.10.4.custom\development-bundle\ui.datepicker.jquery.json" />
     <None Include="Markel.REMUS.DesignSystem.Web.nuspec" />
-    <Content Include="Views\Default\index.cshtml">
-      <SubType>Code</SubType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Snippets\index.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <None Include="NLog.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="Scss\baseline-styles\baseline-modules\default-body-and-headline-fonts\default-body-and-headline-fonts.scss" />
     <None Include="Scss\baseline-styles\baseline-modules\links\_links.scss" />
     <None Include="Scss\baseline-styles\baseline-modules\lists\_lists.scss" />
@@ -599,51 +585,9 @@
     <Content Include="Views\Global\Error.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Snippets\dashboard-prototype.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Views\Global\Partial\UnsupportedBrowserMessage.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\Default\content.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Shared\Layout.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Shared\primary-navigation-menu.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Shared\primary-navigation-prototype.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Snippets\content-style-guide.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <None Include="Views\Snippets\activities-explanations-prototype.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <Content Include="Views\Snippets\bi_cover-prototype.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <None Include="Views\Snippets\bi_cover-prototype.cshtml" />
-    <Content Include="Views\Snippets\email-editor.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <None Include="Views\Snippets\postcode-form-prototype.cshtml" />
-    <Content Include="Views\Snippets\input-email.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Snippets\logo64x64.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Snippets\output-email.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Snippets\stacked-questions-prototype.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <None Include="web.config" />
     <None Include="bower.json" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -665,10 +609,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bootstrapper.cs" />
-    <Compile Include="ErrorStatusCodeHandler.cs" />
-    <Compile Include="Modules\RootModule.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

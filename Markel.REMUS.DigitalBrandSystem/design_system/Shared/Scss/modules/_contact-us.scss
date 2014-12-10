@@ -1,0 +1,31 @@
+@mixin contact-us($selector){
+    #{$selector}{
+        h3 {
+            margin-top: 0;
+        }
+
+        *[class^='icon-'] {
+            @include set-graphic-as(beta, $type:icon);
+            height: auto;
+            width: 100%;
+            background: transparent;
+            color: $colour-greyscale-76;
+            &:before {
+                display: inline-block;
+                line-height: 1;
+            }
+        }
+        .contact-details {
+            @include set-text-as(delta);
+            font-weight: normal;
+            a[href^="mailto:"] {
+                @include set-text-as(delta, $reduced: true);
+            }
+            .email {
+                word-break: break-all;
+            }
+        }
+    }
+}
+
+@include contact-us(".sidekick .contact-us");
