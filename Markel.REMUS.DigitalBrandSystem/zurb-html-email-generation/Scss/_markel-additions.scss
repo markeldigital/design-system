@@ -67,5 +67,6 @@ body, .body {
 }
 
 .wrap-long-word {
+    display: block;
     word-break: break-all;
 }
