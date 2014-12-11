@@ -555,7 +555,6 @@
   </PropertyGroup>
   <Target Name="BeforeBuild">
     <MakeDir Directories="$(ProjectDir)\dummy\net40" />
-    <Exec Command="grunt sass --gruntfile=$(ProjectDir)..\gruntfile.js --no-color" />
   </Target>
   <Target Name="AfterBuild">
     <ItemGroup>

@@ -8,40 +8,29 @@ module.exports = function (grunt) {
 
     var params = {
         'sass-publishing-path': 'design_system/Shared/Scss/',
+        'digital-brand-system-root': 'Markel.REMUS.DigitalBrandSystem/',
         'broker-root': '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/',
         'public-root': '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/',
         'underwriter-root': '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/'
     };
 
     grunt.initConfig({
-        sass: {
-            dev: {
-                options: {
-                    style: 'compressed'
-                },
-                files: [
-                {
-                    src: sourcePathForScss,
-                    dest: path.join(projectRoot, 'Content/Styles/design-system.css'),
-                    ext: '.css'
-                }
-                ]
-            }
-        },
-
         watch: {
             gruntfile: {
                 files: path.join(projectRoot, 'gruntfile.js')
             },
-            css: {
-                files: path.join(projectRoot, '/Scss/**/*.*'),
-                tasks: ['sass', 'sync:toAllUIProjects']
+            designSystem: {
+                files: [path.join(projectRoot, '/Scss/**/*.*'), path.join(projectRoot, '/Components/**/*.*')],
+                tasks: ['sync:toAllUIProjects']
             }
         },
 
         sync: {
             toAllUIProjects: {
                 files: [
+                    // Digital Brand System
+                    {expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['digital-brand-system-root'], params['sass-publishing-path'])},
+
                     // Broker
                     {expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['broker-root'], params['sass-publishing-path'])},
 
@@ -64,6 +53,7 @@ module.exports = function (grunt) {
                     // Step 1: Design System will publish itself to the other projects for local dev (from task watch).
                     // Step 2: Each project watches it's own app.scss for changes and this will notice when design_system is updated and published by step 1 above...
                     // the output of step 2 is an app.css for each project that includes Design System as it's base and adds on any extra styles needed for that project.
+                    'Markel.REMUS.DigitalBrandSystem/gruntfile.js',
                     '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/gruntfile.js',
                     '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/gruntfile.js',
                     '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/gruntfile.js'
@@ -75,7 +65,7 @@ module.exports = function (grunt) {
             options: {
                 logConcurrentOutput: true
             },
-            dev: {
+            all: {
                 tasks: ["watch", "hub:all:watch"]
             }
         }
@@ -87,5 +77,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-hub');
     grunt.loadNpmTasks('grunt-concurrent');
 
-    grunt.registerTask('default', ['concurrent:dev']);
+    grunt.registerTask('default', ['concurrent:all']);
 };

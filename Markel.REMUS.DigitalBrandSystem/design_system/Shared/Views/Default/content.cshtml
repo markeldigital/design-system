@@ -1,9 +1,0 @@
-﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase
-﻿@{
-    ViewBag.Title = @Text.Content.StatusTitle;
-    Layout = "Shared/Layout";
-}
-
-<div>
-    @Html.Partial(Model.PartialView)
-</div>
