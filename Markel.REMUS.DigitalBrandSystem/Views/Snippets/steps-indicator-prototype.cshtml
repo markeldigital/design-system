@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Markel Digital Design System</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/Content/Images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/Content/Images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/Content/Images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/Content/Images/apple-touch-icon-57x57-precomposed.png">
+    <link rel="shortcut icon" sizes="196x196" href="/Content/Images/touch-icon-196x196.png">
+    <link rel="shortcut icon" href="/Content/Images/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="/Content/Images/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#222222">
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Titillium Web:400,600,700:latin']
+            }
+        });
+    </script>
+
+    <script src="/Content/non_bower/jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
+    <script src="/Content/app/primary-navigation.js"></script>
+
+    <link rel="stylesheet" href="/Content/Styles/app.css">
+    <script src="/Content/non_bower/modernizr.custom.09892.js"></script>
+</head>
+<body>
+
+@Html.Partial("Shared/primary-navigation-menu.cshtml")
+<section class="top-header All quotes &amp; policies">
+    <h2 class="primary-signpost">Professional liability insurance package</h2>
+    <ul>
+        <li class=" New_quote">
+            <form action="/portal/en/reference/new/TMO" method="post">
+                <button class="button-style-primary button--size-alpha bi-new-quote">New quote</button>
+            </form>
+        </li>
+        <li class=" All_quotes__policies">
+            <a href="/portal/en/dashboard" class="button-style-subtle button--size-alpha">
+                <span>All quotes &amp; policies</span>
+            </a>
+        </li>
+    </ul>
+</section>
+<section class="steps-indicator grid-width">
+    <ul class="list--plain list--horizontal">
+        <li>
+            <div class="steps-circle">1</div>
+            Disclosure Questions
+        </li>
+        <li><div class="steps-circle">2</div>
+            Quote Options
+        </li>
+        <li><div class="steps-circle">3</div>
+            Bind your quote
+        </li>
+        <li>
+            <div class="steps-circle">4</div>
+            Confirmation
+        </li>
+    </ul>
+</section>
+<main role="main">
+    <div class="content">
+        <div class="content-inner">
+            @RenderBody()
+        </div>
+    </div>
+</main>
+</body>
+</html>

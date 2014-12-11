@@ -1,0 +1,32 @@
+@mixin steps-indicator($selector){
+ #{$selector}{
+     border-bottom: 1px solid $colour-greyscale-76;
+     padding:2*$grid-unit;
+     >ul {
+         @include set-text-as(gamma,$reduced:true,$margins-overrides:zero-both);
+         li {
+             display: inline;
+             padding:2*$grid-unit;
+             margin-top: $grid-unit;
+             border-left: 1px solid $colour-greyscale-76;
+             border-right: 1px solid $colour-greyscale-76;
+             .steps-circle {
+                 @include set-text-as(delta,$margins-overrides:zero-both);
+                 display: inline-block;
+                 border-radius: 50%;
+                 border:1px solid $colour-greyscale-76;
+                 padding-left:9px;
+                 padding-top:2px;
+                 margin-right:$grid-unit;
+                 width: 4*$grid-unit;
+                 height: 4*$grid-unit;
+             }
+             &.active {
+                 color: $colour-white;
+                 background-color: $colour-black;
+             }
+         }
+     }
+ }
+}
+@include steps-indicator(".steps-indicator");

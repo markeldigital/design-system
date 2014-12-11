@@ -484,6 +484,7 @@
     <Content Include="Views\Snippets\stacked-questions-prototype.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Views\Snippets\steps-indicator-prototype.cshtml" />
     <None Include="web.config" />
   </ItemGroup>
   <ItemGroup />

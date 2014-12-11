@@ -17,7 +17,7 @@ properties {
 		$msbuild = "$Env:winDir\Microsoft.NET\Framework64\v4.0.30319\msbuild.exe"
 
 		$services = @(
-			@{"project" = "Markel.REMUS.DesignSystem.Web"; "port" = "3570"}
+			@{"project" = "Markel.REMUS.DigitalBrandSystem"; "port" = "3570"}
 		)
 }
 
