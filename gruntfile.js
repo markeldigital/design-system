@@ -8,7 +8,6 @@ module.exports = function (grunt) {
 
     var params = {
         'sass-publishing-path': 'design_system/Shared/Scss/',
-        'views-publishing-path': 'design_system/Shared/Views/',
         'broker-root': '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/',
         'public-root': '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/',
         'underwriter-root': '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/'
@@ -45,15 +44,12 @@ module.exports = function (grunt) {
                 files: [
                     // Broker
                     {expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['broker-root'], params['sass-publishing-path'])},
-                    {expand: true, cwd: path.join(projectRoot, 'Views'), src: path.join('**'), dest: path.join(params['broker-root'], params['views-publishing-path'])},
 
                     // Public
                     {expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['public-root'], params['sass-publishing-path'])},
-                    {expand: true, cwd: path.join(projectRoot, 'Views'), src: path.join('**'), dest: path.join(params['public-root'], params['views-publishing-path'])},
 
                     // Underwriter
                     {expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['underwriter-root'], params['sass-publishing-path'])},
-                    {expand: true, cwd: path.join(projectRoot, 'Views'), src: path.join('**'), dest: path.join(params['underwriter-root'], params['views-publishing-path'])},
                 ]
             }
         },

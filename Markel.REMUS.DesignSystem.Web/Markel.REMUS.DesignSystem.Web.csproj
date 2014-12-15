@@ -66,10 +66,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Components\common\js\classList.min.js" />
-    <Content Include="Components\expander\js\expander.js" />
-    <Content Include="Components\primary-navigation\js\primary-navigation.js" />
-    <Content Include="Components\tabs\js\ds-tabs.js" />
+    <Content Include="components\common\js\classList.min.js" />
+    <Content Include="components\expander\js\expander.js" />
+    <Content Include="components\primary-navigation\js\primary-navigation.js" />
+    <Content Include="components\tabs\js\ds-tabs.js" />
     <Content Include="Content\app\primary-navigation.js" />
     <Content Include="Content\Images\apple-touch-icon-114x114-precomposed.png" />
     <Content Include="Content\Images\apple-touch-icon-144x144-precomposed.png" />
@@ -388,10 +388,34 @@
     <None Include=".bowerrc" />
     <Content Include="Content\Fonts\iconography-webfont.ttf" />
     <Content Include="Content\Fonts\iconography-webfont.woff" />
-    <None Include="Components\expander\scss\_expander.scss" />
-    <None Include="Components\expander\template\Expander.cshtml" />
-    <None Include="Components\primary-navigation\template\PrimaryNavigation.cshtml" />
-    <None Include="Components\tabs\scss\_tabs.scss" />
+    <Content Include="components\error-pages\template\403_en.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="components\error-pages\template\403_fr.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="components\error-pages\template\404_en.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="components\error-pages\template\404_fr.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="components\error-pages\template\500_en.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="components\error-pages\template\500_fr.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="components\error-pages\template\Error.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="components\expander\scss\_expander.scss" />
+    <None Include="components\expander\template\Expander.cshtml" />
+    <None Include="components\primary-navigation\template\PrimaryNavigation.cshtml" />
+    <None Include="components\tabs\scss\_tabs.scss" />
+    <Content Include="components\unsupported-browser-message\template\unsupportedBrowserMessage.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Content\non_bower\chosen_v1.1.0\.bower.json" />
     <None Include="Content\non_bower\jquery-ui-1.10.4.custom\development-bundle\package.json" />
     <None Include="Content\non_bower\jquery-ui-1.10.4.custom\development-bundle\README.md" />
@@ -498,30 +522,6 @@
     <None Include="Scss\templates\_twins-template.scss" />
     <None Include="Scss\_neat-setup-vars.scss" />
     <None Include="Scss\_vars.scss" />
-    <Content Include="Views\Global\Partial\403_en.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Global\Partial\403_fr.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Global\Partial\404_en.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Global\Partial\404_fr.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Global\Partial\500_en.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Global\Partial\500_fr.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Global\Error.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Views\Global\Partial\UnsupportedBrowserMessage.cshtml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="bower.json" />
     <None Include="packages.config" />
   </ItemGroup>

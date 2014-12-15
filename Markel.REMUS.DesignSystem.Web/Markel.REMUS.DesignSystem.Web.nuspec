@@ -7,10 +7,9 @@
     <description>Unknown</description>
   </metadata>
   <files>
-    <file src="Components\**\*.*" target="Components" />
+    <file src="components\**\*.*" target="components" />
     <file src="bower_components\**\*.*" target="Shared\bower_components" />
     <file src="Scss\**\*.*" target="Shared\Scss" />
-    <file src="bin\Release\Views\Global\**\*.*" target="Shared\Views\Global" />
     <file src="dummy*" target="content" />
     <file src="dummy\" target="content\" />
   </files>
