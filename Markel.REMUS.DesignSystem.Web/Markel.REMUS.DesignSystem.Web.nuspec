@@ -9,8 +9,8 @@
   <files>
     <file src="components\**\*.*" target="components" />
     <file src="bower_components\**\*.*" target="Shared\bower_components" />
-    <file src="Fonts\**\*.*" target="Fonts" />
-    <file src="Images\**\*.*" target="Images" />
+    <file src="Content\Fonts\**\*.*" target="Fonts" />
+    <file src="Content\Images\**\*.*" target="Images" />
     <file src="Scss\**\*.*" target="Shared\Scss" />
     <file src="dummy*" target="content" />
     <file src="dummy\" target="content\" />
