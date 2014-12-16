@@ -1,32 +1,87 @@
 @mixin steps-indicator($selector){
  #{$selector}{
+     counter-reset: section;
      border-bottom: 1px solid $colour-greyscale-76;
-     padding:2*$grid-unit;
-     >ul {
-         @include set-text-as(gamma,$reduced:true,$margins-overrides:zero-both);
-         li {
-             display: inline;
-             padding:2*$grid-unit;
-             margin-top: $grid-unit;
-             border-left: 1px solid $colour-greyscale-76;
-             border-right: 1px solid $colour-greyscale-76;
-             .steps-circle {
-                 @include set-text-as(delta,$margins-overrides:zero-both);
+     .steps-container {
+         >ul {
+             @include set-text-as(gamma,$reduced:true,$margins-overrides:zero-both);
+             li {
+                 padding: 2*$grid-unit;
                  display: inline-block;
-                 border-radius: 50%;
-                 border:1px solid $colour-greyscale-76;
-                 padding-left:9px;
-                 padding-top:2px;
-                 margin-right:$grid-unit;
-                 width: 4*$grid-unit;
-                 height: 4*$grid-unit;
-             }
-             &.active {
-                 color: $colour-white;
-                 background-color: $colour-black;
+                 margin-bottom: 0;
+                 border-left: none;
+                 border-right: 1px solid $colour-greyscale-76;
+                 &:first-child{
+                     border-left: 1px solid $colour-greyscale-76;
+                 }
+                 &:hover {
+                     background-color: $colour-greyscale-97;
+                 }
+
+                 .step {
+                     text-decoration: none;
+                     color: $colour-black;
+                     .steps-circle {
+                         @include respond-to($desk-only){
+                             display: inline-block;
+                         }
+                         display: block;
+                        @include set-text-as(delta,$margins-overrides:zero-both);
+                         margin: 0 auto;
+                         width: 50%;
+                         @include respond-to($desk-only){
+                             margin:0;
+                             width: inherit;
+                         }
+                        &:before {
+                            counter-increment: section;
+                            content: counter(section);
+                            display: inline-block;
+                            border-radius: 50%;
+                            border:1px solid $colour-greyscale-76;
+                            background-color: $colour-white;
+                            width: 4*$grid-unit;
+                            height: 4*$grid-unit;
+                            margin-right:$grid-unit;
+                            padding-top: 4px;
+                            text-align: center;
+                            @include respond-to($desk-only){
+                                padding-top:2px;
+                            }
+
+                        }
+                        span {
+                            display: none;
+                            @include respond-to($lap-and-desk){
+                                display: block;
+                            }
+                        }
+                     }
+                     &.active {
+                         @include set-text-as(gamma,$reduced:true,$margins-overrides:zero-both,$strength: strong);
+                         .steps-circle {
+                             &:before{
+                                 color: $colour-white;
+                                 background-color: $colour-black;
+                                 @include set-text-as(delta, $margins-overrides: zero-both, $strength: strong);
+                             }
+                         }
+                     }
+                     &.success {
+                         .steps-circle {
+                             color: $colour-black;
+                             &:before {
+                                 content: "-";
+                             }
+                         }
+                     }
+
+                 }
+
              }
          }
      }
+
  }
 }
 @include steps-indicator(".steps-indicator");
