@@ -4,6 +4,8 @@
 
 @mixin button($selector, $style){
     $background-color: $colour-interaction-100;
+    $color: $colour-white;
+    $border: none;
 
     @if($style == button-style-primary) {
         $background-color: $colour-brand-primary;
@@ -17,14 +19,25 @@
         $background-color: transparentize($colour-white, 0.75);
     }
 
+    @if($style == button-style-primary-subtle) {
+        $background-color: $colour-interaction-10;
+        $color: $colour-interaction-100;
+        $border: 2px solid $colour-brand-primary;
+    }
+    @if($style == button-style-secondary-subtle) {
+        $background-color: $colour-interaction-10;
+        $color: $colour-interaction-100;
+        $border: 2px solid $colour-interaction-100;
+    }
+
     #{$selector}{
         position: relative;
         display: inline-block;
         vertical-align: middle;
         min-width: 8*$grid-unit;
         background-color: $background-color;
-        color: $colour-white;
-        border: none;
+        color: $color;
+        border: $border;
         text-decoration: none;
         text-align: center;
         border-radius: $standard-curvature;
@@ -57,5 +70,7 @@
 }
 
 @include button(".button-style-primary", button-style-primary);
+@include button(".button-style-primary-subtle", button-style-primary-subtle);
 @include button(".button-style-secondary", button-style-secondary);
+@include button(".button-style-secondary-subtle", button-style-secondary-subtle);
 @include button(".button-style-subtle", button-style-subtle);
