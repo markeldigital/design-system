@@ -6,6 +6,7 @@
     $background-color: $colour-interaction-100;
     $color: $colour-white;
     $border: none;
+	$box-shadow: none;
 
     @if($style == button-style-primary) {
         $background-color: $colour-brand-primary;
@@ -22,12 +23,13 @@
     @if($style == button-style-primary-subtle) {
         $background-color: $colour-interaction-10;
         $color: $colour-interaction-100;
-        $border: 2px solid $colour-brand-primary;
+		$box-shadow: 0 0 0 2px $colour-brand-primary inset;
     }
+
     @if($style == button-style-secondary-subtle) {
         $background-color: $colour-interaction-10;
         $color: $colour-interaction-100;
-        $border: 2px solid $colour-interaction-100;
+		$box-shadow: 0 0 0 2px $colour-interaction-100 inset;
     }
 
     #{$selector}{
@@ -41,6 +43,7 @@
         text-decoration: none;
         text-align: center;
         border-radius: $standard-curvature;
+        box-shadow: $box-shadow;
         width: 100%;
         @include respond-to($lap-and-desk){
             width: auto;
