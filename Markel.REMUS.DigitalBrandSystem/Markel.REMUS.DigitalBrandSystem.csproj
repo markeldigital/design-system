@@ -422,6 +422,7 @@
     <Content Include="Content\non_bower\picoModal-2.0.0.min.js" />
     <Content Include="Content\non_bower\placeholders.min.js" />
     <Content Include="Content\Styles\app.css" />
+    <Content Include="Content\Styles\email-app.css" />
     <Content Include="gruntfile.js" />
     <Content Include="Views\Snippets\input-email.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
