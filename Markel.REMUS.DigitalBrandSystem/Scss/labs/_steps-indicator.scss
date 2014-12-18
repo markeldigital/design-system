@@ -5,6 +5,7 @@
      .steps-container {
          >ul {
              @include set-text-as(gamma,$reduced:true,$margins-overrides:zero-both);
+             text-align: center;
              li {
                  padding: 2*$grid-unit;
                  display: inline-block;
@@ -40,22 +41,27 @@
                             border-radius: 50%;
                             border:1px solid $colour-greyscale-76;
                             background-color: $colour-white;
-                            width: 4*$grid-unit;
-                            height: 4*$grid-unit;
+                            width: 3*$grid-unit;
+                            height: 3*$grid-unit;
+                            padding-top: 0;
+                            @include respond-to($lap-and-desk){
+                                width: 4*$grid-unit;
+                                height: 4*$grid-unit;
+                                padding-top: 4px;
+                            }
                             margin-right:$grid-unit;
-                            padding-top: 4px;
                             text-align: center;
                             @include respond-to($desk-only){
                                 padding-top:2px;
-                            }
 
-                        }
-                        span {
-                            display: none;
-                            @include respond-to($lap-and-desk){
-                                display: block;
                             }
                         }
+                     }
+                     span {
+                         display: none;
+                         @include respond-to($lap-and-desk){
+                             display: inline-block;
+                         }
                      }
                      &.active {
                          @include set-text-as(gamma,$reduced:true,$margins-overrides:zero-both,$strength: strong);

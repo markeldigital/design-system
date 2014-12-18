@@ -7,14 +7,14 @@
         width: 100%;
         margin-top: 6*$grid-unit;
         padding:2*$grid-unit;
-        p {
-            display: inline;
-            width:100%
-        }
         i{
             display: inline;
             font-size: 3*$grid-unit;
             padding-right: $grid-unit;
+        }
+        p {
+            display: inline;
+            width:100%
         }
     }
 
