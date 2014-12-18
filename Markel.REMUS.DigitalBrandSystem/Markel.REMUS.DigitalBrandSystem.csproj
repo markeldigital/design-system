@@ -498,8 +498,7 @@ xcopy /s /y /R "$(SolutionDir)packages\Nancy.Viewengines.Razor.0.23.2\lib\Net40\
 )</PostBuildEvent>
   </PropertyGroup>
   <Target Name="BeforeBuild">
-    <Exec Command="grunt copyDesignSystem --no-color" />
-    <Exec Command="grunt generateAppCss --no-color" />
+    <Exec Command="grunt build --no-color" />
   </Target>
   <Target Name="AfterBuild">
     <Copy Condition=" '$(Configuration)' == 'Release' " SourceFiles="@(Content)" DestinationFiles="@(Content-> '$(ProjectDir)bin\$(Configuration)\%(RelativeDir)%(Filename)%(Extension)')" />

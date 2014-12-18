@@ -3,9 +3,6 @@ var path = require('path');
 module.exports = function (grunt) {
     var root = __dirname;
     console.log(root);
-    var sourcePathForScss = path.join(root, "/Scss/app.scss");    
-    console.log("source path" + sourcePathForScss);
-
 
     var params = {
         'design-system-nuget-pkg-name': "Markel.REMUS.DesignSystem.Web",
@@ -14,21 +11,30 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
         sass: {
-          dev: {         
-            files: [
-                {
-                    src: sourcePathForScss,
-                    dest: path.join(root, 'Content/Styles/app.css'),
-                    ext: '.css'
-                }
-            ]
-          }
+            forApps: {
+                files: [
+                    {
+                        src: path.join(root, "/Scss/app.scss"),
+                        dest: path.join(root, 'Content/Styles/app.css'),
+                        ext: '.css'
+                    }
+                ]
+            },
+            forEmails: {
+                files: [
+                    {
+                        src: path.join(root, "zurb-html-email-generation/Scss/email-app.scss"),
+                        dest: path.join(root, 'Content/Styles/email-app.css'),
+                        ext: '.css'
+                    }
+                ]
+            }
         },
 
         watch: {
-            generateAppCss: {
+            digitalBrandSystem: {
                 files: [path.join(root, '/Scss/**')],
-                tasks: ['generateAppCss']
+                tasks: ['sass:forApps']
             }           
         }
 
@@ -48,7 +54,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-collection');
 
 
-    grunt.registerTask('generateAppCss', ['sass']);    
+    grunt.registerTask('build', ['copyDesignSystem', 'sass:forApps', 'sass:forEmails']);
     grunt.registerTask('default', ['watch']);
     
 
