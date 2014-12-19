@@ -46,7 +46,11 @@
                     @include respond-to($lap-and-desk){
                         display: none;
                     }
-                    font-weight: bold;
+                    @include set-text-as(epsilon, $strength: weak);
+                    margin-bottom: 0;
+                    margin-top:1px;
+                    margin-right: 2*$grid-unit;
+                    text-transform: uppercase;
                 }
                 .data {
                     display: block;
@@ -58,8 +62,10 @@
                     margin: 0;
                     padding: 0;
                 }
-                border-bottom: 1px solid $colour-greyscale-88;
-                background-color: $colour-greyscale-97;
+                @include respond-to($lap-and-desk){
+                    border-bottom: 1px solid $colour-greyscale-88;
+                }
+                border: none;
                 &.main-index {
                     background-color: $colour-white;
                 }
@@ -67,11 +73,18 @@
                     background-color: transparent;
                 }
             }
+
             tr:first-of-type td {
-                border-top: 1px solid $colour-greyscale-88;
+                @include respond-to($lap-and-desk){
+                    border-top: 1px solid $colour-greyscale-88;
+                }
             }
             tr {
-                background: $colour-white;
+                border-bottom: 1px solid $colour-greyscale-88;
+                @include respond-to($lap-and-desk){
+                    border: none;
+                    background: $colour-white;
+                }
             }
             tr:hover {
                 background-color: $colour-greyscale-96;
