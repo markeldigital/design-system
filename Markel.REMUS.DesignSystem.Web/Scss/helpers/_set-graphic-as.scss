@@ -13,20 +13,31 @@
     $epsilon-size: map_get(get-base-text-properties-for(epsilon), "font-size");
 
     // Icons
+    $font-size: $delta-size;
     @if($level == jumbo and $type == icon){
-        font-size: $jumbo-size;
+        $font-size: $jumbo-size;
     }
     @if($level == alpha and $type == icon){
-        font-size: $alpha-size;
+        $font-size: $alpha-size;
     }
     @if($level == beta and $type == icon){
-        font-size: $beta-size;
+        $font-size: $beta-size;
     }
     @if($level == gamma and $type == icon){
-        font-size: $gamma-size;
+        $font-size: $gamma-size;
     }
     @if($level == delta and $type == icon){
-        font-size: $delta-size;
+        $font-size: $delta-size;
+    }
+    // TODO: Responsive icons with this mixin? Always sets icons at the same size on all screen sizes (for now) to counteract 'set-text-as' mixin.
+    @if($type == icon){
+        font-size: $font-size;
+        @include respond-to($lap-and-desk){
+            font-size: $font-size;
+        }
+        @include respond-to($desk-only){
+            font-size: $font-size;
+        }
     }
 
     // Other graphics
