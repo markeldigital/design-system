@@ -7,14 +7,19 @@
         width: 100%;
         margin-top: 6*$grid-unit;
         padding:2*$grid-unit;
+        .notification-content {
+            float: left;
+            width: 90%;
+            p {
+                margin-bottom: 0;
+                display: inline;
+            }
+        }
         i{
-            display: inline;
+            float: left;
+            width: auto;
             font-size: 3*$grid-unit;
             padding-right: $grid-unit;
-        }
-        p {
-            display: inline;
-            width:100%
         }
     }
 
