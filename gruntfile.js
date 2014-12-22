@@ -34,10 +34,6 @@ module.exports = function (grunt) {
                     {expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['digital-brand-system-root'], params['sass-publishing-path'])},
                     {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['digital-brand-system-root'], params['components-publishing-path'])},
 
-                    //// Quote Journey
-                    //{expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['quote-journey-root'], params['sass-publishing-path'])},
-                    //{expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['quote-journey-root'], params['components-publishing-path'])},
-
                     // Broker
                     {expand: true, cwd: path.join(projectRoot, 'Scss'), src: path.join('**'), dest: path.join(params['broker-root'], params['sass-publishing-path'])},
                     {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['broker-root'], params['components-publishing-path'])},

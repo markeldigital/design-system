@@ -1,5 +1,9 @@
 /* Breakpoints
 */
+
+// Because each app can have it's own location to publish app.css to, we assume a location which can be overridden.
+$ds-package-location: '../../design_system/' !default;
+
 // Note: for palm-sized devices use a mobile first strategy (the first breakpoint is to have no breakpoint)
 $lap-only: new-breakpoint(min-width 569px and max-width 1280px $grid-columns);
 $lap-and-desk: new-breakpoint(min-width 569px $grid-columns);
@@ -40,48 +44,48 @@ $standard-touch-size: 6*$grid-unit;
 
 /* Fonts
 */
-$fallback-fonts: Tahoma, sans-serif;
-$standard-fonts: "Titillium Web", $fallback-fonts;
+$fallback-fonts: Tahoma, sans-serif !default;
+$standard-fonts: "Titillium Web", $fallback-fonts !default;
 
 /* Colour Palette
 */
 // Colour names are based on opacity against a white background.
 // Brand colours
-$colour-brand-primary: #b71234;
+$colour-brand-primary: #b71234 !default;
 
 
 // Semantic colours
-$error-colour-100: #f27300;
-$error-colour-10: #fef1e5;
-$warning-colour-10: #fffce2;
-$warning-colour-100:#ffcc00;
-$success-colour-100: #7ab800;
-$success-colour-10: #f1f8e5;
-$colour-interaction-100: #009aa6;
-$colour-interaction-60: #66c2ca;
-$colour-interaction-10: #e5f5f6;
+$error-colour-100: #f27300 !default;
+$error-colour-10: #fef1e5 !default;
+$warning-colour-10: #fffce2 !default;
+$warning-colour-100:#ffcc00 !default;
+$success-colour-100: #7ab800 !default;
+$success-colour-10: #f1f8e5 !default;
+$colour-interaction-100: #009aa6 !default;
+$colour-interaction-60: #66c2ca !default;
+$colour-interaction-10: #e5f5f6 !default;
 // Greyscale colours names are based on HSB with brightness defining the name of the variable.
-$colour-black: #000;
-$colour-greyscale-24: #3c3c3c;
-$colour-greyscale-39: #636363;
-$colour-greyscale-51: #818181;
-$colour-greyscale-63: #a1a1a1;
-$colour-greyscale-76: #c1c1c1;
-$colour-greyscale-88: #e0e0e0;
-$colour-greyscale-92: #eaeaea;
-$colour-greyscale-94: #efefef;
-$colour-greyscale-96: #f6f6f6;
-$colour-greyscale-97: #f7f7f7;
-$colour-greyscale-98: #fafafa;
-$colour-white: #fff;
+$colour-black: #000 !default;
+$colour-greyscale-24: #3c3c3c !default;
+$colour-greyscale-39: #636363 !default;
+$colour-greyscale-51: #818181 !default;
+$colour-greyscale-63: #a1a1a1 !default;
+$colour-greyscale-76: #c1c1c1 !default;
+$colour-greyscale-88: #e0e0e0 !default;
+$colour-greyscale-92: #eaeaea !default;
+$colour-greyscale-94: #efefef !default;
+$colour-greyscale-96: #f6f6f6 !default;
+$colour-greyscale-97: #f7f7f7 !default;
+$colour-greyscale-98: #fafafa !default;
+$colour-white: #fff !default;
 
-$mobile-menu-background: #38454f;
+$mobile-menu-background: #38454f !default;
 
-$brand-image-1: url('../Images/hero-bg.png') no-repeat top center $colour-greyscale-98;
+$brand-image-1: url('../Images/hero-bg.png') no-repeat top center $colour-greyscale-98 !default;
 
 /* Global styles for consistency of wells, drop-shadows, borders, etc.
 */
-$standard-transparent-overlay-colour: transparentize($colour-black, 0.5);
-$standard-drop-shadow: 0 2px 2px rgba($colour-black, 0.5);
-$standard-curvature: 4px;
-$standard-transition-animation: all 0.2s ease-in-out; // Use with @include transition ();
+$standard-transparent-overlay-colour: transparentize($colour-black, 0.5) !default;
+$standard-drop-shadow: 0 2px 2px rgba($colour-black, 0.5) !default;
+$standard-curvature: 4px !default;
+$standard-transition-animation: all 0.2s ease-in-out !default; // Use with @include transition ();
