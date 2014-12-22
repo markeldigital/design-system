@@ -28,12 +28,10 @@
                          }
                          display: block;
                         @include set-text-as(delta,$margins-overrides:zero-both);
-                         margin: 0 auto;
-                         width: 50%;
-                         @include respond-to($desk-only){
-                             margin:0;
-                             width: inherit;
-                         }
+                        @include respond-to($desk-only){
+                            margin:0;
+                            width: inherit;
+                        }
                         &:before {
                             counter-increment: section;
                             content: counter(section);
@@ -49,11 +47,13 @@
                                 height: 4*$grid-unit;
                                 padding-top: 4px;
                             }
-                            margin-right:$grid-unit;
+                            @include respond-to($lap-and-desk)
+                            {
+                                margin-right:$grid-unit;
+                            }
                             text-align: center;
                             @include respond-to($desk-only){
                                 padding-top:2px;
-
                             }
                         }
                      }
