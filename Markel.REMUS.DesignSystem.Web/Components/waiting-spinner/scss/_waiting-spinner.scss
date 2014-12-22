@@ -1,6 +1,6 @@
 @mixin waiting-spinner($selector, $background-colour: $colour-interaction-10){
     #{$selector}{
-        background: url($ds-package-location + "/Components/waiting-spinner/img/loading.svg") center center $background-colour;
+        background: url($ds-package-location + "Components/waiting-spinner/img/loading.svg") center center $background-colour;
         background-size: contain;
     }
 }
