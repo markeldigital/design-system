@@ -1,0 +1,31 @@
+@import "notification-warning";
+@import "notification-success";
+@import "notification-error";
+@mixin notification($selector){
+    #{$selector}{
+        display: inline-block;
+        width: 100%;
+        margin-top: 6*$grid-unit;
+        padding:2*$grid-unit;
+        .notification-content {
+            float: left;
+            width: 90%;
+            p {
+                margin-bottom: 0;
+                display: inline;
+            }
+        }
+        i{
+            float: left;
+            width: auto;
+            font-size: 3*$grid-unit;
+            padding-right: $grid-unit;
+        }
+    }
+
+}
+
+@include notification(".notification");
+@include notification-warning(".notification-warning");
+@include notification-success(".notification-success");
+@include notification-error(".notification-error");

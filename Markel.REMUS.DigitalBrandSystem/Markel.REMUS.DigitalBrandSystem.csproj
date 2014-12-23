@@ -423,6 +423,10 @@
     <Content Include="Content\non_bower\placeholders.min.js" />
     <Content Include="Content\Styles\app.css" />
     <Content Include="Content\Styles\email-app.css" />
+    <Content Include="grunt-tasks\copy-design-system.js" />
+    <Content Include="grunt-tasks\grunt-file-utils.js" />
+    <Content Include="grunt-tasks\index.js" />
+    <Content Include="grunt-tasks\params.js" />
     <Content Include="gruntfile.js" />
     <Content Include="Views\Snippets\input-email.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

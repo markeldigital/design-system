@@ -38,6 +38,10 @@ namespace Markel.REMUS.DigitalBrandSystem
                 StaticContentConventionBuilder.AddDirectory("Content/non_bower", "Content/non_bower")
             );
 
+            conventions.StaticContentsConventions.Add(
+                StaticContentConventionBuilder.AddDirectory("design_system")
+                );
+
             conventions.CultureConventions = new List<Func<NancyContext, CultureInfo>>
             {
                 BuiltInCultureConventions.FormCulture,
