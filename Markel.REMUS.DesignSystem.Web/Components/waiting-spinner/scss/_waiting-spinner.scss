@@ -4,3 +4,5 @@
         background-size: contain;
     }
 }
+
+@include waiting-spinner(".ds-waiting-spinner");
