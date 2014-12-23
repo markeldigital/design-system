@@ -31,7 +31,7 @@ namespace Markel.REMUS.BrokerPortal.Web
 
         public void Handle(HttpStatusCode statusCode, NancyContext context)
         {
-            var response = _viewRenderer.RenderView(context, "Global/Error");
+            var response = _viewRenderer.RenderView(context, "Shared/DesignSystemPartials/Error");
             response.StatusCode = statusCode;
             context.Response = response;
         }
