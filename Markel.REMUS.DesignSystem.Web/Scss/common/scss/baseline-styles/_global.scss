@@ -1,4 +1,4 @@
-@import "baseline-modules/set-box-sizing/set-box-sizing";
+@import "baseline-modules/set-box-sizing/_set-box-sizing";
 
 html, body {
     height: 100%;
@@ -16,9 +16,9 @@ body {
     }
 }
 
-@import "baseline-modules/links/links";
-@import "baseline-modules/lists/lists";
-@import "baseline-modules/quotes/quotes";
+@import "baseline-modules/links/_links";
+@import "baseline-modules/lists/_lists";
+@import "baseline-modules/quotes/_quotes";
 
 /* Useful classes TODO: find better place for these to live. */
 .visually-hidden {

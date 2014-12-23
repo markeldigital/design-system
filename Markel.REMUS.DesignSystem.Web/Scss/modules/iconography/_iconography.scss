@@ -115,3 +115,9 @@ $icon-map:(
 @mixin get-icon-content-only($icon-name){
     content: map-get($icon-map, $icon-name);
 }
+
+//TODO: find a better home for this.
+// Fix issue with underline of icons in links
+a i[class^='icon-']:before {
+    text-decoration: none;
+}

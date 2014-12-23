@@ -1,72 +1,35 @@
-﻿@charset "utf-8";
-
-// Neat Grid setup
-@import '_neat-setup-vars';
-
-// Vendor
-@import '../bower_components/normalize-scss/_normalize.scss';
-@import '../bower_components/bourbon/dist/bourbon';
-@import '../bower_components/neat/app/assets/stylesheets/neat';
-
-// Variables, breakpoints
-@import '_vars';
-
-// Global helpers
-@import 'helpers/_visually-hidden';
-@import 'helpers/_icon-interaction';
-@import 'helpers/_respond-to';
-@import 'helpers/_grid-width';
-@import 'helpers/_set-text-as';
-@import 'helpers/_set-graphic-as';
-@import 'helpers/_padding-for-form-element';
-@import 'helpers/_box-shadows';
-@import 'helpers/_set-form-element-state'; // TODO:
-
-// Base
-@import 'baseline-styles/_global';
+﻿@import "common/scss/common.scss";
 
 /* Modules
 */
-//Order dependent
-@import 'modules/_links';
-// Not order dependent
-@import 'modules/_iconography';
+// Not order dependent //TODO: need to work out which of these have dependencies on the others and either remove the dependencies or put them together in one module.
+@import 'modules/iconography/_iconography';
 @import 'modules/chrome-and-content/_chrome-and-content';
-@import 'modules/_split-actions';
-@import 'modules/_scroll-area';
+@import 'modules/split-actions/_split-actions';
+@import 'modules/scroll-area/_scroll-area';
 @import 'modules/panels/_panels';
 @import 'modules/buttons/_buttons';
 @import 'modules/on-off-box/_on-off-box';
-@import 'modules/_search';
+@import 'modules/search/_search';
 @import 'modules/forms/forms';
-@import 'modules/_tables';
-@import 'modules/_error-message';
-@import 'modules/_success-message';
-@import 'modules/_warning-message';
-@import 'modules/_flag';
-@import 'modules/_premium-option';
-@import 'modules/_premium';
+@import 'modules/tables/_tables';
+@import 'modules/error-message/_error-message';
+@import 'modules/success-message/_success-message';
+@import 'modules/warning-message/_warning-message';
+@import 'modules/flag/_flag';
+@import 'modules/premium-option/_premium-option';
+@import 'modules/premium/_premium';
 @import 'modules/input-and-unit/_input-and-unit.scss';
 @import 'modules/basic-checkbox/_basic-checkbox';
-@import 'modules/_contact-us';
-@import 'modules/_total-premium';
-@import 'modules/_marketing-info';
-@import 'modules/_error-popup';
-@import 'modules/_static-error';
+@import 'modules/contact-us/_contact-us';
+@import 'modules/total-premium/_total-premium';
+@import 'modules/marketing-info/_marketing-info';
+@import 'modules/error-popup/_error-popup';
+@import 'modules/static-error/_static-error';
 @import 'modules/select2/_select2';
 @import 'modules/hero/_hero';
 @import 'modules/error-page/_error-page';
 @import 'modules/notification/_notification';
-
-// Templates
-@import 'templates/_twins-template';
-@import 'templates/_sidekick-template';
-@import 'templates/_focused-template';
-
-// Screens
-@import 'screens/_design-system-screen';
-
-// Prototyping...TODO: move into non-prod area
-@import "screens/_stacked-questions-prototype.scss";
-
-
+@import 'modules/twins-template/_twins-template';
+@import 'modules/sidekick-template/_sidekick-template';
+@import 'modules/focused-template/_focused-template';
