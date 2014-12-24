@@ -14,7 +14,7 @@ module.exports = function (grunt) {
             var templatePathParts = templatePaths[i].split('/');
             var destPath = path.join(root, 'Views/Shared/DesignSystemPartials/', templatePathParts[templatePathParts.length - 1]);
             grunt.file.copy(sourcePath, destPath);
-        };
+        }
         grunt.file.setBase(root);
     });
 

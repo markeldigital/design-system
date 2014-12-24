@@ -1,0 +1,114 @@
+@import "mobile-trigger";
+
+@mixin account-menu($selector, $options){
+
+    $account-menu-selector: $selector;
+    @include mobile-trigger($account-menu-selector);
+
+    #{$selector} {
+        position: relative;
+        >a{
+            padding-left: $grid-unit*4;
+            @include respond-to($lap-and-desk){
+                padding-left: $grid-unit*5;
+            }
+            @include respond-to($desk-only){
+                padding-left: $grid-unit*7;
+            }
+            &:hover{
+                img{
+                    opacity: 1;
+                }
+            }
+        }
+        .desk-trigger {
+            display: none;
+            @include respond-to($lap-and-desk) {
+                display: block;
+            }
+
+            // User Avatar
+            img{
+                display: none;
+                @include respond-to($lap-and-desk){
+                    display: block;
+                    border-radius: 50%;
+                    position: absolute;
+                    top:0;
+                    border: solid 2px $colour-greyscale-39;
+                    background-color: $colour-greyscale-39;
+                    @include set-graphic-as(gamma);
+                    left: ($grid-unit+2px);
+                    margin: (1.5*$grid-unit+1px) 0;
+                }
+                @include respond-to($desk-only){
+                    @include set-graphic-as(beta);
+                    left: $grid-unit*2;
+                    margin: (1.5*$grid-unit+2px) 0;
+                }
+            }
+        }
+
+        &.logged-out{
+            >a{
+                padding-left: $grid-unit*1.5;
+            }
+        }
+
+        // Dropdown contents
+        >ul{
+            min-width: 200px !important;
+            right: 0;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            overflow: auto;
+            height: 100%;
+            background: $mobile-menu-background;
+            @include respond-to($palm-only){
+                @include set-text-as(gamma, $reduced: true, $margins-overrides: zero-both);
+            }
+            top: $menu-palm-height + 5px;
+            @include respond-to($lap-and-desk){
+                position: absolute;
+                top: inherit;
+                right: 0;
+                left: auto;
+                min-width: 100%;
+                overflow: visible;
+                z-index: map_get($options, 'top-z-index');
+                bottom: auto;
+            }
+            li {
+                @include respond-to($palm-only){
+                    background: transparent;
+                    border-bottom: solid 1px transparentize($colour-white, 0.8);
+                }
+                h3{
+                    padding: $grid-unit*2;
+                    @include set-text-as(beta, $reduced: true, $margins-overrides: zero-both);
+                    @include respond-to($lap-and-desk){
+                        @include set-text-as(gamma, $margins-overrides: zero-both);
+                    }
+                    color: $colour-white;
+                    @include respond-to($lap-and-desk){
+                        color: $colour-greyscale-39;
+                    }
+                }
+                a,button{
+                    color: $colour-white;
+                    @include transition($standard-transition-animation);
+                    @include respond-to($lap-and-desk){
+                        color: $colour-greyscale-39;
+                    }
+                    &:hover{
+                        background-color: transparentize($colour-white, 0.9);
+                        @include respond-to($lap-and-desk){
+                            background-color: $colour-greyscale-96;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

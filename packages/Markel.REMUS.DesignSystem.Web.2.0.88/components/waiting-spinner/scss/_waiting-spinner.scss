@@ -1,0 +1,8 @@
+@mixin waiting-spinner($selector, $background-colour: $colour-interaction-10, $icon-size: 32px){
+    #{$selector}{
+        background: url($ds-package-location + "Components/waiting-spinner/img/loading.svg") center center $background-colour;
+        background-size: $icon-size;
+    }
+}
+
+@include waiting-spinner(".ds-waiting-spinner");

@@ -1,6 +1,6 @@
 // Import Markel variables
-@import '../../design_system/Shared/Scss/_neat-setup-vars';
-@import '../../design_system/Shared/Scss/_vars';
+@import '../../design_system/Components/common/scss/vars/neat-setup-vars';
+@import '../../design_system/Components/common/scss/vars/vars';
 
 // Setup 'Ink' variables using Markel variables
 @import '_markel-settings-for-zurb-framework.scss';

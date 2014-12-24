@@ -1,0 +1,76 @@
+@mixin mobile-trigger($account-menu-selector){
+    #{$account-menu-selector} {
+        .mobile-trigger {
+            @include respond-to($lap-and-desk) {
+                display: none;
+            }
+            padding-left: $grid-unit*0.75;
+            @include transition(none);
+            .open{
+                display: none;
+            }
+            i{
+                width: $grid-unit*2;
+            }
+            $burger-line-height: 2px;
+            $burger-line-width: 20px;
+            .burger-icon{
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 $burger-line-height;
+                &, &:before, &:after{
+                    width: $burger-line-width !important;
+                    height: $burger-line-height;
+                    background: $colour-greyscale-39;
+                    border-radius: $burger-line-height*2;
+                    @include transition($standard-transition-animation);
+                }
+                &:before, &:after{
+                    display: block;
+                    content: '';
+                    position: relative;
+                }
+                &:before{
+                    @include transform(translateY(-5px) rotate(0deg));
+                }
+                &:after{
+                    @include transform(translateY(3px) rotate(0deg));
+                }
+            }
+        }
+        &.open .mobile-trigger {
+            @include respond-to($lap-and-desk){
+                display: none;
+            }
+            border: none;
+            position: fixed;
+            height: $menu-palm-height+5px;
+            border-top: solid 4px $colour-brand-primary;
+            top:0;
+            left: 0;
+            width: 100%;
+            text-align: right;
+            background-color: $colour-white;
+            &, i{
+                color: $colour-greyscale-39;
+                @include transition(none);
+            }
+            .open{display: inline;}
+            .close{display: none;}
+            .burger-icon {
+                background: transparent;
+                &:before{
+                    top:0;
+                    @include transform(translateY(0px) rotate(45deg));
+                }
+                &:after{
+                    bottom: 0;
+                    @include transform(translateY(-2px) rotate(-45deg));
+                }
+            }
+            span, i {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 
         watch: {
             generateAppCss: {
-                files: [path.join(root, '/Scss/**'), path.join(root, '/design_system/Shared/Scss/**')],
+                files: [path.join(root, '/Scss/**'), path.join(root, '/design_system/Components/**/Scss/**')],
                 tasks: ['generateAppCss']
             }
             // TODO: watch JS as well. (see Public site for inspiration)

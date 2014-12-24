@@ -1,0 +1,19 @@
+@mixin menu($selector) {
+
+    #{$selector} {
+        list-style-type: none;
+        #{$selector}-trigger {
+
+        }
+        #{$selector}-items {
+            li {
+                list-style-type: none;
+                #{$selector}-item {
+
+                }
+            }
+        }
+    }
+}
+
+@include menu('.ds-menu');

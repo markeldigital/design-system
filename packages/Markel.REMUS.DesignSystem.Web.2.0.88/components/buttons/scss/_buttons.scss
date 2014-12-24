@@ -1,0 +1,79 @@
+@import "modify-as-icon-button";
+@import "modify-as-button-size";
+
+
+@mixin button($selector, $style){
+    $background-color: $colour-interaction-100;
+    $color: $colour-white;
+    $border: none;
+	$box-shadow: none;
+
+    @if($style == button-style-primary) {
+        $background-color: $colour-brand-primary;
+    }
+
+    @if($style == button-style-secondary) {
+        $background-color: $colour-interaction-100;
+    }
+
+    @if($style == button-style-subtle) {
+        $background-color: transparentize($colour-white, 0.75);
+    }
+
+    @if($style == button-style-primary-subtle) {
+        $background-color: $colour-interaction-10;
+        $color: $colour-interaction-100;
+		$box-shadow: 0 0 0 2px $colour-brand-primary inset;
+    }
+
+    @if($style == button-style-secondary-subtle) {
+        $background-color: $colour-interaction-10;
+        $color: $colour-interaction-100;
+		$box-shadow: 0 0 0 2px $colour-interaction-100 inset;
+    }
+
+    #{$selector}{
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        min-width: 8*$grid-unit;
+        background-color: $background-color;
+        color: $color;
+        border: $border;
+        text-decoration: none;
+        text-align: center;
+        border-radius: $standard-curvature;
+        box-shadow: $box-shadow;
+        width: 100%;
+        @include respond-to($lap-and-desk){
+            width: auto;
+        }
+
+        &.hover, &:hover {
+            $hover-background-colour: darken($background-color, 10);
+            background-color: $hover-background-colour;
+            @include transition($standard-transition-animation);
+        }
+
+        &.active, &:active, &.focus, &:focus {
+            $active-background-color: darken($background-color, 15);
+            background-color: $active-background-color;
+            @include transition(none);
+        }
+
+        .disabled, &[disabled]{
+            @include standard-option-disabled-style($set-border: false);
+            &.hover, &:hover {
+                @include standard-option-disabled-style($set-border: false);
+            }
+        }
+    }
+    @include modify-as-button-size($selector);
+    @include modify-as-icon-button($selector);
+}
+
+@include button(".button-style-primary", button-style-primary);
+@include button(".button-style-primary-subtle", button-style-primary-subtle);
+@include button(".button-style-secondary", button-style-secondary);
+@include button(".button-style-secondary-subtle", button-style-secondary-subtle);
+@include button(".button-style-subtle", button-style-subtle);
