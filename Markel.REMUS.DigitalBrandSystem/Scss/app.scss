@@ -1,7 +1,5 @@
 // Design system imports
-@import '../design_system/Shared/Scss/design-system.scss';
-//@import '../design_system/Components/expander/scss/_expander.scss';
-//@import '../design_system/Components/menu/scss/_menu.scss';
+@import '../design_system/Components/all/scss/design-system-all-modules-index.scss';
 
 // Permanent documentation screens
 @import 'screens/_design-system-screen';
