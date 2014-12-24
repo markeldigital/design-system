@@ -8,7 +8,7 @@
   </metadata>
   <files>
     <file src="components\**\*.*" target="components" />
-    <file src="bower_components\**\*.*" target="Shared\bower_components" />
+    <file src="bower_components\**\*.*" target="bower_components" />
     <file src="Content\Fonts\**\*.*" target="Fonts" />
     <file src="dummy*" target="content" />
     <file src="dummy\" target="content\" />
