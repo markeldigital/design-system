@@ -4,9 +4,9 @@
 @import 'vars/_neat-setup-vars';
 
 // Vendor
-@import '../../../bower_components/normalize-scss/_normalize.scss';
-@import '../../../bower_components/bourbon/dist/bourbon';
-@import '../../../bower_components/neat/app/assets/stylesheets/neat';
+@import '../../../bower_components/normalize-scss/_normalize';
+@import '../../../bower_components/bourbon/dist/_bourbon';
+@import '../../../bower_components/neat/app/assets/stylesheets/_neat';
 
 // Variables, breakpoints
 @import 'vars/_vars';
