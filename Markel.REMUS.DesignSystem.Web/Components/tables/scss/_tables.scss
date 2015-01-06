@@ -95,8 +95,9 @@
             tr:hover {
                 background-color: $colour-greyscale-96;
             }
+
         }
     }
 }
 
-@include table("table");
+@include table(".simple-table");
