@@ -1,3 +1,6 @@
 {
-    "directory": "/bower_components"
+    "directory": "/bower_components",
+	"proxy": "http://LONWSGDC1.markelintl.markelgroup.com:8080",
+	"https-proxy": "http://LONWSGDC1.markelintl.markelgroup.com:8080",
+  	"strict-ssl": false
 }

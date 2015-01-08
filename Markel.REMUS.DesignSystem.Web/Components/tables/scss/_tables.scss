@@ -3,7 +3,7 @@
         width: 100%;
         margin-bottom: 2*$grid-unit;
         @include respond-to($lap-and-desk){
-            margin-left:- 2*$grid-unit;
+            margin-left: -2*$grid-unit;
         }
         th, td {
             text-align: left;

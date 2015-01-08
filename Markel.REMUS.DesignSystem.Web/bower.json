@@ -5,6 +5,9 @@
     "jquery": "2.1.0",
     "normalize-scss": "~3.0.1",
     "bourbon": "~4.0.1",
-    "neat": "~1.6.0"
+    "neat": "~1.7.1"
+  },
+  "resolutions": {
+    "neat": "~1.7.1"
   }
 }
