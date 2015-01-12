@@ -2,7 +2,7 @@
     #{$selector} {
         background: $brand-image-1;
         background-size: cover;
-        padding: $grid-unit*.75 0;
+        padding:0;
         @include respond-to($lap-and-desk) {
             padding: $grid-unit*1.5 0;
         }
@@ -62,22 +62,12 @@
 
                 margin-bottom: 0;
                 float: right;
-                &:first-child button{
-                    background-color: $colour-brand-primary;
-                    &:hover{
-                        background-color: darken($colour-brand-primary, 10%);
-                    }
-                }
-                &:last-child a{
-                    background-color: transparentize($colour-white, 0.85);
-                    &:hover{
-                        background-color: transparentize($colour-white, 0.75);
-                    }
-                }
+
             }
         }
         @include respond-to-print(){
             display: none;
         }
+
     }
 }

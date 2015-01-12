@@ -1,6 +1,6 @@
 ﻿@using Markel.REMUS.Infrastructure.Nancy.Extensions
 
-@foreach (var navItem in Model.Links)
+@foreach (var navItem in Model.Combined)
 {
     <li class='@navItem.Value.Selected @navItem.Value.Name.Replace("&","").Replace(" ", "_")'>
         @if (navItem.Value.Method == "GET")

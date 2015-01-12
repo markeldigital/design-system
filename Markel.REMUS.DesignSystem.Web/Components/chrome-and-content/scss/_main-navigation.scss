@@ -79,14 +79,12 @@
                     span{
                         line-height: $grid-unit*2;
                     }
-                    span, i {
-                        opacity: 0.7;
-                    }
                     i {
                         width: $grid-unit;
                         @include respond-to($lap-and-desk){
                             width: $grid-unit*1.5;
                         }
+                        opacity: 0.7;
                         @include transform(rotate(0deg));
                         @include transition($standard-transition-animation);
                     }
@@ -97,8 +95,29 @@
             }
             &.right-nav{
                 float: right;
-                ul li a i{
-                    @include visually-shown();
+                ul li a {
+                    span, i {
+                        opacity: 0.7;
+                    }
+                    i{
+                        @include visually-shown();
+                    }
+                }
+            }
+            &.left-nav{
+                display: none;
+                @include respond-to($lap-and-desk){
+                    display:block;
+                    opacity:1;
+                    ul{
+                        padding-left: $logo-desk-clearance + $logo-desk-width + $grid-unit*4;
+                        li:first-child {
+                            border: none;
+                        }
+                        li {
+                            
+                        }
+                    }
                 }
             }
 
