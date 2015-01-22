@@ -5,7 +5,7 @@
 @mixin form($selector){
     #{$selector}{
         legend, label {
-            @include set-text-as(body, $margins-overrides: ("bottom": $grid-unit/3));
+            @include set-text-as(body, $margins-overrides: ("bottom": $grid-unit));
             display: inline-block;
             .legend-content {
                 display: inline-block;
