@@ -53,12 +53,12 @@
 
         @include logo("a.logo");
 
-        .top-header nav {
-            display: none;
-            @include respond-to($lap-and-desk){
-                display: block;
-            }
-        }
+//        .top-header nav {
+//            display: none;
+//            @include respond-to($lap-and-desk){
+//                display: block;
+//            }
+//        }
 
         nav {
             > ul > li {
@@ -95,11 +95,10 @@
             }
             &.right-nav{
                 float: right;
+                .trigger {
+                    opacity: 0.7;
+                }
                 ul li a {
-                    span, i {
-                        opacity: 0.7;
-                    }
-
                     i{
                         @include visually-shown();
                     }

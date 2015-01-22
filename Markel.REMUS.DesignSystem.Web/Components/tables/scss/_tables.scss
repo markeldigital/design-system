@@ -7,7 +7,10 @@
         }
         th, td {
             text-align: left;
-            padding: 2*$grid-unit;
+            padding: $grid-unit;
+            @include respond-to($lap-and-desk){
+                padding: 2*$grid-unit;
+            }
             @include respond-to($lap-and-desk) {
                 &:first-child {
                     @include respond-to($lap-and-desk){
