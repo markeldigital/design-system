@@ -34,7 +34,7 @@
             @include page-top-padding();
         }
         // When there's a notification, move the spacing onto that instead of H1.
-        .notification {
+        .notification, .actions-panel {
             @include page-top-padding();
             & + h1 {
                 margin-top: 2*$grid-unit;
