@@ -1,6 +1,7 @@
 @mixin modify-as-default-or-stacked($selector, $options) {
     $label-width: map_get($options, "width");
     $label-padding: map_get($options, "label-padding");
+    $label-mobile-padding: map_get($options, "label-mobile-padding");
     $fake-input-display: map_get($options, "fake-input-display");
     $fake-input-margin: map_get($options, "fake-input-margin");
     $label-max-width: map_get($options, "label-max-width");
@@ -13,7 +14,10 @@
             width: $label-width;
             max-width: $label-max-width;
             margin: map_get($options, "label-margin");
-            padding: $label-padding;
+            padding: $label-mobile-padding;
+            @include respond-to($lap-and-desk) {
+                padding: $label-padding;
+            }
             text-align: map_get($options, "label-text-align");
             .fake-radio-button:before, .fake-check-box:before {
                 display: $fake-input-display;
