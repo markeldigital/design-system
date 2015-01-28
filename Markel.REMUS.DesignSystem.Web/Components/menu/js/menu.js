@@ -57,12 +57,16 @@ ds.menu = function(keyboard, openClass, closedClass){
         subMenu.classList.remove(selectors.openClass);
         subMenu.classList.add(selectors.closedClass);
         subMenu.setAttribute('aria-hidden', 'true');
+        subMenu.parentNode.classList.remove(selectors.openClass);
+        subMenu.parentNode.classList.add(selectors.closedClass);
     };
 
     scope.openSubMenu = function(subMenu){
         subMenu.classList.remove(selectors.closedClass);
         subMenu.classList.add(selectors.openClass);
         subMenu.removeAttribute('aria-hidden');
+        subMenu.parentNode.classList.remove(selectors.closedClass);
+        subMenu.parentNode.classList.add(selectors.openClass);
     };
 
     scope.toggleSubMenu = function(e) {
@@ -72,8 +76,20 @@ ds.menu = function(keyboard, openClass, closedClass){
     };
 
     scope.setupEventHandlersOn = function(trigger, subMenu){
-        trigger.onclick = function(e){ scope.toggleSubMenu(e); e.preventDefault(); };
+        trigger.onclick = function(e){
+            scope.toggleSubMenu(e);
+            e.preventDefault();
+        };
         trigger.onkeyup = subMenu.onkeyup = function(e){ scope.respondToKeyboard(e); };
+    };
+
+    scope.setupLoseFocusHandlersOn = function(menu, subMenu){
+        //menu.addEventListener('DOMFocusIn', function(e){ scope.openSubMenu(subMenu); });
+        //menu.addEventListener('DOMFocusOut', function(e){ scope.closeSubMenu(subMenu); });
+
+        // IE fallbacks
+        subMenu.addEventListener('focusin', function(e){ scope.openSubMenu(subMenu); });
+        menu.addEventListener('focusout', function(e){ scope.closeSubMenu(subMenu); });
     };
 
     scope.setAccessibilityAttributesOn = function(trigger, subMenu, subMenuItems, dropDownSequenceNumber){
@@ -97,13 +113,15 @@ ds.menu = function(keyboard, openClass, closedClass){
     scope.setup = function(){
         var dropdowns = document.querySelectorAll('.' + selectors.menuDropdownClass);
         for(var i=0; i < dropdowns.length; i++){
-            var trigger = dropdowns[i].querySelector('.' + selectors.triggerClass);
-            var subMenu = dropdowns[i].querySelector('.' + selectors.subMenuClass);
+            var menu = dropdowns[i];
+            var trigger = menu.querySelector('.' + selectors.triggerClass);
+            var subMenu = menu.querySelector('.' + selectors.subMenuClass);
             var subMenuItems = subMenu.querySelectorAll('.' + selectors.menuItemClass);
 
             scope.closeAllSubMenus();
             scope.setAccessibilityAttributesOn(trigger, subMenu, subMenuItems, i);
             scope.setupEventHandlersOn(trigger, subMenu);
+            scope.setupLoseFocusHandlersOn(menu, subMenu);
         }
     };
 

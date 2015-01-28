@@ -1,15 +1,82 @@
 @mixin menu($selector) {
 
+    $content-color: $colour-greyscale-63;
+    $borders-color: $colour-greyscale-88;
+    $background-color: $colour-white;
+    $hover-color: $colour-greyscale-98;
+
     #{$selector} {
+        position: relative;
         list-style-type: none;
+
         #{$selector}-trigger {
-
+            position: relative;
+            z-index: 2;
+            display: table;
+            width: 100%;
+            @include respond-to($lap-and-desk){
+                display: inline-block;
+                width: auto;
+            }
+            padding: 2*$grid-unit;
+            color: $content-color;
+            border: 1px solid $borders-color;
+            background-color: $background-color;
+            text-decoration: none;
+            text-transform: uppercase;
+            span, i[class^='icon-']{
+                display: table-cell;
+                @include respond-to($lap-and-desk) {
+                    display: inline-block;
+                }
+            }
+            i[class^='icon-']:before {
+                color: $content-color;
+            }
+            &:hover, &:active {
+                background-color: $hover-color;
+            }
         }
-        #{$selector}-items {
-            li {
-                list-style-type: none;
-                #{$selector}-item {
 
+        &.ds-open #{$selector}-trigger {
+            border-bottom: none;
+            i[class^='icon-']:before {
+                @include icon-content-for-name("caret-up");
+                color: $content-color;
+            }
+        }
+
+        #{$selector}-items {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            @include respond-to($lap-and-desk){
+                position: absolute;
+                z-index: 1000;
+                width: auto;
+            }
+            margin:0;
+            padding: 0;
+            border: 1px solid $borders-color;
+            background-color: $background-color;
+            &.ds-closed {
+                display: none;
+            }
+
+            #{$selector}-item {
+                display: block;
+                margin: 0;
+                list-style-type: none;
+                > * {
+                    display: block;
+                    padding: 2*$grid-unit;
+                    color: $content-color;
+                    i[class^='icon-']:before {
+                        color: $content-color;
+                    }
+                    &:hover, &:focus, &:active {
+                        background-color: $hover-color;
+                    }
                 }
             }
         }
