@@ -1,4 +1,4 @@
-@mixin waiting-spinner($selector, $background-colour: $colour-interaction-10, $icon-size: 32px){
+@mixin waiting-spinner($selector, $background-colour: transparent, $icon-size: 24px){
     html.no-smil #{$selector} {
         background: url($ds-package-location + "Components/waiting-spinner/img/loading-fallback.gif") center center $background-colour no-repeat;
         background-size: $icon-size;
