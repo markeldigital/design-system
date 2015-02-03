@@ -1,7 +1,11 @@
-@mixin main-banner($selector){
+@mixin site-section($selector){
     #{$selector} {
         background: $brand-image-1;
         background-size: cover;
+        &.neutral-section {
+            background: $colour-greyscale-97;
+            border-bottom: 1px solid $colour-greyscale-88;
+        }
         padding:0;
         @include respond-to($lap-and-desk) {
             padding: $grid-unit*1.5 0;
@@ -23,7 +27,6 @@
             position: relative;
             z-index: auto;
             @include set-text-as(delta, $reduced: true, $margins-overrides: zero-both);
-            color: $colour-white;
             margin: 0;
             margin-left: $logo-palm-width + 2*$logo-palm-clearance;
             @include respond-to($lap-and-desk){
@@ -35,6 +38,12 @@
                 margin-left: $logo-desk-width + 2*$logo-desk-clearance;
             }
         }
+        &.product-section {
+            h2 {
+                color: $colour-white!important;
+            }
+        }
+
         h2, ul{
             line-height: 40px;
             @include respond-to($lap-and-desk){

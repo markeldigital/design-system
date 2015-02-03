@@ -79,7 +79,8 @@ $colour-greyscale-97: #f7f7f7 !default;
 $colour-greyscale-98: #fafafa !default;
 $colour-white: #fff !default;
 
-$mobile-menu-background: #38454f !default;
+$mobile-menu-background: #38454f !default; // TODO: Redo when we put the blue into the greyscale.
+$mobile-menu-border: solid 1px rgba(255, 255, 255, 0.2);
 
 $brand-image-1: url('../Images/hero-bg.png') no-repeat top center $colour-greyscale-98 !default;
 

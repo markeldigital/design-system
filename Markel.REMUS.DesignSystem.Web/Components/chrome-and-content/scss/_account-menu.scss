@@ -1,34 +1,19 @@
-@import "mobile-trigger";
-
-@mixin account-menu($selector, $options){
-
-    $account-menu-selector: $selector;
-    @include mobile-trigger($account-menu-selector);
+@mixin account-menu($selector){
+// TODO: Clean up / remove?
 
     #{$selector} {
-        position: relative;
-        >a{
-            padding-left: $grid-unit*4;
+        ///User Avatar TODO: can be simplified?
+        &.ds-menu .ds-menu-trigger {
             @include respond-to($lap-and-desk){
-                padding-left: $grid-unit*5;
+                padding-left: 5*$grid-unit;
             }
             @include respond-to($desk-only){
-                padding-left: $grid-unit*7;
-            }
-            &:hover{
-                img{
-                    opacity: 1;
-                }
+                padding-left: 7*$grid-unit;
             }
         }
-        .desk-trigger {
-            display: none;
-            @include respond-to($lap-and-desk) {
-                display: block;
-            }
 
-            // User Avatar
-            img{
+        .ds-menu-trigger {
+            img {
                 display: none;
                 @include respond-to($lap-and-desk){
                     display: block;
@@ -49,66 +34,11 @@
             }
         }
 
-        &.logged-out{
-            >a{
-                padding-left: $grid-unit*1.5;
-            }
-        }
-
-        // Dropdown contents
-        >ul{
-            min-width: 200px !important;
-            right: 0;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            overflow: auto;
-            height: 100%;
-            background: $mobile-menu-background;
-            @include respond-to($palm-only){
-                @include set-text-as(gamma, $reduced: true, $margins-overrides: zero-both);
-            }
-            top: $menu-palm-height + 5px;
+        .ds-menu-items {
             @include respond-to($lap-and-desk){
-                position: absolute;
-                top: inherit;
                 right: 0;
-                left: auto;
-                min-width: 100%;
-                overflow: visible;
-                z-index: map_get($options, 'top-z-index');
-                bottom: auto;
-            }
-            li {
-                @include respond-to($palm-only){
-                    background: transparent;
-                    border-bottom: solid 1px transparentize($colour-white, 0.8);
-                }
-                h3{
-                    padding: $grid-unit*2;
-                    @include set-text-as(beta, $reduced: true, $margins-overrides: zero-both);
-                    @include respond-to($lap-and-desk){
-                        @include set-text-as(gamma, $margins-overrides: zero-both);
-                    }
-                    color: $colour-white;
-                    @include respond-to($lap-and-desk){
-                        color: $colour-greyscale-39;
-                    }
-                }
-                a,button{
-                    color: $colour-white;
-                    @include transition($standard-transition-animation);
-                    @include respond-to($lap-and-desk){
-                        color: $colour-greyscale-39;
-                    }
-                    &:hover{
-                        background-color: transparentize($colour-white, 0.9);
-                        @include respond-to($lap-and-desk){
-                            background-color: $colour-greyscale-96;
-                        }
-                    }
-                }
             }
         }
     }
+
 }

@@ -11,10 +11,10 @@ $logo-lap-clearance: 3*$grid-unit;
 $logo-desk-clearance: 7*$grid-unit;
 
 @import "logo";
-@import "main-navigation";
-@import "main-banner";
+@import "global-banner";
+@import "site-section";
 @import "main-content";
 
-@include main-navigation(".primary-navigation-menu");
-@include main-banner(".top-header");
+@include global-banner(".global-banner");
+@include site-section(".top-header");
 @include main-content(".content");
