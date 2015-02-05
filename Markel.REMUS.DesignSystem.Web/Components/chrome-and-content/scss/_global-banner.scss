@@ -1,6 +1,7 @@
 @import 'mobile-trigger';
 @import 'account-menu';
 
+
 @mixin navigation-items($selector, $desk-alignment) {
     #{$selector}{
         @include respond-to($lap-and-desk){
@@ -103,6 +104,7 @@
     }
 }
 
+
 @mixin mobile-trigger-container($selector){
     #{$selector} {
         @include respond-to($lap-and-desk){
@@ -155,6 +157,7 @@
     }
 }
 
+
 @mixin global-banner($selector) {
     $top-z-index: 99999;
 
@@ -198,3 +201,4 @@
 
     @include primary-navigation-and-utility-navigation-content('.primary-navigation-and-utility-navigation-content');
 }
+

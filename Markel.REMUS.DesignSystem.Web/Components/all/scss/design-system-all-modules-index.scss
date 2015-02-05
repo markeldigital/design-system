@@ -1,9 +1,11 @@
 ﻿@import "../../common/scss/_common";
 
+
 /* Modules
 */
 // Not order dependent //TODO: need to work out which of these have dependencies on the others and either remove the dependencies or put them together in one module.
 @import '../../iconography/scss/_iconography';
+@import '../../menu/scss/_menu';
 @import '../../chrome-and-content/scss/_chrome-and-content';
 @import '../../split-actions/scss/_split-actions';
 @import '../../scroll-area/scss/_scroll-area';
@@ -33,3 +35,6 @@
 @import '../../twins-template/scss/_twins-template';
 @import '../../sidekick-template/scss/_sidekick-template';
 @import '../../focused-template/scss/_focused-template';
+
+
+

@@ -20,6 +20,8 @@ ds = function(){
     return scope;
 }();
 
+
+
 ds.menu = function(keyboard, openClass, closedClass){
     var scope = this;
 
@@ -128,5 +130,6 @@ ds.menu = function(keyboard, openClass, closedClass){
     return scope;
 }(ds.keyboard, ds.selectors.openClass, ds.selectors.closedClass);
 
-ds.menu.setup();
-
+window.addEventListener("load", function () {
+    ds.menu.setup();
+});
