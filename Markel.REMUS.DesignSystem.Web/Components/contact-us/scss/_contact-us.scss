@@ -26,16 +26,16 @@
             border: 1px solid $colour-greyscale-76;
             border-radius: 50%;
             background: white;
-        }
-        *[class^='icon-'] {
-            @include set-graphic-as(gamma,$type:icon);
-            @include respond-to($lap-and-desk){
-                @include set-graphic-as(beta, $type:icon);
-            }
-            color: $colour-interaction-100;
-            &:before {
-                display: inline-block;
-                line-height: 1;
+            *[class^='icon-'] {
+                @include set-graphic-as(gamma,$type:icon);
+                @include respond-to($lap-and-desk){
+                    @include set-graphic-as(beta, $type:icon);
+                }
+                color: $colour-interaction-100;
+                &:before {
+                    display: inline-block;
+                    line-height: 1;
+                }
             }
         }
         .contact-details {
@@ -52,4 +52,4 @@
     }
 }
 
-@include contact-us(".sidekick .contact-us");
+@include contact-us(".contact-us");
