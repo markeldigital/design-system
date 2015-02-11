@@ -12,6 +12,7 @@
     <file src="Content\Fonts\**\*.*" target="Fonts" />
     <file src="dummy*" target="content" />
     <file src="dummy\" target="content\" />
+    <file src="bin\Release\Markel.REMUS.DesignSystem.Contracts.dll" target="lib" />
   </files>
 </package>
 

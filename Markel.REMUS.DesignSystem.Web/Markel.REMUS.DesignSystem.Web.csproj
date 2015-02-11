@@ -504,6 +504,12 @@
   <ItemGroup>
     <Folder Include="Content\Styles\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Markel.REMUS.DesignSystem.Contracts\Markel.REMUS.DesignSystem.Contracts.csproj">
+      <Project>{43045123-84a7-4a04-bce3-04adf0b46df5}</Project>
+      <Name>Markel.REMUS.DesignSystem.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
