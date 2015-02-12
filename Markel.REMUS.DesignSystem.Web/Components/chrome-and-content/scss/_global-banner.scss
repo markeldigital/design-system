@@ -154,6 +154,19 @@
                 }
             }
         }
+
+        .mobile-section-actions {
+            padding: 2*$grid-unit;
+            border-bottom: $mobile-menu-border;
+            ul {
+                li {
+                    margin: 0;
+                }
+            }
+            @include respond-to($lap-and-desk){
+                display: none;
+            }
+        }
     }
 }
 
