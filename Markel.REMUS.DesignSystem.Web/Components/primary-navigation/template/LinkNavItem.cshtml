@@ -1,6 +1,6 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<Markel.REMUS.DesignSystem.Contracts.INavigateSomewhere>
-<li class='ds-menu-item link-nav-item'>
-    <a href='@Model.Url' class="@Model.Classes" @Model.LinkTagAttributes>
+<li class='ds-menu-item @Model.Classes'>
+    <a href='@Model.Url' @Model.LinkTagAttributes>
         <span>@Model.Name</span>
     </a>
 </li>
