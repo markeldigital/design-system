@@ -7,5 +7,6 @@
         string Url { get; }
         string Classes { get; }
         string LinkTagAttributes { get; }
+        string SpanClass { get; }
     }
 }
