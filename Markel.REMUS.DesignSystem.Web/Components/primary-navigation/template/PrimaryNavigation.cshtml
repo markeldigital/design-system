@@ -26,9 +26,21 @@
             </a>
         </div>
 
-
+ 
         <div class="primary-navigation-and-utility-navigation-content">
-            @if (Model.PrimaryNavigation.Count > 0)
+            @if (Model.SectionActions.Count > 0)
+            {
+                <nav class="mobile-section-actions">
+                    <ul>
+                        @foreach (var action in Model.SectionActions)
+                        {
+                            @Html.Partial(action.PartialPath, action)
+                        }
+                    </ul>
+                </nav>
+            }
+
+           @if (Model.PrimaryNavigation.Count > 0)
             {
                 <nav class="primary-navigation">
                     <ul>
