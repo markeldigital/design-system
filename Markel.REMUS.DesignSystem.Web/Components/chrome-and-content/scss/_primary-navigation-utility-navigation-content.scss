@@ -1,0 +1,46 @@
+@import "navigation-items";
+@import 'account-menu';
+
+@mixin primary-navigation-and-utility-navigation-content($selector) {
+    #{$selector} {
+        display: none;
+        &.open {
+            display: block;
+        }
+        @include respond-to($lap-and-desk) {
+            display: block;
+        }
+        width: 100%;
+        @include navigation-items('.primary-navigation', left);
+        @include navigation-items('.utility-navigation', right);
+
+        &:not(.open) .primary-navigation {
+            margin-left: $logo-palm-width + 2*$logo-palm-clearance;
+            @include respond-to($lap-and-desk) {
+                margin-left: $logo-lap-width + 2*$logo-lap-clearance;
+            }
+            @include respond-to($desk-only) {
+                margin-left: $logo-desk-width + 2*$logo-desk-clearance;
+            }
+        }
+
+        .utility-navigation {
+            ul {
+                letter-spacing: -0.35em;
+            }
+        }
+
+        .mobile-section-actions {
+            padding: 2*$grid-unit;
+            border-bottom: $mobile-menu-border;
+            ul {
+                li {
+                    margin: 0;
+                }
+            }
+            @include respond-to($lap-and-desk){
+                display: none;
+            }
+        }
+    }
+}

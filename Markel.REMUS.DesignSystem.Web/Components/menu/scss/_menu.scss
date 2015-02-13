@@ -83,6 +83,17 @@
             }
         }
     }
+
+    // Prevents FOUC whilst keeping menu open for none-JS browsers.
+    .js #{$selector} .ds-menu-items {
+        display: none;
+        &.ds-open {
+            display: block;
+        }
+    }
+    .no-js #{$selector} .ds-menu-items {
+        display: block;
+    }
 }
 
 @include menu('.ds-menu');
