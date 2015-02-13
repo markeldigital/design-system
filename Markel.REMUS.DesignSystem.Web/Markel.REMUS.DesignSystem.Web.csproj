@@ -454,7 +454,10 @@
     <None Include="components\panels\scss\_panels.scss" />
     <None Include="components\premium-option\scss\_premium-option.scss" />
     <None Include="components\premium\scss\_premium.scss" />
-    <None Include="components\primary-navigation\template\PrimaryNavigation.cshtml" />
+    <Content Include="components\primary-navigation\template\LinkNavItem.cshtml" />
+    <Content Include="components\primary-navigation\template\NestedNavItem.cshtml" />
+    <Content Include="components\primary-navigation\template\PostNavItem.cshtml" />
+    <Content Include="components\primary-navigation\template\PrimaryNavigation.cshtml" />
     <None Include="components\scroll-area\scss\_scroll-area.scss" />
     <None Include="components\search\scss\_search.scss" />
     <None Include="components\select2\scss\_select2-overrides.scss" />

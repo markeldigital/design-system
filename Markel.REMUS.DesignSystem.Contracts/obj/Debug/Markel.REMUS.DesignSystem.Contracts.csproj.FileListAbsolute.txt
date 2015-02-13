@@ -1,5 +1,0 @@
-C:\Dev\REMUS\REMUS.DesignSystem.Web\Markel.REMUS.DesignSystem.Contracts\obj\Debug\Markel.REMUS.DesignSystem.Contracts.csprojResolveAssemblyReference.cache
-C:\Dev\REMUS\REMUS.DesignSystem.Web\Markel.REMUS.DesignSystem.Contracts\bin\Debug\Markel.REMUS.DesignSystem.Contracts.dll
-C:\Dev\REMUS\REMUS.DesignSystem.Web\Markel.REMUS.DesignSystem.Contracts\bin\Debug\Markel.REMUS.DesignSystem.Contracts.pdb
-C:\Dev\REMUS\REMUS.DesignSystem.Web\Markel.REMUS.DesignSystem.Contracts\obj\Debug\Markel.REMUS.DesignSystem.Contracts.dll
-C:\Dev\REMUS\REMUS.DesignSystem.Web\Markel.REMUS.DesignSystem.Contracts\obj\Debug\Markel.REMUS.DesignSystem.Contracts.pdb

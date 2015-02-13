@@ -2,6 +2,10 @@
 {
     public interface INavigateSomewhere
     {
-        string Render();
+        string PartialPath { get; }
+        string Name { get; }
+        string Url { get; }
+        string Classes { get; }
+        string LinkTagAttributes { get; }
     }
 }
