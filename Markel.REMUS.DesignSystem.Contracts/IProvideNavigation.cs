@@ -7,5 +7,7 @@ namespace Markel.REMUS.DesignSystem.Contracts
         IList<INavigateSomewhere> PrimaryNavigation { get; }
         IList<INavigateSomewhere> SectionActions { get; }
         IList<INavigateSomewhere> UtilityNavigation { get; }
+        string LogoClickThrough { get; }
+        string ContentPath { get; }
     }
 }
