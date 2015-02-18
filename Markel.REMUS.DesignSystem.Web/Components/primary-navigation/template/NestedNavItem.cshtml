@@ -1,11 +1,7 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<Markel.REMUS.DesignSystem.Contracts.INestLinks>
-<li class="ds-menu nested-nav-item @Model.Classes">
+<li class="ds-menu nested-nav-item">
     <a class="ds-menu-trigger" href="">
-        @if (!string.IsNullOrEmpty(Model.ImagePath))
-        {
-            <img src='@Model.ImagePath'/>
-        }
-        <span class="@Model.SpanClass">@Model.Name</span>
+        <span >@Model.Name</span>
         <i class="icon-caret-down"></i>
      </a>
     <ul class="ds-menu-items">
