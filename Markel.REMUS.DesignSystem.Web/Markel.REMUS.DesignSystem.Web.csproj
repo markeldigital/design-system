@@ -458,6 +458,7 @@
     <Content Include="components\primary-navigation\template\NestedNavItem.cshtml" />
     <Content Include="components\primary-navigation\template\PostNavItem.cshtml" />
     <Content Include="components\primary-navigation\template\PrimaryNavigation.cshtml" />
+    <Content Include="components\primary-navigation\template\MenuItem.cshtml" />
     <None Include="components\scroll-area\scss\_scroll-area.scss" />
     <None Include="components\search\scss\_search.scss" />
     <None Include="components\select2\scss\_select2-overrides.scss" />
