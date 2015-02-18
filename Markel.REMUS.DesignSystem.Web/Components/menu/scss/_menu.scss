@@ -10,39 +10,47 @@
         list-style-type: none;
 
         #{$selector}-trigger {
-            position: relative;
-            z-index: 2;
-            display: table;
-            width: 100%;
-            @include respond-to($lap-and-desk){
-                display: inline-block;
-                width: auto;
-            }
-            padding: 2*$grid-unit;
-            color: $content-color;
-            border: 1px solid $borders-color;
-            background-color: $background-color;
-            text-decoration: none;
-            text-transform: uppercase;
-            span, i[class^='icon-']{
-                display: table-cell;
-                @include respond-to($lap-and-desk) {
+            // Not styled by default (allows combining with things like a button component for the trigger)
+            &#{$selector}-trigger--style {
+                position: relative;
+                z-index: 2;
+                display: table;
+                width: 100%;
+                @include respond-to($lap-and-desk){
                     display: inline-block;
+                    width: auto;
                 }
-            }
-            i[class^='icon-']:before {
+                padding: 2*$grid-unit;
                 color: $content-color;
-            }
-            &:hover, &:active {
-                background-color: $hover-color;
+                text-decoration: none;
+                text-transform: uppercase;
+                span, i[class^='icon-']{
+                    display: table-cell;
+                    @include respond-to($lap-and-desk) {
+                        display: inline-block;
+                    }
+                }
+
+                i[class^='icon-']:before {
+                    color: $content-color;
+                }
+                border: 1px solid $borders-color;
+                background-color: $background-color;
+                &:hover, &:active {
+                    background-color: $hover-color;
+                }
             }
         }
 
         &.ds-open #{$selector}-trigger {
-            border-bottom: none;
             i[class^='icon-']:before {
                 @include icon-content-for-name("caret-up");
-                color: $content-color;
+            }
+            &#{$selector}-trigger--style {
+                border-bottom: none;
+                i[class^='icon-']:before {
+                    color: $content-color;
+                }
             }
         }
 

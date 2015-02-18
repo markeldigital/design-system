@@ -1,0 +1,47 @@
+@mixin navigation-items-mobile(){
+    @include respond-to($palm-only){
+        ul {
+            background-color: transparent;
+            li {
+                display: block;
+                margin: 0;
+                border-bottom: $mobile-menu-border;
+                a, button {
+                    display: block;
+                    margin: 0;
+                    width: 100%;
+                    padding: 1.5*$grid-unit 2*$grid-unit;
+                    color: $colour-white;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    &:hover, &:active, &:focus {
+                        background-color: transparentize($colour-white, 0.9);
+                    }
+                }
+                &.current {
+                    @include respond-to($palm-only){
+                        border-left: 2px solid $colour-brand-primary;
+                    }
+                }
+            }
+        }
+
+        .ds-menu {
+            border-bottom: none;
+            .ds-menu-trigger {
+                display: table;
+                border-bottom: $mobile-menu-border;
+                i[class^='icon-']{
+                    display: table-cell; // For right alignment but inline with text.
+                }
+                i[class^='icon-']:before, &.ds-open i[class^='icon-']:before {
+                    color: $colour-white;
+                }
+            }
+            .ds-menu-items {
+                border: none;
+            }
+        }
+    }
+}

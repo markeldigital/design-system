@@ -1,0 +1,92 @@
+@mixin navigation-items-lap-and-desk(){
+
+    // BOTH LAP AND DESK
+    @include respond-to($lap-and-desk){
+        // Common to both levels
+        li {
+            width: auto;
+            margin: 0;
+            border-bottom: none;
+            a, button {
+                display: inline-block;
+                margin: 0;
+                padding: 0 $grid-unit;
+                text-decoration: none;
+                span {
+                    display: inline-block;
+                    height:100%;
+                }
+            }
+        }
+
+        // First level only.
+        > ul > li {
+            display: inline-block;
+            & > a, & > button {
+                width: auto;
+                line-height: $menu-lap-height;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: $colour-greyscale-63;
+                &:hover, &:focus, &:active {
+                    color: $colour-black;
+                    i[class^='icon-'] {
+                        &:before {
+                            color: $colour-black;
+                        }
+                    }
+                }
+            }
+            &.ds-open:hover, &.ds-open:focus, &.ds-open:active {
+                color: $colour-black;
+                i[class^='icon-'] {
+                    &:before {
+                        color: $colour-black;
+                    }
+                }
+            }
+
+            &.current {
+                font-weight: bold;
+                & > a, & > button {
+                    color: $colour-black;
+                    span {
+                        position: relative;
+                        &:after {
+                            content: '';
+                            bottom: 0;
+                            left: 0;
+                            position: absolute;
+                            height: 2px;
+                            width: 100%;
+                            background-color: $colour-black;
+                        }
+                    }
+                }
+            }
+        }
+
+        .ds-menu {
+            i[class^='icon-'], &.ds-open i[class^='icon-'] {
+                &:before {
+                    color: $colour-greyscale-63;
+                }
+            }
+            .ds-menu-items {
+                .ds-menu-item {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    // DESK ONLY
+    @include respond-to($desk-only){
+        // First level
+        & > ul > li {
+            & > a, & > button {
+                line-height: $menu-desk-height;
+            }
+        }
+    }
+}

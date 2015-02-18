@@ -1,103 +1,17 @@
+@import "navigation-items-mobile";
+@import "navigation-items-lap-and-desk";
+
 @mixin navigation-items($selector, $desk-alignment) {
     #{$selector}{
         @include respond-to($lap-and-desk){
             float: $desk-alignment;
         }
-        ul {
-            background-color: transparent;
-            @include respond-to($lap-and-desk){
-                background-color: $colour-white;
-            }
-            li {
-                display: inline-block;
-                width: 100%;
-                @include respond-to($lap-and-desk) {
-                    width: auto;
-                    border-bottom: none;
-                }
-                margin:0;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                a, button {
-                    display: inline-block;
-                    width: 100%;
-                    padding: 1.5*$grid-unit 2*$grid-unit;
-                    @include respond-to($lap-and-desk){
-                        padding: 0 $grid-unit;
-                    }
-                    color: $colour-greyscale-39;
-                    background-color: transparent;
-                    text-decoration: none;
-                    border-left: 1px solid transparent;
-                    border-right: 1px solid transparent;
-                    &:hover, &:focus, &:active {
-                        background-color: $colour-greyscale-98;
-                        border-right: 1px solid $colour-greyscale-88;
-                        border-left: 1px solid $colour-greyscale-88;
-                    }
-                }
-            }
 
-            @include respond-to($lap-and-desk){
-                .ds-menu-item {
-                    display: block;
-                    white-space: nowrap;
-                    border-bottom: 1px solid $colour-greyscale-88;
-                    a, button {
-                        width: 100%;
-                        &:hover, &:focus, &:active {
-                            border-left: 1px solid transparent;
-                            border-right: 1px solid transparent;
-                        }
-                    }
-                }
-                .ds-menu-trigger {
-                    border-top: none;
-                    border-bottom: none;
-                }
-            }
-        }
-        > ul > li li {
-            text-transform: none;
-            letter-spacing: 0;
-        }
-
-        @include respond-to($lap-and-desk){
-            > ul > li {
-                & > a, & > button {
-                    line-height: $menu-palm-height;
-                    @include respond-to($lap-and-desk){
-                        width: auto;
-                        line-height: $menu-lap-height;
-                    }
-                    @include respond-to($desk-only){
-                        line-height: $menu-desk-height;
-                    }
-                }
-            }
-        }
+        @include navigation-items-lap-and-desk();
     }
 
-    // Exceptions for when the mobile menu is open...
+    // Mobile menu specifics
     &.open #{$selector} {
-        .ds-menu, .ds-menu-items {
-            border: none;
-        }
-        .ds-menu-trigger {
-            border: none;
-            border-bottom: $mobile-menu-border;
-        }
-        ul li {
-            border-bottom: $mobile-menu-border;
-            .ds-menu-items {
-                border: none;
-            }
-            a, button {
-                color: $colour-white;
-                &:hover, &:active, &:focus {
-                    background-color: transparentize($colour-white, 0.9);
-                }
-            }
-        }
+        @include navigation-items-mobile();
     }
 }

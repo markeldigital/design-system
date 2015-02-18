@@ -14,19 +14,14 @@
         @include navigation-items('.primary-navigation', left);
         @include navigation-items('.utility-navigation', right);
 
+        $item-padding: $grid-unit;
         &:not(.open) .primary-navigation {
-            margin-left: $logo-palm-width + 2*$logo-palm-clearance;
+            margin-left: $logo-palm-width + 2*$logo-palm-clearance - $item-padding;
             @include respond-to($lap-and-desk) {
-                margin-left: $logo-lap-width + 2*$logo-lap-clearance;
+                margin-left: $logo-lap-width + 2*$logo-lap-clearance - $item-padding;
             }
             @include respond-to($desk-only) {
-                margin-left: $logo-desk-width + 2*$logo-desk-clearance;
-            }
-        }
-
-        .utility-navigation {
-            ul {
-                letter-spacing: -0.35em;
+                margin-left: $logo-desk-width + 2*$logo-desk-clearance - $item-padding;
             }
         }
 
@@ -44,3 +39,4 @@
         }
     }
 }
+
