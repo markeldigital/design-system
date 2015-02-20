@@ -74,12 +74,15 @@
 
             #{$selector}-item {
                 display: block;
+                width: 100%;
                 margin: 0;
                 list-style-type: none;
                 border-bottom: 1px solid $borders-color;
+                white-space: nowrap;
                 > * {
                     display: block;
                     padding: 2*$grid-unit;
+                    text-decoration: none;
                     color: $content-color;
                     i[class^='icon-']:before {
                         color: $content-color;

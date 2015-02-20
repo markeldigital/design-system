@@ -1,11 +1,6 @@
 @mixin site-section($selector){
     #{$selector} {
-        background: $brand-image-1;
-        background-size: cover;
-        &.neutral-section {
-            background: $colour-greyscale-97;
-            border-bottom: 1px solid $colour-greyscale-88;
-        }
+        width: 100%;
         padding:0;
         @include respond-to($lap-and-desk) {
             padding: $grid-unit*1.5 0;
@@ -15,13 +10,6 @@
         }
         @include clearfix();
         position: relative;
-        overflow: hidden;
-        >img{
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
         h2{
             float: left;
             position: relative;
@@ -39,44 +27,53 @@
             }
         }
         &.product-section {
+            background: $brand-image-1;
+            background-size: cover;
             h2 {
                 color: $colour-white!important;
             }
         }
+        &.neutral-section {
+            background: $colour-greyscale-97;
+            border-bottom: 1px solid $colour-greyscale-88;
+        }
 
-        h2, ul{
-            line-height: 40px;
+        $site-section-mobile-line-height: 34px;
+        $site-section-lap-line-height: 48px;
+        $site-section-desk-line-height: 44px;
+        h2 {
+            line-height: $site-section-mobile-line-height;
             @include respond-to($lap-and-desk){
-                line-height: 42px;
+                line-height: $site-section-lap-line-height;
             }
             @include respond-to($desk-only){
-                line-height: 44px;
+                line-height: $site-section-desk-line-height;
             }
         }
 
-        ul{
+        > ul {
             display: none;
-            float: right;
-            margin: 0;
-            padding: 0;
             @include respond-to($lap-and-desk){
                 display: block;
             }
-            li{
+            margin: 0;
+            float: right;
+            padding: 0;
+            li {
+                float: right;
+                margin-bottom: 0;
                 list-style: none;
                 margin-right: $grid-unit*0.5;
                 @include respond-to($lap-and-desk){
                     margin-right: $grid-unit*1.5;
                 }
-
-                margin-bottom: 0;
-                float: right;
-
+            }
+            .ds-menu-items {
+                right: 0;
             }
         }
         @include respond-to-print(){
             display: none;
         }
-
     }
 }

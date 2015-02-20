@@ -16,7 +16,6 @@ $logo-desk-clearance: 7*$grid-unit;
 @import "main-content";
 
 @include global-banner(".global-banner");
-@include site-section(".top-header");
+@include site-section(".site-section, .top-header");
 @include main-content(".content");
-
 
