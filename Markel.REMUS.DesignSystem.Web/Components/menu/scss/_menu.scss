@@ -44,7 +44,7 @@
 
         &.ds-open #{$selector}-trigger {
             i[class^='icon-']:before {
-                @include icon-content-for-name("caret-up");
+                @include get-icon-content-only("caret-up");
             }
             &#{$selector}-trigger--style {
                 border-bottom: none;
