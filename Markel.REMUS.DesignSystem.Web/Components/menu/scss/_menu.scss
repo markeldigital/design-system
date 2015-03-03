@@ -79,7 +79,7 @@
                 list-style-type: none;
                 border-bottom: 1px solid $borders-color;
                 white-space: nowrap;
-                > * {
+                & > a, & > form > button {
                     display: block;
                     padding: 2*$grid-unit;
                     text-decoration: none;
@@ -90,6 +90,12 @@
                     &:hover, &:focus, &:active {
                         background-color: $hover-color;
                     }
+                }
+                // Allow POST as well as GET in menus
+                > form > button {
+                    width: 100%;
+                    border: none;
+                    background: transparent;
                 }
             }
         }

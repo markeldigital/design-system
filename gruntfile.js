@@ -55,9 +55,11 @@ module.exports = function (grunt) {
                     // TODO: need to get apps to update their templates dynamically on local dev to help with feedback on changes in design system to templates.
                     '../REMUS.DigitalBrandSystem/Markel.REMUS.DigitalBrandSystem/gruntfile.js',
                     //'../REMUS.QuoteJourney/Markel.REMUS.Modules.QuoteJourney/gruntfile.js',
-                    '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/gruntfile.js',
                     '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/gruntfile.js',
-                    '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/gruntfile.js'
+                    //'../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/gruntfile.js',
+                    //'../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/gruntfile.js',
+                    '../REMUS.UnderwriterPortal/gruntfile.js',
+                    '../REMUS.BrokerPortal/gruntfile.js'
                 ]
             }
         },
