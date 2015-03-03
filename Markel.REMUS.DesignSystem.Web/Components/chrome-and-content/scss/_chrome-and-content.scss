@@ -12,10 +12,12 @@ $logo-desk-clearance: 7*$grid-unit;
 
 @import "logo";
 @import "global-banner";
+@import "mobile-site-section-actions";
 @import "site-section";
 @import "main-content";
 
 @include global-banner(".global-banner");
+@include mobile-site-section-actions('.mobile-section-actions');
 @include site-section(".site-section, .top-header");
 @include main-content(".content");
 
