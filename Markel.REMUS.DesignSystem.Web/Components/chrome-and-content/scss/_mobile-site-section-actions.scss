@@ -16,7 +16,7 @@
                   button{
                       text-align: left;
                       color: $colour-white;
-                      &:hover{
+                      &:hover, &:focus, &:active{
                           background-color: transparentize($colour-white, 0.9);
                       }
                   }
