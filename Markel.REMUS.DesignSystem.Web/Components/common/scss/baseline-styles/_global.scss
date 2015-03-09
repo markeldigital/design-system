@@ -4,6 +4,11 @@ html, body {
     height: 100%;
 }
 
+html:before {
+    content: $palm-breakpoint; // Share breakpoint with javascript
+    display: none;
+}
+
 @import "baseline-modules/default-body-and-headline-fonts/default-body-and-headline-fonts";
 
 body {
@@ -38,4 +43,3 @@ body {
 .large-6 { @include span-columns(6); }
 .large-4 { @include span-columns(4); }
 .large-3 { @include span-columns(3); }
-

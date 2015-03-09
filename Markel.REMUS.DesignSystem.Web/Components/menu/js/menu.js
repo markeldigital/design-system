@@ -1,29 +1,5 @@
-ds = function(){
-    var scope = this;
-    scope.keyboard = {
-        // Note: only use these with keyup...not keypress. See: http://www.javascripter.net/faq/keycodes.htm
-        tab: 9,
-        space: 32,
-        enter: 13,
-        up: 38,
-        down: 40,
-        left: 37,
-        right: 39
-    };
-
-    scope.prefix = 'ds';
-    scope.selectors = {
-        openClass: scope.prefix + '-open',
-        closedClass: scope.prefix + '-closed'
-    };
-
-    return scope;
-}();
-
-
-
-ds.menu = function(keyboard, openClass, closedClass){
-    var scope = this;
+ds.menu = (function(keyboard, openClass, closedClass){
+    var scope = {};
 
     var prefix = ds.prefix + '-menu';
     var selectors = {
@@ -128,7 +104,7 @@ ds.menu = function(keyboard, openClass, closedClass){
     };
 
     return scope;
-}(ds.keyboard, ds.selectors.openClass, ds.selectors.closedClass);
+})(ds.keyboard, ds.prefix + '-open', ds.prefix + '-closed');
 
 window.addEventListener("load", function () {
     ds.menu.setup();
