@@ -10,7 +10,7 @@
                 .ds-tab-trigger {
                     display: inline-block;
                     width: 100%;
-                    background-color: $colour-greyscale-97;
+                    background-color: $colour-greyscale-96;
                     @include respond-to($lap-and-desk){
                         width: auto;
                         background-color: transparent;
@@ -22,9 +22,10 @@
                     text-decoration: none;
                     text-transform: uppercase;
                     letter-spacing: 1px;
-                    color: $colour-white;
+                    color: $colour-greyscale-24;
+                    border-bottom: 1px solid $colour-greyscale-88;
                     @include respond-to($lap-and-desk){
-                        color: $colour-greyscale-24;
+                        border-bottom: none;
                         &:hover {
                             color: $colour-interaction-100;
                         }
@@ -46,13 +47,14 @@
                         padding-bottom: $grid-unit/2;
                     }
                     > [class^='icon-'] {
+                        color: $colour-greyscale-76;
                         @include respond-to($lap-and-desk){
                             display: none;
                         }
                     }
                     &.ds-palm-tabs--open {
                         > [class^='icon-']:before {
-                            @include get-icon-content-only('caret-down');
+                            @include get-icon-content-only('caret-up');
                         }
                     }
                 }
