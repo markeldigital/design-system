@@ -122,13 +122,15 @@
     })();
 
     scope.setup = function(){
-        // TODO: Use isolating module selector to limit effect on other pages when we start using this more generally...
-        ds.respondToPalmVsLapAndDesk(function(){
-            scope.mobileExpanders.setupClickHandlers(selectors.tabsModuleClass, selectors.triggerClass);
-        }, function(){
-            scope.desktopTabs.makeFirstTabActive(selectors.tabsModuleClass, selectors.triggerClass, selectors.tabContentClass);
-            scope.desktopTabs.setupTabsClickHandlers(selectors.tabsModuleClass, selectors.triggerClass, selectors.tabContentClass);
-        });
+        var moduleOccursOnThisPage = document.querySelectorAll('.' + selectors.tabsModuleClass).length > 0;
+        if(moduleOccursOnThisPage){
+            ds.respondToPalmVsLapAndDesk(function(){
+                scope.mobileExpanders.setupClickHandlers(selectors.tabsModuleClass, selectors.triggerClass);
+            }, function(){
+                scope.desktopTabs.makeFirstTabActive(selectors.tabsModuleClass, selectors.triggerClass, selectors.tabContentClass);
+                scope.desktopTabs.setupTabsClickHandlers(selectors.tabsModuleClass, selectors.triggerClass, selectors.tabContentClass);
+            });
+        }
     };
 
     return scope;
