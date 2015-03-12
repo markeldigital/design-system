@@ -23,7 +23,7 @@ var ds = function(){
 
     scope.respondToPalmVsLapAndDesk = function(palmCallback, lapAndDeskCallback, event){
         var palmBreakpoint = window.getComputedStyle(document.querySelector('html'), ':before').content;
-        palmBreakpoint = Number(palmBreakpoint.replace(/[']/g, ""));
+        palmBreakpoint = Number(palmBreakpoint.replace(/['"]/g, ""));
 
         if(event){
             window.addEventListener(event, function() {
