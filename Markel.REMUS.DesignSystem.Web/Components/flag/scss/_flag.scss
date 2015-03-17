@@ -7,7 +7,7 @@
         @include set-text-as(epsilon);
         text-transform: uppercase;
         letter-spacing: 1px;
-        font-weight: bold;
+        font-weight: 600;
         @include respond-to-print(){
             background: transparent;
         }
