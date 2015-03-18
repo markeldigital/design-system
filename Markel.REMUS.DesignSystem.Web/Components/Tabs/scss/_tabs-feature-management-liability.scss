@@ -8,10 +8,11 @@
             > li {
                 display: inline;
                 .ds-tab-trigger {
-                    display: inline-block;
+                    display: table;
                     width: 100%;
                     background-color: $colour-greyscale-96;
                     @include respond-to($lap-and-desk){
+                        display: inline-block;
                         width: auto;
                         background-color: transparent;
                     }
@@ -45,9 +46,14 @@
                     }
                     > span {
                         padding-bottom: $grid-unit/2;
+                        display: table-cell;
+                        @include respond-to($lap-and-desk){
+                            display: block;
+                        }
                     }
                     > [class^='icon-'] {
                         color: $colour-greyscale-76;
+                        display: table-cell;
                         @include respond-to($lap-and-desk){
                             display: none;
                         }
