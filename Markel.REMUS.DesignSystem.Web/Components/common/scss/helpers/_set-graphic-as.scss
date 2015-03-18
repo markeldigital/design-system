@@ -51,7 +51,7 @@
     }
     @if($level == beta and $type == image){
         width: $beta-size;
-        height: 100%;
+        height: auto;
     }
     @if($level == gamma and $type == image){
         width: $gamma-size;
