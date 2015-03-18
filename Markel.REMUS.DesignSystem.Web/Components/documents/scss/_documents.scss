@@ -25,6 +25,7 @@
                         img {
                             display: block;
                             @include set-graphic-as(beta);
+                            height: 100%;
                         }
                     }
                     p {
