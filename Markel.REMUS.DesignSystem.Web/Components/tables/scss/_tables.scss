@@ -32,6 +32,14 @@
                     @include visually-shown;
                 }
                 vertical-align: top;
+                white-space: nowrap;
+            }
+            th.sort {
+                font-weight: 600;
+                color: $colour-greyscale-24;
+                > [class^='icon-'] {
+                    color: $colour-greyscale-24;
+                }
             }
         }
         tbody {
@@ -63,6 +71,14 @@
                 }
                 .data {
                     overflow: hidden;
+                }
+                .data-nowrap {
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
+                .data-reduced {
+                    overflow: hidden;
+                    @include set-text-as(body, $reduced: true);
                 }
                 .table-actions {
                     display: inline-block;
