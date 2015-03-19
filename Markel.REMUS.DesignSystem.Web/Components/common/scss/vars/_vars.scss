@@ -79,6 +79,8 @@ $colour-greyscale-96: #f6f6f6 !default;
 $colour-greyscale-97: #f7f7f7 !default;
 $colour-greyscale-98: #fafafa !default;
 $colour-white: #fff !default;
+$colour-selected-tab: #fff !default;
+$colour-unselected-tab: rgba(255, 255, 255, 0.8);
 
 $mobile-menu-background: #38454f !default; // TODO: Redo when we put the blue into the greyscale.
 $mobile-menu-border: solid 1px rgba(255, 255, 255, 0.2);

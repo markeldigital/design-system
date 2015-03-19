@@ -27,16 +27,17 @@
                     border-bottom: 1px solid $colour-greyscale-88;
                     @include respond-to($lap-and-desk){
                         border-bottom: none;
+                        color: $colour-unselected-tab;
                         &:hover {
-                            color: $colour-interaction-100;
+                            color: $colour-selected-tab;
                         }
                     }
                     @include respond-to($lap-and-desk){
                         &.ds-tab-trigger--current {
-                            color: $colour-interaction-100;
-                            span {
+                           span {
                                 @include respond-to($lap-and-desk){
-                                    border-bottom: 3px solid $colour-interaction-100;
+                                    color: $colour-selected-tab;
+                                    border-bottom: 3px solid $colour-selected-tab;
                                 }
                             }
                         }
