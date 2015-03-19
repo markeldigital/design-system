@@ -36,7 +36,7 @@
                             color: $colour-interaction-100;
                             span {
                                 @include respond-to($lap-and-desk){
-                                    border-bottom: $grid-unit/2 solid $colour-interaction-100;
+                                    border-bottom: 3px solid $colour-interaction-100;
                                 }
                             }
                         }
