@@ -623,6 +623,9 @@
     <None Include="components\common\scss\_common.scss" />
     <None Include="components\contact-us\scss\_contact-us.scss" />
     <None Include="components\error-message\scss\_error-message.scss" />
+    <Content Include="components\error-pages\template\Error500.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="components\error-page\scss\_error-page-access-restricted.scss" />
     <None Include="components\error-page\scss\_error-page.scss" />
     <None Include="components\error-popup\scss\_error-popup.scss" />
