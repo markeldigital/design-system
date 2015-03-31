@@ -102,8 +102,11 @@ $icon-map:(
         "refresh":                 "\f021",
         "info-circle":             "\f05a",
         "exclamation-circle":      "\f06a",
-        "padlock":                 "\f023"
-
+        "padlock":                 "\f023",
+        "umbrella":                "\f0e9",
+        "check-square-o":          "\f046",
+        "life-ring":               "\f1cd",
+        "clock-o":                 "\f017"
 );
 
 @include iconography($icon-map);
