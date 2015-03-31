@@ -20,8 +20,8 @@
                         float: left;
                         display: block;
                         margin-right: $grid-unit;
-                        height: 100%;
                         overflow: hidden;
+						height:auto;
                         img {
                             display: block;
                             @include set-graphic-as(beta);
