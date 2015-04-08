@@ -107,7 +107,8 @@ $icon-map:(
         "umbrella":                "\f0e9",
         "check-square-o":          "\f046",
         "life-ring":               "\f1cd",
-        "clock-o":                 "\f017"
+        "clock-o":                 "\f017",
+		"question-circle":         "\f059"
 );
 
 @include iconography($icon-map);
