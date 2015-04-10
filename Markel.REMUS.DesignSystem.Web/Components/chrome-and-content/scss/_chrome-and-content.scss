@@ -1,14 +1,14 @@
-$menu-palm-height: $grid-unit *4.5;
-$menu-lap-height: $grid-unit *6;
-$menu-desk-height: $grid-unit *7;
+$menu-palm-height: $grid-unit *4.5 !default;
+$menu-lap-height: $grid-unit *6 !default;
+$menu-desk-height: $grid-unit *7 !default;
 
-$logo-palm-width: $menu-palm-height * 2;
-$logo-lap-width: $menu-lap-height * 2;
-$logo-desk-width: $menu-desk-height * 2;
+$logo-palm-width: $menu-palm-height * 2 !default;
+$logo-lap-width: $menu-lap-height * 2 !default;
+$logo-desk-width: $menu-desk-height * 2 !default;
 
-$logo-palm-clearance: 2*$grid-unit;
-$logo-lap-clearance: 3*$grid-unit;
-$logo-desk-clearance: 7*$grid-unit;
+$logo-palm-clearance: 2*$grid-unit !default;
+$logo-lap-clearance: 3*$grid-unit !default;
+$logo-desk-clearance: 7*$grid-unit !default;
 
 @import "logo";
 @import "global-banner";
