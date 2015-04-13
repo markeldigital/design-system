@@ -3,6 +3,8 @@
 * to set other values in shared mixins such as padding for form elements.
 */
 @function get-base-text-properties-for($level, $strength: regular){
+    $global-text-scaling-factor: 1.0!global!default;
+
     $all-text-properties: ();
     // Note: Text size is based on two root numbers 12 and 16...these numbers are then doubled to get odd and even sequence numbers for the rest of the hierarchy eg. 24 and 32.
     // Note: margin-bottom is always half of text size.
@@ -66,6 +68,15 @@
                 "color": $colour-greyscale-63
         );
     }
+
+    $all-text-properties: (
+            "line-height": map_get($all-text-properties, "line-height")*$global-text-scaling-factor,
+            "font-size": map_get($all-text-properties, "font-size")*$global-text-scaling-factor,
+            "margin-top": map_get($all-text-properties, "margin-top")*$global-text-scaling-factor,
+            "margin-bottom": map_get($all-text-properties, "margin-bottom")*$global-text-scaling-factor,
+            "font-weight": map_get($all-text-properties, "font-weight"),
+            "color": map_get($all-text-properties, "color")
+    );
 
     @return $all-text-properties;
 }
