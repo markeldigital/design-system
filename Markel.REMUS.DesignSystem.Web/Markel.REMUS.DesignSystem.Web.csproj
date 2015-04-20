@@ -329,6 +329,10 @@
     <Content Include="components\cookies-disabled\template\cookiesDisabledMessage.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="components\javascript-disabled\scss\_javascript-disabled.scss" />
+    <Content Include="components\javascript-disabled\template\javascriptDisabledMessage.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="components\cookies-disabled\scss\_cookies-disabled.scss" />
     <None Include="components\documents\scss\_documents.scss" />
     <None Include="components\error-message\scss\_error-message.scss" />
