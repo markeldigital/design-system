@@ -1,0 +1,9 @@
+﻿#cookies-disabled-panel {
+    max-width: 908px;
+    margin: 0 auto;
+    display: none;
+}
+
+html.no-cookies #cookies-disabled-panel {
+    display: block;
+}
