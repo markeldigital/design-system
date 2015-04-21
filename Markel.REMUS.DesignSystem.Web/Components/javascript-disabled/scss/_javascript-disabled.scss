@@ -1,9 +1,7 @@
-﻿#javascript-disabled-panel {
-    max-width: 908px;
-    margin: 0 auto;
+﻿.javascript-disabled-panel {
     display: none;
 }
 
-html.no-js #javascript-disabled-panel {
+html.no-js .javascript-disabled-panel {
     display: block;
 }
