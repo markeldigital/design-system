@@ -9,7 +9,7 @@
             }
         }
 
-        &.open #{$selector}__trigger {
+        &.ds-expander--open #{$selector}__trigger {
             i {
                 &.hover, &:hover {
                     background-color: darken($colour-interaction-100, 10);
@@ -25,11 +25,12 @@
         #{$selector}__content {
             display: none;
         }
-        &.open #{$selector}__content {
+        &.ds-expander--open #{$selector}__content {
             display: block;
         }
     }
 }
+
 
 // TODO: deprecated. Need to gradually replace cases that use this with the version above where the styles classes are not connected to the JS classes.
 @mixin expander($selector){
