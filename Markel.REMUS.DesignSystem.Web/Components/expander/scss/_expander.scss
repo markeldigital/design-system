@@ -1,3 +1,37 @@
+@mixin expander-styles($selector){
+    #{$selector}{
+        #{$selector}__trigger {
+            display: block;
+            margin-right: 1.5*$grid-unit;
+            i {
+                margin-right: $grid-unit;
+                @include icon-interaction($colour-white,$colour-interaction-100);
+            }
+        }
+
+        &.open #{$selector}__trigger {
+            i {
+                &.hover, &:hover {
+                    background-color: darken($colour-interaction-100, 10);
+                    @include transition($standard-transition-animation);
+                }
+                &:before {
+                    @include icon-content-for-name("angle-down");
+                    color: $colour-white;
+                }
+            }
+        }
+
+        #{$selector}__content {
+            display: none;
+        }
+        &.open #{$selector}__content {
+            display: block;
+        }
+    }
+}
+
+// TODO: deprecated. Need to gradually replace cases that use this with the version above where the styles classes are not connected to the JS classes.
 @mixin expander($selector){
     #{$selector}{
         i {
@@ -37,3 +71,5 @@
 
 
 @include expander(".expander");
+
+@include expander-styles(".ds-expander-style-a");

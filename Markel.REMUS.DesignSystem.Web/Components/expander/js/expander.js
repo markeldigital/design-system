@@ -1,13 +1,33 @@
-﻿$(document).ready(function () {
-    $('.expander-trigger').on('click', function (e) {
-        toggleExpanderContent();
-        e.preventDefault();
-    });
-});
+﻿ds.expander = (function() {
+    var scope = this;
 
-window.toggleExpanderContent = function () {
-    var expanderContent = $('.expander-content');
-    var expander = $('.expander');
-    expanderContent.toggleClass('hidden');
-    expander.toggleClass('open');
-};
+    scope.toggle = function(expanderElement) {
+        var openClass = "ds-expander--open";
+        var isOpen = expanderElement.classList.contains(openClass);
+        if (isOpen) {
+            expanderElement.classList.remove(openClass);
+        }
+        else {
+            expanderElement.classList.add(openClass);
+        }
+    };
+
+    scope.setup = function () {
+        var expanderTriggers = document.querySelectorAll('.ds-expander__trigger');
+
+        for (var i = 0; i < expanderTriggers.length; i++) {
+            expanderTriggers[i].addEventListener('click', function (e) {
+                e.preventDefault();
+
+                var expander = e.currentTarget.parentNode;
+                scope.toggle(expander);
+            });
+        }
+    };
+
+    return scope;
+})();
+
+window.addEventListener("load", function () {
+    ds.expander.setup();
+});
