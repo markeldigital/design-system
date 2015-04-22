@@ -1,4 +1,4 @@
-@mixin expander-styles($selector){
+@mixin expander-styles-a($selector){
     #{$selector}{
         #{$selector}__trigger {
             display: block;
@@ -21,13 +21,63 @@
                 }
             }
         }
+    }
+}
 
+@mixin expander-styles-b($selector){
+    #{$selector}{
+        padding: 2*$grid-unit 0;
+        border-top: 1px solid $colour-greyscale-88;
+        &:last-of-type {
+            border-bottom: 1px solid $colour-greyscale-88;
+        }
+        #{$selector}__trigger {
+            display: block;
+            text-decoration: none;
+            color: $colour-greyscale-24;
+            h3 {
+                @include set-text-as(gamma, $margins-overrides: zero-both);
+                display: table;
+                width: 100%;
+                span {
+                    display: table-cell;
+                }
+                i {
+                    display: table-cell;
+                    &:before {
+                        @include set-text-as(gamma, $reduced: true, $margins-overrides: zero-both);
+                        color: $colour-greyscale-24;
+                    }
+                }
+            }
+        }
+        &.ds-expander--open #{$selector}__trigger {
+            h3 {
+                margin-bottom: 2*$grid-unit;
+                color: $colour-greyscale-24;
+                i:before {
+                    @include icon-content-for-name("cross");
+                    color: $colour-greyscale-24;
+                }
+            }
+        }
+    }
+}
+
+@mixin expander-styles($selector, $style-variant){
+    #{$selector}{
         #{$selector}__content {
             display: none;
         }
         &.ds-expander--open #{$selector}__content {
             display: block;
         }
+    }
+
+    @if($style-variant == style-a){
+        @include expander-styles-a($selector);
+    } @else if($style-variant == style-b){
+        @include expander-styles-b($selector);
     }
 }
 
@@ -73,4 +123,5 @@
 
 @include expander(".expander");
 
-@include expander-styles(".ds-expander-style-a");
+@include expander-styles(".ds-expander-style-a", $style-variant: style-a);
+@include expander-styles(".ds-expander-style-b", $style-variant: style-b);

@@ -6,6 +6,7 @@ module.exports = function (grunt) {
 
     var params = {
         'components-publishing-path': 'design_system/Components/',
+        'cms-root': '../REMUS.CMS/CMS/',
         'digital-brand-system-root': '../REMUS.DigitalBrandSystem/Markel.REMUS.DigitalBrandSystem/',
         'quote-journey-root': '../REMUS.QuoteJourney/Markel.REMUS.Modules.QuoteJourney/',
         'broker-root': '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/',
@@ -27,6 +28,9 @@ module.exports = function (grunt) {
         sync: {
             toAllUIProjects: {
                 files: [
+                    // CMS
+                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['cms-root'], params['components-publishing-path'])},
+
                     // Digital Brand System
                     {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['digital-brand-system-root'], params['components-publishing-path'])},
 
@@ -53,6 +57,7 @@ module.exports = function (grunt) {
                     // Step 2: Each project's watches it's own app.scss for changes and this will notice when design_system is updated and published by step 1 above...
                     // the output of step 2 is an app.css for each project that includes Design System as it's base and adds on any extra styles needed for that project.
                     // TODO: need to get apps to update their templates dynamically on local dev to help with feedback on changes in design system to templates.
+                    '../REMUS.CMS/gruntfile.js',
                     '../REMUS.DigitalBrandSystem/Markel.REMUS.DigitalBrandSystem/gruntfile.js',
                     //'../REMUS.QuoteJourney/Markel.REMUS.Modules.QuoteJourney/gruntfile.js',
                     '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/gruntfile.js',
