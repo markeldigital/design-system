@@ -57,6 +57,7 @@
                 color: $colour-greyscale-24;
                 i:before {
                     @include icon-content-for-name("cross");
+                    @include set-text-as(gamma, $reduced: true, $margins-overrides: zero-both);
                     color: $colour-greyscale-24;
                 }
             }
@@ -120,7 +121,7 @@
     }
 }
 
-
+// TODO: deprecated. Use expander-styles mixin instead.
 @include expander(".expander");
 
 @include expander-styles(".ds-expander-style-a", $style-variant: style-a);
