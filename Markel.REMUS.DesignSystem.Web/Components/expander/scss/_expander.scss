@@ -26,17 +26,18 @@
 
 @mixin expander-styles-b($selector){
     #{$selector}{
-        padding: 2*$grid-unit 0;
+
         border-top: 1px solid $colour-greyscale-88;
         &:last-of-type {
             border-bottom: 1px solid $colour-greyscale-88;
         }
         #{$selector}__trigger {
+            padding: 2*$grid-unit 0;
             display: block;
             text-decoration: none;
             color: $colour-greyscale-24;
             h3 {
-                @include set-text-as(gamma, $margins-overrides: zero-both);
+                @include set-text-as(gamma, $reduced: true, $margins-overrides: zero-both);
                 display: table;
                 width: 100%;
                 span {
@@ -53,7 +54,6 @@
         }
         &.ds-expander--open #{$selector}__trigger {
             h3 {
-                margin-bottom: 2*$grid-unit;
                 color: $colour-greyscale-24;
                 i:before {
                     @include icon-content-for-name("cross");
