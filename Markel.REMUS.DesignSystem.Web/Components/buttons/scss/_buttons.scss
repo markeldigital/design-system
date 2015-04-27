@@ -46,6 +46,8 @@
         text-decoration: none;
         text-align: center;
         border-radius: $standard-curvature;
+        text-transform: uppercase;
+        letter-spacing: 1px;
         box-shadow: $box-shadow;
         width: 100%;
         @include respond-to($lap-and-desk){
@@ -87,3 +89,5 @@
 @include button(".button-style-secondary", button-style-secondary);
 @include button(".button-style-secondary-subtle", button-style-secondary-subtle);
 @include button(".button-style-subtle", button-style-subtle);
+
+
