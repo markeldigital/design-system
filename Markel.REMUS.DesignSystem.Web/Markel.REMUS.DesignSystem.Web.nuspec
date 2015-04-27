@@ -9,7 +9,6 @@
   <files>
     <file src="components\**\*.*" target="components" />
     <file src="bower_components\**\*.*" target="bower_components" />
-    <file src="Content\Fonts\**\*.*" target="Fonts" />
     <file src="dummy*" target="content" />
     <file src="dummy\" target="content\" />
     <file src="bin\Release\Markel.REMUS.DesignSystem.Contracts.dll" target="lib" />
