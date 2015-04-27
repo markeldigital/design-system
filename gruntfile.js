@@ -57,14 +57,11 @@ module.exports = function (grunt) {
                     // Step 2: Each project's watches it's own app.scss for changes and this will notice when design_system is updated and published by step 1 above...
                     // the output of step 2 is an app.css for each project that includes Design System as it's base and adds on any extra styles needed for that project.
                     // TODO: need to get apps to update their templates dynamically on local dev to help with feedback on changes in design system to templates.
-                    '../REMUS.CMS/gruntfile.js',
-                    '../REMUS.DigitalBrandSystem/Markel.REMUS.DigitalBrandSystem/gruntfile.js',
-                    //'../REMUS.QuoteJourney/Markel.REMUS.Modules.QuoteJourney/gruntfile.js',
-                    '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/gruntfile.js',
-                    //'../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/gruntfile.js',
-                    //'../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/gruntfile.js',
-                    '../REMUS.UnderwriterPortal/gruntfile.js',
-                    '../REMUS.BrokerPortal/gruntfile.js'
+//                    '../REMUS.CMS/gruntfile.js',
+//                    '../REMUS.DigitalBrandSystem/Markel.REMUS.DigitalBrandSystem/gruntfile.js',
+                    '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/gruntfile.js'
+//                    '../REMUS.UnderwriterPortal/gruntfile.js',
+//                    '../REMUS.BrokerPortal/gruntfile.js'
                 ]
             }
         },
