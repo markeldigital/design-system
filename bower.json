@@ -1,0 +1,19 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "main": "Markel.REMUS.DesignSystem.Web/Components/all/scss/design-system-all-modules-index.scss",
+  "ignore": [
+    "Markel.REMUS.DesignSystem.Contracts",
+    "Markel.REMUS.DesignSystem.Web/bin",
+    "packages",
+    "scripts",
+    "**/*.sln",
+    "**/*.csproj",
+    "**/*.cs"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "private": true
+}
