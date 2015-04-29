@@ -1,11 +1,10 @@
 ﻿'use strict';
 var path = require('path');
 module.exports = function (grunt) {
-    var projectRoot = path.join(__dirname, "Markel.REMUS.DesignSystem.Web");
-    console.log(projectRoot);
-
+    var projectRoot = __dirname;
+	
     var params = {
-        'components-publishing-path': 'design_system/Components/',
+        'components-publishing-path': 'bower_components/design-system/Components/',
         'cms-root': '../REMUS.CMS/CMS/',
         'digital-brand-system-root': '../REMUS.DigitalBrandSystem/Markel.REMUS.DigitalBrandSystem/',
         'quote-journey-root': '../REMUS.QuoteJourney/Markel.REMUS.Modules.QuoteJourney/',

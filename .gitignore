@@ -1,23 +1,4 @@
 # User-specific files
-*.suo
-*.user
-*.sln.docstates
-
-Markel.REMUS.DesignSystem.Web/bin/
-REMUS.DesignSystem.Web.v12.suo
-Markel.REMUS.DesignSystem.Web/obj/
-Markel.REMUS.DesignSystem.Web/dummy/
-Markel.REMUS.DesignSystem.Web/.sass-cache/
-
-
-Markel.REMUS.DigitalBrandSystem/bin/
-Markel.REMUS.DigitalBrandSystem/obj/
-Markel.REMUS.DigitalBrandSystem/Content/app/*.css
-Markel.REMUS.DigitalBrandSystem/design_system
-Markel.REMUS.DigitalBrandSystem/.sass-cache/
-Markel.REMUS.DesignSystem.Contracts/bin/
-Markel.REMUS.DesignSystem.Contracts/obj/
-
 .idea/
 .sass-cache/
 
