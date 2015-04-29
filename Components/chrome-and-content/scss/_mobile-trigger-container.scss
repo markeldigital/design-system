@@ -1,5 +1,3 @@
-@import 'mobile-trigger';
-
 @mixin mobile-trigger-container($selector){
     #{$selector} {
         @include respond-to($lap-and-desk){
@@ -8,9 +6,9 @@
         width: 100%;
         height: $menu-palm-height;
         text-align: right;
-        background-color: $colour-white;
         a {
             display: inline-block;
+            padding-right: 2*$grid-unit;
             line-height: $menu-palm-height;
             color: $colour-greyscale-39;
             text-decoration: none;

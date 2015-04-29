@@ -1,24 +1,29 @@
-@mixin logo($selector){
+@mixin logo($selector, $above-mobile-nav){
     #{$selector} {
         display: block;
         float: left;
-        padding: $grid-unit*1.5;
+        z-index: $above-mobile-nav;
+        padding: $grid-unit+1px;
         width: $logo-palm-width;
         height: $logo-palm-width;
         margin: 0 $logo-palm-clearance;
         background-color: $colour-brand-primary;
-        position: absolute;
         @include respond-to($lap-and-desk){
+            position: relative;
+            float: left;
             width: $logo-lap-width;
             height: $logo-lap-width;
-            margin: 0 $logo-lap-clearance;
-            padding: $grid-unit*2;
+            margin: 0 $logo-lap-clearance 0 0;
+            padding: $grid-unit*1.5;
         }
         @include respond-to($desk-only){
+            position: absolute;
+            float: none;
+            left: -($logo-desk-width + $logo-desk-clearance) + 4*$grid-unit;
             width: $logo-desk-width;
             height: $logo-desk-width;
-            margin: 0 $logo-desk-clearance;
-            padding: $grid-unit*2+2px;
+            margin: 0;
+            padding: $grid-unit*3-2px;
         }
         img{
             width: 100%;

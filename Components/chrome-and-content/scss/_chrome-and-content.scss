@@ -1,9 +1,9 @@
-$menu-palm-height: $grid-unit *4.5 !default;
-$menu-lap-height: $grid-unit *6 !default;
-$menu-desk-height: $grid-unit *7 !default;
+$menu-palm-height: $grid-unit *7 !default;
+$menu-lap-height: $grid-unit *8 !default;
+$menu-desk-height: $grid-unit *8 !default;
 
-$logo-palm-width: $menu-palm-height * 2 !default;
-$logo-lap-width: $menu-lap-height * 2 !default;
+$logo-palm-width: $menu-palm-height !default;
+$logo-lap-width: $menu-lap-height !default;
 $logo-desk-width: $menu-desk-height * 2 !default;
 
 $logo-palm-clearance: 2*$grid-unit !default;
@@ -18,6 +18,5 @@ $logo-desk-clearance: 7*$grid-unit !default;
 
 @include global-banner(".global-banner");
 @include mobile-site-section-actions('.mobile-section-actions');
-@include site-section(".site-section, .top-header");
+@include site-section(".ds-site-section");
 @include main-content(".content");
-

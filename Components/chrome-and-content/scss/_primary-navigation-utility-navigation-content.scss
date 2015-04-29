@@ -7,21 +7,21 @@
         &.open {
             display: block;
         }
+        width: 100%;
         @include respond-to($lap-and-desk) {
             display: block;
         }
-        width: 100%;
         @include navigation-items('.primary-navigation', left);
         @include navigation-items('.utility-navigation', right);
 
         $item-padding: $grid-unit;
         &:not(.open) .primary-navigation {
-            margin-left: $logo-palm-width + 2*$logo-palm-clearance - $item-padding;
+            margin-left: 0;
             @include respond-to($lap-and-desk) {
-                margin-left: $logo-lap-width + 2*$logo-lap-clearance - $item-padding;
+                margin-left: 0;
             }
             @include respond-to($desk-only) {
-                margin-left: $logo-desk-width + 2*$logo-desk-clearance - $item-padding;
+                margin-left: 0;
             }
         }
     }
