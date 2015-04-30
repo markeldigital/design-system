@@ -25,6 +25,11 @@
         $interaction-style-exception: true;
     }
 
+    @if($style == button-style-subtle-2) {
+        $background-color: $colour-greyscale-88;
+        $color: $colour-greyscale-24;
+    }
+
     @if($style == button-style-primary-subtle) {
         $background-color: $colour-interaction-10;
         $color: $colour-interaction-100;
@@ -92,3 +97,4 @@
 @include button(".button-style-secondary", button-style-secondary);
 @include button(".button-style-secondary-subtle", button-style-secondary-subtle);
 @include button(".button-style-subtle", button-style-subtle);
+@include button(".button-style-subtle-2", button-style-subtle-2);
