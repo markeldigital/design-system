@@ -7,7 +7,8 @@
     $color: $colour-white;
     $border: none;
 	$box-shadow: none;
-    $interaction-style-exception: null;
+    $interaction-subtle-style-exception: null;
+    $interaction-subtle2-style-exception: null;
 
     @if($style == button-style-primary) {
         $background-color: $colour-brand-primary;
@@ -22,12 +23,14 @@
     @if($style == button-style-subtle) {
         $background-color: transparent;
         $box-shadow: inset 0 0 0 2px $colour-white;
-        $interaction-style-exception: true;
+        $interaction-subtle-style-exception: true;
     }
 
     @if($style == button-style-subtle-2) {
-        $background-color: $colour-greyscale-88;
+        $background-color: $colour-white;
+        $border: 1px solid $colour-greyscale-88;
         $color: $colour-greyscale-24;
+        $interaction-subtle2-style-exception: true;
     }
 
     @if($style == button-style-primary-subtle) {
@@ -63,10 +66,16 @@
 
         $hover-background-colour: darken($background-color, 10);
         $hover-color: $color;
-        @if($interaction-style-exception){
+        
+        @if($interaction-subtle-style-exception){
             $hover-background-colour: $colour-white;
             $hover-color: $colour-black;
         }
+
+        @if($interaction-subtle2-style-exception){
+            $hover-background-colour: $colour-greyscale-97;
+        }
+
         &.hover, &:hover {
             background-color: $hover-background-colour;
             color: $hover-color;
@@ -88,6 +97,7 @@
             }
         }
     }
+
 
 
     @include modify-as-button-size($selector);
