@@ -45,6 +45,12 @@
                     }
                 }
             }
+            &:first-of-type > a, &:first-of-type > button {
+                padding-left: 0;
+            }
+            &:last-of-type > a, &:last-of-type > button {
+                padding-right: 0;
+            }
 
             &.current {
                 font-weight: bold;
