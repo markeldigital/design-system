@@ -66,8 +66,12 @@
                     margin-right: $grid-unit*0.5;
                     @include respond-to($lap-and-desk) {
                         margin-right: $grid-unit*1.5;
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
                     }
                 }
+
                 .ds-menu-items {
                     right: 0;
                 }
