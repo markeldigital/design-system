@@ -48,7 +48,7 @@
             }
         }
         // First panel is assumed to contain H1's inside panels
-        article > *[class^='panel']:first-of-type {
+        article > *[class^='panel-']:first-of-type {
             padding: 0;
         }
         @include respond-to-print(){
