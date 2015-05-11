@@ -19,7 +19,7 @@
         @include respond-to($desk-only){
             position: absolute;
             float: none;
-            left: -($logo-desk-width + $logo-desk-clearance) + 4*$grid-unit;
+            left: -($logo-desk-width + $logo-desk-clearance);
             width: $logo-desk-width;
             height: $logo-desk-width;
             margin: 0;
@@ -49,4 +49,3 @@
         }
     }
 }
-
