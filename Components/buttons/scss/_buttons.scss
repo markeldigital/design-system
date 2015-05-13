@@ -6,9 +6,10 @@
     $background-color: $colour-interaction-100;
     $color: $colour-white;
     $border: none;
-	$box-shadow: none;
+    $box-shadow: none;
     $interaction-subtle-style-exception: null;
     $interaction-subtle2-style-exception: null;
+    $interaction-primary-subtle-style-exception: null;
 
     @if($style == button-style-primary) {
         $background-color: $colour-brand-primary;
@@ -34,15 +35,16 @@
     }
 
     @if($style == button-style-primary-subtle) {
-        $background-color: $colour-interaction-10;
-        $color: $colour-interaction-100;
-		$box-shadow: 0 0 0 2px $colour-brand-primary inset;
+        $background-color: transparent;
+        $color: $colour-brand-primary;
+        $box-shadow: 0 0 0 2px $colour-brand-primary inset;
+        $interaction-primary-subtle-style-exception: true;
     }
 
     @if($style == button-style-secondary-subtle) {
         $background-color: $colour-interaction-10;
         $color: $colour-interaction-100;
-		$box-shadow: 0 0 0 2px $colour-interaction-100 inset;
+        $box-shadow: 0 0 0 2px $colour-interaction-100 inset;
     }
 
     #{$selector}{
@@ -66,7 +68,7 @@
 
         $hover-background-colour: darken($background-color, 10);
         $hover-color: $color;
-        
+
         @if($interaction-subtle-style-exception){
             $hover-background-colour: $colour-white;
             $hover-color: $colour-black;
@@ -87,8 +89,12 @@
             background-color: $active-background-color;
             color: $hover-color;
             box-shadow: none;
+            @if($interaction-primary-subtle-style-exception){
+                box-shadow: $box-shadow;
+            }
             @include transition(none);
         }
+
 
         .disabled, &[disabled]{
             @include standard-option-disabled-style($set-border: false);
@@ -97,8 +103,6 @@
             }
         }
     }
-
-
 
     @include modify-as-button-size($selector);
     @include modify-as-icon-button($selector);
