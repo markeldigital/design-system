@@ -34,6 +34,13 @@
         $interaction-subtle2-style-exception: true;
     }
 
+    @if($style == button-style-link) {
+        $background-color: transparent;
+        $border: none;
+        $color: map_get($links-options, "colour");
+        $interaction-subtle2-style-exception: true;
+    }
+
     @if($style == button-style-primary-subtle) {
         $background-color: transparent;
         $color: $colour-brand-primary;
@@ -114,3 +121,4 @@
 @include button(".button-style-secondary-subtle", button-style-secondary-subtle);
 @include button(".button-style-subtle", button-style-subtle);
 @include button(".button-style-subtle-2", button-style-subtle-2);
+@include button(".button-style-link", button-style-link);
