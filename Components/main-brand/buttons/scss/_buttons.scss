@@ -10,6 +10,7 @@
     $interaction-subtle-style-exception: null;
     $interaction-subtle2-style-exception: null;
     $interaction-primary-subtle-style-exception: null;
+    $text-transform: uppercase;
 
     @if($style == button-style-primary) {
         $background-color: $colour-brand-primary;
@@ -39,6 +40,7 @@
         $border: none;
         $color: map_get($links-options, "colour");
         $interaction-subtle2-style-exception: true;
+        $text-transform: none;
     }
 
     @if($style == button-style-primary-subtle) {
@@ -65,7 +67,7 @@
         text-decoration: none;
         text-align: center;
         border-radius: $standard-curvature;
-        text-transform: uppercase;
+        text-transform: $text-transform;
         letter-spacing: 1px;
         box-shadow: $box-shadow;
         width: 100%;
