@@ -8,7 +8,9 @@
             display: block;
         }
         width: 100%;
+        border-top: 1px solid $colour-greyscale-88;
         @include respond-to($lap-and-desk) {
+            border-top: none;
             display: block;
         }
         @include navigation-items('.primary-navigation', left);

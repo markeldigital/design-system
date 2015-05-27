@@ -5,3 +5,11 @@
 */
 
 $links-options: ("colour": $colour-brand-primary);
+
+/*
+    Header components
+*/
+$global-banner-options: ("first-box-shadow": 0 0 0 0 transparent, "second-box-shadow": inset 0 4px 0 0 $colour-brand-primary, "border-bottom": 1px solid $colour-greyscale-88);
+$logo-options: ("mobile-position": relative, "background-color": transparent);
+$primary-navigation-and-utility-navigation-options: ("open-mobile-menu-position": relative, "clear": both, "mobile-border-top": 1px solid $colour-greyscale-88);
+$mobile-menu-trigger-options: ("open-position": relative, "open-box-shadow": none);

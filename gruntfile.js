@@ -28,13 +28,13 @@ module.exports = function (grunt) {
             toAllUIProjects: {
                 files: [
                     // CMS
-                    //{expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['cms-root'], params['components-publishing-path'])},
+                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['cms-root'], params['components-publishing-path'])},
 
                     // Digital Brand System
                     //{expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['digital-brand-system-root'], params['components-publishing-path'])},
 
                     // Broker
-                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['broker-root'], params['components-publishing-path'])},
+                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['broker-root'], params['components-publishing-path'])}
 
                     // Public
                     //{expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['public-root'], params['components-publishing-path'])},
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
                     // the output of step 2 is an app.css for each project that includes Design System as it's base and adds on any extra styles needed for that project.
                     // TODO: need to get apps to update their templates dynamically on local dev to help with feedback on changes in design system to templates.
                     '../REMUS.BrokerPortal/gruntfile.js',
-                    //'../REMUS.CMS/gruntfile.js',
+                    '../REMUS.CMS/gruntfile.js'
                     //'../REMUS.DigitalBrandSystem/Markel.REMUS.DigitalBrandSystem/gruntfile.js',
                     //'../REMUS.RetailPublicSite/REMUS.RetailPublicSite/gruntfile.js',
                     //'../REMUS.UnderwriterPortal/gruntfile.js'
@@ -69,7 +69,9 @@ module.exports = function (grunt) {
                 logConcurrentOutput: true
             },
             all: {
-                tasks: ["watch", "hub:all:watch"]
+                tasks: [
+                    "watch" //, "hub:all:watch"
+                ]
             }
         }
     });

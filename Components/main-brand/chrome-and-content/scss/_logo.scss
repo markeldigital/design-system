@@ -1,13 +1,13 @@
-@mixin logo($selector, $above-mobile-nav){
+@mixin logo($selector, $options, $z-index){
     #{$selector} {
         display: block;
-        float: left;
-        z-index: $above-mobile-nav;
+        position: map_get($options, "mobile-position");
+        z-index: $z-index;
         padding: $grid-unit+1px;
         width: $logo-palm-width;
         height: $logo-palm-width;
         margin: 0 $logo-palm-clearance;
-        background-color: $colour-brand-primary;
+        background-color: map_get($options, "background-color");
         @include respond-to($lap-and-desk){
             position: relative;
             float: left;

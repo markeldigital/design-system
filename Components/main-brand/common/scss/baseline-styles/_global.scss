@@ -1,29 +1,10 @@
+// Import order is significant
 @import "baseline-modules/set-box-sizing/_set-box-sizing";
-
-html, body {
-    height: 100%;
-}
-
-html:before {
-    content: $palm-breakpoint; // Share breakpoint with javascript
-    display: none;
-}
-
+@import "baseline-modules/html-tag/html-tag";
 @import "baseline-modules/default-body-and-headline-fonts/default-body-and-headline-fonts";
-
-body {
-    overflow-x: hidden;
-    background: $colour-white;
-    @include respond-to-print() {
-        * {
-            box-shadow: none !important;
-        }
-    }
-}
-
+@import "baseline-modules/body-tag/body-tag";
 @import "baseline-modules/links/_links";
 @include links('a', $options: $links-options);
-
 @import "baseline-modules/lists/_lists";
 @import "baseline-modules/quotes/_quotes";
 

@@ -5,25 +5,17 @@
 @mixin global-banner($selector) {
     $global-banner-z-index: 99999;
     $mobile-nav-z-index: $global-banner-z-index+1;
-    $logo-z-index: $mobile-nav-z-index+2;
+    $logo-z-index: $global-banner-z-index;
     $border-top-height: $grid-unit/2;
 
     @include account-menu('.account-menu');
 
     #{$selector} {
         width: 100%;
-        background: $colour-white;
-        box-shadow: inset 0 -1px 0 0 $colour-greyscale-88, inset 0 $border-top-height 0 0 $colour-brand-primary;
         position: relative;
+        box-shadow: map_get($global-banner-options, "first-box-shadow"), map_get($global-banner-options, "second-box-shadow");
+        border-bottom: map_get($global-banner-options, "border-bottom");
         z-index: $global-banner-z-index;
-
-        height: $menu-palm-height;
-        @include respond-to($lap-and-desk){
-            height: $menu-lap-height;
-        }
-        @include respond-to($desk-only){
-            height: $menu-desk-height;
-        }
 
         .logo-and-primary-navigation-and-utility-navigation {
             position: relative;
@@ -31,23 +23,23 @@
                 @include grid-width;
             }
 
-            @include logo("a.logo", $logo-z-index);
+            @include logo("a.logo", $logo-options, $logo-z-index);
 
             .primary-navigation-and-utility-navigation {
                 height: 100%;
                 width: 100%;
+                border-top: map_get($primary-navigation-and-utility-navigation-options, "mobile-border-top");
                 @include respond-to($lap-and-desk){
-                    background-color: $colour-white;
+                    border-top: none;
                 }
                 &.open {
-                    position: fixed;
+                    position: map_get($primary-navigation-and-utility-navigation-options, "open-mobile-menu-position");
                     z-index: $mobile-nav-z-index;
-                    background-color: $mobile-menu-background;
+                    background-color: $colour-white;
                 }
 
                 @include mobile-trigger-container('.primary-navigation-and-utility-navigation-trigger-container');
-                @include mobile-trigger('.primary-navigation-and-utility-navigation-trigger-container a');
-
+                @include mobile-trigger('.primary-navigation-and-utility-navigation-trigger-container a', $mobile-menu-trigger-options);
             }
         }
     }

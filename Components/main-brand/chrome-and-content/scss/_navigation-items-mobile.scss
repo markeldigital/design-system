@@ -2,27 +2,53 @@
     @include respond-to($palm-only){
         ul {
             background-color: transparent;
+            // First level
+            li:not(.ds-menu-item) {
+                border-bottom: 1px solid $colour-greyscale-88;
+                > a, > button {
+                    padding: 1.5*$grid-unit 2*$grid-unit;
+                    @include set-text-as(body, $reduced: true, $margins-overrides: zero-both);
+                    color: $colour-greyscale-39;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    &:hover, &:active, &:focus {
+                        color: $colour-greyscale-24;
+                    }
+                    span {
+                        // TODO: remove hard-coded size.
+                        line-height: 24px;
+                    }
+                }
+                &.ds-open {
+                    > a, > button {
+//                        padding: 1.5*$grid-unit 2*$grid-unit $grid-unit/2 2*$grid-unit;
+                    }
+                    .ds-menu-items {
+                        margin-bottom: $grid-unit;
+                    }
+                }
+            }
+            // Second level
+            li.ds-menu-item {
+                a, button {
+                    padding: $grid-unit 2*$grid-unit $grid-unit 4*$grid-unit;
+                    @include set-text-as(body, $margins-overrides: zero-both);
+                    color: $colour-greyscale-39;
+                    &:hover, &:active, &:focus {
+                        background-color: $colour-greyscale-97;
+                        color: $colour-greyscale-24;
+                    }
+                }
+            }
             li {
                 display: block;
                 margin: 0;
-                border-bottom: $mobile-menu-border;
                 a, button {
                     display: block;
                     margin: 0;
                     width: 100%;
-                    padding: 1.5*$grid-unit 2*$grid-unit;
-                    color: $colour-white;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    &:hover, &:active, &:focus {
-                        background-color: transparentize($colour-white, 0.9);
-                    }
-                }
-                &.current {
-                    @include respond-to($palm-only){
-                        border-left: 2px solid $colour-brand-primary;
-                    }
                 }
             }
         }
@@ -31,16 +57,20 @@
             border-bottom: none;
             .ds-menu-trigger {
                 display: table;
-                border-bottom: $mobile-menu-border;
                 i[class^='icon-']{
                     display: table-cell; // For right alignment but inline with text.
                 }
                 i[class^='icon-']:before, &.ds-open i[class^='icon-']:before {
-                    color: $colour-white;
+                    color: $colour-greyscale-39;
+                    // TODO: remove hard-coded size.
+                    line-height: 24px;
                 }
             }
             .ds-menu-items {
                 border: none;
+                .ds-menu-item {
+                    border: none;
+                }
             }
         }
     }
