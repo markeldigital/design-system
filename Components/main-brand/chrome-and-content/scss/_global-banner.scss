@@ -34,7 +34,7 @@
             @include logo("a.logo", $logo-options, $logo-z-index);
 
             .primary-navigation-and-utility-navigation {
-                height: 100%;
+                height: map_get($primary-navigation-and-utility-navigation-options, "height");
                 width: 100%;
                 border-top: map_get($primary-navigation-and-utility-navigation-options, "mobile-border-top");
                 @include respond-to($lap-and-desk){
