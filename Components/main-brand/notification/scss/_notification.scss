@@ -6,10 +6,17 @@
         display: inline-block;
         width: 100%;
         margin-top: 6*$grid-unit;
-        padding:2*$grid-unit;
+        border-radius: $standard-curvature;
+        padding: $grid-unit;
+        @include set-text-as(gamma, $reduced: true, $margins-overrides: zero-both);
+        @include respond-to($lap-and-desk) {
+            @include set-text-as(gamma, $margins-overrides: zero-both);
+            padding: 2*$grid-unit;
+        }
         .notification-content {
             float: left;
             width: 90%;
+            line-height: map_get(get-base-text-properties-for(alpha), "font-size");
             p {
                 margin-bottom: 0;
                 display: inline;
@@ -18,8 +25,13 @@
         i{
             float: left;
             width: auto;
-            font-size: 3*$grid-unit;
             padding-right: $grid-unit;
+            @include set-text-as(gamma, $reduced: true, $margins-overrides: zero-both);
+            line-height: map_get(get-base-text-properties-for(alpha), "font-size");
+            @include respond-to($lap-and-desk) {
+                @include set-text-as(gamma, $margins-overrides: zero-both);
+                line-height: map_get(get-base-text-properties-for(alpha), "font-size");
+            }
         }
     }
 
