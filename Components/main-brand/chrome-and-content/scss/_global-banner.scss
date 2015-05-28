@@ -17,6 +17,14 @@
         border-bottom: map_get($global-banner-options, "border-bottom");
         z-index: $global-banner-z-index;
 
+        min-height: $menu-palm-height;
+        @include respond-to($lap-and-desk){
+            min-height: $menu-lap-height;
+        }
+        @include respond-to($desk-only){
+            min-height: $menu-desk-height;
+        }
+        
         .logo-and-primary-navigation-and-utility-navigation {
             position: relative;
             @include respond-to($lap-and-desk){
