@@ -1,5 +1,4 @@
 @import "navigation-items";
-@import 'account-menu';
 
 @mixin primary-navigation-and-utility-navigation-content($selector) {
     #{$selector} {

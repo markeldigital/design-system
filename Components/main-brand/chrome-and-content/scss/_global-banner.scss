@@ -1,14 +1,5 @@
-@import "mobile-trigger";
-@import "mobile-trigger-container";
-@import "primary-navigation-utility-navigation-content";
-
 @mixin global-banner($selector) {
-    $global-banner-z-index: 99999;
-    $mobile-nav-z-index: $global-banner-z-index+1;
-    $logo-z-index: $global-banner-z-index;
     $border-top-height: $grid-unit/2;
-
-    @include account-menu('.account-menu');
 
     #{$selector} {
         width: 100%;
@@ -30,27 +21,6 @@
             @include respond-to($lap-and-desk){
                 @include grid-width;
             }
-
-            @include logo("a.logo", $logo-options, $logo-z-index);
-
-            .primary-navigation-and-utility-navigation {
-                height: map_get($primary-navigation-and-utility-navigation-options, "height");
-                width: 100%;
-                border-top: map_get($primary-navigation-and-utility-navigation-options, "mobile-border-top");
-                @include respond-to($lap-and-desk){
-                    border-top: none;
-                }
-                &.open {
-                    position: map_get($primary-navigation-and-utility-navigation-options, "open-mobile-menu-position");
-                    z-index: $mobile-nav-z-index;
-                    background-color: $colour-white;
-                }
-
-                @include mobile-trigger-container('.primary-navigation-and-utility-navigation-trigger-container');
-                @include mobile-trigger('.primary-navigation-and-utility-navigation-trigger-container a', $mobile-menu-trigger-options);
-            }
         }
     }
-
-    @include primary-navigation-and-utility-navigation-content('.primary-navigation-and-utility-navigation-content');
 }

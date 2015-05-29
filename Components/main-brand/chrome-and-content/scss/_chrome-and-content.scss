@@ -1,22 +1,29 @@
-$menu-palm-height: $grid-unit *7 !default;
-$menu-lap-height: $grid-unit *8 !default;
-$menu-desk-height: $grid-unit *7.5 !default;
-
-$logo-palm-width: $menu-palm-height !default;
-$logo-lap-width: $menu-lap-height !default;
-$logo-desk-width: 14*$grid-unit !default;
-
-$logo-palm-clearance: 2*$grid-unit !default;
-$logo-lap-clearance: 3*$grid-unit !default;
-$logo-desk-clearance: $grid-unit !default;
-
-@import "logo";
+/*
+    Banner & banner components (eg. navigation)
+*/
 @import "global-banner";
-@import "mobile-site-section-actions";
-@import "site-section";
-@import "main-content";
-
 @include global-banner(".global-banner");
+
+@import "logo"; // Depends on it's container for position & z-index to work (these change based on sub-brand)
+@include logo("a.logo", $logo-options);
+@import "primary-navigation-and-utility-navigation"; // Depends on 'open' class from javascript.
+@include primary-navigation-and-utility-navigation('.primary-navigation-and-utility-navigation', $primary-navigation-and-utility-navigation-options);
+@import "primary-navigation-utility-navigation-content"; // Depends on 'open' class from javascript.
+@include primary-navigation-and-utility-navigation-content('.primary-navigation-and-utility-navigation-content');
+@import 'account-menu'; // No dependencies...could move into 'menu' component as a generic option, then remove from here.
+@include account-menu('.account-menu');
+
+/*
+    Site section
+*/
+@import "mobile-site-section-actions";
 @include mobile-site-section-actions('.mobile-section-actions');
+@import "site-section";
 @include site-section(".ds-site-section");
+
+/*
+    Main content area
+*/
+@import "main-content";
 @include main-content(".content");
+
