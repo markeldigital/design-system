@@ -17,10 +17,6 @@
             float: left;
             width: 90%;
             line-height: map_get(get-base-text-properties-for(alpha), "font-size");
-            p {
-                margin-bottom: 0;
-                display: inline;
-            }
         }
         i{
             float: left;
