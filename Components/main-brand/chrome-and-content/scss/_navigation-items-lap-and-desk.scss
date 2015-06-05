@@ -4,6 +4,7 @@
     @include respond-to($lap-and-desk){
         // Common to both levels
         li {
+            @include set-text-as(delta, $responsive-text: false, $reduced: true);
             width: auto;
             margin: 0;
             border-bottom: none;

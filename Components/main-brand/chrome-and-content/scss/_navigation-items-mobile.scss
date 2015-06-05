@@ -7,7 +7,7 @@
                 border-bottom: 1px solid $colour-greyscale-88;
                 > a, > button {
                     padding: 1.5*$grid-unit 2*$grid-unit;
-                    @include set-text-as(body, $reduced: true, $margins-overrides: zero-both);
+                    @include set-text-as(delta, $reduced: true, $responsive-text: false, $margins-overrides: zero-both);
                     color: $colour-greyscale-39;
                     text-transform: uppercase;
                     letter-spacing: 1px;
@@ -34,7 +34,7 @@
             li.ds-menu-item {
                 a, button {
                     padding: $grid-unit 2*$grid-unit $grid-unit 4*$grid-unit;
-                    @include set-text-as(body, $margins-overrides: zero-both);
+                    @include set-text-as(delta, $responsive-text: false, $margins-overrides: zero-both);
                     color: $colour-greyscale-39;
                     &:hover, &:active, &:focus {
                         background-color: $colour-greyscale-97;
