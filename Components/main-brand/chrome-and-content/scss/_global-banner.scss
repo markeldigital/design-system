@@ -6,7 +6,7 @@
         position: relative;
         box-shadow: map_get($options, "first-box-shadow"), map_get($options, "second-box-shadow");
         border-bottom: map_get($options, "border-bottom");
-        border-bottom: map_get($options, "z-index");
+        z-index: map_get($options, "z-index");
         min-height: map_get($options, "mobile-height");
         @include respond-to(map_get($options, "collapsed-menu-breakpoint-lap-and-desk")) {
             min-height: map_get($options, "tablet-height");
