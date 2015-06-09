@@ -1,19 +1,17 @@
 @import "navigation-items-mobile";
 @import "navigation-items-lap-and-desk";
 
-@mixin navigation-items($selector, $desk-alignment) {
+@mixin navigation-items($selector, $options) {
     #{$selector}{
         position: relative;
-		
-		@include respond-to($lap-and-desk){
-            float: $desk-alignment;
+        @include respond-to(map_get($options, "collapsed-menu-breakpoint-lap-and-desk")){
+            float: map_get($options, "desk-alignment");
         }
-
-        @include navigation-items-lap-and-desk();
+        @include navigation-items-lap-and-desk($options);
     }
 
     // Mobile menu specifics
     &.open #{$selector} {
-        @include navigation-items-mobile();
+        @include navigation-items-mobile($options);
     }
 }

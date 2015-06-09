@@ -1,10 +1,10 @@
-@mixin navigation-items-lap-and-desk(){
+@mixin navigation-items-lap-and-desk($options){
 
     // BOTH LAP AND DESK
-    @include respond-to($lap-and-desk){
+    @include respond-to(map_get($options, "collapsed-menu-breakpoint-lap-and-desk")){
         // Common to both levels
         li {
-            @include set-text-as(delta, $responsive-text: false, $reduced: true);
+            @include set-text-as(delta, $reduced: true, $responsive-text: false, $margins-overrides: zero-both);
             width: auto;
             margin: 0;
             border-bottom: none;
@@ -22,6 +22,7 @@
 
         // First level only.
         > ul > li {
+            @include set-text-as(map_get($options, "typography-level"), $responsive-text: false, $reduced: map_get($options, "typography-reduced"), $margins-overrides: zero-both);
             display: inline-block;
             & > a, & > button {
                 width: auto;
@@ -75,6 +76,7 @@
 
         .ds-menu {
             i[class^='icon-'], &.ds-open i[class^='icon-'] {
+                width: 1.5*$grid-unit;
                 &:before {
                     color: $colour-greyscale-63;
                 }
@@ -97,3 +99,4 @@
         }
     }
 }
+

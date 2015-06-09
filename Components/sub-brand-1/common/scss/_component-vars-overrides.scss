@@ -16,10 +16,14 @@ $menu-palm-height: $grid-unit *7 !default; // Used in global banner, main-conten
 $menu-lap-height: $grid-unit *8 !default;
 $menu-desk-height: $grid-unit *7.5 !default;
 $global-banner-options: (
+        "mobile-height": $menu-palm-height,
+        "tablet-height": $menu-lap-height,
+        "desktop-height": $menu-desk-height,
         "z-index": $global-banner-z-index,
         "first-box-shadow": inset 0 -1px 0 0 $colour-greyscale-88,
         "second-box-shadow": inset 0 4px 0 0 $colour-brand-primary,
-        "border-bottom": none
+        "border-bottom": none,
+        "collapsed-menu-breakpoint": 700px
 );
 $logo-options: (
         "mobile-width": $menu-palm-height,

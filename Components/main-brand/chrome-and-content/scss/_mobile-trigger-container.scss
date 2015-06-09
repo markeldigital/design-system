@@ -1,6 +1,7 @@
-@mixin mobile-trigger-container($selector){
+@mixin mobile-trigger-container($selector, $options){
+
     #{$selector} {
-        @include respond-to($lap-and-desk){
+        @include respond-to(map_get($collapsed-menu-breakpoints, "collapsed-menu-breakpoint-lap-and-desk")){
             display: none;
         }
         width: 100%;

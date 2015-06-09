@@ -1,7 +1,7 @@
-@mixin mobile-site-section-actions($selector){
+@mixin mobile-site-section-actions($selector, $options){
   #{$selector}{
-      @include respond-to($lap-and-desk){
-        display: none;
+      @include respond-to(map_get($options, "collapsed-menu-breakpoint-lap-and-desk")) {
+          display: none;
       }
       padding: 2*$grid-unit;
       border-bottom: 1px solid $colour-greyscale-88;
@@ -12,6 +12,10 @@
       .ds-menu-items {
           background-color: transparent;
           border: none;
+          @include respond-to(map_get($options, "collapsed-menu-breakpoint-palm-only")) {
+              position: relative;
+              border-top: 1px solid $colour-greyscale-88;
+          }
           .ds-menu-item{
               border-bottom: 1px solid $colour-greyscale-88;
               border-left: 1px solid $colour-greyscale-88;

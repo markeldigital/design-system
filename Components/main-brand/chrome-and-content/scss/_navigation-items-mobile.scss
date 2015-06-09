@@ -1,5 +1,5 @@
-@mixin navigation-items-mobile(){
-    @include respond-to($palm-only){
+@mixin navigation-items-mobile($options){
+    @include respond-to(map_get($options, "collapsed-menu-breakpoint-palm-only")){
         ul {
             background-color: transparent;
             // First level
@@ -67,6 +67,7 @@
                 }
             }
             .ds-menu-items {
+                position: relative;
                 border: none;
                 .ds-menu-item {
                     border: none;

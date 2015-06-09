@@ -8,7 +8,7 @@
         height: map_get($options, "mobile-height");
         margin: 0 map_get($options, "mobile-clearance");
         background-color: map_get($options, "background-color");
-        @include respond-to($lap-and-desk){
+        @include respond-to(map_get($options, "collapsed-menu-breakpoint-lap-and-desk")) {
             position: relative;
             float: left;
             width: map_get($options, "tablet-width");
@@ -49,3 +49,4 @@
         }
     }
 }
+
