@@ -3,7 +3,9 @@
 
 @mixin navigation-items($selector, $desk-alignment) {
     #{$selector}{
-        @include respond-to($lap-and-desk){
+        position: relative;
+		
+		@include respond-to($lap-and-desk){
             float: $desk-alignment;
         }
 
