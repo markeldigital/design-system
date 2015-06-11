@@ -3,8 +3,8 @@
 
 @mixin navigation-items($selector, $options) {
     #{$selector}{
-        position: relative;
         @include respond-to(map_get($options, "collapsed-menu-breakpoint-lap-and-desk")){
+            position: relative; // For search
             float: map_get($options, "desk-alignment");
         }
         @include navigation-items-lap-and-desk($options);

@@ -3,15 +3,15 @@
 @mixin primary-navigation-and-utility-navigation-content($selector, $options) {
 
     #{$selector} {
-        display: none;
+        @include visually-hidden();
         &.open {
-            display: block;
+            @include visually-shown();
         }
         width: 100%;
         border-top: 1px solid $colour-greyscale-88;
         @include respond-to(map_get($options, "collapsed-menu-breakpoint-lap-and-desk")) {
             border-top: none;
-            display: block;
+            @include visually-shown();
         }
 
         @include navigation-items('.primary-navigation', $options: map_merge(("desk-alignment": left, "typography-level": delta, "typography-reduced": true), $options));
@@ -29,4 +29,3 @@
         }
     }
 }
-
