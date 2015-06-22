@@ -1,0 +1,25 @@
+@mixin card($bem-module-name){
+    // block
+    [class*='#{$bem-module-name}'] {
+        // elements
+        [class*='#{$bem-module-name}__first'] {
+            margin-top: 0;
+        }
+        [class*='#{$bem-module-name}__last'] {
+            margin-bottom: 0;
+        }
+        // modifiers
+        &[class*='--centered'] {
+            text-align: center;
+        }
+        &[class*='--size-m'] {
+            @include responsive-padding(4*$grid-unit, l);
+        }
+        &[class*='--style-1'] {
+            background-color: $colour-white;
+            border: 1px solid $colour-greyscale-88;
+            border-bottom: 2px solid $colour-greyscale-88;
+            border-radius: $standard-curvature;
+        }
+    }
+}
