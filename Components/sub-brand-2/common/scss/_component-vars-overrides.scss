@@ -26,23 +26,23 @@ $global-banner-options: (
         "collapsed-menu-breakpoint": 800px
 );
 $logo-options: (
-        "mobile-width": $menu-palm-height,
+        "mobile-width": auto,
         "mobile-height": $menu-palm-height,
-        "mobile-padding": $grid-unit+1px,
-        "tablet-width": $menu-lap-height,
-        "tablet-height": $menu-lap-height,
-        "tablet-padding": $grid-unit*1.5,
-        "desktop-width": 14*$grid-unit,
+        "mobile-padding": $grid-unit + 4px,
+        "tablet-width": auto,
+        "tablet-height": 10*$grid-unit,
+        "tablet-padding": 2*$grid-unit,
+        "desktop-width": auto,
         "desktop-height": 14*$grid-unit,
-        "desktop-padding": $grid-unit*3-2px,
+        "desktop-padding": $grid-unit*3 + 3px,
         "mobile-clearance": 2*$grid-unit,
         "tablet-clearance": 3*$grid-unit,
         "desktop-clearance": $grid-unit,
-        "desktop-left": -(14*$grid-unit + $grid-unit),
-        "z-index": $global-banner-z-index,
+        "desktop-left": -9*$grid-unit,
+        "z-index": $global-banner-z-index+2,
         "mobile-position": relative,
         "background-color": transparent,
-        "hover-background-color": transparentize($colour-black, 0.98)
+        "hover-background-color": transparent
 );
 $primary-navigation-and-utility-navigation-options: (
         "height": auto,
