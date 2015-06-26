@@ -92,6 +92,7 @@ ds.menu = (function(keyboard, openClass, closedClass){
         var dropdowns = document.querySelectorAll('.' + selectors.menuDropdownClass);
         for(var i=0; i < dropdowns.length; i++){
             var menu = dropdowns[i];
+            menu.setAttribute('tabIndex', '-1');
             var trigger = menu.querySelector('.' + selectors.triggerClass);
             var subMenu = menu.querySelector('.' + selectors.subMenuClass);
             var subMenuItems = subMenu.querySelectorAll('.' + selectors.menuItemClass);
