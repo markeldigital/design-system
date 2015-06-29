@@ -50,7 +50,13 @@ ds.menu = (function(keyboard, openClass, closedClass){
     scope.toggleSubMenu = function(e) {
         var subMenuID = '#' + e.currentTarget.getAttribute('aria-controls');
         var subMenu = document.querySelector(subMenuID);
-        subMenu.classList.contains(selectors.openClass) ? scope.closeSubMenu(subMenu) : scope.openSubMenu(subMenu);
+
+        if (subMenu.classList.contains(selectors.openClass)) {
+            scope.closeSubMenu(subMenu);
+        } else {
+            scope.closeAllSubMenus();
+            scope.openSubMenu(subMenu);
+        }
     };
 
     scope.setupEventHandlersOn = function(trigger, subMenu){
@@ -58,7 +64,8 @@ ds.menu = (function(keyboard, openClass, closedClass){
             scope.toggleSubMenu(e);
             e.preventDefault();
         };
-        trigger.onkeyup = subMenu.onkeyup = function(e){ scope.respondToKeyboard(e); };
+        trigger.onkeyup = subMenu.onkeyup = function(e){
+            scope.respondToKeyboard(e); };
     };
 
     scope.setupLoseFocusHandlersOn = function(menu, subMenu){
