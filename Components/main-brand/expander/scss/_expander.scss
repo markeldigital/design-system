@@ -45,9 +45,13 @@
                 }
                 i {
                     display: table-cell;
+                    vertical-align: middle;
+                    line-height: 1;
                     &:before {
-                        @include set-text-as(gamma, $reduced: true, $margins-overrides: zero-both);
+                        @include set-text-as(gamma, $responsive-text: false, $margins-overrides: zero-both);
+                        @include transition(transform 0.25s ease-in-out);
                         color: $colour-greyscale-24;
+                        line-height: 1;
                     }
                 }
             }
@@ -56,9 +60,12 @@
             h3 {
                 color: $colour-greyscale-24;
                 i:before {
-                    @include icon-content-for-name("cross");
-                    @include set-text-as(gamma, $reduced: true, $margins-overrides: zero-both);
+                    @include icon-content-for-name("plus");
+                    @include set-text-as(gamma, $responsive-text: false, $margins-overrides: zero-both);
+                    @include transition(transform 0.25s ease-in-out);
+                    @include transform(rotate(45deg));
                     color: $colour-greyscale-24;
+                    line-height: 1;
                 }
             }
         }

@@ -1,7 +1,7 @@
 @mixin all-icons-helper(){
     $icon-size: $large-spacer;
     font-family: 'Iconography';
-    @include set-text-as(body, $margins-overrides: zero-both);
+//    @include set-text-as(body, $margins-overrides: zero-both);
     line-height:$icon-size;
     display: inline-block;
     width: $icon-size;
@@ -34,8 +34,8 @@
     */
     @font-face {
         font-family: 'Iconography';
-        src: url($ds-package-location + "Components/main-brand/iconography/font/iconography-webfont.woff?v=4.1.0") format('woff'),
-			url($ds-package-location + "Components/main-brand/iconography/font/iconography-webfont.ttf?v=4.1.0") format('truetype');
+        src: url($ds-package-location + "Components/main-brand/iconography/font/iconography.woff?v=4.1.0") format('woff'),
+			url($ds-package-location + "Components/main-brand/iconography/font/iconography.ttf?v=4.1.0") format('truetype');
         font-weight: normal;
         font-style: normal;
     }
@@ -62,53 +62,56 @@
     }
 }
 $icon-map:(
-        "reserve-space":            "\2002",
-        "tick":                    "\f00c",
-        "tick-circle":              "\f058",
-        "cross":                   "\f00d",
-        "times-circle":            "\f057",
-        "info":                    "\f129",
-        "spinner":                 "\f110",
-        "menu":                    "\f0c9",
-        "plus":                    "\f067",
-        "minus":                   "\f068",
-        "error":                   "\f12a",
-        "circle-o":                "\f10c",
-        "dashboard":               "\f0e4",
-        "check-circle-o":          "\f05d",
-        "chevron-circle-down":     "\f13a",
-        "circle":                  "\f111",
-        "caret-left":              "\f0d9",
-        "caret-up":                "\f0d8",
-        "caret-down":              "\f0d7",
-        "caret-right":             "\f0da",
-        "clock":                   "\f017",
-        "certificate":             "\f0a3",
-        "signal":                  "\f012",
-        "tablet":                  "\f10a",
-        "mobile":                  "\f10b",
-        "user":                    "\f007",
-        "calendar":                "\f073",
-        "exclamation-triangle":    "\f071",
-        "unlink":                  "\f127",
-        "minus-circle":            "\f056",
-        "search":                  "\f002",
-        "chain-broken":            "\f127",
-        "arrrow-circle-right":     "\f0a9",
-        "phone":                   "\f095",
-        "angle-left":              "\f104",
-        "angle-right":             "\f105",
-        "angle-up":                "\f106",
-        "angle-down":              "\f107",
-        "refresh":                 "\f021",
-        "info-circle":             "\f05a",
-        "exclamation-circle":      "\f06a",
-        "padlock":                 "\f023",
-        "umbrella":                "\f0e9",
-        "check-square-o":          "\f046",
-        "life-ring":               "\f1cd",
-        "clock-o":                 "\f017",
-		"question-circle":         "\f059"
+        "reserve-space":           "\2002",
+        "arrow-left":              "\e208",
+        "arrow-right":             "\e209",
+        "arrow-down":              "\e20a",
+        "arrow-up":                "\e201",
+        "angle-left":              "\e110",
+        "angle-right":             "\e111",
+        "angle-down":              "\e10f",
+        "angle-up":                "\e112",
+        "caret-left":              "\e202",
+        "caret-right":             "\e203",
+        "caret-down":              "\e204",
+        "caret-up":                "\e205",
+        "check-square-o":          "\e2fa", // verified-user
+        "tick-circle":             "\e281",
+        "tick":                    "\e206",
+        "times-circle":            "\e207", // cross-circle
+        "cross":                   "\e070",
+        "question-circle":         "\e29b",
+        "info-circle":             "\e2a2",
+        "error":                   "\e002", // exclamation
+        "exclamation-circle":      "\e000",
+        "exclamation-triangle":    "\e2c6",
+        "unlink":                  "\e2c6", // exclamation-triangle
+        "chain-broken":            "\e2c6", // exclamation-triangle
+        "minus-circle":            "\e080",
+        "minus":                   "\e07f",
+        "plus-circle":             "\e06b",
+        "plus":                    "\e069",
+        "phone-circle":            "\e001",
+        "phone":                   "\e03f",
+        "search":                  "\e2ca",
+        "circle-o":                "\e25e",
+        "circle":                  "\e13b",
+        "menu":                    "\e20e",
+        "calendar":                "\e28c",
+        "user":                    "\e253",
+        "tablet":                  "\e0a1", // devices
+        "mobile":                  "\e0a1", // devices
+        "clock":                   "\e08e", // clock-o
+        "clock-o":                 "\e08e",
+        "signal":                  "\e2f7", // trending-up
+        "dashboard":               "\e257", // poll
+        "spinner":                 "\e27f", // refresh
+        "refresh":                 "\e27f",
+        "certificate":             "\e260", // star
+        "padlock":                 "\e2ab",
+        "life-ring":               "\e10d", // headset-mic
+        "umbrella":                "\e1ae", // style
+
 );
 
 @include iconography($icon-map);

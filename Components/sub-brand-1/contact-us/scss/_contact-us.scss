@@ -31,10 +31,16 @@
                 @include respond-to($lap-and-desk){
                     @include set-graphic-as(beta, $type:icon);
                 }
+                width: 3*$grid-unit;
+                height: 3*$grid-unit;
+                @include respond-to($lap-and-desk) {
+                    width: 4*$grid-unit;
+                    height: 4*$grid-unit;
+                }
+                line-height: 0.95; // TODO: Find a more elegant way to do this, maybe?
                 color: $colour-interaction-100;
                 &:before {
                     display: inline-block;
-                    line-height: 1;
                 }
             }
         }
