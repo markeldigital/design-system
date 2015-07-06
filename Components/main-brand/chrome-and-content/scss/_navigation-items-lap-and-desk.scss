@@ -29,7 +29,7 @@
                 line-height: $menu-lap-height;
                 text-transform: uppercase;
                 letter-spacing: 1px;
-                color: $colour-greyscale-63;
+                color: $colour-greyscale-39;
                 &:hover, &:focus, &:active {
                     color: $colour-black;
                     i[class^='icon-'] {
@@ -78,7 +78,7 @@
             i[class^='icon-'], &.ds-open i[class^='icon-'] {
                 width: 1.5*$grid-unit;
                 &:before {
-                    color: $colour-greyscale-63;
+                    color: $colour-greyscale-39;
                 }
             }
             .ds-menu-items {
@@ -99,4 +99,3 @@
         }
     }
 }
-
