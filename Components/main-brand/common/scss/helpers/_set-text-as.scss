@@ -126,9 +126,9 @@
         $lap-scale-factor: 0.9;
         $desk-scale-factor: 1;
 
-        font-size: $size*$palm-scale-factor;
+        font-size: $size*$palm-scale-factor; // For better device support, 'The first media query is no media query'.
         @include private-mixin-set-text-margins($margins, $margins-overrides, $palm-scale-factor);
-        @include respond-to($lap-and-desk){
+        @include respond-to($lap-only){ // Use exclusive breakpoint in this case (instead of overriding text size multiple times).
             font-size: $size*$lap-scale-factor;
             @include private-mixin-set-text-margins($margins, $margins-overrides, $lap-scale-factor);
         }

@@ -6,7 +6,7 @@ $ds-package-location: '../../bower_components/design-system/' !default;
 
 // Note: for palm-sized devices use a mobile first strategy (the first breakpoint is to have no breakpoint)
 $palm-breakpoint: "569"; // Gets put onto the html:before element for JS.
-$lap-only: new-breakpoint(min-width #{$palm-breakpoint}+px and max-width 1280px $grid-columns);
+$lap-only: new-breakpoint(min-width 569px max-width 1280px, $grid-columns);
 $lap-and-desk: new-breakpoint(min-width 569px $grid-columns);
 $desk-only: new-breakpoint(min-width 1280px $grid-columns);
 $palm-only: new-breakpoint(max-width 568px $grid-columns); // Use sparingly.
