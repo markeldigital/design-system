@@ -1,3 +1,8 @@
+@function px-to-rem($value-in-px){
+    $rem-size: $value-in-px / 16px;
+    @return #{$rem-size}rem;
+}
+
 /*
 * Do not use to set text size. Only use this to GET text properties in order
 * to set other values in shared mixins such as padding for form elements.
@@ -127,17 +132,21 @@
         $desk-scale-factor: 1;
 
         font-size: $size*$palm-scale-factor; // For better device support, 'The first media query is no media query'.
+        font-size: px-to-rem($size*$palm-scale-factor);
         @include private-mixin-set-text-margins($margins, $margins-overrides, $palm-scale-factor);
         @include respond-to($lap-only){ // Use exclusive breakpoint in this case (instead of overriding text size multiple times).
             font-size: $size*$lap-scale-factor;
+            font-size: px-to-rem($size*$lap-scale-factor);
             @include private-mixin-set-text-margins($margins, $margins-overrides, $lap-scale-factor);
         }
         @include respond-to($desk-only){
             font-size: $size;
+            font-size: px-to-rem($size);
             @include private-mixin-set-text-margins($margins, $margins-overrides, $desk-scale-factor);
         }
     } @else if($responsive-text == false){
         font-size: $size;
+        font-size: px-to-rem($size);
         @include private-mixin-set-text-margins($margins, $margins-overrides, $scale-factor: 1);
     }
 
