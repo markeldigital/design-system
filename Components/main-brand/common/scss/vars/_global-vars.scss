@@ -82,7 +82,7 @@ $colour-white: #fff !default;
 $colour-selected-tab: #fff !default;
 $colour-unselected-tab: rgba(255, 255, 255, 0.8);
 
-$brand-image-1: url('../Images/hero-bg.png') no-repeat top center $colour-greyscale-98 !default;
+$brand-image-1: $colour-greyscale-98 !default;
 
 /* Global styles for consistency of wells, drop-shadows, borders, etc.
 */

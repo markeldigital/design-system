@@ -111,7 +111,8 @@ $icon-map:(
         "padlock":                 "\e2ab",
         "life-ring":               "\e10d", // headset-mic
         "umbrella":                "\e1ae", // style
-
+        "product-PL":              "\e1b0",
+        "product-ML":              "\e1af"
 );
 
 @include iconography($icon-map);

@@ -17,10 +17,10 @@
             display: none;
         }
         &.product-section {
-            background: $brand-image-1;
-            background-size: cover;
+            background-color: $colour-greyscale-98;
+            border-bottom: 1px solid $colour-greyscale-88;
             h2 {
-                color: $colour-white !important;
+                color: $colour-greyscale-24 !important;
             }
         }
         &.neutral-section {

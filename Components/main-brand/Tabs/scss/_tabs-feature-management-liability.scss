@@ -10,7 +10,7 @@
                 .ds-tab-trigger {
                     display: table;
                     width: 100%;
-                    background-color: $colour-greyscale-96;
+                    background-color: $colour-white;
                     @include respond-to($lap-and-desk){
                         display: inline-block;
                         width: auto;
@@ -27,17 +27,17 @@
                     border-bottom: 1px solid $colour-greyscale-88;
                     @include respond-to($lap-and-desk){
                         border-bottom: none;
-                        color: $colour-unselected-tab;
+                        color: $colour-greyscale-24;
                         &:hover {
-                            color: $colour-selected-tab;
+                            color: $colour-greyscale-24;
                         }
                     }
                     @include respond-to($lap-and-desk){
                         &.ds-tab-trigger--current {
-                           span {
+                            span {
                                 @include respond-to($lap-and-desk){
-                                    color: $colour-selected-tab;
-                                    border-bottom: 3px solid $colour-selected-tab;
+                                    color: $colour-greyscale-24;
+                                    border-bottom: 3px solid $colour-greyscale-24;
                                 }
                             }
                         }

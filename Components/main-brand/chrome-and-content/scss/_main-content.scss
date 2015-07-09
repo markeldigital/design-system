@@ -1,11 +1,12 @@
 @mixin page-top-padding(){
     //the page top padding is based on the menu height
-    margin-top: $menu-palm-height * 1.5;
+    margin-top: 0.75*$menu-palm-height;
     @include respond-to($lap-and-desk){
-        margin-top: $menu-lap-height * 1.5;
+        margin-top: 0.75*$menu-lap-height;
     }
     @include respond-to($desk-only){
         margin-top: $menu-desk-height;
+        
     }
 }
 
