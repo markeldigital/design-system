@@ -25,4 +25,4 @@
     }
 }
 
-@include twins-template(".twins-template", ".primary-twin, .sign-in, .registration, .registration-success", ".secondary-twin, .marketing-info");
+@include twins-template(".twins-template", ".primary-twin", ".secondary-twin");

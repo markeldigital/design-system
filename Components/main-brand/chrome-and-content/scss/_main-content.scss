@@ -6,7 +6,6 @@
     }
     @include respond-to($desk-only){
         margin-top: $menu-desk-height;
-        
     }
 }
 
