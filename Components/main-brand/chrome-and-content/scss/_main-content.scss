@@ -57,4 +57,12 @@
             }
         }
     }
+
+    /* Accessibility skiplink requires tabindex=0 on the main but this can cause
+     * 'a blue glow' when clicking on the content of the page for sighted mouse
+     * users hence the compromise below.
+     */
+    main[tabindex="0"]:focus {
+        outline: none;
+    }
 }

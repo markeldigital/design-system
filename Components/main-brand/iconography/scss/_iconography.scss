@@ -1,7 +1,6 @@
 @mixin all-icons-helper(){
     $icon-size: $large-spacer;
     font-family: 'Iconography';
-//    @include set-text-as(body, $margins-overrides: zero-both);
     line-height:$icon-size;
     display: inline-block;
     width: $icon-size;
@@ -29,8 +28,8 @@
 
 @mixin iconography($icon-map){
     /*
-    * To add icons go to http://icomoon.me and sign in with the company account (TODO: Set this up!).
-    * Our current icon set is FontAwesome.
+    * We use a custom icon set that Benny has drawn using http://icomoon.me
+    * The icon set details are stored in a JSON file that Benny has put on dropbox for now and can be re-uploaded to icomoon to regenerate the icon set.
     */
     @font-face {
         font-family: 'Iconography';

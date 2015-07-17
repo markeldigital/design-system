@@ -6,6 +6,8 @@
         @include respond-to(map_get($options, "collapsed-menu-breakpoint-lap-and-desk")){
             position: relative; // For search
             float: map_get($options, "desk-alignment");
+            #{map_get($options, "desk-alignment")}: -1.5*$grid-unit;
+            letter-spacing: -0.35em; // Removes the spacing on display-inline children
         }
         @include navigation-items-lap-and-desk($options);
     }

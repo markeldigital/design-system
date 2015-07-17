@@ -23,7 +23,8 @@ $global-banner-options: (
         "first-box-shadow": inset 0 -1px 0 0 $colour-greyscale-88,
         "second-box-shadow": inset 0 4px 0 0 $colour-brand-primary,
         "border-bottom": none,
-        "collapsed-menu-breakpoint": 700px
+        "needs-clearance-from-red-bar": true,
+        "collapsed-menu-breakpoint": 750px
 );
 $logo-options: (
         "mobile-width": $menu-palm-height,

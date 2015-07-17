@@ -3,7 +3,7 @@
     $content-color: $colour-greyscale-39;
     $borders-color: $colour-greyscale-88;
     $background-color: $colour-white;
-    $hover-color: $colour-greyscale-98;
+    $hover-color: $colour-greyscale-97;
 
     #{$selector} {
         position: relative;
@@ -38,6 +38,7 @@
                 background-color: $background-color;
                 &:hover, &:active {
                     background-color: $hover-color;
+                    @include transition($standard-transition-animation);
                 }
             }
         }

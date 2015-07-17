@@ -8,10 +8,11 @@
             width: auto;
             margin: 0;
             border-bottom: none;
+            letter-spacing: normal;
             a, button {
                 display: inline-block;
                 margin: 0;
-                padding: 0 $grid-unit;
+                padding: 0 1.5*$grid-unit;
                 text-decoration: none;
                 span {
                     display: inline-block;
@@ -26,17 +27,28 @@
             display: inline-block;
             & > a, & > button {
                 width: auto;
-                line-height: $menu-lap-height;
+                @if (map_get($global-banner-options, "needs-clearance-from-red-bar") == true) {
+                    line-height: $menu-lap-height - 4px;
+                    margin-top: 4px;
+                } @else {
+                    line-height: $menu-lap-height;
+                }
                 text-transform: uppercase;
                 letter-spacing: 1px;
+                font-weight: 600;
                 color: $colour-greyscale-39;
+//                box-shadow: inset 1px 0 0 $colour-greyscale-88, inset -1px 0 0 $colour-greyscale-88;
                 &:hover, &:focus, &:active {
+                    box-shadow: inset 1px 0 0 $colour-greyscale-88, inset -1px 0 0 $colour-greyscale-88;
                     color: $colour-black;
                     i[class^='icon-'] {
                         &:before {
                             color: $colour-black;
                         }
                     }
+                }
+                &:hover, &:active, &:focus {
+                    background-color: $colour-greyscale-97;
                 }
             }
             &.ds-open:hover, &.ds-open:focus, &.ds-open:active {
@@ -46,12 +58,6 @@
                         color: $colour-black;
                     }
                 }
-            }
-            &:first-of-type > a, &:first-of-type > button {
-                padding-left: 0;
-            }
-            &:last-of-type > a, &:last-of-type > button {
-                padding-right: 0;
             }
 
             &.current {
@@ -94,7 +100,11 @@
         // First level
         & > ul > li {
             & > a, & > button {
-                line-height: $menu-desk-height;
+                @if (map_get($global-banner-options, "needs-clearance-from-red-bar") == true) {
+                    line-height: $menu-lap-height - 4px;
+                } @else {
+                    line-height: $menu-lap-height;
+                }
             }
         }
     }
