@@ -37,7 +37,6 @@
                 letter-spacing: 1px;
                 font-weight: 600;
                 color: $colour-greyscale-39;
-//                box-shadow: inset 1px 0 0 $colour-greyscale-88, inset -1px 0 0 $colour-greyscale-88;
                 &:hover, &:focus, &:active {
                     box-shadow: inset 1px 0 0 $colour-greyscale-88, inset -1px 0 0 $colour-greyscale-88;
                     color: $colour-black;
@@ -101,9 +100,9 @@
         & > ul > li {
             & > a, & > button {
                 @if (map_get($global-banner-options, "needs-clearance-from-red-bar") == true) {
-                    line-height: $menu-lap-height - 4px;
+                    line-height: $menu-desk-height - 4px;
                 } @else {
-                    line-height: $menu-lap-height;
+                    line-height: $menu-desk-height;
                 }
             }
         }
