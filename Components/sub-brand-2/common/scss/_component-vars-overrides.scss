@@ -54,7 +54,8 @@ $primary-navigation-and-utility-navigation-options: (
 $mobile-menu-trigger-options: (
         "z-index": $global-banner-z-index+1,
         "open-position": relative,
-        "open-box-shadow": none
+        "open-box-shadow": none,
+        "alignment": left
 );
 $navigation-items-options: (
         "lap-and-desk-hover-box-shadow": "inset 1px 0 0 #e0e0e0, inset -1px 0 0 #e0e0e0"

@@ -6,7 +6,7 @@
         @include respond-to(map_get($collapsed-menu-breakpoints, "collapsed-menu-breakpoint-lap-and-desk")) {
             display: none;
         }
-        padding-left: $grid-unit*0.75;
+        padding-#{map_get($options, "alignment")}: 2*$grid-unit;
         @include transition(none);
         .text-when-open {
             display: none;
@@ -51,7 +51,7 @@
         top:0;
         left: 0;
         width: 100%;
-        text-align: right;
+        text-align: map_get($options, "alignment");
         background-color: $colour-white;
         .special-menu-icon {
             color: $colour-greyscale-39;
