@@ -38,7 +38,7 @@
                 font-weight: 600;
                 color: $colour-greyscale-39;
                 &:hover, &:focus, &:active {
-                    box-shadow: inset 1px 0 0 $colour-greyscale-88, inset -1px 0 0 $colour-greyscale-88;
+                    box-shadow: #{map_get($navigation-items-options, "lap-and-desk-hover-box-shadow")}; // TODO: try to remove this by using border-bottom on broker for global-banner
                     color: $colour-black;
                     i[class^='icon-'] {
                         &:before {

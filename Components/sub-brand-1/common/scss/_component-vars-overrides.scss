@@ -56,3 +56,6 @@ $mobile-menu-trigger-options: (
         "open-position": fixed,
         "open-box-shadow": inset 0 4px 0 0 $colour-brand-primary
 );
+$navigation-items-options: (
+        "lap-and-desk-hover-box-shadow": "inset 1px 0 0 #e0e0e0, inset -1px 0 0 #e0e0e0, inset 0 -1px 0 #e0e0e0"
+)

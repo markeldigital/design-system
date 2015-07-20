@@ -7,6 +7,9 @@
             position: relative; // For search
             float: map_get($options, "desk-alignment");
             #{map_get($options, "desk-alignment")}: -1.5*$grid-unit;
+            &.keep-inside-grid {
+                #{map_get($options, "desk-alignment")}: 0;
+            }
             letter-spacing: -0.35em; // Removes the spacing on display-inline children
         }
         @include navigation-items-lap-and-desk($options);
