@@ -10,7 +10,7 @@
             &.keep-inside-grid {
                 #{map_get($options, "desk-alignment")}: 0;
             }
-            letter-spacing: -0.35em; // Removes the spacing on display-inline children
+            font-size: 0; // Removes the spacing on display-inline children
         }
         @include navigation-items-lap-and-desk($options);
     }
