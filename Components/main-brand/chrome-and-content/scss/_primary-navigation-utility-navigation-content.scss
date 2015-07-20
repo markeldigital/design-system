@@ -14,8 +14,8 @@
             @include visually-shown();
         }
 
-        @include navigation-items('.primary-navigation', $options: map_merge(("desk-alignment": left, "typography-level": delta, "typography-reduced": true), $options));
-        @include navigation-items('.utility-navigation', $options: map_merge(("desk-alignment": right, "typography-level": epsilon, "typography-reduced": false), $options));
+        @include navigation-items('.primary-navigation', $options: map_merge(("desk-alignment": left, "typography-level": delta, "typography-reduced": true, "typography-weight": 600), $options));
+        @include navigation-items('.utility-navigation', $options: map_merge(("desk-alignment": right, "typography-level": epsilon, "typography-reduced": false, "typography-weight": regular), $options));
 
         $item-padding: $grid-unit;
         &:not(.open) .primary-navigation {

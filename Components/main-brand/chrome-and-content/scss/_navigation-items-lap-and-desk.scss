@@ -35,7 +35,7 @@
                 }
                 text-transform: uppercase;
                 letter-spacing: 1px;
-                font-weight: 600;
+                font-weight: map_get($options, "typography-weight");
                 color: $colour-greyscale-39;
                 &:hover, &:focus, &:active {
                     box-shadow: #{map_get($navigation-items-options, "lap-and-desk-hover-box-shadow")}; // TODO: try to remove this by using border-bottom on broker for global-banner
