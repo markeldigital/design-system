@@ -1,59 +1,60 @@
 @import "modify-as-icon-button";
 @import "modify-as-button-size";
 
-
 @mixin button($selector, $style){
     $background-color: $colour-interaction-100;
     $color: $colour-white;
-    $border: none;
     $box-shadow: none;
-    $interaction-subtle-style-exception: null;
-    $interaction-subtle2-style-exception: null;
-    $interaction-primary-subtle-style-exception: null;
+    $outline-button: null;
     $text-transform: uppercase;
+    $hover-background-color: null;
+    $hover-color: null;
 
+    // Main buttons
     @if($style == button-style-primary) {
         $background-color: $colour-brand-primary;
+        $hover-background-color: darken($background-color, 10);
         $box-shadow: inset 0 -3px 0 0 rgba($colour-black, 0.16);
     }
 
     @if($style == button-style-secondary) {
         $background-color: $colour-interaction-100;
+        $hover-background-color: darken($background-color, 10);
         $box-shadow: inset 0 -3px 0 0 rgba($colour-black, 0.16);
     }
 
-    @if($style == button-style-subtle) {
-        $background-color: transparent;
-        $box-shadow: inset 0 0 0 2px $colour-white;
-        $interaction-subtle-style-exception: true;
-    }
-
-    @if($style == button-style-subtle-2) {
-        $background-color: $colour-white;
-        $border: 1px solid $colour-greyscale-88;
-        $color: $colour-greyscale-24;
-        $interaction-subtle2-style-exception: true;
-    }
-
-    @if($style == button-style-link) {
-        $background-color: transparent;
-        $border: none;
-        $color: map_get($links-options, "colour");
-        $interaction-subtle2-style-exception: true;
-        $text-transform: none;
-    }
-
+    // Outline buttons
     @if($style == button-style-primary-subtle) {
-        $background-color: transparent;
         $color: $colour-brand-primary;
-        $box-shadow: 0 0 0 2px $colour-brand-primary inset;
-        $interaction-primary-subtle-style-exception: true;
+        $hover-color: $colour-white;
+    }
+    @if($style == button-style-secondary-subtle) {
+        $color: $colour-interaction-100;
+        $hover-color: $colour-white;
+    }
+    @if($style == button-style-subtle) {
+        $color: $colour-white;
+        $hover-color: $colour-black;
+    }
+    @if($style == button-style-primary-subtle or $style == button-style-secondary-subtle or $style == button-style-subtle) { // Common bits for outline buttons
+        $box-shadow: 0 0 0 2px $color inset;
+        $hover-background-color: $color;
+        $background-color: transparent;
+        $outline-button: true;
     }
 
-    @if($style == button-style-secondary-subtle) {
-        $background-color: $colour-interaction-10;
-        $color: $colour-interaction-100;
-        $box-shadow: 0 0 0 2px $colour-interaction-100 inset;
+    // Non-conformist buttons
+    @if($style == button-style-subtle-2) { // Not quite like an outline button
+        $color: $colour-greyscale-24;
+        $background-color: transparent;
+        $hover-background-color: $colour-greyscale-88;
+        $box-shadow: 0 0 0 1px $colour-greyscale-88 inset;
+    }
+    @if($style == button-style-link) { // Very subtle button (eg. for < back actions in forms)
+        $background-color: transparent;
+        $color: map_get($links-options, "colour");
+        $hover-background-color: rgba($color, 0.1);
+        $text-transform: none;
     }
 
     #{$selector}{
@@ -63,7 +64,7 @@
         min-width: 8*$grid-unit;
         background-color: $background-color;
         color: $color;
-        border: $border;
+        border: none;
         text-decoration: none;
         text-align: center;
         border-radius: $standard-curvature;
@@ -75,38 +76,27 @@
             width: auto;
         }
 
-        $hover-background-colour: darken($background-color, 10);
-        $hover-color: $color;
-
-        @if($interaction-subtle-style-exception){
-            $hover-background-colour: $colour-white;
-            $hover-color: $colour-black;
-        }
-
-        @if($interaction-subtle2-style-exception){
-            $hover-background-colour: $colour-greyscale-97;
-        }
-
         &.hover, &:hover {
-            background-color: $hover-background-colour;
-            color: $hover-color;
+            background-color: $hover-background-color;
+            @if($outline-button){
+                color: $hover-color;
+            }
             @include transition($standard-transition-animation);
         }
 
         &.active, &:active, &.focus, &:focus {
-            $active-background-color: darken($hover-background-colour, 5);
+            $active-background-color: darken($hover-background-color, 10);
             background-color: $active-background-color;
-            color: $hover-color;
             box-shadow: none;
-            @if($interaction-primary-subtle-style-exception){
-                box-shadow: $box-shadow;
+            @if($outline-button){
+                color: $hover-color;
             }
             @include transition(none);
         }
 
-
         .disabled, &[disabled]{
             @include standard-option-disabled-style($set-border: false);
+            color: $colour-white;
             &.hover, &:hover {
                 @include standard-option-disabled-style($set-border: false);
             }
