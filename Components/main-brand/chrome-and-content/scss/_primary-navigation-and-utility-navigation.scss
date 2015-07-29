@@ -6,8 +6,10 @@
         height: map_get($options, "height");
         width: 100%;
         border-top: map_get($options, "mobile-border-top");
+        overflow-x: hidden; // Fix whitespace appearing on right and horizontal scroll when mobile menu is opened.
         @include respond-to(map_get($collapsed-menu-breakpoints, "collapsed-menu-breakpoint-lap-and-desk")){
             border-top: none;
+            overflow-x: visible; // Take whitespace fix off where it isn't needed.
         }
         &.open {
             position: map_get($options, "open-mobile-menu-position");
