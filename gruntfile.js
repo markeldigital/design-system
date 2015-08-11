@@ -4,6 +4,7 @@ module.exports = function (grunt) {
     var projectRoot = __dirname;
 	
     var params = {
+        'direct-root': '../REMUS.DirectPortal/REMUS.DirectPortal.web/',
         'components-publishing-path': 'bower_components/design-system/Components/',
         'cms-root': '../REMUS.CMS/CMS/',
         'digital-brand-system-root': '../REMUS.DigitalBrandSystem/Markel.REMUS.DigitalBrandSystem/',
@@ -40,7 +41,10 @@ module.exports = function (grunt) {
                     {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['public-root'], params['components-publishing-path'])},
 
                     // Underwriter
-                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['underwriter-root'], params['components-publishing-path'])}
+                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['underwriter-root'], params['components-publishing-path'])},
+
+                    //DirectPortal
+                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['direct-root'], params['components-publishing-path'])}
                 ]
             }
         },
