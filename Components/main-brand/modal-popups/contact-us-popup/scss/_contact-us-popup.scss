@@ -1,0 +1,35 @@
+@mixin contact-us-poup($selector){
+    #{$selector}{
+        form {
+            @include respond-to($lap-and-desk){
+                width: 50%;
+            }
+        }
+        .hp {
+            display:none;
+        }
+        label {
+            display: inline-block;
+            width: 100%;
+            margin-top: $grid-unit;
+        }
+
+        input {
+            display: block;
+        }
+
+        @include message(".field-validation-error");
+        .field-validation-error {
+            display: inline-block;
+            padding-left: $grid-unit;
+        }
+    }
+    // TODO: change buttons to optionally allow them to be called instead of always use them via markup classes. 
+    @include button($selector + " input[type='submit']", button-style-primary);
+    #{$selector} input[type='submit'] {
+        padding: 1.5*$grid-unit 2*$grid-unit;
+        margin-top: 3*$grid-unit;
+    }
+}
+
+@include contact-us-poup(".contact-form-page");

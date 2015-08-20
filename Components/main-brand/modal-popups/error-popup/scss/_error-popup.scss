@@ -20,7 +20,6 @@
             @include respond-to($lap-and-desk) {
                 @include set-graphic-as(gamma, $type: icon);
             }
-
         }
         h1 {
             @include set-text-as(beta);

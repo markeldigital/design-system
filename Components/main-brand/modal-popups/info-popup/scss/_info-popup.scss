@@ -1,0 +1,51 @@
+@mixin info-popup($selector, $shadow-selector, $close-button-selector){
+    #{$selector}{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        max-width: 100*$grid-unit;
+        max-height: 100*$grid-unit;
+        min-height: 10*$grid-unit;
+        padding: 0 2*$grid-unit 2*$grid-unit 2*$grid-unit!important;
+        background: $colour-greyscale-97;
+        @include respond-to($palm-only){
+            top: 0!important;
+        }
+
+        .popup-content {
+            height: 100%;
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                border: none;
+            }
+        }
+
+        h1 {
+            @include set-text-as(gamma);
+            //border-bottom: none;
+            //padding:0;
+        }
+
+        p {
+            margin-bottom: $grid-unit*2;
+        }
+    }
+
+    #{$shadow-selector} {
+        background: rgba($colour-black, 0.8)!important;
+    }
+
+    #{$close-button-selector} {
+        background: transparent!important;
+        border: none!important;
+        color: $colour-black;
+        box-shadow: none!important;
+        top: 3*$grid-unit!important;
+        right: 3*$grid-unit!important;
+    }
+}
+
+@include info-popup(".info-popup", ".custom-shadow", ".custom-close");
