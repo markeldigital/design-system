@@ -1,3 +1,23 @@
+@mixin modal($selector, $shadow-selector, $level){
+    #{$selector}{
+
+        h2 {
+            @include set-text-as(gamma, $margins-overrides:zero-both, $strength: strong);
+            border-bottom: 1px solid $colour-greyscale-88;
+            padding: $grid-unit*2;
+        }
+
+        p {
+            margin: 0 0 $grid-unit*2 0 !important;
+        }
+    }
+
+    #{$shadow-selector} {
+        background: rgba($colour-black, 0.6)!important;
+        opacity: 1 !important;
+    }
+}
+
 @mixin info-popup($selector, $shadow-selector, $close-button-selector){
     #{$selector}{
         position: relative;
@@ -125,3 +145,5 @@
 }
 
 @include info-popup(".info-popup", ".custom-shadow", ".custom-close");
+
+@include modal(".error-page", ".custom-shadow", error-modal);
