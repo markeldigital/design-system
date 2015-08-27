@@ -1,16 +1,21 @@
-/* Use defaults from main brand:
-*/
+/*--=============================================================
+=================================================================
 
-/* Custom to this sub-brand:
-*/
+Sub-brand-2 = Direct portal and CMS header / navigation
+
+This file overrides the styles from main
+
+=================================================================
+=============================================================--*/
+
+// Link colour's
 
 $links-options: (
         "colour": $colour-brand-primary
 );
 
-/*
-    Header components
-*/
+//    Header components
+
 $global-banner-z-index: 9;
 $menu-palm-height: $grid-unit *7 !default; // Used in global banner, main-content (margin), mobile-trigger-container, mobile-trigger, site-section.
 $menu-lap-height: $grid-unit *8 !default;
@@ -59,4 +64,4 @@ $mobile-menu-trigger-options: (
 );
 $navigation-items-options: (
         "lap-and-desk-hover-box-shadow": "inset 1px 0 0 #e0e0e0, inset -1px 0 0 #e0e0e0"
-)
+);
