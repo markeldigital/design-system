@@ -1,6 +1,6 @@
 @mixin logo($selector, $options){
     #{$selector} {
-        display: block;
+        display: map_get($options, 'block-style');
         position: map_get($options, "mobile-position");
         z-index: map_get($options, "z-index");
         padding: map_get($options, "mobile-padding");

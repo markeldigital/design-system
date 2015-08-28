@@ -15,6 +15,7 @@ $global-banner-z-index: 99999;
 $menu-palm-height: $grid-unit *7 !default; // Used in global banner, main-content (margin), mobile-trigger-container, mobile-trigger, site-section.
 $menu-lap-height: $grid-unit *8 !default;
 $menu-desk-height: $grid-unit *7.5 !default;
+$block-style: block;
 $global-banner-options: (
         "mobile-height": $menu-palm-height,
         "tablet-height": $menu-lap-height,
@@ -43,7 +44,8 @@ $logo-options: (
         "z-index": $global-banner-z-index,
         "mobile-position": absolute,
         "background-color": $colour-brand-primary,
-        "hover-background-color": darken($colour-brand-primary, 10)
+        "hover-background-color": darken($colour-brand-primary, 10),
+        "block-style" : $block-style
 );
 $primary-navigation-and-utility-navigation-options: (
         "height": 100%,
