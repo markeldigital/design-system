@@ -1,0 +1,9 @@
+@mixin main-container($selector) {
+
+    $main-container-options: (
+            'background-image': none,
+            'color': red
+    );
+
+
+}

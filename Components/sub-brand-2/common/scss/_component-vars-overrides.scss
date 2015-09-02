@@ -71,21 +71,24 @@ $navigation-items-options: (
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// Main section background
+// Main section header and background image
 
-main {
 
-    background: url("https://placehold.it/2000x400") 0 0 no-repeat;
-}
 
-.question-wrapper {
 
-    background-color: $colour-white;
-    overflow: hidden;
-    padding: 0 $grid-unit*3;
-    margin: 0 ($grid-unit*3 * -1);
-    margin-bottom: $grid-unit*3;
-    border-radius: $standard-curvature;
-    box-shadow: 0px 1px 5px 2px $colour-greyscale-76;
 
-}
+//main {
+//
+//    background: url("https://placehold.it/2000x400") 0 0 no-repeat;
+//
+//    &:first-of-type h1 {
+//        color: $colour-white;
+//    }
+//}
+
+$main-container-options: (
+    'background-image': none,
+    'color': red
+);
+
+
