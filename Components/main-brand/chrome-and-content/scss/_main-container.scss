@@ -1,9 +1,13 @@
 @mixin main-container($selector) {
 
-    $main-container-options: (
-            'background-image': none,
-            'color': red
-    );
+    #{$selector}{
 
+        background: map-get($main-container-options, 'background');
+
+        &:first-of-type h1 {
+
+            color: map-get($main-container-options, 'header-color');
+        }
+    }
 
 }

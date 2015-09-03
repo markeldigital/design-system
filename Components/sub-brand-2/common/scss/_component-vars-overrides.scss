@@ -8,13 +8,19 @@ This file overrides the styles from main
 =================================================================
 =============================================================--*/
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 // Link colour's
 
 $links-options: (
         "colour": $colour-brand-primary
 );
 
-//    Header components
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Header components
 
 $global-banner-z-index: 9;
 $menu-palm-height: $grid-unit *7 !default; // Used in global banner, main-content (margin), mobile-trigger-container, mobile-trigger, site-section.
@@ -73,22 +79,7 @@ $navigation-items-options: (
 
 // Main section header and background image
 
-
-
-
-
-//main {
-//
-//    background: url("https://placehold.it/2000x400") 0 0 no-repeat;
-//
-//    &:first-of-type h1 {
-//        color: $colour-white;
-//    }
-//}
-
 $main-container-options: (
-    'background-image': none,
-    'color': red
+        'background': url("https://placehold.it/2000x400") 0 0 no-repeat,
+        'header-color': $colour-white
 );
-
-

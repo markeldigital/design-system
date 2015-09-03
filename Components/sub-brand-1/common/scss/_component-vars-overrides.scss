@@ -1,16 +1,18 @@
-/* Use defaults from main brand:
-*/
+/*--=============================================================
+=================================================================
 
-/* Custom to this sub-brand:
-*/
+Sub-brand-1 = Broker portal and CMS header / navigation
 
-//$links-options: (
-//        "colour": $colour-brand-primary
-//);
+This file overrides the styles from main
 
-/*
-    Header components
-*/
+=================================================================
+=============================================================--*/
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//Header components
+
 $global-banner-z-index: 99999;
 $menu-palm-height: $grid-unit *7 !default; // Used in global banner, main-content (margin), mobile-trigger-container, mobile-trigger, site-section.
 $menu-lap-height: $grid-unit *8 !default;
