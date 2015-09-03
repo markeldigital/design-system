@@ -32,6 +32,5 @@ $collapsed-menu-breakpoints: ("collapsed-menu-breakpoint-lap-and-desk": $collaps
 */
 @import "main-content";
 @include main-content(".content");
-@import 'main-container';
-@include main-container('main');
+
 
