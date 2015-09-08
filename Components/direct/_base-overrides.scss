@@ -1,0 +1,8 @@
+// Body background image for desktop
+
+body {
+
+    @include respond-to($lap-and-desk) {
+        background-color: $colour-greyscale-97;
+    }
+}
