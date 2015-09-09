@@ -3,6 +3,7 @@
 
     #{$selector} {
         width: 100%;
+        background-color: white;
         position: relative;
         box-shadow: map_get($options, "first-box-shadow"), map_get($options, "second-box-shadow");
         border-bottom: map_get($options, "border-bottom");
