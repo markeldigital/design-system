@@ -3,9 +3,6 @@ Design System
 */
 @import "../main-brand/common/scss/common-third-party-libraries";
 
-
-
-
 /*
 Design System (main-brand & sub-brand)
 */
@@ -43,10 +40,11 @@ Design System (main-brand & sub-brand)
 @import '../main-brand/cookies-disabled/scss/_cookies-disabled.scss';
 @import '../main-brand/javascript-disabled/scss/_javascript-disabled.scss';
 @import '../main-brand/card/scss/card.scss';
+@import '../main-brand/expander-list/scss/_expander-list.scss';
 
 // TODO: make into more generic tabs component
 @import '../main-brand/tabs/scss/tabs-feature-management-liability.scss';
 
 /* Sub-brand specific components */
-@import '../sub-brand-1/documents/scss/documents.scss';
-@import '../main-brand/expander-list/scss/_expander-list.scss';
+@import 'documents/scss/documents.scss';
+
