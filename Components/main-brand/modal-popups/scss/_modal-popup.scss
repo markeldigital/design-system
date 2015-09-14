@@ -78,46 +78,46 @@
                 outline: none !important;
             }
         }
-    }
 
-    .editorial-page div.panel--style-1{
+        .editorial-page div.panel--style-1{
 
-        padding: $grid-unit*2;
-    }
-
-    .ds-expander-style-b{
-
-        border: none;
-    }
-
-    .ds-expander-style-b:last-of-type{
-
-        border: none;
-    }
-
-    .editorial {
-
-        padding: $grid-unit*2;
-        border: 1px solid $success-colour-100;
-        background-color: $success-colour-10;
-        overflow: hidden;
-
-        &:before {
-            float: left;
-            font-family: 'Iconography';
-            @include get-icon-content-only("tick-circle");
-            display: inline-block;
-            @include set-text-as(gamma, $margins-overrides:zero-both);
-            width: 9%;
-            color: $success-colour-100;
-            line-height: 1;
+            padding: $grid-unit*2;
         }
 
-        p {
-            padding: 0;
-            float: left;
-            width: 90%;
+        .ds-expander-style-b{
 
+            border: none;
+        }
+
+        .ds-expander-style-b:last-of-type{
+
+            border: none;
+        }
+
+        .editorial {
+
+            padding: $grid-unit*2;
+            border: 1px solid $success-colour-100;
+            background-color: $success-colour-10;
+            overflow: hidden;
+
+            &:before {
+                float: left;
+                font-family: 'Iconography';
+                @include get-icon-content-only("tick-circle");
+                display: inline-block;
+                @include set-text-as(gamma, $margins-overrides:zero-both);
+                width: 9%;
+                color: $success-colour-100;
+                line-height: 1;
+            }
+
+            p {
+                padding: 0;
+                float: left;
+                width: 90%;
+
+            }
         }
     }
 }
