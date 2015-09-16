@@ -3,10 +3,61 @@
     #{$selector} {
 
 
-        .modal-title {
-            @include set-text-as(gamma, $margins-overrides:zero-both, $strength: strong);
-            color: $colour-greyscale-24;
+        .modal-header {
+            padding: $grid-unit*2;
+            border-bottom: 1px solid $colour-greyscale-88;
+            overflow: hidden;
+
+            .modal-title {
+                @include set-text-as(gamma, $margins-overrides:zero-both, $strength: strong);
+                color: $colour-greyscale-24;
+                float: left;
+                width: auto;
+            }
+
+            //close button
+            .modal-close {
+
+                color: $colour-greyscale-24;
+                @include set-text-as(gamma, $margins-overrides:zero-both);
+                padding: 0;
+                background: transparent;
+                border: none;
+
+
+                &:before{
+                    font-family: 'Iconography';
+                    @include get-icon-content-only("cross");
+                    display: inline-block;
+                }
+
+                &:hover, &:focus, &:active{
+
+                    color: lighten($colour-black, 50);
+                    @include transition($standard-transition-animation);
+                    outline: none !important;
+                }
+            }
+
         }
+
+        // Body padding
+        .modal-body {
+            position: relative;
+            padding: $grid-unit*2;
+        }
+
+        //content (with box shadow)
+        .modal-content {
+            position: relative;
+            background-color: $colour-white;
+            border-radius: $standard-curvature;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+            outline: 0;
+        }
+
+
+
 
 
 
@@ -67,18 +118,7 @@
             width: auto;
             margin: $grid-unit;
         }
-        .modal-content {
-            position: relative;
-            background-color: #ffffff;
-            border: 1px solid #999999;
-            border: 1px solid rgba(0, 0, 0, 0.2);
-            border-radius: 6px;
-            -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
-            -webkit-background-clip: padding-box;
-            background-clip: padding-box;
-            outline: 0;
-        }
+
         .modal-backdrop {
             position: fixed;
             top: 0;
@@ -96,31 +136,17 @@
             opacity: 0.5;
             filter: alpha(opacity=50);
         }
-        .modal-header {
-            padding: $grid-unit*2;
-            border-bottom: 1px solid #e5e5e5;
-            overflow: hidden;
-        }
+
         .modal-header .close {
             float: right;
         }
-        .modal-title {
-            margin: 0;
-            float: left;
-            width: auto;
-        }
-        .modal-body {
-            position: relative;
-            padding: $grid-unit*2;
-        }
+
+
 
         @include respond-to($lap-and-desk) {
             .modal-dialog {
                 width: 500px;
                 margin: $grid-unit*3 auto;
-            }
-            .modal-content {
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
             }
         }
 
