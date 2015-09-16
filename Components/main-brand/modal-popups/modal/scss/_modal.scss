@@ -2,7 +2,6 @@
 
     #{$selector} {
 
-
         .modal-header {
             padding: $grid-unit*2;
             border-bottom: 1px solid $colour-greyscale-88;
@@ -23,7 +22,7 @@
                 padding: 0;
                 background: transparent;
                 border: none;
-
+                float: right;
 
                 &:before{
                     font-family: 'Iconography';
@@ -37,6 +36,7 @@
                     @include transition($standard-transition-animation);
                     outline: none !important;
                 }
+
             }
 
         }
@@ -46,6 +46,8 @@
             position: relative;
             padding: $grid-unit*2;
         }
+
+
 
         //content (with box shadow)
         .modal-content {
@@ -58,11 +60,22 @@
 
 
 
+        //modal dialog
+        .modal-dialog {
+            position: relative;
+            width: auto;
+            margin: $grid-unit;
+
+            @include respond-to($lap-and-desk) {
+
+                width: 456px;
+                margin: $grid-unit*3 auto;
+
+            }
+        }
 
 
-
-
-//        Bootstrap styles below
+        //Bootstrap styles / transitions etc etc
 
         .fade {
             opacity: 0;
@@ -113,11 +126,6 @@
             overflow-x: hidden;
             overflow-y: auto;
         }
-        .modal-dialog {
-            position: relative;
-            width: auto;
-            margin: $grid-unit;
-        }
 
         .modal-backdrop {
             position: fixed;
@@ -133,49 +141,8 @@
             filter: alpha(opacity=0);
         }
         .modal-backdrop.in {
-            opacity: 0.5;
-            filter: alpha(opacity=50);
-        }
-
-        .modal-header .close {
-            float: right;
-        }
-
-
-
-        @include respond-to($lap-and-desk) {
-            .modal-dialog {
-                width: 500px;
-                margin: $grid-unit*3 auto;
-            }
-        }
-
-        .center-block {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .pull-right {
-            float: right !important;
-        }
-        .pull-left {
-            float: left !important;
-        }
-        .hide {
-            display: none !important;
-        }
-        .show {
-            display: block !important;
-        }
-        .invisible {
-            visibility: hidden;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-        .affix {
-            position: fixed;
+            opacity: 0.6;
+            filter: alpha(opacity=60);
         }
 
     }
