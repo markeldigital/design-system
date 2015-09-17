@@ -5,7 +5,6 @@
     #{$selector}{
         overflow: hidden;
         width: 100%;
-        margin-top: 6*$grid-unit;
         border-radius: $standard-curvature;
         padding: $grid-unit*1.5;
             @include respond-to($lap-and-desk) {
