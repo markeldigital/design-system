@@ -2,8 +2,17 @@
 
     #{$selector} {
 
+        //Removes margin of notifications within modals
+        .notification{
+
+            margin-top: 0;
+        }
+
         .modal-header {
             padding: $grid-unit*2;
+                @include respond-to($lap-and-desk){
+                    padding: $grid-unit*2 $grid-unit*3;
+                }
             border-bottom: 1px solid $colour-greyscale-88;
             overflow: hidden;
 
@@ -45,6 +54,9 @@
         .modal-body {
             position: relative;
             padding: $grid-unit*2;
+                @include respond-to($lap-and-desk){
+                    padding: $grid-unit*3;
+                }
         }
 
 
