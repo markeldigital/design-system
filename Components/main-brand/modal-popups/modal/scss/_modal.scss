@@ -165,4 +165,15 @@
 
 }
 
+//Override for digital brand system
+.dbs-modal-container .modal{
+    display: block !important;
+    opacity: 1;
+    position: static;
+
+    .modal-dialog{
+        transform: none;
+    }
+}
+
 @include modal('.modal');

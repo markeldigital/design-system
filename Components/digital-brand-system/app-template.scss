@@ -4,7 +4,7 @@ Styles for the digital brand system
 @import "../main-brand/common/scss/common-third-party-libraries";
 //@imports/sub-brand-1/common/scss/global-vars-overrides"; // Sub-brand overrides for global vars if needed.
 @import "../main-brand/common/scss/vars/global-vars"; // Overrides for component vars
-@import "../direct/component-vars-overrides";
+@import "../broker/component-vars-overrides";
 @import "../main-brand/common/scss/vars/component-vars";
 @import "../main-brand/common/scss/common-markel";
 @import '../main-brand/iconography/scss/_iconography';
@@ -22,6 +22,7 @@ Styles for the digital brand system
 @import '../main-brand/forms/scss/input-and-unit/scss/_input-and-unit';
 @import '../main-brand/forms/scss/basic-checkbox/scss/_basic-checkbox';
 @import '../main-brand/modal-popups/scss/modal-popup';
+@import '../main-brand/modal-popups/modal/scss/_modal';
 @import '../main-brand/static-error/scss/_static-error';
 @import '../main-brand/forms/scss/autosuggest/scss/_select2';
 @import '../main-brand/hero/scss/_hero';
