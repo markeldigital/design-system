@@ -1,0 +1,57 @@
+// Main section header and background image
+
+
+@mixin quote-journey($selector) {
+
+    #{$selector}{
+
+        @include respond-to($lap-and-desk) {
+            background: url('../../Content/Images/direct_portal_bg2.jpg') 0 0 no-repeat;
+            background-size: contain;
+        }
+
+
+
+        &:first-of-type h1 {
+            @include respond-to($lap-and-desk) {
+                color: $colour-white;
+            }
+        }
+
+        //    Style below overrides header color for error view only
+        article.static-error h1{
+            color: inherit;
+        }
+    }
+
+}
+
+@mixin quote-journey__main($selector) {
+
+    #{$selector} {
+
+        border-radius: $standard-curvature;
+
+        @include respond-to($lap-and-desk) {
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+            padding: 0;
+            margin: 0 ($grid-unit*3 * -1);
+        }
+
+        @include respond-to($lap-only){
+
+            margin: 0 ($grid-unit * -1);
+        }
+
+
+
+        background-color: $colour-white;
+        overflow: hidden;
+        margin-bottom: $grid-unit*3;
+        clear: both;
+
+    }
+}
+
+@include quote-journey('.quote-journey');
+@include quote-journey__main('.quote-journey__main');
