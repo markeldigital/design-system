@@ -1,7 +1,7 @@
-﻿@import '_question';
-@import '_help-message';
-@import '_help-message-trigger';
-@import '_inline-help-message';
+﻿@import 'question';
+@import 'help-message';
+@import 'help-message-trigger';
+@import 'inline-help-message';
 
 
 @include question(".question");
