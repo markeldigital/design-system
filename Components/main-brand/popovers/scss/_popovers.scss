@@ -3,13 +3,14 @@
 @mixin tooltip($selector) {
 
     #{$selector} {
-
+        $popover-title-color: #fff;
         $popover-bg: rgba(0,0,0, 0.8);
         $popover-color: #fff;
         $popover-arrow-width: 1rem;
         $popover-arrow-outer-width: 1rem;
         $popover-arrow-color: $popover-bg;
-        $popover-arrow-outer-color: $popover-bg;
+        $popover-arrow-outer-color: none;
+
 
 
             position: absolute;
@@ -35,8 +36,15 @@
             &.bottom  { margin-top: $popover-arrow-width; }
             &.left    { margin-left: -$popover-arrow-width; }
 
+        .popover-title{
+            color: $popover-title-color;
+            margin: 0;
+            padding: 1rem 1rem 0 1rem;
+            font-size: 1.2rem;
+        }
+
         .popover-content {
-            padding: 9px 14px;
+            padding: 0 1rem 1rem 1rem;
             color: $popover-color;
         }
 
@@ -71,7 +79,7 @@
                 bottom: -$popover-arrow-outer-width;
                 &:after {
                     content: " ";
-                    bottom: 1px;
+                    bottom: 0;
                     margin-left: -$popover-arrow-width;
                     border-bottom-width: 0;
                     border-top-color: $popover-arrow-color;
@@ -85,7 +93,7 @@
                 border-right-color: $popover-arrow-outer-color;
                 &:after {
                     content: " ";
-                    left: 1px;
+                    left: 0;
                     bottom: -$popover-arrow-width;
                     border-left-width: 0;
                     border-right-color: $popover-arrow-color;
@@ -99,7 +107,7 @@
                 top: -$popover-arrow-outer-width;
                 &:after {
                     content: " ";
-                    top: 1px;
+                    top: 0;
                     margin-left: -$popover-arrow-width;
                     border-top-width: 0;
                     border-bottom-color: $popover-arrow-color;
@@ -114,7 +122,7 @@
                 border-left-color: $popover-arrow-outer-color;
                 &:after {
                     content: " ";
-                    right: 1px;
+                    right: 0;
                     border-right-width: 0;
                     border-left-color: $popover-arrow-color;
                     bottom: -$popover-arrow-width;
