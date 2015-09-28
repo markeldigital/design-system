@@ -42,40 +42,40 @@ Styles for the digital brand system
 //Quote journey
 
 // Layout
-@import '../direct/quote-journey/layout/footer.scss';
-@import '../direct/quote-journey/layout/quote-journey.scss';
+@import '../main-brand/quote-journey/direct/layout/footer.scss';
+@import '../main-brand/quote-journey/direct/layout/quote-journey.scss';
 
 // Modules
-@import '../main-brand/quote-journey/modules/_actions-panel';
-@import '../main-brand/quote-journey/modules/_documents';
-@import '../main-brand/quote-journey/modules/insurance-summary/_insurance-summary';
-@import '../main-brand/quote-journey/modules/insurance-summary/_insurance-summary-totals';
-@import '../main-brand/quote-journey/modules/insurance-summary/_insurance-summary-marketing';
-@import '../main-brand/quote-journey/modules/disclaimer-message/_disclaimer-message';
-@import '../main-brand/quote-journey/modules/_forms';
-@import '../main-brand/quote-journey/modules/question-message/_question-message';
-@import '../main-brand/quote-journey/modules/_endorsements';
-@import '../main-brand/quote-journey/modules/_premium';
-@import '../main-brand/quote-journey/modules/_premium-option';
-@import '../main-brand/quote-journey/modules/_question-date-picker';
-@import '../main-brand/quote-journey/modules/_question-declaration-message';
-@import '../main-brand/quote-journey/modules/_quote-header';
-@import '../main-brand/quote-journey/modules/stacked-questions-block.scss';
-@import '../main-brand/quote-journey/modules/_total-premium';
-@import '../main-brand/quote-journey/modules/cover-group/_cover-group';
-@import '../main-brand/quote-journey/modules/option/_option';
-@import '../main-brand/quote-journey/modules/question-multi-numeric/_question-multi-numeric';
-@import '../main-brand/quote-journey/modules/question-monetary/_question-monetary';
-@import '../main-brand/quote-journey/modules/question-percentage-breakdown/_question-percentage-breakdown';
-@import '../main-brand/quote-journey/modules/question-address-finder/_question-address-finder';
-@import '../main-brand/quote-journey/modules/question-single-checkbox/_question-single-checkbox';
-@import '../main-brand/quote-journey/modules/question-and-question-help/_question-and-question-help';
-@import '../main-brand/quote-journey/modules/date-picker/pikaday';
+@import '../main-brand/quote-journey/direct/modules/_actions-panel';
+@import '../main-brand/quote-journey/direct/modules/_documents';
+@import '../main-brand/quote-journey/direct/modules/insurance-summary/_insurance-summary';
+@import '../main-brand/quote-journey/direct/modules/insurance-summary/_insurance-summary-totals';
+@import '../main-brand/quote-journey/direct/modules/insurance-summary/_insurance-summary-marketing';
+@import '../main-brand/quote-journey/direct/modules/disclaimer-message/_disclaimer-message';
+@import '../main-brand/quote-journey/direct/modules/_forms';
+@import '../main-brand/quote-journey/direct/modules/question-message/_question-message';
+@import '../main-brand/quote-journey/direct/modules/_endorsements';
+@import '../main-brand/quote-journey/direct/modules/_premium';
+@import '../main-brand/quote-journey/direct/modules/_premium-option';
+@import '../main-brand/quote-journey/direct/modules/_question-date-picker';
+@import '../main-brand/quote-journey/direct/modules/_question-declaration-message';
+@import '../main-brand/quote-journey/direct/modules/_quote-header';
+@import '../main-brand/quote-journey/direct/modules/stacked-questions-block.scss';
+@import '../main-brand/quote-journey/direct/modules/_total-premium';
+@import '../main-brand/quote-journey/direct/modules/cover-group/_cover-group';
+@import '../main-brand/quote-journey/direct/modules/option/_option';
+@import '../main-brand/quote-journey/direct/modules/question-multi-numeric/_question-multi-numeric';
+@import '../main-brand/quote-journey/direct/modules/question-monetary/_question-monetary';
+@import '../main-brand/quote-journey/direct/modules/question-percentage-breakdown/_question-percentage-breakdown';
+@import '../main-brand/quote-journey/direct/modules/question-address-finder/_question-address-finder';
+@import '../main-brand/quote-journey/direct/modules/question-single-checkbox/_question-single-checkbox';
+@import '../main-brand/quote-journey/direct/modules/question-and-question-help/_question-and-question-help';
+@import '../main-brand/quote-journey/direct/modules/date-picker/pikaday';
 
 // Screens
 
-@import "../main-brand/quote-journey/screens/_questions-screen.scss";
-@import "../main-brand/quote-journey/screens/_quote-screen.scss";
+@import "../main-brand/quote-journey/direct/screens/_questions-screen.scss";
+@import "../main-brand/quote-journey/direct/screens/_quote-screen.scss";
 
 //Templates
-@import '../main-brand/quote-journey/templates/insurance-summary-template';
+@import '../main-brand/quote-journey/direct/templates/insurance-summary-template';
