@@ -108,4 +108,35 @@
 }(jQuery);
 
 
-$('.popover-btn').popover();
+
+$('.popover-btn').each(function(){
+
+    var windowWidth = $(window).width();
+
+    if(windowWidth <= 600){
+
+        $(this).attr('data-placement', 'top');
+
+    }else{
+
+       // Do nothing...
+
+    }
+
+});
+
+
+$('.popover-btn').popover({
+
+ template: '<div class="popover">\
+<div class="arrow"></div>\
+<div class="popover-header">\
+<button type="button" class="popover-close" data-dismiss="popover" aria-hidden="true" aria-label="Close"></button>\
+<h3 class="popover-title"></h3>\
+</div>\
+<div class="popover-content"></div>\
+</div>'
+
+});
+
+

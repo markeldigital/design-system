@@ -15,7 +15,8 @@
 
         .notification-content {
             display: table-cell;
-            vertical-align: top;
+            vertical-align: middle;
+            word-break: break-word;
 
             p:last-of-type{
 
@@ -46,7 +47,7 @@
            }
 
            i{
-              @include set-text-as(beta, $reduced: true, $margins-overrides: zero-both);
+              @include set-text-as(beta, $margins-overrides: zero-both);
                padding-right: $grid-unit*1.5;
            }
 
