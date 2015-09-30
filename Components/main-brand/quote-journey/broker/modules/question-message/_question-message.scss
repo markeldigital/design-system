@@ -1,10 +1,6 @@
 @mixin question-message($selector, $background-colour){
     #{$selector} {
-		.question-main {
-            padding: 0;
-            border-left: none;
-        }
-        .message-content {
+		.message-content {
 			[class^='icon-'] {
 				float: left;
 				margin-right: $grid-unit;
@@ -15,7 +11,11 @@
 				overflow: hidden;
 			}
 			@include fill-parent;
+            @include respond-to($lap-and-desk){
+                @include span-columns($three-fifths);
+            }
             background: $background-colour;
+
             padding: 3*$grid-unit;
             p:last-of-type {
                 margin-bottom: 0;
@@ -24,5 +24,5 @@
     }
 }
 
-@include question-message(".question.question-message", $colour-greyscale-97);
-@include question-message(".question.question-warning-message", $error-colour-10);
+@include question-message(".question-message", $colour-greyscale-97);
+@include question-message(".question-warning-message", $error-colour-10);

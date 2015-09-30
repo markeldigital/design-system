@@ -1,27 +1,21 @@
 ﻿@mixin questions-screen($selector){
     #{$selector}{
         .question {
-                    @include clearfix;
-                    .question-main {
-                        @include respond-to($lap-and-desk){
-                            @include span-columns($three-fifths);
-                        }
-                    }
-                    .question-aside {
-                        position: relative;
-                        @include span-columns($two-fifths);
-                    }
+            @include clearfix;
+            .question-main {
+                @include respond-to($lap-and-desk){
+                    @include span-columns($three-fifths);
                 }
-
-        .breakdown-feedback dt {
-            @include visually-hidden;
-        }
-
-        form .split-actions {
-            @include respond-to($lap-and-desk) {
-                @include span-columns($three-fifths);
+            }
+            .question-aside {
+                position: relative;
+                @include span-columns($two-fifths);
             }
         }
+		
+		.breakdown-feedback dt {
+			@include visually-hidden;
+		}
 
         &.historical-mode {
             .question-main {

@@ -6,6 +6,6 @@
 
 @include question(".question");
 @include inline-help-message(".inline-help-message");
-@include help-message(".qj-help-message-text");
+@include help-message(".question-aside .help-message-text");
 @include help-message-trigger-mobile(".help-message-trigger-mobile");
 @include help-message-trigger-desktop(".help-message-trigger-desktop");
