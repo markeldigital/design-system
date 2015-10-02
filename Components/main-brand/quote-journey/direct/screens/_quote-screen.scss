@@ -22,7 +22,7 @@
         }
 
         .limit-header, .premium-header {
-            @include set-text-as(delta);
+            @include set-text-as(delta, $strength: strong); 
         }
 
         .limit-header, .premium-header, .limit-value, .premium-value {
