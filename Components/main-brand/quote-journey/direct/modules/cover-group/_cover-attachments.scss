@@ -1,27 +1,32 @@
 @mixin cover-attachments($selector) {
+
     #{$selector} {
-        h3 {
-            @include set-text-as(body, $margins-overrides: zero-both);
-            font-weight: bold;
-        }
 
-        .panel-inverse {
-            min-height: $grid-unit*10;
-            ul {
-                list-style: none;
-                padding: 0;
+        .additional-detail{
+            margin-bottom: 2*$grid-unit;
+            &:nth-last-child(1){
+                margin-bottom: 0;
             }
-        }
 
-        .cover-attachments-left, .cover-attachments-right {
             @include respond-to($lap-and-desk) {
                 @include span-columns($one-half);
+                @include omega(2n);
+                margin-bottom: 3*$grid-unit;
+                &:nth-last-child(1),
+                &:nth-last-child(2){
+                    margin-bottom: 0;
+                }
             }
+
         }
 
-		.additional-detail {
-			margin-bottom: 2*$grid-unit;
-		}
+        .additional-detail h3 {
+            @include set-text-as(body, $margins-overrides: zero-top);
+            margin-bottom: $grid-unit/2;
+            font-weight: 600;
+        }
+
+
 
 		.additional-detail p {
 			margin-bottom: 0;
@@ -31,10 +36,5 @@
 			color: $colour-greyscale-63;
 		}
 
-        @include respond-to-print(){
-            .cover-attachments-left, .cover-attachments-right {
-                @include span-columns($one-half);
-            }
-        }
     }
 }

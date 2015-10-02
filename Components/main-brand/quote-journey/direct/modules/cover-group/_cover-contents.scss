@@ -1,5 +1,18 @@
 @mixin cover-contents($selector) {
     #{$selector} {
+
+        padding: $grid-unit*2;
+        @include respond-to($lap-and-desk){
+            padding: $grid-unit*3;
+        }
+
+        .panel-inverse {
+            padding: $grid-unit*2;
+            @include respond-to($lap-and-desk){
+                padding: $grid-unit*3;
+            }
+        }
+
         margin-top: $grid-unit/4;
         .cover-level-label {
             @include set-text-as(body, $margins-overrides: zero-bottom);
@@ -10,6 +23,7 @@
                 clear: none;
             }
         }
+
         .limit-header-container {
             margin-bottom: $grid-unit;
         }

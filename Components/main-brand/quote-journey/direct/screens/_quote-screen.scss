@@ -21,8 +21,19 @@
             }
         }
 
-        .limit-header, .premium-header {
-            @include set-text-as(delta, $strength: strong); 
+        h3.limit-header{
+
+            @include set-text-as(delta, $margins-overrides: zero-both);
+            margin-bottom: $grid-unit;
+
+            a, span {
+                font-weight: 600;
+            }
+        }
+
+        .premium-header {
+            @include set-text-as(delta);
+            font-weight: 600;
         }
 
         .limit-header, .premium-header, .limit-value, .premium-value {

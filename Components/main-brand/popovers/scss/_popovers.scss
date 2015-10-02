@@ -16,7 +16,10 @@
         left: 0;
         z-index: 999;
         display: none;
-        max-width: 278px;
+        width: 100%;
+        @include respond-to($lap-and-desk) {
+            max-width: 278px;
+        }
         background-color: $popover-bg;
         background-clip: padding-box;
         border-radius: $standard-curvature;
