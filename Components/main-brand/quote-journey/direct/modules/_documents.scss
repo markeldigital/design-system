@@ -1,5 +1,7 @@
 @mixin documents($selector){
     #{$selector}{
+        border-bottom: 1px solid $colour-greyscale-88;
+        padding: $grid-unit*2 0;
         ul {
             list-style: none;
             padding-left: 0;
@@ -12,11 +14,12 @@
                 a {
                     display: inline-block;
                     width: 100%;
+                    color: $colour-greyscale-24;
                     &:hover {
-                        background-color: $colour-interaction-10;
-                        outline: $grid-unit solid $colour-interaction-10;
+//                        background-color: $colour-interaction-10;
+//                        outline: $grid-unit solid $colour-interaction-10;
                     }
-                    .pdf-icon-download {
+                    .pdf-icon-download, .word-icon-download {
                         float: left;
                         display: block;
                         margin-right: $grid-unit;
