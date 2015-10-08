@@ -41,8 +41,8 @@
                     }
                 }
                 &.loading {
-                    background-color: $colour-interaction-10;
-                    outline: $grid-unit solid $colour-interaction-10;
+                    background-color: $colour-greyscale-96;
+                    outline: $grid-unit solid $colour-greyscale-96; 
                     .documents__icon img {
                         visibility: hidden;
                     }
