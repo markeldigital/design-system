@@ -11,7 +11,8 @@ module.exports = function (grunt) {
         'quote-journey-root': '../REMUS.QuoteJourney/Markel.REMUS.Modules.QuoteJourney/',
         'broker-root': '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/',
         'public-root': '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/',
-        'underwriter-root': '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/'
+        'underwriter-root': '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/',
+        'live-design-system': '../REMUS.LiveDesignSystem/'
     };
 
     grunt.initConfig({
@@ -44,7 +45,10 @@ module.exports = function (grunt) {
                     {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['underwriter-root'], params['components-publishing-path'])},
 
                     //DirectPortal
-                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['direct-root'], params['components-publishing-path'])}
+                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['direct-root'], params['components-publishing-path'])},
+
+                    //Live Design System
+                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['live-design-system'], params['components-publishing-path'])}
                 ]
             }
         },

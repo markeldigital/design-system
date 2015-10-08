@@ -131,7 +131,7 @@ $('.popover-btn').popover({
  template: '<div class="popover">\
 <div class="arrow"></div>\
 <div class="popover-header">\
-<button type="button" class="popover-close" data-dismiss="popover" aria-hidden="true" aria-label="Close"></button>\
+<button type="button" class="popover-close" data-dismiss="popover" aria-hidden="true" aria-label="Close" tabindex="-1"></button>\
 <h3 class="popover-title"></h3>\
 </div>\
 <div class="popover-content"></div>\
