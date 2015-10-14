@@ -42,7 +42,7 @@
                 }
                 &.loading {
                     background-color: $colour-greyscale-96;
-                    outline: $grid-unit solid $colour-greyscale-96; 
+                    outline: $grid-unit solid $colour-greyscale-96;
                     .documents__icon img {
                         visibility: hidden;
                     }

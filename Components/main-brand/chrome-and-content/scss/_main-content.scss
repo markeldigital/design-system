@@ -28,7 +28,10 @@
 
     #{$selector}{
         width: 100%;
-        margin-bottom: $grid-unit*10;
+        margin-bottom: $grid-unit*4;
+        @include respond-to($lap-and-desk){
+            margin-bottom: $grid-unit*10;
+        }
 
         h1 {
             word-wrap: break-word;

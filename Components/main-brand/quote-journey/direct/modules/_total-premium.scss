@@ -1,14 +1,11 @@
 @mixin total-premium($selector){
     #{$selector}{
-        @include clearfix;
-        margin-top: 2*$grid-unit;
-        padding: $grid-unit 0;
         @include respond-to($lap-and-desk) {
             margin-top: 3*$grid-unit;
             padding: 2*$grid-unit 0;
+            border-top: 1px solid $colour-greyscale-88;
+            border-bottom: 1px solid $colour-greyscale-88;
         }
-        border-top: 1px solid $colour-greyscale-88;
-        border-bottom: 1px solid $colour-greyscale-88;
 
         dl {
             dt {
