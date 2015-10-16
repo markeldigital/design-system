@@ -1,0 +1,11 @@
+@mixin summary-total-premium($selector){
+
+    #{$selector}{
+
+
+
+    }
+
+}
+
+@include summary-total-premium('.summary-total-premium');
