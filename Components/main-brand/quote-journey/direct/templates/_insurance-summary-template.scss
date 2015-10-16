@@ -16,6 +16,7 @@
             }
         }
         .qj-insurance-summary {
+            height: 100%;
             overflow: auto;
 
             @include respond-to($lap-and-desk){

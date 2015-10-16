@@ -1,0 +1,23 @@
+@mixin summary-header($selector){
+
+    #{$selector}{
+
+        &__title{
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        background-color: red;
+
+
+    }
+
+}
+
+@include summary-header('.summary-header');
+
+
+.summary-header{
+
+    background-color: blue !important;
+}

@@ -36,6 +36,7 @@ Styles for the digital brand system
 @import '../main-brand/waiting-spinner/scss/_waiting-spinner.scss';
 @import '../main-brand/cookies-disabled/scss/_cookies-disabled.scss';
 @import '../main-brand/javascript-disabled/scss/_javascript-disabled.scss';
+@import '../main-brand/marketing-info/scss/_marketing-info';
 @import '../main-brand/Tabs/scss/tabs';
 @import '../main-brand/popovers/scss/_popovers'; 
 
@@ -71,6 +72,8 @@ Styles for the digital brand system
 @import '../main-brand/quote-journey/direct/modules/question-single-checkbox/_question-single-checkbox';
 @import '../main-brand/quote-journey/direct/modules/question-and-question-help/_question-and-question-help';
 @import '../main-brand/quote-journey/direct/modules/date-picker/pikaday';
+@import '../main-brand/quote-journey/direct/modules/quote-summary/summary-header';
+
 
 // Screens
 
