@@ -15,6 +15,7 @@
         }
         .expander-trigger {
             display: block;
+            text-decoration: none;
             color: $colour-greyscale-24;
             &:hover, &:focus, &:active {
                 background-color: $colour-greyscale-98;

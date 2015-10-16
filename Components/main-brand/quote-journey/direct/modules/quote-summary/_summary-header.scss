@@ -2,12 +2,13 @@
 
     #{$selector}{
 
+        padding-bottom: $grid-unit*1.5;
+
         &__title{
-            font-size: 30px;
-            text-decoration: none;
+            @include set-text-as(beta, $margins-overrides: zero-both, $strength: strong);
+            margin-top: $grid-unit*2 !important;
         }
 
-        background-color: red;
 
 
     }
@@ -15,9 +16,3 @@
 }
 
 @include summary-header('.summary-header');
-
-
-.summary-header{
-
-    background-color: blue !important;
-}

@@ -1,0 +1,20 @@
+@mixin cover-breakdown($selector){
+
+    #{$selector}{
+
+        padding-bottom: $grid-unit*1.5;
+
+        &__list{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+
+
+
+    }
+
+}
+
+@include cover-breakdown('.cover-breakdown');
