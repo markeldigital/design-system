@@ -1,0 +1,11 @@
+@mixin summary-cta($selector){
+
+    #{$selector}{
+
+        padding: $grid-unit*1.5 0;
+
+
+    }
+}
+
+@include summary-cta('.summary-cta');
