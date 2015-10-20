@@ -47,14 +47,12 @@ Design System
 //Quote journey
 
 // Layout
+@import '../main-brand/quote-journey/direct/layout/quote-summary.scss';
 @import '../main-brand/quote-journey/direct/layout/footer.scss';
 @import '../main-brand/quote-journey/direct/layout/quote-journey.scss';
 
 // Modules
 @import '../main-brand/quote-journey/direct/modules/_actions-panel';
-@import '../main-brand/quote-journey/direct/modules/_documents';
-@import '../main-brand/quote-journey/direct/modules/insurance-summary/_insurance-summary';
-@import '../main-brand/quote-journey/direct/modules/insurance-summary/_insurance-summary-totals';
 @import '../main-brand/quote-journey/direct/modules/insurance-summary/_insurance-summary-marketing';
 @import '../main-brand/quote-journey/direct/modules/disclaimer-message/_disclaimer-message';
 @import '../main-brand/quote-journey/direct/modules/_forms';
@@ -77,6 +75,11 @@ Design System
 @import '../main-brand/quote-journey/direct/modules/question-and-question-help/_question-and-question-help';
 @import '../main-brand/quote-journey/direct/modules/date-picker/pikaday';
 @import '../main-brand/quote-journey/direct/modules/call-to-action-sticky/_call-to-action-sticky';
+@import '../main-brand/quote-journey/direct/modules/quote-summary/summary-header';
+@import '../main-brand/quote-journey/direct/modules/quote-summary/cover-breakdown';
+@import '../main-brand/quote-journey/direct/modules/quote-summary/summary-total-premium';
+@import '../main-brand/quote-journey/direct/modules/quote-summary/summary-cta';
+@import '../main-brand/quote-journey/direct/modules/quote-summary/documents';
 
 // Screens
 

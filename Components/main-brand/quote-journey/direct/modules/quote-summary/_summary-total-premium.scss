@@ -3,7 +3,7 @@
     #{$selector}{
 
         padding: $grid-unit*1.5 0;
-        border-bottom: 1px solid $colour-greyscale-63;
+        border-bottom: 1px solid $colour-greyscale-88;
 
         &__header{
             @include set-text-as(gamma, $margins-overrides: zero-both, $strength: strong);

@@ -3,13 +3,15 @@
     #{$selector}{
 
         padding-bottom: $grid-unit*1.5;
-        border-bottom: 1px solid $colour-greyscale-63;
+        border-bottom: 1px solid $colour-greyscale-88;
 
         &__list{
             list-style-type: none;
             padding: $grid-unit * 1.5 0 0 0;
             margin: 0;
-            border-top: 1px solid $colour-greyscale-63;
+            @include respond-to($lap-and-desk) {
+                border-top: 1px solid $colour-greyscale-88;
+            }
 
             li{
                 display: table;

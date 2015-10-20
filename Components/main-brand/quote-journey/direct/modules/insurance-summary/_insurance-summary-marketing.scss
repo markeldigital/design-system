@@ -1,5 +1,6 @@
 @mixin insurance-summary-totals($selector) {
     #{$selector} {
+        display: none;
         li {
             .icon-tick {
                 color: $colour-greyscale-24;
@@ -8,6 +9,7 @@
         padding: 2*$grid-unit;
         border-bottom: 1px solid $colour-greyscale-88;
         @include respond-to($lap-and-desk){
+            display: block;
             margin: 0 2*$grid-unit;
             padding: 2*$grid-unit 0;
             border-bottom: none;

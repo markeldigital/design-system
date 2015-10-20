@@ -1,7 +1,6 @@
 @mixin documents($selector){
     #{$selector} {
-
-        padding: $grid-unit*2 0;
+        padding-top: $grid-unit*2;
         ul {
             list-style: none;
             margin: 0;
