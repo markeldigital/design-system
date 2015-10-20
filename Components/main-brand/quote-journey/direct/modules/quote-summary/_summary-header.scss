@@ -66,6 +66,8 @@
     border-bottom: 1px solid $colour-greyscale-88;
     padding: 0 $grid-unit*2 $grid-unit*2 $grid-unit*2;
     @include respond-to($lap-and-desk) {
+        border: none;
+        padding: 0;
         display: block;
     }
 
