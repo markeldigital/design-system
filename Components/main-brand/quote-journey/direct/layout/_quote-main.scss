@@ -7,7 +7,7 @@
         @include span-columns(8);
         float: left;
         padding: $grid-unit*3;
-        border-right: 1px solid red;
+        border-right: 1px solid $colour-greyscale-88;
     }
 
 

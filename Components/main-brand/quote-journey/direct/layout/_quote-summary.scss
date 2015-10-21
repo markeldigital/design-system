@@ -1,13 +1,35 @@
-@mixin insurance-summary($selector) {
+@mixin quote-summary($selector) {
     #{$selector} {
         margin-bottom: $grid-unit*3;
+
         @include respond-to($lap-and-desk) {
-         @include span-columns(4, $display: block-collapse);
+            @include span-columns(4, $display: block-collapse);
             float: right;
             padding: $grid-unit*3 $grid-unit*5 $grid-unit*3 $grid-unit*5;
             margin: 0;
         }
 
+        @include respond-to($lap-only){
+            padding: $grid-unit*3;
+        }
+
+        .quote-section {
+
+            &--sm-pad {
+                padding: $grid-unit*1.5 0;
+            }
+
+            &--md-pad {
+                padding: $grid-unit*2 0;
+            }
+
+            &--lg-pad {
+                padding: $grid-unit*3 0;
+            }
+        }
+
     }
+
 }
-@include insurance-summary('.qj-insurance-summary');
+
+@include quote-summary('.quote-summary');

@@ -2,12 +2,12 @@
 
     #{$selector}{
 
-        padding-bottom: $grid-unit*1.5;
+        padding-bottom: $grid-unit;
         border-bottom: 1px solid $colour-greyscale-88;
 
         &__list{
             list-style-type: none;
-            padding: $grid-unit * 1.5 0 0 0;
+            padding: $grid-unit*2 0 0 0;
             margin: 0;
             @include respond-to($lap-and-desk) {
                 border-top: 1px solid $colour-greyscale-88;
@@ -16,12 +16,14 @@
             li{
                 display: table;
                 width: 100%;
+                margin-bottom: $grid-unit;
             }
         }
 
         i{
             @include set-text-as(gamma, $reduced: true, $margins-overrides: zero-both);
-            color: $colour-greyscale-63;
+            line-height: 1.25;
+            color: $colour-greyscale-24;
             display: table-cell;
             vertical-align: top;
         }
@@ -29,8 +31,8 @@
         &__list__name{
             @include set-text-as(delta, $margins-overrides: zero-both);
             display: table-cell;
-            padding: $grid-unit/2 0 0 $grid-unit;
-            width: 75%;
+            padding: 0 $grid-unit;
+            vertical-align: top;
 
         }
 
@@ -38,6 +40,7 @@
             @include set-text-as(delta, $margins-overrides: zero-both);
             display: table-cell;
             text-align: right;
+            vertical-align: top;
         }
 
 

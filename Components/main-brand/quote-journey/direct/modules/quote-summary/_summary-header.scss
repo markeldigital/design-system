@@ -7,6 +7,11 @@
          border: 1px solid $colour-greyscale-88;
          padding: $grid-unit*1.5 $grid-unit $grid-unit*1.5 $grid-unit*2;
 
+         @include respond-to($lap-and-desk){
+             border: none;
+             padding: 0 0 $grid-unit*2 0;
+         }
+
         &__container{
            display: table-cell;
         }
@@ -34,6 +39,7 @@
         text-align:  right;
 
             &__trigger {
+
                 @include set-text-as(epsilon, $responsive-text: false, $margins-overrides: zero-both);
                 font-weight: 600;
                 color: $colour-greyscale-24;
@@ -46,9 +52,7 @@
 
                 }
                 @include respond-to($lap-and-desk) {
-                    &:hover, &:focus, &:active {
-
-                    }
+                    display: none;
                 }
             }
     }
@@ -60,7 +64,6 @@
 
 //Expander content
 .summary-expander__content {
-    display: none;
     border-left: 1px solid $colour-greyscale-88;
     border-right: 1px solid $colour-greyscale-88;
     border-bottom: 1px solid $colour-greyscale-88;
@@ -68,10 +71,6 @@
     @include respond-to($lap-and-desk) {
         border: none;
         padding: 0;
-        display: block;
-    }
 
-    &.open {
-        display: block;
     }
 }
