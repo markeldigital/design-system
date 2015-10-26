@@ -1,11 +1,10 @@
 @mixin quote-summary($selector) {
     #{$selector} {
         margin-bottom: $grid-unit*3;
-
         @include respond-to($lap-and-desk) {
             @include span-columns(4, $display: block-collapse);
             float: right;
-            padding: $grid-unit*3 $grid-unit*5 $grid-unit*3 $grid-unit*5;
+           padding: $grid-unit*3 $grid-unit*5 $grid-unit*3 $grid-unit*5;
             margin: 0;
         }
 
@@ -27,7 +26,6 @@
                 padding: $grid-unit*3 0;
             }
         }
-
     }
 
 }
