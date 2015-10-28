@@ -89,4 +89,6 @@ Design System
 //Templates
 @import '../main-brand/quote-journey/direct/templates/insurance-summary-template';
 
-
+//Deprecated
+@import '../deprecated/quote-journey/direct/modules/insurance-summary/insurance-summary';
+@import '../deprecated/quote-journey/direct/modules/insurance-summary/insurance-summary-totals';

@@ -42,13 +42,10 @@
             margin: 0 ($grid-unit * -1);
         }
 
-
-
-        background-color: $colour-white;
-        overflow: hidden;
-        margin-bottom: $grid-unit*3;
-        clear: both;
-
+        float: left;
+        width: 100%;
+       background-color: $colour-white;
+       margin-bottom: $grid-unit*3;
     }
 }
 
