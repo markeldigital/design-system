@@ -1,27 +1,18 @@
 @import "navigation-items";
-
 @mixin primary-navigation-and-utility-navigation-content($selector, $options) {
-
     #{$selector} {
-        height: 0; width: 0; overflow: hidden; // Visually hidden
-//        @include visually-hidden();
+        @include visually-hidden();
         &.open {
-            height: auto; // Visually shown
-            width: 100%;
-            overflow: hidden;
+            @include visually-shown();
         }
+        width: 100%;
         border-top: 1px solid $colour-greyscale-88;
         @include respond-to(map_get($options, "collapsed-menu-breakpoint-lap-and-desk")) {
             border-top: none;
-            height: auto; // Visually shown
-            width: 100%;
-            overflow: hidden;
             @include visually-shown();
         }
-
         @include navigation-items('.primary-navigation', $options: map_merge(("desk-alignment": left, "typography-level": delta, "typography-reduced": true, "typography-weight": 600), $options));
         @include navigation-items('.utility-navigation', $options: map_merge(("desk-alignment": right, "typography-level": epsilon, "typography-reduced": false, "typography-weight": regular), $options));
-
         $item-padding: $grid-unit;
         &:not(.open) .primary-navigation {
             margin-left: 0;
