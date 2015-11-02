@@ -3,14 +3,19 @@
 @mixin primary-navigation-and-utility-navigation-content($selector, $options) {
 
     #{$selector} {
-        @include visually-hidden();
+        height: 0; width: 0; overflow: hidden; // Visually hidden
+//        @include visually-hidden();
         &.open {
-            @include visually-shown();
+            height: auto; // Visually shown
+            width: 100%;
+            overflow: hidden;
         }
-        width: 100%;
         border-top: 1px solid $colour-greyscale-88;
         @include respond-to(map_get($options, "collapsed-menu-breakpoint-lap-and-desk")) {
             border-top: none;
+            height: auto; // Visually shown
+            width: 100%;
+            overflow: hidden;
             @include visually-shown();
         }
 
