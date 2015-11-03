@@ -16,7 +16,7 @@
         display: none;
 		float: right;
         @include respond-to($lap-and-desk){
-            display: inline-block;
+            display: table-cell;
         }
 	}
 }

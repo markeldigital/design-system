@@ -10,8 +10,6 @@
     $hover-background-color: null;
     $hover-color: null;
 
-
-
     // Main buttons
     @if($style == button-style-primary) {
         $background-color: $colour-brand-primary;

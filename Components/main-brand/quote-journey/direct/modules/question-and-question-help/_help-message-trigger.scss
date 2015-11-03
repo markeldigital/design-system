@@ -14,9 +14,9 @@
 	@include help-message-trigger($selector);
 	#{$selector} {
         display: none;
-		float: right;
         @include respond-to($lap-and-desk){
-            display: inline-block;
+            display: table-cell;
+            text-align: left;
         }
 	}
 }

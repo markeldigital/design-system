@@ -23,6 +23,30 @@
 
             a{
                 color: $colour-greyscale-24;
+
+            }
+
+            legend{
+                display: table;
+                width: 100%;
+                > span {
+                    display: table-cell;
+                    width: 100%;
+                }
+            }
+
+            .label-selector{
+                display: table;
+                width: 100%;
+                label{
+                    display: table-cell;
+                    width: 100%;
+                }
+
+                > span {
+                    display: table-cell;
+                    width: 100%;
+                }
             }
         }
 
