@@ -1,8 +1,6 @@
 @import "../option/_option";
-
 @mixin question($selector){
     $question-state-border-size: $grid-unit/2;
-
     #{$selector} {
         margin: $medium-spacer 0 0 0;
         @include respond-to($lap-and-desk){
@@ -11,8 +9,8 @@
                     background-color: $colour-interaction-10;
                 }
             }
-			.qj-help-message-text {
-                    display: block;
+            .qj-help-message-text {
+                display: block;
             }
         }
         .question-main {
@@ -20,44 +18,16 @@
             background-color: $colour-greyscale-97;
             padding: $medium-spacer $medium-spacer $medium-spacer $medium-spacer;
             @include clearfix();
-
             a{
                 color: $colour-greyscale-24;
-
-            }
-
-            legend{
-                display: table;
-                width: 100%;
-                > span {
-                    display: table-cell;
-                    width: 100%;
-                }
-            }
-
-            .label-selector{
-                display: table;
-                width: 100%;
-                label{
-                    display: table-cell;
-                    width: 100%;
-                }
-
-                > span {
-                    display: table-cell;
-                    width: 100%;
-                }
             }
         }
-
         &.question-error .question-main {
             border-color: $error-colour-100;
         }
-
         &.question-success .question-main {
             border-color: $success-colour-100;
         }
-
         &.active {
             .question-main {
                 border-color: $colour-interaction-100;
@@ -74,7 +44,6 @@
         .intro-area {
             ul {
                 padding-left: 3*$grid-unit;
-
             }
         }
         &.monetary, &.multi-numeric{
