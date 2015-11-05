@@ -14,6 +14,7 @@
 
 
         &:first-of-type h1 {
+            font-weight: 600;
             @include respond-to($lap-and-desk) {
                 color: $colour-white;
             }

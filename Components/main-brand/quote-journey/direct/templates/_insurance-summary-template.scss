@@ -37,12 +37,6 @@
                 border-right: 1px solid $colour-greyscale-88;
             }
 
-            .intro-text {
-                padding-top: 2*$grid-unit;
-                padding-bottom: 5*$grid-unit;
-                @include set-text-as(gamma, $strength: strong, $reduced: true, $margins-overrides: zero-both);
-                font-style: italic;
-            }
         }
         .title, .qj-primary-content, .qj-insurance-summary {
             @include respond-to($lap-and-desk){

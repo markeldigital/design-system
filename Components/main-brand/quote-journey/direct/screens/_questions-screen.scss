@@ -2,6 +2,10 @@
     #{$selector}{
         .question-container {
 
+            .intro-text{
+                padding-bottom: 0;
+            }
+
             @include respond-to($lap-and-desk) {
                 padding: $grid-unit*3;
                 @include span-columns($two-thirds);
@@ -13,13 +17,6 @@
                 padding-bottom: $grid-unit*2;
             }
 
-            .intro-text {
-                padding-top: 2*$grid-unit;
-                @include set-text-as(gamma, $strength: strong, $reduced: true, $margins-overrides: zero-both);
-                font-weight: 400;
-                font-style: italic;
-
-            }
         }
 
         .marketing-aside {
