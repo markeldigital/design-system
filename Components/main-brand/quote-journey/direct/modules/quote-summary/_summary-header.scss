@@ -27,7 +27,7 @@
         }
 
         &__reference{
-            @include set-text-as(delta, $margins-overrides: zero-both);
+            @include set-text-as(delta, $responsive-text: false, $reduced: true, $margins-overrides: zero-both);
         }
 
     }

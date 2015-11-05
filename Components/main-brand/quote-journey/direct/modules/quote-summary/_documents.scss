@@ -37,12 +37,10 @@
                         }
                     }
                     p {
-                        @include set-text-as(delta, $margins-overrides: zero-bottom);
+                        @include set-text-as(delta, $responsive-text: false, $reduced: true, $margins-overrides: zero-bottom);
                         overflow: hidden;
                         margin-top: 6px;
-                        @include respond-to($lap-and-desk){
-                            margin-top: 4px;
-                        }
+
                     }
                 }
                 &.loading {
