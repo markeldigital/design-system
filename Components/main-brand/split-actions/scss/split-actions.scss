@@ -19,7 +19,7 @@
         .split-actions-btn-container {
 
             @include respond-to($palm-only) {
-                button {
+                button, a{
                     i {
                         line-height: 1;
                         height: auto;
@@ -40,7 +40,7 @@
 
                     float: right;
 
-                    button {
+                    button, a {
                         margin-left: $btnMargin;
                     }
                 }
@@ -48,7 +48,7 @@
                 &--left {
                     float: left;
 
-                    button {
+                    button, a {
                         margin-right: $btnMargin;
                     }
 
@@ -56,7 +56,7 @@
 
                 &--centred{
                     text-align: center;
-                        button{
+                    button, a{
                         &:first-of-type{
                             margin-right: $btnMargin;
                         }
