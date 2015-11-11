@@ -1,0 +1,121 @@
+@mixin select-drop-down-list($selector) {
+
+    #{$selector} {
+
+        legend {
+            display: block;
+            width: 100%;
+            @include clearfix();
+
+            span{
+                font-weight: 400;
+            }
+        }
+
+        &__row {
+            display: block;
+            border-collapse: collapse;
+            @include respond-to($lap-and-desk) {
+                display: table;
+            }
+            width: 100%;
+        }
+
+        &__limit {
+
+            display: table;
+            width: 100%;
+            @include respond-to($lap-and-desk) {
+                display: table-cell;
+                width: auto!important;
+            }
+        }
+
+        &__label {
+            font-weight: 600;
+            display: table-cell;
+
+            padding-right: $grid-unit;
+
+            @include respond-to($lap-and-desk) {
+                padding-right: $grid-unit*2;
+                display: inline-block;
+            }
+
+        }
+
+        &__select-list {
+            display: table-cell;
+            @include respond-to($lap-and-desk) {
+                display: inline-block;
+            }
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            box-shadow: inset 0 -3px 0 0 $colour-greyscale-88;
+            border: 1px solid $colour-greyscale-88;
+            cursor: pointer;
+
+
+
+            @include respond-to($lap-only) {
+                min-width: 160px;
+                max-width: 180px;
+            }
+
+            @include respond-to($desk-only) {
+                min-width: 240px;
+                max-width: 280px;
+            }
+
+
+            &::-ms-expand {
+                display: none;
+            }
+
+        }
+
+        &__value{
+
+            display: table-cell;
+            @include respond-to($lap-and-desk) {
+                display: inline-block;
+            }
+        }
+
+        &__details-trigger {
+
+            text-align: right;
+            display: block;
+
+            @include respond-to($lap-and-desk) {
+                display: table-cell;
+            }
+            a {
+                color: inherit;
+
+                i{
+                    color: inherit;
+                }
+
+                &:hover{
+
+
+
+                }
+
+                &.active{
+
+                    i{
+                        @include transform(rotate(180deg));
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+@include select-drop-down-list('.select-premium-options');

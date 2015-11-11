@@ -24,6 +24,17 @@
                 @include standard-option-disabled-style();
             }
         }
+
+        &.read-only{
+            background: none;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            padding-left: 0;
+            padding-right: 0;
+            word-wrap: break-word;
+            word-break: break-word;
+        }
     }
 
     .error {
@@ -68,6 +79,8 @@
             }
         }
     }
+
+
 }
 
 @include form-element('input[type="text"],
