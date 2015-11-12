@@ -1,4 +1,4 @@
-@mixin select-drop-down-list($selector) {
+@mixin cover-options($selector) {
 
     #{$selector} {
 
@@ -89,28 +89,31 @@
             text-align: right;
             display: block;
 
+
             @include respond-to($lap-and-desk) {
                 display: table-cell;
+
             }
             a {
                 color: inherit;
+                display: inline-block;
 
                 i{
                     color: inherit;
+                    border: none;
+                    display: inline-block;
+
+
+
                 }
 
-                &:hover{
-
+                &:hover, &:focus{
+                    color: $colour-interaction-100;
 
 
                 }
 
-                &.active{
 
-                    i{
-                        @include transform(rotate(180deg));
-                    }
-                }
             }
 
         }
@@ -118,4 +121,4 @@
     }
 }
 
-@include select-drop-down-list('.select-premium-options');
+@include cover-options('.cover-options');

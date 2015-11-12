@@ -1,0 +1,42 @@
+@mixin cover-details($selector) {
+
+    #{$selector} {
+        display: table;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        &__row{
+
+            display: table-row;
+
+        }
+
+        &__title{
+
+            display: table-cell;
+            padding: 0 $grid-unit*3 $grid-unit 0;
+            @include set-text-as(delta, $margins-overrides: zero-both);
+            font-weight: 600;
+            white-space: nowrap;
+
+
+        }
+
+        &__description{
+
+            display: table-cell;
+            padding: 0 0 $grid-unit 0;
+
+            &-small{
+
+                @include set-text-as(epsilon, $margins-overrides: zero-both);
+            }
+
+            p{
+                margin: 0;
+            }
+        }
+
+    }
+}
