@@ -1,0 +1,26 @@
+@mixin cover-endorsements($selector){
+
+    #{$selector}{
+
+        padding: 0;
+        margin: $grid-unit*3 0 0 0;
+
+           &__content{
+
+               padding: $grid-unit*3 $grid-unit*3 0 $grid-unit*3;
+
+           }
+
+            &__list{
+
+                list-style: upper-roman;
+                padding: 0 0 0 $grid-unit*2;
+                margin: 0 0 0 $grid-unit*3;
+
+            }
+
+
+    }
+
+}
+

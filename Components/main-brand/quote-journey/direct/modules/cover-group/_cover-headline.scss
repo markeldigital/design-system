@@ -1,6 +1,10 @@
 ﻿
-@mixin cover-headline($selector){
+@mixin cover-headline($selector) {
     #{$selector} {
+
+
+
+
         line-height: 0;
         @include clearfix;
         overflow: hidden;
@@ -32,6 +36,7 @@
             border: none;
             box-shadow: none;
             background-color: $colour-greyscale-94;
+
             .fake-check-box {
                 -webkit-touch-callout: none;
                 -webkit-user-select: none;
@@ -88,14 +93,16 @@
                 @include set-text-as(gamma, $strength: strong, $margins-overrides: zero-both);
             }
 
-
         }
 
-        @include respond-to-print(){
-            .selected-premium-value  {
+        @include respond-to-print() {
+            .selected-premium-value {
                 text-decoration: line-through;
             }
         }
+
+
     }
+
 }
 

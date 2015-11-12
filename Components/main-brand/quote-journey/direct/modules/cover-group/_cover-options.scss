@@ -84,35 +84,14 @@
             }
         }
 
-        &__details-trigger {
-
+        .cover-details-trigger {
+            padding: 0;
             text-align: right;
             display: block;
 
 
             @include respond-to($lap-and-desk) {
                 display: table-cell;
-
-            }
-            a {
-                color: inherit;
-                display: inline-block;
-
-                i{
-                    color: inherit;
-                    border: none;
-                    display: inline-block;
-
-
-
-                }
-
-                &:hover, &:focus{
-                    color: $colour-interaction-100;
-
-
-                }
-
 
             }
 

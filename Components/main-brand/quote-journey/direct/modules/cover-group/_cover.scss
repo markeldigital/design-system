@@ -2,6 +2,9 @@
 @import "cover-headline";
 @import "cover-contents";
 @import "modify-cover-as-not-taken-up";
+@import "cover-details-trigger";
+@import "cover-endorsements";
+
 
 @mixin cover($selector){
     #{$selector} {
@@ -53,4 +56,6 @@
     @include cover-contents('.cover-contents');
     @include cover-headline('.cover .cover-headline');
     @include modify-cover-as-not-taken-up($selector, '.cover--not-taken-up');
+    @include cover-details-trigger('.cover-details-trigger');
+    @include cover-endorsements('.cover-details-endorsements');
 }

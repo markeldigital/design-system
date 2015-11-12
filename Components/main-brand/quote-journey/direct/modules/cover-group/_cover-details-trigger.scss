@@ -1,0 +1,38 @@
+@mixin cover-details-trigger($selector) {
+
+    #{$selector} {
+
+        a {
+            color: inherit;
+            display: inline-block;
+
+            i {
+                color: inherit;
+                border: none;
+                display: inline-block;
+                -webkit-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+
+            }
+
+            &:hover, &:focus {
+                color: $colour-interaction-100;
+
+
+            }
+
+        }
+
+        &.active {
+            a {
+                i {
+
+                    -ms-transform: rotate(180deg); /* IE 9 */
+                    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
