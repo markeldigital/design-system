@@ -91,6 +91,15 @@
                 display: table-cell;
                 vertical-align: top;
                 @include set-text-as(gamma, $strength: strong, $margins-overrides: zero-both);
+                -webkit-transition: all 500ms ease-in;
+
+
+                &.active {
+                    background-color: cyan;
+                    -webkit-transition: all 200ms ease-in;
+                    border-radius: 50%;
+
+                }
             }
 
         }
