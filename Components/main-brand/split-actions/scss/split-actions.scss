@@ -53,15 +53,6 @@
                     }
 
                 }
-
-                &--centred{
-                    text-align: center;
-                    button, a{
-                        &:first-of-type{
-                            margin-right: $btnMargin;
-                        }
-                    }
-                }
             }
         }
 
