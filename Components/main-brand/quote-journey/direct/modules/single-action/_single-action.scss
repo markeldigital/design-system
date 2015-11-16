@@ -1,0 +1,7 @@
+@mixin single-action($selector){
+    #{$selector} {
+        background-color: pink;
+    }
+}
+
+@include single-action('.single-action');
