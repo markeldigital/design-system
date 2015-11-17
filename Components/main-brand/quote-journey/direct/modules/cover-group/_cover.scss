@@ -4,7 +4,7 @@
 @import "modify-cover-as-not-taken-up";
 @import "cover-details-trigger";
 @import "cover-endorsements";
-
+@import "../../../../../deprecated/quote-journey/direct/modules/cover-group/_cover-attachments";
 
 @mixin cover($selector){
     #{$selector} {
@@ -58,4 +58,5 @@
     @include modify-cover-as-not-taken-up($selector, '.cover--not-taken-up');
     @include cover-details-trigger('.cover-details-trigger');
     @include cover-endorsements('.cover-details-endorsements');
+    @include cover-attachments(".cover-attachments");
 }
