@@ -36,7 +36,7 @@
     #{$trigger} {
         display: table-cell;
         vertical-align: middle;
-        text-align:  right;
+        text-align: right;
 
             &__trigger {
 
@@ -71,6 +71,13 @@
     @include respond-to($lap-and-desk) {
         border: none;
         padding: 0;
+    }
+//Hide content on mobile only
+    @include respond-to($palm-only) {
+        display: none;
 
+        &.active {
+            display: block;
+        }
     }
 }
