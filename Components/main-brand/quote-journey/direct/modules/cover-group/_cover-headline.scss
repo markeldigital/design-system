@@ -1,10 +1,6 @@
 ﻿
 @mixin cover-headline($selector) {
     #{$selector} {
-
-
-
-
         line-height: 0;
         @include clearfix;
         overflow: hidden;
@@ -91,13 +87,11 @@
                 display: table-cell;
                 vertical-align: top;
                 @include set-text-as(gamma, $strength: strong, $margins-overrides: zero-both);
-                -webkit-transition: all 500ms ease-in;
-
+                @include transition(color 250ms ease-in-out);
 
                 &.active {
-                    background-color: cyan;
-                    -webkit-transition: all 200ms ease-in;
-                    border-radius: 50%;
+                    opacity: 0;
+                    color: $colour-interaction-100;
 
                 }
             }
@@ -114,4 +108,3 @@
     }
 
 }
-

@@ -1,6 +1,14 @@
 @mixin single-action($selector){
     #{$selector} {
-        background-color: pink;
+        clear: both;
+        width: 100%;
+        margin-bottom: $grid-unit;
+        margin-top: $grid-unit*3;
+        @include clearfix;
+
+        a, button{
+            float: right;
+        }
     }
 }
 

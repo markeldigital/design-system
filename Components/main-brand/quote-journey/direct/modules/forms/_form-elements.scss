@@ -1,0 +1,24 @@
+@mixin formElements($selector, $style) {
+
+    #{$selector} {
+
+        @if ($style == bold) {
+        {
+
+            font-weight: 600;
+
+            @include respond-to($lap-and-desk) {
+
+                font-weight: 600;
+
+            }
+        }
+
+        }
+
+    }
+}
+
+@include formElements('.legend-content');
+@include formElements('.label-selector label');
+
