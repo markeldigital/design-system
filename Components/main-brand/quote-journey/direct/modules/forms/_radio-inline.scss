@@ -1,0 +1,11 @@
+@mixin radio-inline($selector) {
+
+    #{$selector}{
+
+
+
+
+    }
+}
+
+@include radio-inline('.radio-option');
