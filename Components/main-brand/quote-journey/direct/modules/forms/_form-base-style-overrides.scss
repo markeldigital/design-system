@@ -4,12 +4,6 @@
 
             font-weight: 600;
 
-            @include respond-to($lap-and-desk) {
-
-                font-weight: 600;
-
-        }
-
     }
 }
 
