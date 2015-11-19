@@ -1,0 +1,11 @@
+.l-quote-page{
+
+    background-color: #fff;
+
+     @include respond-to($lap-and-desk){
+
+         background-color: #F7F7F7;
+
+     }
+
+}
