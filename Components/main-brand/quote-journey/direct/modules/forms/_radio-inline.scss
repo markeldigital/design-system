@@ -4,7 +4,7 @@
 
         label{
 
-            padding: $grid-unit*2;
+            padding: $grid-unit*1.5 $grid-unit*2;
             text-align: left;
             display: table;
             @include respond-to($palm-only){
@@ -22,7 +22,7 @@
                 }
 
                 display: table-cell;
-               padding-right: $grid-unit;
+                padding-right: $grid-unit;
                 margin: 0 $grid-unit 0 0;
                 vertical-align: middle;
 
