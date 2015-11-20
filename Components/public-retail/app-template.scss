@@ -36,3 +36,10 @@ Design System (main-brand & sub-brand)
 @import '../main-brand/javascript-disabled/scss/_javascript-disabled.scss';
 @import '../main-brand/split-actions/scss/split-actions';
 @import '../main-brand/marketing-info/scss/_marketing-info';
+@import '../main-brand/card/scss/card.scss';
+
+// TODO: make into more generic tabs component
+@import '../main-brand/tabs/scss/tabs-feature-management-liability.scss';
+/* Sub-brand specific components */
+@import '../sub-brand-1/documents/scss/documents.scss';
+@import '../main-brand/expander-list/scss/_expander-list.scss';
