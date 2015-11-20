@@ -2,9 +2,9 @@
         font-weight: 600;
 }
 
-select:focus{
+.cover-options-select__select-list{
     @include respond-to($palm-only) {
-        @include set-text-as(body, $responsive-text: false, $margins-overrides: zero-both);
+        @include set-text-as(body, $responsive-text: false, $margins-overrides: zero-both); 
     }
 }
 
