@@ -1,12 +1,12 @@
-@mixin formElements($selector) {
+.legend-content, .label-selector label {
+        font-weight: 600;
+}
 
-    #{$selector}{
-
-            font-weight: 600;
-
+select:focus{
+    @include respond-to($palm-only) {
+        @include set-text-as(body, $responsive-text: false, $margins-overrides: zero-both);
     }
 }
 
-@include formElements('.legend-content');
-@include formElements('.label-selector label');
+
 

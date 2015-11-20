@@ -73,6 +73,9 @@
                 display: table-cell;
                 vertical-align: top;
                 padding-right: $grid-unit;
+                    @include respond-to($lap-and-desk){
+                        padding-right: $grid-unit*2;
+                    }
                 dt {
                     @include set-text-as(gamma, $strength: strong, $margins-overrides: zero-both);
                 }
@@ -102,6 +105,11 @@
             .selected-premium-value {
                 text-decoration: line-through;
             }
+        }
+
+        .checkbox-option.checkbox-stacked input[type="checkbox"]:not(:checked) + label .selected-premium-value {
+            @include set-text-as(gamma, $margins-overrides: zero-both);
+
         }
 
 
