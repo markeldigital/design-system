@@ -18,9 +18,6 @@
             @include respond-to($lap-and-desk){
                 padding: 3*$grid-unit;
             }
-            @include respond-to($lap-and-desk){
-                padding: 4*$grid-unit;
-            }
         }
         &#{$bem-module-name}--style-1 {
             background-color: $colour-white;
