@@ -57,6 +57,7 @@
     @include cover-headline('.cover .cover-headline');
     @include modify-cover-as-not-taken-up($selector, '.cover--not-taken-up');
     @include cover-details-trigger('.cover-details-trigger');
+    @include cover-details-trigger('.cover-details-endorsements__trigger');
     @include cover-endorsements('.cover-details-endorsements');
     @include cover-attachments(".cover-attachments");
 }
