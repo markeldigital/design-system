@@ -3,15 +3,20 @@
     #{$selector}{
 
         padding: 0;
-
-        margin: 0 0 $grid-unit 0;
-
-        &:first-of-type {
+        margin: $grid-unit*2 0 $grid-unit 0;
+        border-top: 1px solid $colour-greyscale-88;
+        padding-top: $grid-unit*2;
+        @include respond-to($lap-and-desk){
+            padding-top: $grid-unit*3;
             margin: $grid-unit*3 0 $grid-unit 0;
         }
 
 
 
+        &__title{
+
+            @include set-text-as(gamma, $margins-overrides: zero-top);
+        }
 
            &__content{
 

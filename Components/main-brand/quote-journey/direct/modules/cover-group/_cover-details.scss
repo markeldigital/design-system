@@ -1,6 +1,11 @@
 @mixin cover-details($selector) {
 
     #{$selector} {
+        border-top: 1px solid $colour-greyscale-88;
+        padding-top: $grid-unit*2;
+        @include respond-to($lap-and-desk){
+            padding-top: $grid-unit*3;
+        }
 
         &__list {
             display: table;
