@@ -3,24 +3,23 @@
     #{$selector} {
         line-height: 0;
         @include clearfix;
-        overflow: hidden;
         .checkbox-option.checkbox-stacked input[type="checkbox"]:not(:checked) + label {
             &:hover, &:focus {
                 .fake-check-box:before {
                     @include icon-content-for-name("tick");
-                    color: $colour-greyscale-88;
+                    color: $colour-greyscale-94;
                     background-color: $colour-white;
                 }
             }
         }
         .checkbox-option.checkbox-stacked input + label {
-            &:hover {
-                box-shadow: 0 0 8px 0 rgba(0, 0, 0, .10), inset 0 0 0 1px $colour-greyscale-88;
+            &:hover, &:focus {
+                box-shadow: inset 0 0 0 1px $colour-greyscale-88;
+                @include transition(all 150ms ease-in);
             }
         }
-        .checkbox-option.checkbox-stacked input:focus + label {
-            box-shadow: 0 0 8px 0 rgba(0, 0, 0, .10), inset 0 0 0 1px $colour-greyscale-88;
-        }
+
+
         .checkbox-option.checkbox-stacked input + label, .cover-headline--simple {
             border-radius: 0;
             width: 100%;
@@ -60,7 +59,7 @@
                 -ms-user-select: none;
                 user-select: none;
                 background-color: $colour-white;
-                border: 1px solid $colour-greyscale-76;
+                border: 1px solid $colour-greyscale-63;
 
                 line-height: 1.5;
                 width: 3*$grid-unit;
@@ -80,8 +79,7 @@
                     @include set-text-as(gamma, $strength: strong, $margins-overrides: zero-both);
                 }
                 dd {
-                    @include set-text-as(delta, $margins-overrides: zero-both);
-                    font-style: italic;
+                    @include set-text-as(delta, $reduced: true, $margins-overrides: zero-both);
                 }
             }
 

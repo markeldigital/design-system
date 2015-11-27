@@ -1,6 +1,11 @@
 @mixin cover-contents($selector) {
     #{$selector} {
 
+        &:first-of-type{
+
+            margin-top: 2px;
+        }
+
         padding: $grid-unit*2;
         @include respond-to($lap-and-desk){
             padding: $grid-unit*3;

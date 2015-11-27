@@ -5,6 +5,7 @@
         padding: 0;
         margin: $grid-unit*2 0 $grid-unit 0;
         border-top: 1px solid $colour-greyscale-88;
+        box-shadow: inset 0 1px 0 0 $colour-white;
         padding-top: $grid-unit*2;
         @include respond-to($lap-and-desk){
             padding-top: $grid-unit*3;
@@ -13,10 +14,10 @@
 
 
 
-        &__title{
+            &__title{
 
-            @include set-text-as(gamma, $margins-overrides: zero-top);
-        }
+                @include set-text-as(gamma, $margins-overrides: zero-top);
+            }
 
            &__content{
 
@@ -29,6 +30,12 @@
                 list-style: upper-roman;
                 padding: 0 0 0 $grid-unit*2;
                 margin: 0 0 0 $grid-unit*3;
+
+            }
+
+            &__trigger{
+
+                margin-bottom: $grid-unit;
 
             }
 
