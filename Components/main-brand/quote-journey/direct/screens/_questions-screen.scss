@@ -1,6 +1,23 @@
 @mixin questions-screen($selector){
     #{$selector}{
+
+        .quote-journey__main{
+
+            background-color: $colour-white;
+
+            @include respond-to($lap-and-desk) {
+                border-radius: $standard-curvature;
+                box-shadow: inset 0px -3px 0px 0px rgba(0, 0, 0, 0.10);
+                border: 1px solid rgba(0, 0, 0, 0.10);
+            }
+
+        }
+
+
+
+
         .question-container {
+
 
             .intro-text{
                 padding-bottom: 0;
@@ -20,17 +37,18 @@
         }
 
         .marketing-aside {
-            padding: $grid-unit*2 0;
-            li {
-                .icon-tick {
-                    color: $colour-greyscale-24;
-                }
-            }
+            padding: 0;
             @include respond-to($lap-and-desk) {
-                @include span-columns($one-third);
-                padding: $grid-unit*4 $grid-unit*5;
 
-            }
+                @include span-columns(4, $display: block-collapse);
+                padding: $grid-unit $grid-unit*5;
+
+                }
+                li {
+                    .icon-tick {
+                        color: $colour-greyscale-24;
+                    }
+                }
         }
 
         .question {
