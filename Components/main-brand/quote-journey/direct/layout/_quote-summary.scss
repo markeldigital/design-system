@@ -13,9 +13,14 @@
             border-radius: $standard-curvature;
 
         }
+        &.is_stuck{
+            @include respond-to ($palm-only) {
+                position: static!important;
+                top:0 !important;
+            }
 
+        }
     }
-
 }
 
 @include quote-summary('.quote-summary');

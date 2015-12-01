@@ -6,3 +6,12 @@ body {
         background-color: $colour-greyscale-97;
     }
 }
+
+.content {
+
+    @include respond-to($lap-and-desk) {
+        background: url('../../Content/images/direct-qj-bg.jpg') 0 0 no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
