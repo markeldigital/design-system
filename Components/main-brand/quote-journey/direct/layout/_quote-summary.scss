@@ -14,11 +14,14 @@
 
         }
         &.is_stuck{
-            @include respond-to ($palm-only) {
+            @include respond-to($palm-only) {
                 position: static!important;
                 top:0 !important;
             }
 
+        }
+        &.sticky-ios{
+             position: sticky!important;
         }
     }
 }

@@ -6,7 +6,7 @@ body {
     font-family: $standard-fonts;
     @-moz-document url-prefix() {
         & {
-            font-family: $fallback-fonts;
+            font-family: $standard-fonts;
         }
     };
     color: $colour-greyscale-24;
