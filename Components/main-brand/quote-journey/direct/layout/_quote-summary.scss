@@ -2,7 +2,7 @@
     #{$selector} {
         margin-bottom: $grid-unit*3;
         background-color: $colour-white;
-        transform: translate3d(0px, 0px, 0px);
+        @include transform(translate3d(0px, 0px, 0px));
 
         @include respond-to($lap-and-desk) {
             @include span-columns(4);
