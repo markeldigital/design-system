@@ -2,8 +2,6 @@
     #{$selector} {
         margin-bottom: $grid-unit*3;
         background-color: $colour-white;
-        @include transform(translate3d(0px, 0px, 0px));
-        -webkit-overflow-scrolling: touch;
 
         @include respond-to($lap-and-desk) {
             @include span-columns(4);
@@ -15,14 +13,6 @@
             border-radius: $standard-curvature;
 
         }
-        &.is_stuck{
-            @include respond-to($palm-only) {
-                position: static!important;
-                top:0 !important;
-            }
-
-        }
-
     }
 }
 
