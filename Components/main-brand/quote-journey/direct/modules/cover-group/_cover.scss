@@ -4,6 +4,7 @@
 @import "modify-cover-as-not-taken-up";
 @import "cover-details-trigger";
 @import "cover-endorsements";
+@import "cover-description";
 @import "../../../../../deprecated/quote-journey/direct/modules/cover-group/_cover-attachments";
 
 @mixin cover($selector){
@@ -35,7 +36,9 @@
         }
 
         .referral-reasons {
-            background-color: $warning-colour-10;
+            background-color: $colour-greyscale-97;
+            background-image: linear-gradient(-45deg, black 25%, transparent 25%, transparent 10%, black 50%, black 75%, transparent 75%, transparent);
+            background-size: $grid-unit/2 $grid-unit/2;
             ul {
                 margin: 8px 0 0;
                 li:last-child {
@@ -60,4 +63,5 @@
     @include cover-details-trigger('.cover-details-endorsements__trigger');
     @include cover-endorsements('.cover-details-endorsements');
     @include cover-attachments(".cover-attachments");
+    @include cover-description(".cover-details-description");
 }
