@@ -112,7 +112,8 @@ $icon-map:(
         "umbrella":                "\e1ae", // style
         "product-PL":              "\e1b0",
         "product-ML":              "\e1af",
-        "product-CO":              "\e900"
+        "product-CO":              "\e900",
+        "not-available":           "\e017"
 );
 
 @include iconography($icon-map);

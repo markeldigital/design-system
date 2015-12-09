@@ -19,6 +19,40 @@
             }
         }
 
+        .cover-headline--cannot-offer {
+            border-radius: 0;
+            width: 100%;
+            display: table;
+            padding: $grid-unit 2*$grid-unit;;
+            @include respond-to($lap-and-desk) {
+                padding: 2*$grid-unit 3*$grid-unit;
+            }
+            background-color: $colour-greyscale-94;
+
+            dl {
+                display: table-cell;
+                vertical-align: top;
+                opacity: 0.5;
+                dt {
+                    @include set-text-as(gamma, $strength: strong, $margins-overrides: zero-both);
+                }
+                dd {
+                    @include set-text-as(delta, $reduced: true, $margins-overrides: zero-both);
+                }
+            }
+
+            i {
+                @include set-text-as(beta, $reduced: true, $margins-overrides: zero-both);
+                line-height: 1.2;
+                color: $colour-greyscale-24;
+                opacity: 0.5;
+                display: table-cell;
+                vertical-align: top;
+                width: $grid-unit*3;
+                height: $grid-unit*3;
+                padding-right: $grid-unit*1.5;
+            }
+        }
 
         .checkbox-option.checkbox-stacked input + label, .cover-headline--simple {
             border-radius: 0;
