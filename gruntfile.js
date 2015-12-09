@@ -2,7 +2,7 @@
 var path = require('path');
 module.exports = function (grunt) {
     var projectRoot = __dirname;
-	
+
     var params = {
         'direct-root': '../REMUS.DirectPortal/REMUS.DirectPortal.web/',
         'components-publishing-path': 'bower_components/design-system/Components/',
@@ -16,6 +16,21 @@ module.exports = function (grunt) {
     };
 
     grunt.initConfig({
+        sass: {
+            dev: {
+                options: {
+                    sourcemap: true
+                },
+                files: [
+                    {
+                        src: "Components/digital-brand-system/app-template.scss",
+                        dest: "dist/digital-brand-system.css",
+                        ext: ".css"
+                    }
+                ]
+            }
+        },
+
         watch: {
             gruntfile: {
                 files: path.join(projectRoot, 'gruntfile.js')
@@ -88,6 +103,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-sync');
     grunt.loadNpmTasks('grunt-hub');
     grunt.loadNpmTasks('grunt-concurrent');
+    grunt.loadNpmTasks('grunt-contrib-sass');
 
     grunt.registerTask('default', ['concurrent:all']);
 };

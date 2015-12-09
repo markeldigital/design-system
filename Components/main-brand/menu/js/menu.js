@@ -12,7 +12,7 @@ ds.menu = (function(keyboard, openClass, closedClass){
     };
 
     scope.closeAllSubMenus = function(){
-        var subMenus = document.querySelectorAll('.' + selectors.subMenuClass);
+        var subMenus = getSubmenuFor(document);
         for(var i=0; i < subMenus.length; i++){
             scope.closeSubMenu(subMenus[i]);
         }
@@ -68,13 +68,20 @@ ds.menu = (function(keyboard, openClass, closedClass){
             scope.respondToKeyboard(e); };
     };
 
-    scope.setupLoseFocusHandlersOn = function(menu, subMenu){
-        //menu.addEventListener('DOMFocusIn', function(e){ scope.openSubMenu(subMenu); });
-        //menu.addEventListener('DOMFocusOut', function(e){ scope.closeSubMenu(subMenu); });
+    var openSubmenuOnFocusInFor = function(submenu) {
+        submenu.addEventListener('focusin', function(e){ scope.openSubMenu(submenu); });
+    };
 
-        // IE fallbacks
-        subMenu.addEventListener('focusin', function(e){ scope.openSubMenu(subMenu); });
-        menu.addEventListener('focusout', function(e){ scope.closeSubMenu(subMenu); });
+
+    var closeSubmenuWhenNotChromeWhenMenuLosesFocusFor = function(menu, submenu) {
+        if (window.navigator.appVersion.indexOf('Chrome') === -1) {
+            menu.addEventListener('focusout', function(e){ scope.closeSubMenu(submenu); });
+        }
+    };
+
+    scope.setupLoseFocusHandlersOn = function(menu, subMenu){
+        openSubmenuOnFocusInFor(subMenu);
+        closeSubmenuWhenNotChromeWhenMenuLosesFocusFor(menu, subMenu);
     };
 
     scope.setAccessibilityAttributesOn = function(trigger, subMenu, subMenuItems, dropDownSequenceNumber){
@@ -95,19 +102,43 @@ ds.menu = (function(keyboard, openClass, closedClass){
         }
     };
 
-    scope.setup = function(){
-        var dropdowns = document.querySelectorAll('.' + selectors.menuDropdownClass);
-        for(var i=0; i < dropdowns.length; i++){
-            var menu = dropdowns[i];
-            menu.setAttribute('tabIndex', '-1');
-            var trigger = menu.querySelector('.' + selectors.triggerClass);
-            var subMenu = menu.querySelector('.' + selectors.subMenuClass);
-            var subMenuItems = subMenu.querySelectorAll('.' + selectors.menuItemClass);
+    var getDropdownsBy = function(selector) {
+        return document.querySelectorAll('.' + selector);
+    };
 
-            scope.closeAllSubMenus();
-            scope.setAccessibilityAttributesOn(trigger, subMenu, subMenuItems, i);
-            scope.setupEventHandlersOn(trigger, subMenu);
-            scope.setupLoseFocusHandlersOn(menu, subMenu);
+    var getTriggerFor = function(element) {
+        return element.querySelector('.' + selectors.triggerClass);
+    };
+
+    var getSubmenuFor = function(element) {
+        return element.querySelector('.' + selectors.subMenuClass);
+    };
+
+    var getSubmenuItemsFor = function(element) {
+        return element.querySelectorAll('.' + selectors.menuItemClass);
+    };
+
+    var removeFromTabIndex = function(element) {
+        element.setAttribute('tabIndex', '-1')
+    };
+
+    var setupMenu = function(menu, index) {
+        removeFromTabIndex(menu);
+
+        var trigger = getTriggerFor(menu);
+        var subMenu = getSubmenuFor(menu);
+        var subMenuItems = getSubmenuItemsFor(subMenu);
+
+        scope.closeAllSubMenus();
+        scope.setAccessibilityAttributesOn(trigger, subMenu, subMenuItems, index);
+        scope.setupEventHandlersOn(trigger, subMenu);
+        scope.setupLoseFocusHandlersOn(menu, subMenu);
+    };
+
+    scope.setup = function(){
+         var dropdowns = getDropdownsBy(selectors.menuDropdownClass);
+        for(var i=0; i < dropdowns.length; i++){
+            setupMenu(dropdowns[i], i);
         }
     };
 
