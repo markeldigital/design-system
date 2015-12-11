@@ -6,7 +6,6 @@
 @import "cover-endorsements";
 @import "cover-description";
 @import "cover-cannot-offer";
-@import "../../../../../deprecated/quote-journey/direct/modules/cover-group/_cover-attachments";
 
 @mixin cover($selector){
     #{$selector} {
@@ -63,7 +62,6 @@
     @include cover-details-trigger('.cover-details-trigger');
     @include cover-details-trigger('.cover-details-endorsements__trigger');
     @include cover-endorsements('.cover-details-endorsements');
-    @include cover-attachments(".cover-attachments");
     @include cover-description(".cover-details-description");
     @include cover-cannot-offer(".cover-cannot-offer");
 }
