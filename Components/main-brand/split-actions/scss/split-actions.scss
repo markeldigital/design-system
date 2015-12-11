@@ -15,7 +15,7 @@
         }
         .last-action {
             @include respond-to($lap-and-desk) {
-                float: right; 
+                float: right;
             }
         }
         @include respond-to-print() {
