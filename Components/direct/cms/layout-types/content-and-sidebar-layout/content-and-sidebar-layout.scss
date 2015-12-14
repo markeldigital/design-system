@@ -26,6 +26,13 @@
                 margin-left: auto;
             }
         }
+
+		#{$selector}-secondary .card {
+			margin-bottom: $grid-unit * 2;
+			@include respond-to($lap-and-desk){
+				margin-bottom: $grid-unit * 3;
+			}
+        }
     }
 }
 
