@@ -104,6 +104,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-hub');
     grunt.loadNpmTasks('grunt-concurrent');
     grunt.loadNpmTasks('grunt-contrib-sass');
-
     grunt.registerTask('default', ['concurrent:all']);
 };
