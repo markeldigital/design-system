@@ -1,0 +1,95 @@
+/*
+Design System (main-brand & sub-brand)
+*/
+@import "../../main-brand/common/scss/_common-third-party-libraries";
+@import "../../main-brand/common/scss/vars/_global-vars"; // Overrides for component vars
+@import "component-vars-overrides";
+@import "../../main-brand/common/scss/vars/_component-vars";
+@import "../../main-brand/common/scss/_common-markel";
+
+@import '../../main-brand/iconography/scss/_iconography';
+@import '../../main-brand/menu/scss/_menu';
+@import '../../main-brand/chrome-and-content/scss/_chrome-and-content';
+@import '../../main-brand/scroll-area/scss/_scroll-area';
+@import '../../main-brand/panels/scss/_panels';
+@import '../../main-brand/buttons/scss/_buttons';
+@import '../../main-brand/forms/scss/on-off-box/scss/_on-off-box';
+@import '../../main-brand/forms/scss/search/scss/_search';
+@import '../../main-brand/forms/scss/_forms';
+@import '../../main-brand/tables/scss/_tables';
+@import '../../main-brand/forms/scss/error-message/scss/_error-message';
+@import '../../main-brand/flag/scss/_flag';
+@import '../../main-brand/forms/scss/input-and-unit/scss/_input-and-unit';
+@import '../../main-brand/forms/scss/basic-checkbox/scss/_basic-checkbox';
+@import '../../main-brand/modal-popups/pico-modal/scss/_error-popup';
+@import '../../main-brand/static-error/scss/_static-error';
+@import '../../main-brand/forms/scss/autosuggest/scss/_select2';
+@import '../../main-brand/hero/scss/_hero';
+@import '../../main-brand/error-page/scss/_error-page';
+@import '../../main-brand/notification/scss/_notification';
+@import '../../main-brand/twins-template/scss/_twins-template';
+@import '../../main-brand/sidekick-template/scss/_sidekick-template';
+@import '../../main-brand/focused-template/scss/_focused-template';
+@import '../../main-brand/expander/scss/_expander';
+@import '../../main-brand/waiting-spinner/scss/_waiting-spinner';
+@import '../../main-brand/cookies-disabled/scss/_cookies-disabled';
+@import '../../main-brand/javascript-disabled/scss/_javascript-disabled';
+@import '../../main-brand/split-actions/scss/split-actions';
+@import '../../main-brand/marketing-info/scss/_marketing-info';
+
+
+// Sub-brand specific components
+@import 'contact-us/scss/_contact-us';
+
+/* Quote Journey specific Modules
+*/
+
+// Not order dependent
+@import '../../main-brand/quote-journey/broker/modules/_actions-panel';
+@import '../../main-brand/quote-journey/broker/modules/_documents';
+@import '../../main-brand/quote-journey/broker/modules/insurance-summary/_insurance-summary';
+@import '../../main-brand/quote-journey/broker/modules/insurance-summary/_insurance-summary-totals';
+@import '../../main-brand/quote-journey/broker/modules/disclaimer-message/_disclaimer-message';
+@import '../../main-brand/quote-journey/broker/modules/question-message/_question-message';
+@import '../../main-brand/quote-journey/broker/modules/_endorsements';
+@import '../../main-brand/quote-journey/broker/modules/_form-fragment';
+@import '../../main-brand/quote-journey/broker/modules/_premium';
+@import '../../main-brand/quote-journey/broker/modules/_premium-option';
+@import '../../main-brand/quote-journey/broker/modules/_question-date-picker';
+@import '../../main-brand/quote-journey/broker/modules/_question-declaration-message';
+@import '../../main-brand/quote-journey/broker/modules/_quote-header';
+@import '../../main-brand/quote-journey/broker/modules/_stacked-questions-block';
+@import '../../main-brand/quote-journey/broker/modules/_total-premium';
+@import '../../main-brand/quote-journey/broker/modules/cover-group/_cover-group';
+@import '../../main-brand/quote-journey/broker/modules/option/_option';
+@import '../../main-brand/quote-journey/broker/modules/question-multi-numeric/_question-multi-numeric';
+@import '../../main-brand/quote-journey/broker/modules/question-monetary/_question-monetary';
+@import '../../main-brand/quote-journey/broker/modules/question-percentage-breakdown/_question-percentage-breakdown';
+@import '../../main-brand/quote-journey/broker/modules/question-address-finder/_question-address-finder';
+@import '../../main-brand/quote-journey/broker/modules/question-single-checkbox/_question-single-checkbox';
+@import '../../main-brand/quote-journey/broker/modules/question-and-question-help/_question-and-question-help';
+
+// Screens
+@import "../../main-brand/quote-journey/broker/screens/_quote-screen";
+@import "../../main-brand/quote-journey/broker/screens/_questions-screen";
+@import "../../main-brand/quote-journey/broker/screens/_policy-confirmation-screen";
+@import "../../main-brand/quote-journey/broker/screens/_insurance-summary-feature-off";
+
+//Templates
+@import '../../main-brand/quote-journey/broker/templates/_insurance-summary-template';
+
+// TODO: This lib shouldn't be imported in the Sass but instead conditionally loaded in the directive - put here for now to fix prod.
+@import "../../main-brand/quote-journey/broker/modules/date-picker/pikaday";
+
+@import "screens/_dashboard-screen";
+@import "screens/_policy-confirmation-screen";
+@import "screens/_bind-screen";
+@import "screens/_terms-and-conditions-screen";
+@import 'screens/_registration-success-screen';
+@import 'screens/_forgotten-password-screen';
+@import 'screens/_reset-password-screen';
+
+// TODO: Should be moved to RetailPublic project?
+@import 'screens/_sign-in-screen';
+@import 'screens/_registration-screen';
+@import 'notification-persistent';
