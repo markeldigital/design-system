@@ -48,6 +48,17 @@
                 }
             }
         }
+
+		//Centers the logo as this is left by -72px by default
+
+		&--center{
+
+			left: 0;
+			max-width: 100% !important;
+			width: auto !important;
+
+
+		}
     }
 }
 
