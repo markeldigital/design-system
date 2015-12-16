@@ -37,49 +37,11 @@ Design System (main-brand & sub-brand)
 @import '../../main-brand/split-actions/scss/split-actions';
 @import '../../main-brand/marketing-info/scss/_marketing-info';
 
+//Quote journey
+@import '../quote-journey/app-template';
 
 // Sub-brand specific components
 @import 'contact-us/scss/_contact-us';
-
-/* Quote Journey specific Modules
-*/
-
-// Not order dependent
-@import '../../main-brand/quote-journey/broker/modules/_actions-panel';
-@import '../../main-brand/quote-journey/broker/modules/_documents';
-@import '../../main-brand/quote-journey/broker/modules/insurance-summary/_insurance-summary';
-@import '../../main-brand/quote-journey/broker/modules/insurance-summary/_insurance-summary-totals';
-@import '../../main-brand/quote-journey/broker/modules/disclaimer-message/_disclaimer-message';
-@import '../../main-brand/quote-journey/broker/modules/question-message/_question-message';
-@import '../../main-brand/quote-journey/broker/modules/_endorsements';
-@import '../../main-brand/quote-journey/broker/modules/_form-fragment';
-@import '../../main-brand/quote-journey/broker/modules/_premium';
-@import '../../main-brand/quote-journey/broker/modules/_premium-option';
-@import '../../main-brand/quote-journey/broker/modules/_question-date-picker';
-@import '../../main-brand/quote-journey/broker/modules/_question-declaration-message';
-@import '../../main-brand/quote-journey/broker/modules/_quote-header';
-@import '../../main-brand/quote-journey/broker/modules/_stacked-questions-block';
-@import '../../main-brand/quote-journey/broker/modules/_total-premium';
-@import '../../main-brand/quote-journey/broker/modules/cover-group/_cover-group';
-@import '../../main-brand/quote-journey/broker/modules/option/_option';
-@import '../../main-brand/quote-journey/broker/modules/question-multi-numeric/_question-multi-numeric';
-@import '../../main-brand/quote-journey/broker/modules/question-monetary/_question-monetary';
-@import '../../main-brand/quote-journey/broker/modules/question-percentage-breakdown/_question-percentage-breakdown';
-@import '../../main-brand/quote-journey/broker/modules/question-address-finder/_question-address-finder';
-@import '../../main-brand/quote-journey/broker/modules/question-single-checkbox/_question-single-checkbox';
-@import '../../main-brand/quote-journey/broker/modules/question-and-question-help/_question-and-question-help';
-
-// Screens
-@import "../../main-brand/quote-journey/broker/screens/_quote-screen";
-@import "../../main-brand/quote-journey/broker/screens/_questions-screen";
-@import "../../main-brand/quote-journey/broker/screens/_policy-confirmation-screen";
-@import "../../main-brand/quote-journey/broker/screens/_insurance-summary-feature-off";
-
-//Templates
-@import '../../main-brand/quote-journey/broker/templates/_insurance-summary-template';
-
-// TODO: This lib shouldn't be imported in the Sass but instead conditionally loaded in the directive - put here for now to fix prod.
-@import "../../main-brand/quote-journey/broker/modules/date-picker/pikaday";
 
 @import "screens/_dashboard-screen";
 @import "screens/_policy-confirmation-screen";

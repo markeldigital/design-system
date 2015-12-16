@@ -1,9 +1,10 @@
+//Global
 @import "../../main-brand/common/scss/common-third-party-libraries";
-//@import "../bower_components/design-system/Components/sub-brand-1/common/scss/global-vars-overrides"; // Sub-brand overrides for global vars if needed.
 @import "../../main-brand/common/scss/vars/global-vars";
-@import "../../broker/portal/component-vars-overrides"; // Overrides for component vars
+@import "component-vars-overrides";
 @import "../../main-brand/common/scss/vars/component-vars";
 @import "../../main-brand/common/scss/common-markel";
+
 /* Design System Components */
 @import '../../main-brand/iconography/scss/_iconography';
 @import '../../main-brand/menu/scss/_menu';
@@ -34,8 +35,13 @@
 @import '../../main-brand/javascript-disabled/scss/_javascript-disabled.scss';
 @import '../../main-brand/split-actions/scss/split-actions.scss';
 
+//Quote journey
+@import '../quote-journey/app-template';
 
+//Templates
+@import "template/insurance-summary-template";
 
+//Screens
 @import "screens/_dashboard-screen.scss";
 @import "screens/_add-a-broker-screen.scss";
 @import "screens/_broker-office-form.scss";
