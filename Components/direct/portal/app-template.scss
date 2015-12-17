@@ -42,47 +42,4 @@ Design System
 //Base element overrides
 @import "base-overrides";
 
-// Layout
-@import '../../main-brand/quote-journey/direct/layout/_quote-summary';
-@import '../../main-brand/quote-journey/direct/layout/_quote-main';
-@import '../../main-brand/quote-journey/direct/layout/footer';
-@import '../../main-brand/quote-journey/direct/layout/_quote-journey';
 
-// Modules
-@import '../../main-brand/quote-journey/direct/modules/_actions-panel';
-@import '../../main-brand/quote-journey/direct/modules/insurance-summary/_insurance-summary-marketing';
-@import '../../main-brand/quote-journey/direct/modules/disclaimer-message/_disclaimer-message';
-@import '../../main-brand/quote-journey/direct/modules/question-message/_question-message';
-@import '../../main-brand/quote-journey/direct/modules/_premium';
-@import '../../main-brand/quote-journey/direct/modules/_premium-option';
-@import '../../main-brand/quote-journey/direct/modules/_question-date-picker';
-@import '../../main-brand/quote-journey/direct/modules/_question-declaration-message';
-@import '../../main-brand/quote-journey/direct/modules/_quote-header';
-@import '../../main-brand/quote-journey/direct/modules/_stacked-questions-block';
-@import '../../main-brand/quote-journey/direct/modules/_total-premium';
-@import '../../main-brand/quote-journey/direct/modules/cover-group/_cover-group';
-@import '../../main-brand/quote-journey/direct/modules/option/_option';
-@import '../../main-brand/quote-journey/direct/modules/question-multi-numeric/_question-multi-numeric';
-@import '../../main-brand/quote-journey/direct/modules/question-monetary/_question-monetary';
-@import '../../main-brand/quote-journey/direct/modules/question-percentage-breakdown/_question-percentage-breakdown';
-@import '../../main-brand/quote-journey/direct/modules/question-address-finder/_question-address-finder';
-@import '../../main-brand/quote-journey/direct/modules/question-single-checkbox/_question-single-checkbox';
-@import '../../main-brand/quote-journey/direct/modules/question-and-question-help/_question-and-question-help';
-@import '../../main-brand/quote-journey/direct/modules/date-picker/pikaday';
-@import '../../main-brand/quote-journey/direct/modules/call-to-action-sticky/_call-to-action-sticky';
-@import '../../main-brand/quote-journey/direct/modules/quote-summary/_summary-header';
-@import '../../main-brand/quote-journey/direct/modules/quote-summary/_cover-breakdown';
-@import '../../main-brand/quote-journey/direct/modules/quote-summary/_summary-total-premium';
-@import '../../main-brand/quote-journey/direct/modules/quote-summary/_summary-cta';
-@import '../../main-brand/quote-journey/direct/modules/quote-summary/_documents';
-@import '../../main-brand/quote-journey/direct/modules/intro-text/_intro-text';
-@import '../../main-brand/quote-journey/direct/modules/single-action/_single-action';
-@import '../../main-brand/quote-journey/direct/modules/forms/_forms';
-@import '../../main-brand/quote-journey/direct/modules/_form-fragment';
-@import '../../main-brand/quote-journey/direct/modules/split-actions/_split-actions';
-
-
-// Screens
-
-@import "../../main-brand/quote-journey/direct/screens/_questions-screen";
-@import "../../main-brand/quote-journey/direct/screens/_quote-screen";
