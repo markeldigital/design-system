@@ -1,0 +1,5 @@
+languageCode = "en-us"
+title = "Markel Brand Guidelines"
+theme = "bootie-docs"
+[params]
+  mainMenu = ["about", "components"]
