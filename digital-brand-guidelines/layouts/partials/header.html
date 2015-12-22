@@ -21,19 +21,65 @@
 
 <body role="document">
 
-	<!-- Fixed navbar -->
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar">
-				<a class="navbar-brand" href="{{ $baseUrl }}/">{{ .Site.Title }}</a>
-			</div>
-			<div id="navbar">
-				<ul class="nav navbar-nav">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Components</a></li>
-                    <li><a href="">Accessibility</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
-	</nav>
+	<!--&lt;!&ndash; Fixed navbar &ndash;&gt;-->
+	<!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
+		<!--<div class="container">-->
+			<!--<div class="navbar">-->
+				<!--<a class="navbar-brand" href="{{ $baseUrl }}/">{{ .Site.Title }}</a>-->
+			<!--</div>-->
+			<!--<div id="navbar">-->
+				<!--<ul class="nav navbar-nav">-->
+                    <!--<li><a href="">About</a></li>-->
+                    <!--<li><a href="">Components</a></li>-->
+                    <!--<li><a href="">Accessibility</a></li>-->
+				<!--</ul>-->
+			<!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
+		<!--</div>-->
+	<!--</nav>-->
+
+
+
+    <header class="global-banner">
+        <div class="logo-and-primary-navigation-and-utility-navigation">
+            <a class="logo" href="/">
+                <img src="/img/markel-logo-white.svg" alt="Markel" class="white-logo">
+            </a>
+            <div class="primary-navigation-and-utility-navigation">
+                <div class="primary-navigation-and-utility-navigation-trigger-container">
+                    <a href="">
+                        <span class="text-when-closed">Menu</span>
+                        <span class="text-when-open">Close</span>
+                        <i class="special-menu-icon"></i>
+                    </a>
+                </div>
+
+                <div class="primary-navigation-and-utility-navigation-content">
+                    <nav class="primary-navigation">
+                        <ul>
+                            <li>
+                                <a href="/about">
+                                    <span>About</span>
+                                </a>
+                        </li>
+                        <li>
+                            <a href="/components">
+                                <span>Components</span>
+                            </a>
+                        </li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
 <div class="container">

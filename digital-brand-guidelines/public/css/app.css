@@ -749,7 +749,7 @@ blockquote {
 */
 @font-face {
   font-family: 'Iconography';
-  src: url("../../bower_components/design-system/Components/main-brand/iconography/font/iconography.woff?v=4.1.0") format("woff"), url("../../bower_components/design-system/Components/main-brand/iconography/font/iconography.ttf?v=4.1.0") format("truetype");
+  src: url("../font/iconography.woff?v=4.1.0") format("woff"), url("../font/iconography.ttf?v=4.1.0") format("truetype");
   font-weight: normal;
   font-style: normal; }
 .icon-not-available, .icon-product-CO, .icon-product-ML, .icon-product-PL, .icon-umbrella, .icon-life-ring, .icon-padlock, .icon-certificate, .icon-refresh, .icon-spinner, .icon-dashboard, .icon-signal, .icon-clock-o, .icon-clock, .icon-mobile, .icon-tablet, .icon-user, .icon-calendar, .icon-menu, .icon-circle, .icon-circle-o, .icon-search, .icon-phone, .icon-phone-circle, .icon-plus, .icon-plus-circle, .icon-minus, .icon-minus-circle, .icon-chain-broken, .icon-unlink, .icon-exclamation-triangle, .icon-exclamation-circle, .icon-error, .icon-info-circle, .icon-question-circle, .icon-cross, .icon-times-circle, .icon-tick, .icon-tick-circle, .icon-check-square-o, .icon-caret-up, .icon-caret-down, .icon-caret-right, .icon-caret-left, .icon-angle-up, .icon-angle-down, .icon-angle-right, .icon-angle-left, .icon-arrow-up, .icon-arrow-down, .icon-arrow-right, .icon-arrow-left, .icon-reserve-space {
@@ -5210,11 +5210,11 @@ ERROR - 401/UNAUTHORISED
       display: none; } }
 
 html.no-smil .ds-waiting-spinner {
-  background: url("../../bower_components/design-system/Components/main-brand/waiting-spinner/img/loading-fallback.gif") center center transparent no-repeat;
+  background: url("/Components/main-brand/waiting-spinner/img/loading-fallback.gif") center center transparent no-repeat;
   background-size: 24px; }
 
 html.smil .ds-waiting-spinner {
-  background: url("../../bower_components/design-system/Components/main-brand/waiting-spinner/img/loading.svg") center center transparent no-repeat;
+  background: url("/Components/main-brand/waiting-spinner/img/loading.svg") center center transparent no-repeat;
   background-size: 24px; }
 
 .cookies-disabled-panel {

@@ -8,11 +8,11 @@ Components
 
 @import "../main-brand/common/scss/common-third-party-libraries";
 //@imports/sub-brand-1/common/scss/global-vars-overrides"; // Sub-brand overrides for global vars if needed.
-@import "../main-brand/common/scss/vars/global-vars"; // Overrides for component vars
-@import "../broker/portal/component-vars-overrides";
+@import "global-vars"; // Overrides for component vars
+@import "component-vars-overrides";
 @import "../main-brand/common/scss/vars/component-vars";
 @import "../main-brand/common/scss/common-markel";
-@import '../main-brand/iconography/scss/_iconography';
+@import 'iconography';
 @import '../main-brand/menu/scss/_menu';
 @import '../main-brand/chrome-and-content/scss/_chrome-and-content';
 @import '../main-brand/scroll-area/scss/_scroll-area';
@@ -44,6 +44,8 @@ Components
 @import '../main-brand/marketing-info/scss/_marketing-info';
 @import '../main-brand/Tabs/scss/tabs';
 @import '../main-brand/popovers/scss/_popovers';
+
+
 
 /*
 Layouts
