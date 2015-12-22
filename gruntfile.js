@@ -12,7 +12,7 @@ module.exports = function (grunt) {
         'broker-root': '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/',
         'public-root': '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/',
         'underwriter-root': '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/',
-        'live-design-system': '../REMUS.LiveDesignSystem/'
+        //'live-design-system': '../REMUS.LiveDesignSystem/'
     };
 
     grunt.initConfig({
@@ -21,13 +21,9 @@ module.exports = function (grunt) {
                 options: {
                     sourcemap: true
                 },
-                files: [
-                    {
-                        src: "Components/digital-brand-system/app-template.scss",
-                        dest: "dist/digital-brand-system.css",
-                        ext: ".css"
+                files: {
+                        'digital-brand-guidelines/public/css/app.css' : 'Components/digital-brand-guidelines/app-template.scss'
                     }
-                ]
             }
         },
 
@@ -37,7 +33,7 @@ module.exports = function (grunt) {
             },
             designSystem: {
                 files: [path.join(projectRoot, '/Components/**/*.*')],
-                tasks: ['sync:toAllUIProjects']
+                tasks: ['sync:toAllUIProjects', 'sass']
             }
         },
 
@@ -63,7 +59,7 @@ module.exports = function (grunt) {
                     {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['direct-root'], params['components-publishing-path'])},
 
                     //Live Design System
-                    {expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['live-design-system'], params['components-publishing-path'])}
+                    //{expand: true, cwd: path.join(projectRoot, 'Components'), src: path.join('**'), dest: path.join(params['live-design-system'], params['components-publishing-path'])}
                 ]
             }
         },
