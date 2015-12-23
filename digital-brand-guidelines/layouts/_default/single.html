@@ -1,16 +1,15 @@
 {{ partial "header.html" . }}
 
 <div class="row">
-		<main role="main" class="grid-width">
+    <div class="grid-width">
+		<main role="main" class="main">
 			<article>
 				<a id="title"></a>
 				<h1 class="doc-entry-title">{{ .Title }}</h1>
-				<section>
 					{{ .Content }}
-				</section>
 			</article>
 		</main>
-
+    </div>
 </div> <!-- /.row -->
 
 {{ partial "footer.html" . }}

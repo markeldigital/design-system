@@ -51,7 +51,14 @@ Components
 Layouts
 */
 
-@import 'layout';
+@import 'layout/base';
+@import 'layout/components';
+
+/*
+screens
+*/
+
+@import 'screens/typography';
 
 /*
 Theme

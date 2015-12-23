@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Markel Brand Guidelines</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on Markel Brand Guidelines</description>
+    <title>Components on Markel Brand Guidelines</title>
+    <link>http://localhost:1313/components/</link>
+    <description>Recent content in Components on Markel Brand Guidelines</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 21 Dec 2015 14:41:07 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/components/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Buttons</title>
@@ -239,103 +239,6 @@
 &lt;/nav&gt;
 &lt;p&gt;Also, menus can be combined with the menu bar component.&lt;/p&gt;&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Accessibility</title>
-      <link>http://localhost:1313/accessibility/</link>
-      <pubDate>Mon, 21 Dec 2015 14:40:11 +0000</pubDate>
-      
-      <guid>http://localhost:1313/accessibility/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://localhost:1313/about/</link>
-      <pubDate>Mon, 21 Dec 2015 14:40:11 +0000</pubDate>
-      
-      <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Typography</title>
-      <link>http://localhost:1313/typography/</link>
-      <pubDate>Mon, 21 Dec 2015 14:40:11 +0000</pubDate>
-      
-      <guid>http://localhost:1313/typography/</guid>
-      <description>&lt;div class=&#34;design-system-library-screen&#34;&gt;
-&lt;div class=&#34;typography-hierarchy&#34;&gt;
-&lt;h3 class=&#34;design-system-headline&#34;&gt;Typography hierarchy&lt;/h3&gt;
-&lt;p&gt;Our typography scales according to the screen size. We have several scales to suit different needs.&lt;/p&gt;
-&lt;p class=&#34;design-system-dev-notes&#34;&gt;&lt;strong&gt;Developer notes:&lt;/strong&gt; always use plain tag names such as &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; or the &lt;code&gt;@include set-text-as()&lt;/code&gt; mixin...never define typography for yourself. The class names used in the markup here will not work outside of this page.&lt;/p&gt;
-
-&lt;h3&gt;The Regular typography scale. Please use these in preference over the reduced versions.&lt;/h3&gt;
-&lt;!-- Tech notes: The size of text is not tied to the HTML element but you should use an appropriate html tag eg. an H1 for main page headers. --&gt;
-&lt;!-- Tech notes: Set the size of text using Sass mixins not using these class names --&gt;
-&lt;div class=&#34;panel-inverse&#34;&gt;
-&lt;p class=&#34;jumbo&#34;&gt;Jumbo&lt;/p&gt;
-&lt;p class=&#34;alpha&#34;&gt;Largest (Alpha)&lt;/p&gt;
-&lt;p class=&#34;beta&#34;&gt;Large (Beta)&lt;/p&gt;
-&lt;p class=&#34;gamma&#34;&gt;Medium (Gamma)&lt;/p&gt;
-&lt;p class=&#34;delta&#34;&gt;Smaller than medium. Standard body content text size (Delta/Body)&lt;/p&gt;
-&lt;p class=&#34;epsilon&#34;&gt;Small (epsilon)&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;h3&gt;The reduced scale. Only use these if one of the sizes above is not appropriate. In general we prefer using the regular scale.&lt;/h3&gt;
-&lt;div class=&#34;panel-inverse&#34;&gt;
-&lt;p class=&#34;jumbo reduced&#34;&gt;Jumbo&lt;/p&gt;
-&lt;p class=&#34;alpha reduced&#34;&gt;Largest (Alpha)&lt;/p&gt;
-&lt;p class=&#34;beta reduced&#34;&gt;Large (Beta)&lt;/p&gt;
-&lt;p class=&#34;gamma reduced&#34;&gt;Medium (Gamma)&lt;/p&gt;
-&lt;p class=&#34;delta reduced&#34;&gt;Smaller than medium. Standard body content text size (Delta/Body)&lt;/p&gt;
-&lt;p class=&#34;epsilon reduced&#34;&gt;Small (epsilon)&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;The weak hierarchy. Use this where you need &lt;span class=&#34;gamma weak&#34;&gt;contrast&lt;/span&gt; with surrounding copy. Use this to make the type recede and appear less important than surrounding text of the same size.&lt;/h3&gt;
-&lt;div class=&#34;panel-inverse&#34;&gt;
-&lt;p class=&#34;jumbo weak&#34;&gt;Jumbo&lt;/p&gt;
-&lt;p class=&#34;alpha weak&#34;&gt;Largest (Alpha)&lt;/p&gt;
-&lt;p class=&#34;beta weak&#34;&gt;Large (Beta)&lt;/p&gt;
-&lt;p class=&#34;gamma weak&#34;&gt;Medium (Gamma)&lt;/p&gt;
-&lt;p class=&#34;delta weak&#34;&gt;Smaller than medium. Standard body content text size (Delta/Body)&lt;/p&gt;
-&lt;p class=&#34;epsilon weak&#34;&gt;Small (epsilon)&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;The strong hierarchy. Use this where you need &lt;span class=&#34;gamma strong&#34;&gt;contrast&lt;/span&gt; with surrounding copy. Use this make the type stand out and appear more important than surrounding text of the same size.&lt;/h3&gt;
-&lt;div class=&#34;panel-inverse&#34;&gt;
-&lt;p class=&#34;jumbo strong&#34;&gt;Jumbo&lt;/p&gt;
-&lt;p class=&#34;alpha strong&#34;&gt;Largest (Alpha)&lt;/p&gt;
-&lt;p class=&#34;beta strong&#34;&gt;Large (Beta)&lt;/p&gt;
-&lt;p class=&#34;gamma strong&#34;&gt;Medium (Gamma)&lt;/p&gt;
-&lt;p class=&#34;delta strong&#34;&gt;Smaller than medium. Standard body content text size (Delta/Body)&lt;/p&gt;
-&lt;p class=&#34;epsilon strong&#34;&gt;Small (epsilon)&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;The typography scales all together to show the contrast.&lt;/h3&gt;
-&lt;div class=&#34;panel-inverse&#34;&gt;
-&lt;p class=&#34;jumbo&#34;&gt;Regular&lt;span class=&#34;jumbo strong&#34;&gt;Strong&lt;/span&gt;&lt;span class=&#34;jumbo weak&#34;&gt;Weak&lt;/span&gt;&lt;/p&gt;
-&lt;p class=&#34;alpha&#34;&gt;Regular&lt;span class=&#34;alpha strong&#34;&gt;Strong&lt;/span&gt;&lt;span class=&#34;alpha weak&#34;&gt;Weak&lt;/span&gt;&lt;/p&gt;
-&lt;p class=&#34;beta&#34;&gt;Regular&lt;span class=&#34;beta strong&#34;&gt;Strong&lt;/span&gt;&lt;span class=&#34;beta weak&#34;&gt;Weak&lt;/span&gt;&lt;/p&gt;
-&lt;p class=&#34;gamma&#34;&gt;Regular&lt;span class=&#34;gamma strong&#34;&gt;Strong&lt;/span&gt;&lt;span class=&#34;gamma weak&#34;&gt;Weak&lt;/span&gt;&lt;/p&gt;
-&lt;p class=&#34;delta&#34;&gt;Regular&lt;span class=&#34;delta strong&#34;&gt;Strong&lt;/span&gt;&lt;span class=&#34;delta weak&#34;&gt;Weak&lt;/span&gt;&lt;/p&gt;
-&lt;p class=&#34;epsilon&#34;&gt;Regular&lt;span class=&#34;epsilon strong&#34;&gt;Strong&lt;/span&gt;&lt;span class=&#34;epsilon weak&#34;&gt;Weak&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>_index</title>
-      <link>http://localhost:1313/_index/</link>
-      <pubDate>Mon, 21 Dec 2015 14:39:20 +0000</pubDate>
-      
-      <guid>http://localhost:1313/_index/</guid>
-      <description></description>
     </item>
     
   </channel>

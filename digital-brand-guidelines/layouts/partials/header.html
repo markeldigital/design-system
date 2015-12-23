@@ -19,25 +19,7 @@
         </script>
 	</head>
 
-<body role="document">
-
-	<!--&lt;!&ndash; Fixed navbar &ndash;&gt;-->
-	<!--<nav class="navbar navbar-inverse navbar-fixed-top">-->
-		<!--<div class="container">-->
-			<!--<div class="navbar">-->
-				<!--<a class="navbar-brand" href="{{ $baseUrl }}/">{{ .Site.Title }}</a>-->
-			<!--</div>-->
-			<!--<div id="navbar">-->
-				<!--<ul class="nav navbar-nav">-->
-                    <!--<li><a href="">About</a></li>-->
-                    <!--<li><a href="">Components</a></li>-->
-                    <!--<li><a href="">Accessibility</a></li>-->
-				<!--</ul>-->
-			<!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
-		<!--</div>-->
-	<!--</nav>-->
-
-
+<body role="document" class="js">
 
     <header class="global-banner">
         <div class="logo-and-primary-navigation-and-utility-navigation">
@@ -55,18 +37,7 @@
 
                 <div class="primary-navigation-and-utility-navigation-content">
                     <nav class="primary-navigation">
-                        <ul>
-                            <li>
-                                <a href="/about">
-                                    <span>About</span>
-                                </a>
-                        </li>
-                        <li>
-                            <a href="/components">
-                                <span>Components</span>
-                            </a>
-                        </li>
-                        </ul>
+                        {{ partial "navs/primary-nav.html"}}
                     </nav>
 
                 </div>
