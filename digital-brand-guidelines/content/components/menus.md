@@ -30,12 +30,12 @@ title = "Menus"
 <a class="ds-menu-trigger ds-menu-trigger--style" href="" aria-haspopup="true" aria-controls="ds-sub-menu-5" id="ds-menu-trigger-5"><span>Menu</span><i class="icon-caret-down"></i></a>
 <ul class="ds-menu-items" role="menu" id="ds-sub-menu-5" aria-labelledby="ds-menu-trigger-5">
 <li class="ds-menu-item" role="menuitem">
-<a href="#">
+<a href="http://www.google.com">
 <span>An action</span>
 </a>
 </li>
 <li class="ds-menu-item" role="menuitem">
-<a href="#">
+<a href="http://www.google.com">
 <span>An action</span>
 </a>
 </li>
