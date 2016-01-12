@@ -2,7 +2,7 @@
     #{$selector}{
         border: 1px solid $error-colour-100;
         background-color: $error-colour-10;
-        .icon-exclamation-circle{
+        i {
             color: $error-colour-100;
         }
     }
