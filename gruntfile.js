@@ -11,7 +11,7 @@ module.exports = function (grunt) {
         'quote-journey-root': '../REMUS.QuoteJourney/Markel.REMUS.Modules.QuoteJourney/',
         'broker-root': '../REMUS.BrokerPortal/Markel.REMUS.BrokerPortal.Web/',
         'public-root': '../REMUS.RetailPublicSite/REMUS.RetailPublicSite/',
-        'underwriter-root': '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/',
+        'underwriter-root': '../REMUS.UnderwriterPortal/REMUS.UnderwriterPortal/'
         //'live-design-system': '../REMUS.LiveDesignSystem/'
     };
 
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
                     sourcemap: true
                 },
                 files: {
-                        'digital-brand-guidelines/public/css/app.css' : 'Components/digital-brand-guidelines/app-template.scss'
+                        'digital-brand-guidelines/public/css/app-template.css' : 'Components/digital-brand-guidelines/app-template.scss'
                     }
             }
         },

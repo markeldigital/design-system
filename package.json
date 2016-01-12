@@ -16,6 +16,7 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-hub": "~0.7.0",
     "grunt-nodemailer": "~0.2.1",
-    "grunt-sync": "~0.2.0"
+    "grunt-sync": "~0.2.0",
+    "grunt-patternprimer": "~0.1.2"
   }
 }
