@@ -5,6 +5,9 @@
   "engines": {
     "node": ">=0.8.0"
   },
+  "scripts": {
+    "test": "./node_modules/.bin/dalek ./tests/menu.test.js -b chrome"
+  },
   "devDependencies": {
     "dalek-browser-chrome": "0.0.11",
     "dalek-cli": "0.0.5",
