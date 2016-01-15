@@ -1,0 +1,8 @@
+---
+gem: --no-document
+:benchmark: false
+:verbose: true
+:update_sources: true
+:ssl_verify_mode: 0
+:sources:
+- http://rubygems.org/
