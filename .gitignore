@@ -6,3 +6,6 @@ dist/
 node_modules/
 Components/digital-brand-guidelines
 digital-brand-guidelines
+_site/
+.sass-cache/
+.jekyll-metadata
