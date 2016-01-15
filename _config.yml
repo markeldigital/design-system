@@ -1,3 +1,8 @@
 safe: true
 lsi: false
 exclude: [bin, Gemfile, Gemfile.lock, commit.sh, vendor]
+
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir: Components/
+

@@ -8,11 +8,11 @@ Styles for the Markel Digital Brand Guidelines
 Components
 */
 
-@import "main-brand/common/scss/common-third-party-libraries";
-@import "digital-brand-guidelines/_global-vars"; // Overrides for component vars
-@import "digital-brand-guidelines/component-vars-overrides";
-@import "main-brand/common/scss/vars/component-vars";
-@import "main-brand/common/scss/common-markel";
+@import 'main-brand/common/scss/common-third-party-libraries';
+@import 'digital-brand-guidelines/_global-vars'; // Overrides for component vars
+@import 'digital-brand-guidelines/component-vars-overrides';
+@import 'main-brand/common/scss/vars/component-vars';
+@import 'main-brand/common/scss/common-markel';
 @import 'digital-brand-guidelines/iconography';
 @import 'main-brand/menu/scss/_menu';
 @import 'main-brand/chrome-and-content/scss/_chrome-and-content';
@@ -51,8 +51,6 @@ Layouts
 */
 
 @import 'digital-brand-guidelines/layout/base';
-@import 'digital-brand-guidelines/layout/components';
-//@import 'digital-brand-guidelines/layout/tabs';
 
 /*
 screens

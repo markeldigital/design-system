@@ -1,4 +1,4 @@
-@import '../modules/help-topics';
+@import '../modules/_help-topics';
 
 @mixin help-screen($selector){
     #{$selector}{

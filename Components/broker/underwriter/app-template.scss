@@ -42,9 +42,9 @@
 @import "template/insurance-summary-template";
 
 //Screens
-@import "screens/_dashboard-screen.scss";
-@import "screens/_add-a-broker-screen.scss";
-@import "screens/_broker-office-form.scss";
+@import "Screens/_dashboard-screen";
+@import "Screens/_add-a-broker-screen";
+@import "Screens/_broker-office-form";
 
-@import "screens/_brokers-screen.scss";
-@import "screens/_status-flag.scss";
+@import "Screens/_brokers-screen";
+@import "Screens/_status-flag";

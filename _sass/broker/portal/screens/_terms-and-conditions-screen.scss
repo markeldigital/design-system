@@ -1,9 +1,0 @@
-@mixin terms-and-conditions-screen($selector){
-    #{$selector}{
-        .terms-and-conditions-text {
-            padding: $grid-unit/2 $grid-unit*2.5 $grid-unit;
-        }
-    }
-}
-
-@include terms-and-conditions-screen(".terms-and-conditions-screen");
