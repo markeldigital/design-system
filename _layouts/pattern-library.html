@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <title>{{ page.title }} - Markel Digital</title>
+
+    {% include meta.html %}
+    {% include styles.html %}
+
+</head>
+<body>
+
+{% include header.html %}
+
+<section class="ds-site-section top-header neutral-section">
+    <div class="ds-site-section__content">
+        <h2 class="primary-signpost">{{ page.hero }}</h2>
+    </div>
+</section>
+
+<main role="main" class="{{ page.pageClass }}">
+    <div class="content">
+        <div class="content-inner">
+            <div class="grid-width">
+                <aside class="l-pattern__aside">
+                    <ul>
+                        {% for item in site.data.nav-pattern-library %}
+                        <li class="ds-menu">
+                            <a href="/design-guidelines/pattern-library{{ item.link }}"><span>{{ item.label }}</span></a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+
+                </aside>
+                <article class="l-pattern__main">
+                    <h1>{{ page.title }}</h1>
+                    {{ content }}
+                </article>
+        </div>
+    </div>
+    </div>
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>

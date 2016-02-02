@@ -1,0 +1,7 @@
+<ul class="grid-menu">
+    {% for item in site.data.[page.nav] %}
+    <li>
+        <a href="{{ item.link }}"><span>{{ item.label }}</span></a>
+    </li>
+    {% endfor %}
+</ul>
