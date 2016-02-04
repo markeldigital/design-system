@@ -6,5 +6,3 @@ nav: nav-design-guides
 ---
 
 {% include design-guides.html %}
-
-

@@ -1,5 +1,8 @@
 safe: true
 lsi: false
 exclude: [bin, Gemfile, Gemfile.lock, commit.sh, vendor]
+baseUrl: http://127.0.0.1:4000/
+
+
 
 
